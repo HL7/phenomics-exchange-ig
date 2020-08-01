@@ -8,6 +8,7 @@ output
 ###########################################
 /input-cache/org.hl7.fhir.publisher.jar
 
+
 # Windows generated files #
 ###########################
 Thumbs.db
@@ -20,3 +21,6 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+
+# shahim, ignore all for now
+/input-cache

@@ -1,0 +1,15 @@
+{
+    "publisher": {
+        "maven-repo_comment": [
+            "Rename one of the following to keys to 'maven-repo'",
+            "to pick which repository to retrieve from.",
+            "The version must exist in that repository.",
+            "See bin/get-publisher.sh for details."
+        ],
+        "maven-repo_maven-release":"maven-release",
+        "maven-repo_oss-snapshot": "oss-snapshot",
+
+        "maven-repo": "maven-release",
+        "maven-version": "1.1.6"
+    }
+}
