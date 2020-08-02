@@ -53,7 +53,7 @@ rm README.md
 echo "# Built branches" > README.md
 for i in $(ls -d */)
 do 
-    echo Branch "["${i%%/}"]("${i}") is [published](http://phenopackets.org/core-ig/"${i%%/}"/)" >> README.md
+    echo Branch "["${i%%/}"]("${i}") is [published](http://phenopackets.org/core-ig/"${i} >> README.md
 done
 
 http://phenopackets.org/core-ig/master/
