@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#set -x
+set -x
 set -e
 set -u
 set -o pipefail
@@ -24,11 +24,10 @@ BRANCHES=($(git for-each-ref --format="%(refname)"))
 #cat ${GIT_ROOT}/.git/config
 #git fetch --all --tags
 #git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
-#git branch --all
-#git tag -l
+git branch --all
+git tag -l
 #git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 cd ${GIT_ROOT}/../core-ig-gh-pages
-
 
 #git pull --ff-only
 
@@ -37,6 +36,7 @@ cd ${GIT_ROOT}/../core-ig-gh-pages
 #rm -rf "$GIT_BRANCH"
 IFSO="$IFS"
 IFS=$'\n'
+echo GIT_BRANCHES IS "${BRANCHES[*]}"
 for i in $(ls -d */)
 do 
     echo checking directory $i
