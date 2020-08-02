@@ -62,5 +62,3 @@ git add -A &> /dev/null
 git commit -m "Build of $GIT_BRANCH"
 git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-ig.git" gh-pages
 echo ================= FINISHED PUBLISHING =========================
-
-env
