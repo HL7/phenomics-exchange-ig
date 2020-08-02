@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+#set -x
 set -e
 set -u
 set -o pipefail
@@ -18,17 +18,12 @@ GIT_ROOT="$(dirname "$DIR")"
 
 # find git branch for the original commit
 GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
-BRANCHES=($(git for-each-ref --format="%(refname)"))
-echo GIT_BRANCHES IS "${BRANCHES[@]}"
 
-#git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
+BRANCHES=($(git for-each-ref --format="%(refname)"))
+
 cd ${GIT_ROOT}/../core-ig-gh-pages
 
-#git pull --ff-only
-
-# clean directories for non existing branches, and just built branch
-#ls -la
-#rm -rf "$GIT_BRANCH"
+# clean directories for non existing branches
 IFSO="$IFS"
 IFS=$'\n'
 for i in $(ls -d */)
@@ -56,4 +51,4 @@ git commit -m "Build of $GIT_BRANCH"
 git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-ig.git" gh-pages
 echo ================= FINISHED PUBLISHING =========================
 
-env
+#env
