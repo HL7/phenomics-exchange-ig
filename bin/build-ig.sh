@@ -16,6 +16,15 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 GIT_ROOT="$(dirname "$DIR")"
 
+# reset origin to default to work around Travis'
+git remote remove origin
+git remote add origin https://github.com/phenopackets/core-ig.git
+cat ${GIT_ROOT}/.git/config
+git fetch --all --tags
+git fetch --all 
+git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
+git branch --all
+git tag -l
 
 # first make sure we clean any previous published pages in case
 # this build fails early
