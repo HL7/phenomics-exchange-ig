@@ -16,10 +16,18 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 GIT_ROOT="$(dirname "$DIR")"
 
-if [[ ! -f $GIT_ROOT/ig-root/input-cache/publisher.jar ]]; then
-    ${GIT_ROOT}/bin/get-publisher.sh
-fi
+BRANCHES=($(git for-each-ref --format="%(refname)"))
+echo "${BRANCHES[*]}"
 
-java -jar ${GIT_ROOT}/ig-root/input-cache/publisher.jar  -ig ${GIT_ROOT}/ig-root/ig.ini
+IFSO="$IFS"
+IFS=$'\n'
 
-echo ================= FINISHED BUILDING =========================
+for i in $(ls -d */)
+do 
+    if [[ "${BRANCHES[*]}" != *origin/${i%%/}* ]]; then
+        echo directory $i is not in branches
+        echo deleting directory ${i%%/}
+    fi
+
+#    echo ${i%%/}; 
+done
