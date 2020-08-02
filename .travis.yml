@@ -1,0 +1,16 @@
+dist: bionic
+language: ruby
+sudo: required
+
+before_install:
+    - sudo apt-get install jq ruby-full build-essential zlib1g-dev
+    - sudo gem install jekyll bundler
+    - bash -c "echo working directory $(pwd)"
+
+script:
+    - bin/build-ig.sh
+    - bin/publish-pages.sh
+
+branches:
+    only:
+        - master
