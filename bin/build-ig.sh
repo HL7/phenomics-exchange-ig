@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#set -x
+set -x
 set -e
 set -u
 set -o pipefail
@@ -20,7 +20,7 @@ GIT_ROOT="$(dirname "$DIR")"
 # first make sure we clean any previous published pages in case
 # this build fails early
 GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
-git fetch --all --tags
+git fetch --all --tags 
 git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
 git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 rm -rf "${GIT_ROOT}/../core-ig-gh-pages/$GIT_BRANCH" || true 
