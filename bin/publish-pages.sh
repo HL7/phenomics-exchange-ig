@@ -22,7 +22,8 @@ BRANCHES=($(git for-each-ref --format="%(refname)"))
 
 # 
 cat ${GIT_ROOT}/.git/config
-git fetch -f origin gh-pages:refs/remotes/origin/gh-pages
+git fetch --all --tags
+git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
 git branch --all
 git tag -l
 git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
