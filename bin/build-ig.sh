@@ -15,22 +15,23 @@ done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 GIT_ROOT="$(dirname "$DIR")"
+GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
 
 # reset origin to default to work around Travis'
 git remote remove origin
 git remote add origin https://github.com/phenopackets/core-ig.git
 cat ${GIT_ROOT}/.git/config
 git fetch --all --tags
-git fetch --all 
-git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
+#git fetch --all 
+#git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
 git branch --all
 git tag -l
 
 # first make sure we clean any previous published pages in case
 # this build fails early
-GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
-git fetch --all --tags 
-git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
+
+#git fetch --all --tags 
+#git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
 git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 rm -rf "${GIT_ROOT}/../core-ig-gh-pages/$GIT_BRANCH" || true 
 cd ${GIT_ROOT}/../core-ig-gh-pages

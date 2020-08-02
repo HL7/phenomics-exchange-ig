@@ -31,7 +31,6 @@ cd ${GIT_ROOT}/../core-ig-gh-pages
 #rm -rf "$GIT_BRANCH"
 IFSO="$IFS"
 IFS=$'\n'
-
 for i in $(ls -d */)
 do 
     echo checking directory $i
