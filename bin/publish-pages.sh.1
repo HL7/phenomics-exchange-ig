@@ -23,21 +23,21 @@ BRANCHES=($(git for-each-ref --format="%(refname)"))
 # 
 cat ${GIT_ROOT}/.git/config
 git fetch --all --tags
-get fetch --all 
 git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
 git branch --all
 git tag -l
-#git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
+git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 cd ${GIT_ROOT}/../core-ig-gh-pages
+
+git status
 
 #git pull --ff-only
 
 # clean directories for non existing branches, and just built branch
-#ls -la
-#rm -rf "$GIT_BRANCH"
+ls -la
+rm -rf "$GIT_BRANCH"
 IFSO="$IFS"
 IFS=$'\n'
-echo GIT_BRANCHES IS "${BRANCHES[*]}"
 for i in $(ls -d */)
 do 
     echo checking directory $i
@@ -62,5 +62,3 @@ git add -A &> /dev/null
 git commit -m "Build of $GIT_BRANCH"
 git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-ig.git" gh-pages
 echo ================= FINISHED PUBLISHING =========================
-
-env
