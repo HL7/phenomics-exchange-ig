@@ -18,19 +18,9 @@ GIT_ROOT="$(dirname "$DIR")"
 
 # find git branch for the original commit
 GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
-
-git remote remove origin
-git remote add origin https://github.com/phenopackets/core-ig.git
-
 BRANCHES=($(git for-each-ref --format="%(refname)"))
+echo GIT_BRANCHES IS "${BRANCHES[@]}"
 
-# 
-cat ${GIT_ROOT}/.git/config
-git fetch --all --tags
-git fetch --all 
-git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
-git branch --all
-git tag -l
 #git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 cd ${GIT_ROOT}/../core-ig-gh-pages
 
@@ -41,7 +31,7 @@ cd ${GIT_ROOT}/../core-ig-gh-pages
 #rm -rf "$GIT_BRANCH"
 IFSO="$IFS"
 IFS=$'\n'
-echo GIT_BRANCHES IS "${BRANCHES[@]}"
+
 for i in $(ls -d */)
 do 
     echo checking directory $i
