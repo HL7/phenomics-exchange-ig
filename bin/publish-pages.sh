@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -x
+#set -x
 set -e
 set -u
 set -o pipefail
@@ -21,21 +21,20 @@ GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
 BRANCHES=($(git for-each-ref --format="%(refname)"))
 
 # 
-cat ${GIT_ROOT}/.git/config
-git fetch --all --tags
-git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
-git branch --all
-git tag -l
-git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
+#cat ${GIT_ROOT}/.git/config
+#git fetch --all --tags
+#git fetch -f --tags origin gh-pages:refs/remotes/origin/gh-pages
+#git branch --all
+#git tag -l
+#git worktree add -b gh-pages ${GIT_ROOT}/../core-ig-gh-pages origin/gh-pages
 cd ${GIT_ROOT}/../core-ig-gh-pages
 
-git status
 
 #git pull --ff-only
 
 # clean directories for non existing branches, and just built branch
-ls -la
-rm -rf "$GIT_BRANCH"
+#ls -la
+#rm -rf "$GIT_BRANCH"
 IFSO="$IFS"
 IFS=$'\n'
 for i in $(ls -d */)
