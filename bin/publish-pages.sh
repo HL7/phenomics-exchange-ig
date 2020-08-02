@@ -40,7 +40,7 @@ echo GIT_BRANCHES IS "${BRANCHES[*]}"
 for i in $(ls -d */)
 do 
     echo checking directory $i
-    if [[ "${BRANCHES[*]}" != *origin/${i%%/}* ]]; then
+    if [[ "${BRANCHES[@]}" != *origin/${i%%/}* ]]; then
         echo deleting directory ${i%%/}
         rm -rf ${i%%/}
     fi
