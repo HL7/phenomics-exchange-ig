@@ -5,7 +5,7 @@
   <name value="MyObservation"/>
   <title value="My Observation Profile"/>
   <status value="draft"/>
-  <description value="A profile showing the use of XML to author profiles"/>
+  <description value="A Core IG Observartion profile"/>
   <fhirVersion value="4.0.0"/>
   <kind value="resource"/>
   <abstract value="false"/>
