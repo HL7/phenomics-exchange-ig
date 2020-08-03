@@ -45,6 +45,9 @@ do
     echo Branch "["${i%%/}"]("${i}") is [published](http://phenopackets.org/core-ig/"${i}")" >> README.md
 done
 
+echo >> README.md
+echo "### This file is overwritten with each build. Manual edits will be lost!" >> README.md
+
 git reset gh-pages-start
 git add -A &> /dev/null
 git commit -m "Build of $GIT_BRANCH"
