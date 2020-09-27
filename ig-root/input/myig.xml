@@ -7,20 +7,20 @@
   </extension>-->
   <url value="http://somewhere.org/fhir/uv/myig/ImplementationGuide/example.fhir.uv.myig"/>
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
-  <version value="0.2.0"/>
-  <name value="YourComputableMyIGNameHere"/>
-  <title value="Your User Friendly Name for MyIG Here"/>
+  <version value="0.0.1"/>
+  <name value="coreig"/>
+  <title value="Core IG"/>
   <status value="draft"/>
   <experimental value="false"/>
-  <publisher value="HL7 International - [Some] Work Group"/>
+  <publisher value="GA4GH"/>
   <contact>
     <telecom>
       <!-- Or whatever URL and/or email address(es) are appropriate -->
       <system value="url"/>
-      <value value="http://hl7.org/Special/committees/[something]"/>
+      <value value="https://github.com/phenopackets"/>
     </telecom>
   </contact>
-  <description value="A brief description of what MyIG is about (probably the same text as in your readme)"/>
+  <description value="This is a FHIR IG being developed within the context of the Advancing Sharing of Phenotypic Data through FHIR project."/>
   <jurisdiction>
     <!-- This will drive SNOMED release used -->
     <coding>
@@ -41,18 +41,18 @@
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
       inappropriate to use the defaults.  Feel free to provide feedback about the defaults... -->
-    <resource>
+<resource>
       <reference>
-        <reference value="StructureDefinition/mypatient"/>
+        <reference value="StructureDefinition/myObservation"/>
       </reference>
       <description value="Overriding description because we can"/>
-    </resource>
+    </resource>  
 <!--<resource>
 <reference>
 <reference value="MyLogicalModel/AS"/>
 </reference>
 </resource> -->
-    <resource>
+ <!--    <resource>
       <reference>
         <reference value="Patient/example"/>
       </reference>
@@ -66,7 +66,7 @@
       </reference>
       <name value="Value set for no code system"/>
     </resource>
-<!--    <resource>
+   <resource>
       <reference>
         <reference value="Library/example"/>
       </reference>
@@ -83,7 +83,7 @@
         <title value="MyIG Home Page"/>
         <generation value="html"/>
       </page>
-      <page>
+  <!--  <page>
         <nameUrl value="background.html"/>
         <title value="Background"/>
         <generation value="html"/>
@@ -102,8 +102,8 @@
         <nameUrl value="changes.html"/>
         <title value="IG Change History"/>
         <generation value="html"/>
-      </page>
-    </page>
+      </page> -->  
+    </page>   
     <!-- copyright year is a mandatory parameter -->
     <parameter>
       <code value="copyrightyear"/>
@@ -116,16 +116,16 @@
     </parameter>
     <parameter>
       <code value="find-other-resources"/>
-      <value value="true"/>
+      <value value="false"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input\history"/>
     </parameter>
-    <parameter>
+<!--   <parameter>
       <code value="path-binary"/>
       <value value="input\cql"/>
-    </parameter>
+    </parameter>  -->  
     <parameter>
       <code value="path-liquid"/>
       <value value="templates\liquid"/>
