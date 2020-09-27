@@ -3,19 +3,20 @@
   <a name="intro"> </a>
   <h3>Introduction</h3>
 	<p>
-    What is this IG about (in patient/non-expert friendly terms).
+    This is a FHIR IG being developed within the context of the Advancing Sharing of 
+    Phenotypic Data through FHIR project. 
   </p>
 	<a name="technical"> </a>
 	<h3>Technical Overview</h3>
 	<p>
-    Additional detail/context setting for those who have significant background in the domain.  (Try to make as understandable as you can, but
-    set important context).
+    This IG will address core entities needed for data interoperability within the phenotypic domain. The IG will also focus on interoperability with the GA4GH 
+    Phenopackets standard. 
   </p>
   <a name="walkthrough"> </a>
-  <p>
+  <!--   <p>
     The main sections of this IG are:
   </p>
-  <ul>
+ <ul>
     <li>
       <a href="background.html">Background</a> - provides business context for the implementation guide and information that implementers should be
       familiar with before reading the remainder of the IG.  There could be multiple pages for this.
@@ -26,5 +27,5 @@
     <li>
       <a href="downloads.html">Downloads</a> - Allows downloading a copy of this implementation guide and other useful information
     </li>
-  </ul>
+  </ul> -->
 </div>
