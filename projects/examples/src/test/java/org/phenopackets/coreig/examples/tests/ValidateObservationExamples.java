@@ -3,14 +3,21 @@ package org.phenopackets.coreig.examples.tests;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.ObjectInputFilter.Config;
+
+import org.hl7.fhir.r4.model.CodeableConcept;
+import org.hl7.fhir.r4.model.Coding;
+import org.hl7.fhir.r4.model.Narrative;
 import org.hl7.fhir.r4.model.Narrative.NarrativeStatus;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Observation.ObservationStatus;
+import org.hl7.fhir.r4.model.Quantity;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.phenopackets.coreig.examples.PPConfig;
 
 import ca.uhn.fhir.context.FhirContext;
+import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.rest.server.exceptions.UnprocessableEntityException;
@@ -74,7 +81,7 @@ public class ValidateObservationExamples {
 
 		Observation obs = new Observation();
 
-		IGenericClient clienet = PPConfig.getClienet();
+		IGenericClient clienet = PPConfig.getClient();
 		UnprocessableEntityException e = assertThrows(UnprocessableEntityException.class, () -> {
 			MethodOutcome outcome = clienet.create().resource(obs).execute();
 		});
@@ -111,6 +118,74 @@ public class ValidateObservationExamples {
 		assertTrue(outcome.getCreated());
 
 		System.out.println("========= 4 ============");
+
+	}
+
+	@Test
+	void highSodiumExample() {
+		Observation obs = new Observation();
+
+		Narrative text = obs.getText();
+		text.getDiv().addText("Just a dummy example.");
+		text.setStatus(NarrativeStatus.GENERATED);
+		obs.setStatus(ObservationStatus.CANCELLED);
+
+		Coding coding = obs.getCode().addCoding();
+		coding.setCode("2951-2");
+		coding.setSystem("http://loinc");
+
+		Quantity value = obs.getValueQuantity();
+		value.setUnit("mEq/L");
+		value.setValue(160.0);
+
+		// add a snomed interpretation
+		Coding interp = obs.addInterpretation().addCoding();
+		interp.setSystem("http://snomed");
+		interp.setCode("267446004");
+
+		// add an HPO interpretation
+		interp = obs.addInterpretation().addCoding();
+		interp.setSystem("http://hpo");
+		interp.setCode("HP:0003228");
+
+		IParser parser = PPConfig.getJsonParser();
+		parser.setPrettyPrint(true);
+		System.out.println(parser.encodeResourceToString(obs));
+		
+		// output:
+//		{
+//			  "resourceType": "Observation",
+//			  "text": {
+//			    "status": "generated",
+//			    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Just a dummy example.</div>"
+//			  },
+//			  "status": "cancelled",
+//			  "code": {
+//			    "coding": [ {
+//			      "system": "http://loinc",
+//			      "code": "2951-2"
+//			    } ]
+//			  },
+//			  "valueQuantity": {
+//			    "value": 160.0,
+//			    "unit": "mEq/L"
+//			  },
+//			  "interpretation": [ {
+//			    "coding": [ {
+//			      "system": "http://snomed",
+//			      "code": "267446004"
+//			    } ]
+//			  }, {
+//			    "coding": [ {
+//			      "system": "http://hpo",
+//			      "code": "HP:0003228"
+//			    } ]
+//			  } ]
+//			}
+
+		IGenericClient client = PPConfig.getClient();
+		MethodOutcome outcome = client.create().resource(obs).execute();
+		assertTrue(outcome.getCreated());
 
 	}
 

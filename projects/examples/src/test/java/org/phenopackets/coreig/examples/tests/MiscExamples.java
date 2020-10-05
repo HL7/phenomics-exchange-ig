@@ -34,7 +34,7 @@ public class MiscExamples {
 	@Test
 	void emptyPatientOkay() {
 
-		MethodOutcome result = PPConfig.getClienet().create().resource(PPInstances.getEmptyPatient()).execute();
+		MethodOutcome result = PPConfig.getClient().create().resource(PPInstances.getEmptyPatient()).execute();
 		IBaseResource patient = result.getResource();
 		Assertions.assertTrue(result.getCreated());
 	}
@@ -42,7 +42,7 @@ public class MiscExamples {
 	@Test
 	void emptyObservationFails() {
 		FhirContext ctx = PPConfig.getContext();
-		IGenericClient clienet = PPConfig.getClienet();
+		IGenericClient clienet = PPConfig.getClient();
 		Observation obs = PPInstances.getEmptyObservation();
 		obs.addNote().setText("Some note");
 		boolean generated = ctx.getNarrativeGenerator().populateResourceNarrative(ctx, obs);

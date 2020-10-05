@@ -30,7 +30,7 @@ public class PPConfig {
 		return ctx;
 	}
 
-	public static IGenericClient getClienet() {
+	public static IGenericClient getClient() {
 		return getContext().newRestfulGenericClient(getProperties().getProperty(SERVER_URL_PROP_KEY));
 	}
 
@@ -51,7 +51,7 @@ public class PPConfig {
 	}
 
 	static public CapabilityStatement getCapabilitiy() {
-		return getClienet().fetchResourceFromUrl(CapabilityStatement.class, Constants.URL_TOKEN_METADATA);
+		return getClient().fetchResourceFromUrl(CapabilityStatement.class, Constants.URL_TOKEN_METADATA);
 	}
 
 	static public IParser getJsonParser() {
