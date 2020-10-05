@@ -19,7 +19,8 @@ target/
 *.war
 *.nar
 *.ear
-*.zip
+# Shahim, we might need .zip files
+#*.zip
 *.tar.gz
 *.rar
 
@@ -91,7 +92,8 @@ local.properties
 .externalToolBuilders/
 
 # Locally stored "Eclipse launch configurations"
-*.launch
+# Shahim, commented this out to save launchers for now
+#*.launch
 
 # PyDev specific (Python IDE for Eclipse)
 *.pydevproject
