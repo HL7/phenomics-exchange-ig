@@ -39,6 +39,7 @@ done
 #cp -ra ${GIT_ROOT}/ig-root/output "$GIT_BRANCH"
 cp -ra ${GIT_ROOT}/ig-root "$GIT_BRANCH"
 rm "$GIT_BRANCH"/.gitignore
+rm $GIT_BRANCH"/input-cache/publisher.jar
 
 rm README.md
 echo "# Built branches" > README.md
