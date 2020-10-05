@@ -42,4 +42,3 @@ fi
 java -jar ${GIT_ROOT}/ig-root/input-cache/publisher.jar  -ig ${GIT_ROOT}/ig-root/ig.ini
 
 echo ================= FINISHED BUILDING =========================
-grep -irn "summary-table"
