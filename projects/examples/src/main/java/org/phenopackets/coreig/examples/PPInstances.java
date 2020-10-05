@@ -12,7 +12,6 @@ public class PPInstances {
   
   public static Observation getEmptyObservation() {
 	  Observation obs = new Observation();
-	  
 	  return obs;
   }
 
