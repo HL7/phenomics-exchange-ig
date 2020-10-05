@@ -36,7 +36,8 @@ do
 done
 
 # copy over build
-cp -ra ${GIT_ROOT}/ig-root/output "$GIT_BRANCH"
+#cp -ra ${GIT_ROOT}/ig-root/output "$GIT_BRANCH"
+cp -ra ${GIT_ROOT}/ig-root "$GIT_BRANCH"
 rm README.md
 echo "# Built branches" > README.md
 for i in $(ls -d */)
