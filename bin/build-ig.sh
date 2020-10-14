@@ -15,6 +15,8 @@ done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 GIT_ROOT="$(dirname "$DIR")"
+
+
 GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
 
 # reset origin to default to work around Travis'
@@ -35,10 +37,12 @@ git add -A &> /dev/null
 git commit -m "Preparing build of $GIT_BRANCH"
 git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-ig.git" gh-pages
 
-if [[ ! -f $GIT_ROOT/ig-root/input-cache/publisher.jar ]]; then
-    ${GIT_ROOT}/bin/get-publisher.sh
+cd $GIT_ROOT/ig-root
+if [[ ! -f input-cache/publisher.jar ]]; then
+	./_updaetPublisher -f -y
+    #${GIT_ROOT}/bin/get-publisher.sh
 fi
 
-java -jar ${GIT_ROOT}/ig-root/input-cache/publisher.jar  -ig ${GIT_ROOT}/ig-root/ig.ini
+./_genonce.sh
 
 echo ================= FINISHED BUILDING =========================
