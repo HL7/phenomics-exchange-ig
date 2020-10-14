@@ -3,9 +3,9 @@
 	xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir ">
-	<id value="cig-patient"></id>
-	<url value="StructureDefinition/cig-patient" />
-	<name value="cig-patient" />
+	<id value="cig-patient"/>
+	<url value="http://phenopackets.org/core-ig/master/StructureDefinition/cig-patient" />
+	<name value="CoreIgPatient" />
 	<status value="draft" />
 	<kind value="resource" />
 	<abstract value="false" />

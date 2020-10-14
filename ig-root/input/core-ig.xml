@@ -5,9 +5,9 @@
 	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir ">
 	<id value="phenopackets-core-ig" />
 	<url
-		value="http://phenopackets.org/core-ig/master/ImplementationGuide-phenopackets-core-ig.xml" />
+		value="http://phenopackets.org/core-ig/master/ImplementationGuide/phenopackets-core-ig" />
 	<version value="0.0.1" />
-	<name value="Phenopackets Core IG" />
+	<name value="PhenopacketeCoreIg" />
 	<status value="draft" />
 	<packageId value="phenopackets-core-ig" />
 	<fhirVersion value="4.0.1" />
