@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir"
+	xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir ">
+	<id value="phenopackets-core-ig" />
+	<url
+		value="http://phenopackets.org/core-ig/master/ImplementationGuide-phenopackets-core-ig.xml" />
+	<version value="0.0.1" />
+	<name value="Phenopackets Core IG" />
+	<status value="draft" />
+	<packageId value="phenopackets-core-ig" />
+	<fhirVersion value="4.0.1" />
+	<definition>
+		<resource>
+
+			<reference>
+				<reference value="StructureDefinition/cig-patient" />
+			</reference>
+			<name value="Example Patient profile" />
+			<description value="Example Patient profile description."></description>
+		</resource>
+
+		<page>
+			<!-- The root will always be toc.html - the template will force it if you don't do it -->
+			<nameUrl value="toc.html" />
+			<title value="Table of Contents" />
+			<generation value="html" />
+			<page>
+				<nameUrl value="index.html" />
+				<title value="Phenopackets Core IG Home Page" />
+				<generation value="html" />
+			</page>
+		</page>
+
+		<!-- See https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters -->
+		<parameter>
+			<code value="releaselabel" />
+			<value value="draft" />
+		</parameter>
+		<parameter>
+			<code value="copyrightyear" />
+			<value value="2020+" />
+		</parameter>
+		<parameter>
+			<code value="path-resource" />
+			<value value="input/profiles" />
+		</parameter>
+
+
+		<parameter>
+			<code value="logging" />
+			<value value="init" />
+		</parameter>
+		<parameter>
+			<code value="logging" />
+			<value value="progress" />
+		</parameter>
+		<parameter>
+			<code value="logging" />
+			<value value="tx" />
+		</parameter>
+		<!-- following 2 are noisy -->
+		<!-- <parameter> <code value="logging" /> <value value="generate" /> </parameter> -->
+		<!-- <parameter> <code value="logging" /> <value value="html" /> </parameter> -->
+	</definition>
+</ImplementationGuide>
