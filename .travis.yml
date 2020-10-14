@@ -3,9 +3,10 @@ language: ruby
 sudo: required
 
 before_install:
-    - sudo apt-get install jq ruby-full build-essential zlib1g-dev
-    - sudo gem install jekyll bundler
-    - bash -c "echo working directory $(pwd)"
+#    - sudo apt-get install jq ruby-full build-essential zlib1g-dev
+#    - sudo gem install jekyll bundler
+#    - bash -c "echo working directory $(pwd)"
+    - sudo gem install jekyll
 
 script:
     - bin/build-ig.sh
