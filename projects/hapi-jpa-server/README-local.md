@@ -15,4 +15,3 @@ How to run the FHIR server in this project
 - To start the server with a clean empty database, or if the database gets corrupted or locked due to a crash, run mvn clean jetty:run
 - If you would like the server to apply validation, you need to run  mvn -Dspring.config.location=classpath:/application-validate.yaml jetty:run
 
-Without validation the server will accept any instance even if it's not valid according to the spec.

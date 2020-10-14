@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 import org.hl7.fhir.r5.model.CapabilityStatement;
+import org.phenopackets.coreig.PPValidator;
 
 import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.narrative.DefaultThymeleafNarrativeGenerator;
@@ -59,9 +60,7 @@ public class PPConfig {
 		return parser;
 	}
 
-	static public IValidatorModule getValidatorModule() {
-		FhirValidator validator = getContext().newValidator();
-		return null;
+	static public PPValidator getPPValidator() {
+		return new PPValidator(getContext());
 	}
-
 }

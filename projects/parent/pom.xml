@@ -37,6 +37,11 @@
 			<artifactId>hapi-fhir-structures-r4</artifactId>
 			<version>${hapifhir_version}</version>
 		</dependency>
+		<dependency>
+			<groupId>ca.uhn.hapi.fhir</groupId>
+			<artifactId>hapi-fhir-structures-r5</artifactId>
+			<version>${hapifhir_version}</version>
+		</dependency>
 
 		<dependency>
 			<groupId>ca.uhn.hapi.fhir</groupId>
@@ -51,11 +56,11 @@
 		</dependency>
 
 		<!-- for schema validation -->
-		<dependency>
-			<groupId>ca.uhn.hapi.fhir</groupId>
-			<artifactId>hapi-fhir-validation-resources-r4</artifactId>
-			<version>5.1.0</version>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>ca.uhn.hapi.fhir</groupId> -->
+<!-- 			<artifactId>hapi-fhir-validation-resources-r4</artifactId> -->
+<!-- 			<version>5.1.0</version> -->
+<!-- 		</dependency> -->
 
 
 <!-- 		<dependency> -->

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xml="http://www.w3.org/XML/1998/namespace"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd">
+	<id value="template" />
+
+	<text>
+		<status value="generated" />
+		<h:div>ValueSet template file</h:div>
+	</text>
+	<url value="http://core-ig/ValueSet/template" />
+	<status value="unknown" />
+	<expansion>
+		<timestamp value="2020" />
+		<contains>
+			<system value="http://hpo" />
+			<code value="HP:SomeCode" />
+			<display value="Some code" />
+		</contains>
+	</expansion>
+
+</ValueSet>

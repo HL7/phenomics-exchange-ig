@@ -81,9 +81,10 @@ public class ValidateObservationExamples {
 
 		Observation obs = new Observation();
 
-		IGenericClient clienet = PPConfig.getClient();
+		IGenericClient client = PPConfig.getClient();
+	client.validate();
 		UnprocessableEntityException e = assertThrows(UnprocessableEntityException.class, () -> {
-			MethodOutcome outcome = clienet.create().resource(obs).execute();
+			MethodOutcome outcome = client.create().resource(obs).execute();
 		});
 		System.out.println("========== 1 ===========");
 		System.out.println(e.getMessage());
@@ -92,7 +93,7 @@ public class ValidateObservationExamples {
 
 		obs.getText().getDiv().addText("Some narrative content");
 		e = assertThrows(UnprocessableEntityException.class, () -> {
-			MethodOutcome outcome = clienet.create().resource(obs).execute();
+			MethodOutcome outcome = client.create().resource(obs).execute();
 		});
 
 		System.out.println("========== 2 ===========");
@@ -104,7 +105,7 @@ public class ValidateObservationExamples {
 		obs.getCode().addCoding().setCode("SomeCode");
 		obs.setStatus(ObservationStatus.AMENDED);
 		e = assertThrows(UnprocessableEntityException.class, () -> {
-			MethodOutcome outcome = clienet.create().resource(obs).execute();
+			MethodOutcome outcome = client.create().resource(obs).execute();
 		});
 		System.out.println("========= 3 ============");
 		System.out.println(e.getMessage());
@@ -114,7 +115,7 @@ public class ValidateObservationExamples {
 
 		obs.getText().setStatus(NarrativeStatus.GENERATED);
 
-		MethodOutcome outcome = clienet.create().resource(obs).execute();
+		MethodOutcome outcome = client.create().resource(obs).execute();
 		assertTrue(outcome.getCreated());
 
 		System.out.println("========= 4 ============");
