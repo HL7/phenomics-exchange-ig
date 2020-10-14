@@ -4,9 +4,6 @@ sudo: required
 
 before_install:
     - sudo apt-get install jq ruby-full build-essential zlib1g-dev
-    - sudo gem pristine executable-hooks --version 1.6.0
-    - sudo gem pristine gem-wrappers --version 1.4.0
-    - sudo gem pristine nokogiri --version 1.10.9
     - sudo gem install jekyll bundler
 #    - bash -c "echo working directory $(pwd)"
 
