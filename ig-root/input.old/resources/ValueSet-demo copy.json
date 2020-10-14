@@ -1,5 +1,0 @@
-{
-	"$schema": "http://hl7.org/fhir/fhir.schema.json",
-	"resourceType":"ValueSet"
-}
-	

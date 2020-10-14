@@ -43,10 +43,6 @@
 			<value value="2020+" />
 		</parameter>
 		<parameter>
-			<code value="path-resource" />
-			<value value="input/profiles" />
-		</parameter>
-		<parameter>
 			<code value="find-other-resources" />
 			<value value="false" />
 		</parameter>
