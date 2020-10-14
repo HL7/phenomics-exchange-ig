@@ -39,7 +39,7 @@ git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-
 
 cd $GIT_ROOT/ig-root
 if [[ ! -f input-cache/publisher.jar ]]; then
-	./_updaetPublisher -f -y
+	./_updaetPublisher.sh -f -y
     #${GIT_ROOT}/bin/get-publisher.sh
 fi
 
