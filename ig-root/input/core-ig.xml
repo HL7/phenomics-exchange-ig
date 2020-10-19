@@ -4,8 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir ">
 	<id value="phenopackets-core-ig" />
-	<url
-		value="http://phenopackets.org/core-ig/master/ImplementationGuide/phenopackets-core-ig" />
+	<url value="http://phenopackets.org/core-ig/master/ImplementationGuide/phenopackets-core-ig" />
 	<version value="0.0.1" />
 	<name value="PhenopacketeCoreIg" />
 	<status value="draft" />
@@ -13,12 +12,15 @@
 	<fhirVersion value="4.0.1" />
 	<definition>
 		<resource>
-
 			<reference>
 				<reference value="StructureDefinition/cig-patient" />
 			</reference>
-			<name value="Example Patient profile" />
 			<description value="Example Patient profile description."></description>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="StructureDefinition/karyotypic-sex" />
+			</reference>
 		</resource>
 
 		<page>
