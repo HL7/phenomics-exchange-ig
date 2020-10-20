@@ -21,6 +21,28 @@
 			<reference>
 				<reference value="StructureDefinition/karyotypic-sex" />
 			</reference>
+			<name value="Karyotypic Sex Observation" />
+			<description value="Karyotypic Sex Observation description." />
+		</resource>
+		<resource>
+			<reference>
+				<reference value="Observation/example-kts-1" />
+			</reference>
+			<name value="A starting example for Observation based karyotypic sex" />
+			<description value="The description" />
+			<exampleCanonical
+				value="http://phenopackets.org/core-ig/master/StructureDefinition/karyotypic-sex" />
+			<!-- <exampleBoolean value="true" /> -->
+		</resource>
+		<resource>
+			<reference>
+				<reference value="ValueSet/karyotypic-sex" />
+			</reference>
+		</resource>
+		<resource>
+			<reference>
+				<reference value="CodeSystem/karyotypic-sex" />
+			</reference>
 		</resource>
 
 		<page>
@@ -61,6 +83,14 @@
 		<parameter>
 			<code value="logging" />
 			<value value="tx" />
+		</parameter>
+		<parameter>
+			<code value="generate" />
+			<value value="genExamples" />
+		</parameter>
+		<parameter>
+			<code value="generate" />
+			<value value="example-narratives" />
 		</parameter>
 		<!-- following 2 are noisy -->
 		<!-- <parameter> <code value="logging" /> <value value="generate" /> </parameter> -->

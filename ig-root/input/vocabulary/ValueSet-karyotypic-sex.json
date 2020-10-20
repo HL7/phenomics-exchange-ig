@@ -1,28 +1,29 @@
 {
-    "resourceType": "ValueSet",
-    "url": "http://ga4gh.org/fhir/phenopackets/ValueSet/karyotypic-sex",
-    "version": "0.1.0",
-    "name": "KaryotypicSex",
-    "title": "Karyotypic Sex",
-    "status": "draft",
-    "experimental": false,
-    "publisher": "Global Alliance for Genomics and Health",
-    "contact": [
-        {
-            "telecom": [
-                {
-                    "system": "url",
-                    "value": "http://ga4gh.org"
-                }
-            ]
-        }
-    ],
-    "description": "Represents the chromosomal sex of an individual.",
-    "compose": {
-        "include": [
-            {
-                "system": "http://ga4gh.org/fhir/phenopackets/CodeSystem/karyotypic-sex"
-            }
-        ]
-    }
+	"resourceType": "ValueSet",
+	"id": "karyotypic-sex",
+	"url": "http://ga4gh.org/fhir/phenopackets/ValueSet/karyotypic-sex",
+	"version": "0.1.0",
+	"name": "KaryotypicSex",
+	"title": "Karyotypic Sex",
+	"status": "draft",
+	"experimental": false,
+	"publisher": "Global Alliance for Genomics and Health",
+	"contact": [
+		{
+			"telecom": [
+				{
+					"system": "url",
+					"value": "http://ga4gh.org"
+				}
+			]
+		}
+	],
+	"description": "Represents the chromosomal sex of an individual.",
+	"compose": {
+		"include": [
+			{
+				"system": "http://ga4gh.org/fhir/phenopackets/CodeSystem/karyotypic-sex"
+			}
+		]
+	}
 }

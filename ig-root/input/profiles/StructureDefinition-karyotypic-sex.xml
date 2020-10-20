@@ -6,6 +6,7 @@
 	<id value="karyotypic-sex" />
 	<url value="http://phenopackets.org/core-ig/master/StructureDefinition/karyotypic-sex" />
 	<name value="KaryotypicSex" />
+	<title value="Karyotypic Sex Observation" />
 	<status value="draft" />
 	<kind value="resource" />
 	<abstract value="false" />
@@ -17,7 +18,7 @@
 			<path value="Observation.code" />
 			<fixedCodeableConcept>
 				<coding>
-					<system value="http://snomed.info/sct"></system>
+					<system value="http://snomed.info/sct" />
 					<code value="312948004" />
 				</coding>
 				<text value="KaryotypicSex" />
