@@ -42,10 +42,12 @@
     "meta_data": {
         "resources": [
             {
-                "name": "HPO",
+                "id": "hp",
+                "name": "human phenotype ontology",
+                "version": "2020-10-12",
                 "namespace_prefix": "HP",
-                "url": "http://hpo-url",
-                "iri_prefix": "http://hpo-prefix"
+                "url": "http://purl.obolibrary.org/obo/hp.owl",
+                "iri_prefix": "http://purl.obolibrary.org/obo/HP_"
             }
         ]
     }
