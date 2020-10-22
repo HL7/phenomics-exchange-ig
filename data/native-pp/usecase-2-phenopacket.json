@@ -1,0 +1,52 @@
+{
+    "id": "uc2-pp1",
+    "subject": {
+        "id": "Patient-36-16DG1123",
+        "age": {
+            "age": "P10Y"
+        },
+        "sex": "FEMALE"
+    },
+    "phenotypic_features": [
+        {
+            "type": {
+                "id": "HP:0003429",
+                "label": "CNS hypomyelination"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0001249",
+                "label": "Intellectual disability"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0001298)",
+                "label": "Encephalopathy"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0000486",
+                "label": "Strabismus"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0002650",
+                "label": "Scoliosis"
+            }
+        }
+    ],
+    "meta_data": {
+        "resources": [
+            {
+                "name": "HPO",
+                "namespace_prefix": "HP",
+                "url": "http://hpo-url",
+                "iri_prefix": "http://hpo-prefix"
+            }
+        ]
+    }
+}
