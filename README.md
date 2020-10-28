@@ -15,3 +15,5 @@ To get JSON schema support in VS Code, add something like the following to your 
     ]
 }
 ```
+
+Once JSON schema support is enabled in an IDE, the first "discriminator" field that needs to be added to a JSON object that stands for a FHIR resource type to get the schema support for that object type is the "resourceType" field, along with a FHIR Resource type as the value. Auto complete should work if schema support is configured correctly.
