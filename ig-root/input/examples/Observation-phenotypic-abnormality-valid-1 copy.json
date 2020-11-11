@@ -53,26 +53,6 @@
           }
         ]
       }
-    },
-    {
-      "code": {
-        "coding": [
-          {
-            "code": "OTHER",
-            "system": "http://github.com/phenopackets/core-ig/CodeSystem/OTHER",
-            "display": "Severity"
-          }
-        ]
-      },
-      "valueCodeableConcept": {
-        "coding": [
-          {
-            "code": "OTHERTHING",
-            "system": "http://github.com/phenopackets/core-ig/CodeSystem/OTHER",
-            "display": "Mild"
-          }
-        ]
-      }
     }
   ]
 }

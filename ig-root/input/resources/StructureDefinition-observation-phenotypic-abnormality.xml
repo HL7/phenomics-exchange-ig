@@ -33,15 +33,19 @@
 			</type>
 		</element>
 
-		<!-- slicing on .code only for the severity and modifiers -->
-		<element id="Observation.component.SlicingA">
+		<!-- slicing on code.coding.system AND code.coding.code for the severity and modifiers components -->
+		<element >
 			<path value="Observation.component" />
 			<slicing>
 				<discriminator>
 					<type value="value" />
+					<path value="code.coding.system" />
+				</discriminator>
+				<discriminator>
+					<type value="value" />
 					<path value="code.coding.code" />
 				</discriminator>
-				<description value="Slicing for severity and clinical modifier" />
+				<description value="Slicing for severity and clinical modifier(s)" />
 				<ordered value="false" />
 				<rules value="open" />
 			</slicing>
@@ -53,6 +57,10 @@
 			<sliceName value="Severity" />
 			<definition value="Slice to hold phenotype abnormality severity" />
 			<max value="1" />
+		</element>
+		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -78,10 +86,13 @@
 			<max value="*" />
 		</element>
 		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+		</element>
+		<element>
 			<path value="Observation.component.code.coding.code" />
 			<fixedCode value="HP:0012823" />
 		</element>
-
 		<element>
 			<path value="Observation.component.value[x]" />
 			<min value="1" />
@@ -100,7 +111,8 @@
 			but that's too strong of a constraint at this point. We should allow both 
 			for now. -->
 
-		<element id="Observation.component.SlicingB">
+			<!--
+		<element >
 			<path value="Observation.component" />
 			<slicing>
 				<discriminator>
@@ -117,8 +129,9 @@
 			</slicing>
 			<max value="2" />
 		</element>
-
+	-->
 		<!-- Onset CodeableConcept slice -->
+		<!--
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="OnsetCodeableConcept" />
@@ -139,8 +152,9 @@
 				<valueSet value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset" />
 			</binding>
 		</element>
-
+	-->
 		<!-- Onset Quantity slice -->
+		<!--
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="OnsetQuantity" />
@@ -157,5 +171,6 @@
 				<code value="Quantity" />
 			</type>
 		</element>
+	-->
 	</differential>
 </StructureDefinition>
