@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd">
+  <id value="hpo" />
+  <url value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+  <version value="0.0.1"/>
+  <name value="HPO" />
+  <title value="A stub HPO CodeSystem" />
+  <status value="active" />
+  <experimental value="true" />
+  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." />
+  <content value="complete" />
+  <property>
+    <code value="synonym" />
+    <description value="Holds synonyms as strings" />
+    <type value="string" />
+  </property>
+  <property>
+    <code value="xref" />
+    <description value="Holds references to other codes in the form of Coding. This could be done in ConceptMap as well and that would be more useful. This is just a demo for how this works."></description>
+    <type value="Coding" />
+  </property>
+
+  <concept>
+    <code value="HP:0000001" />
+    <display value="All" />
+
+    <concept>
+      <code value="HP:0000118" />
+      <display value="Phenotypic abnormality" />
+
+
+      <concept>
+        <code value="HP:0000707" />
+        <display value="Abnormality of the nervous system" />
+
+        <!-- This is a nested/child concept-->
+        <!-- Showing how to represent synonynms both ways, and the xref info. other concepts are simple code/display -->
+        <!-- This info is from: https://hpo.jax.org/app/browse/term/0003429 -->
+        <concept>
+          <code value="HP:0003429" />
+          <display value="CNS hypomyelination" />
+          <definition value="Reduced amount of myelin in the central nervous system resulting from defective myelinogenesis." />
+          <designation>
+            <language value="en" />
+            <use>
+              <system value="http://snomed.info/sct" />
+              <code value="900000000000013009" />
+              <display value="Synonym" />
+            </use>
+            <value value="hypomyelination" />
+          </designation>
+          <property>
+            <code value="synonym" />
+            <valueString value="hypomyelination" />
+          </property>
+          <property>
+            <code value="xref" />
+            <valueCoding>
+              <system value="http://www.nlm.nih.gov/research/umls" />
+              <code value="C0544820" />
+            </valueCoding>
+          </property>
+          <property>
+            <code value="xref" />
+            <valueCoding>
+              <system value="http://www.nlm.nih.gov/research/umls" />
+              <code value="C4025616" />
+            </valueCoding>
+          </property>
+          <property>
+            <code value="xref" />
+            <valueCoding>
+              <system value="http://snomed.info/sct" />
+              <code value="111007000" />
+            </valueCoding>
+          </property>
+        </concept>
+
+        <concept>
+          <code value="HP:0001249" />
+          <display value="Intellectual disability" />
+        </concept>
+
+        <concept>
+          <code value="HP:0001298" />
+          <display value="Encephalopathy" />
+        </concept>
+      </concept>
+
+      <concept>
+        <code value="HP:0000486" />
+        <display value="Strabismus" />
+      </concept>
+
+
+      <concept>
+        <code value="HP:0002650" />
+        <display value="Scoliosis" />
+      </concept>
+
+    </concept>
+
+
+    <!--  clinical modifier hierarchy-->
+    <concept>
+      <code value="HP:0012823" />
+      <display value="Clinical modifier" />
+
+      <concept>
+        <code value="HP:0410401" />
+        <display value="Worse in evening" />
+      </concept>
+
+      <!--  severity clinical modifier sub hierarchy-->
+      <concept>
+        <code value="HP:0012824" />
+        <display value="Severity" />
+
+        <concept>
+          <code value="HP:0012825" />
+          <display value="Mild" />
+        </concept>
+
+      </concept>
+
+    </concept>
+
+    <!-- clinical course hierarchy -->
+    <concept>
+      <code value="HP:0031797" />
+      <display value="Clinical course" />
+
+      <!--  onset sub hierarchy-->
+      <concept>
+        <code value="HP:0003674" />
+        <display value="Onset" />
+
+        <concept>
+          <code value="HP:0003577" />
+          <display value="Congenital onset" />
+        </concept>
+
+        <concept>
+          <code value="HP:0003623" />
+          <display value="Neonatal onset" />
+        </concept>
+
+      </concept>
+
+    </concept>
+
+
+  </concept>
+
+</CodeSystem>

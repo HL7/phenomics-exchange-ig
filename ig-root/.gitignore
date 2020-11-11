@@ -24,3 +24,5 @@ Thumbs.db
 
 # shahim, ignore all for now
 /input-cache
+
+*.jar

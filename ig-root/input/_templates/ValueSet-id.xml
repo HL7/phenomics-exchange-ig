@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd">
+  <id value="" />
+  <url value="http://github.com/phenopackets/core-ig/ValueSet/.." />
+  <name value="" />
+  <title value="" />
+  <status value="draft" />
+  <description value="ValueSet description here" />
+  <compose>
+    <include>
+      <system value="" />
+      <concept>
+        <code value="testing" />
+        <display value="Testing display" />
+      </concept>
+    </include>
+  </compose>
+
+</ValueSet>

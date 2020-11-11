@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd">
+  <id value="phenotypic-severity" />
+  <url value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-severity" />
+  <name value="PhenotypicSeverityValueSet" />
+  <title value="Phenotypic severity ValueSet" />
+  <status value="active" />
+  <description value="ValueSet description here" />
+  <compose>
+    <include>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+      <filter>
+        <property value="concept" />
+        <op value="is-a" />
+        <value value="HP:0012824"></value>
+      </filter>
+    </include>
+
+    <!-- root concept can be excluded-->
+    <exclude>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <concept>
+        <code value="HP:0012824"/>
+      </concept>
+    </exclude>
+  </compose>
+
+</ValueSet>

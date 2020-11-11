@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns="http://hl7.org/fhir" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd">
+  <id value="phenotypic-onset" />
+  <url value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset" />
+  <name value="PhenotypicOnsetValueSet" />
+  <title value="Phenotypic onset ValueSet" />
+  <status value="active" />
+  <description value="ValueSet description here" />
+  <compose>
+    <include>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+      <filter>
+        <property value="concept" />
+        <op value="is-a" />
+        <value value="HP:0003674"></value>
+      </filter>
+    </include>
+
+    <!-- root concept can be excluded-->
+    <exclude>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+      <concept>
+        <code value="HP:0003674" />
+      </concept>
+      <!-- this is a valid onset code but being excluded to show ValueSet based validation -->
+      <!-- i.e. there is an example with this onset, which is valid according to the CodeSyste/hpo but because
+         it is not in this ValueSet, it should be flagged as an invalide entry-->
+      <!-- this exclusion should be removed at some point-->
+      <concept>
+        <code value="HP:0003623" />
+      </concept>
+    </exclude>
+
+  </compose>
+
+</ValueSet>
