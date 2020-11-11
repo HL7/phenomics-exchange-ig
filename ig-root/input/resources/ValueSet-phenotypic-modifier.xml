@@ -24,7 +24,7 @@
       </concept>
     </exclude>
 
-    <!-- exclude the severity hierarchy -->
+    <!-- exclude the severity sub hierarchy -->
     <exclude>
       <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
       <filter>

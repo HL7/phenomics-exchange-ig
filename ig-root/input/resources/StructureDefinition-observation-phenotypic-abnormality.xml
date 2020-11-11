@@ -45,6 +45,10 @@
 					<type value="value" />
 					<path value="code.coding.code" />
 				</discriminator>
+				<discriminator>
+					<type value="type" />
+					<path value="value" />
+				</discriminator>
 				<description value="Slicing for severity and clinical modifier(s)" />
 				<ordered value="false" />
 				<rules value="open" />
@@ -105,44 +109,29 @@
 			</binding>
 		</element>
 
+
 		<!-- Slicing on .code and type to allow 0-2 instances of age representation. 
 			One is Quanity, other is CodableConcept -->
 		<!-- This could made to have max 1 to force either CodeableConcept or Quantity, 
 			but that's too strong of a constraint at this point. We should allow both 
 			for now. -->
 
-			<!--
-		<element >
-			<path value="Observation.component" />
-			<slicing>
-				<discriminator>
-					<type value="value" />
-					<path value="code.coding.code" />
-				</discriminator>
-				<discriminator>
-					<type value="type" />
-					<path value="value[x]" />
-				</discriminator>
-				<description value="Slicing for onset as Quantity or CodeableConcept" />
-				<ordered value="false" />
-				<rules value="open" />
-			</slicing>
-			<max value="2" />
-		</element>
-	-->
 		<!-- Onset CodeableConcept slice -->
-		<!--
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="OnsetCodeableConcept" />
 			<max value="1" />
 		</element>
 		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+		</element>
+		<element>
 			<path value="Observation.component.code.coding.code" />
 			<fixedCode value="HP:0003674" />
 		</element>
 		<element>
-			<path value="Observation.component.value[x]" />
+			<path value="Observation.component.value" />
 			<min value="1" />
 			<type>
 				<code value="CodeableConcept" />
@@ -152,13 +141,16 @@
 				<valueSet value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset" />
 			</binding>
 		</element>
-	-->
+
 		<!-- Onset Quantity slice -->
-		<!--
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="OnsetQuantity" />
 			<max value="1" />
+		</element>
+		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -171,6 +163,6 @@
 				<code value="Quantity" />
 			</type>
 		</element>
-	-->
+
 	</differential>
 </StructureDefinition>
