@@ -33,8 +33,9 @@
 			</type>
 		</element>
 
-		<!-- slicing on code.coding.system AND code.coding.code for the severity and modifiers components -->
-		<element >
+		<!-- slicing on code.coding.system AND code.coding.code for the severity 
+			and modifiers components -->
+		<element>
 			<path value="Observation.component" />
 			<slicing>
 				<discriminator>
@@ -64,7 +65,7 @@
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.system" />
-			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -91,7 +92,7 @@
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.system" />
-			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -124,7 +125,7 @@
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.system" />
-			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -150,7 +151,7 @@
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.system" />
-			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />

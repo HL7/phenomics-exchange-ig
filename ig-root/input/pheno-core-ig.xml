@@ -63,6 +63,13 @@
       <name value="A valid phenotypic abnormality Observation example."/>
       <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality"/>
     </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/phenotypic-abnormality-invalid-1"/>
+      </reference>
+      <name value="An INVALID phenotypic abnormality Observation example."/>
+      <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality"/>
+    </resource>
 
     <!-- Base resoruces to have a placeholder page in the IG-->
     <!-- 

@@ -110,6 +110,10 @@
         <code value="HP:0410401" />
         <display value="Worse in evening" />
       </concept>
+      <concept>
+        <code value="HP:0031375" />
+        <display value="Refractory" />
+      </concept>      
 
       <!--  severity clinical modifier sub hierarchy-->
       <concept>
@@ -119,6 +123,10 @@
         <concept>
           <code value="HP:0012825" />
           <display value="Mild" />
+        </concept>
+        <concept>
+          <code value="HP:0012826" />
+          <display value="Moderate" />
         </concept>
 
       </concept>

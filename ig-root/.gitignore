@@ -26,3 +26,4 @@ Thumbs.db
 /input-cache
 
 *.jar
+/txCache
