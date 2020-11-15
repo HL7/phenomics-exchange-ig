@@ -60,7 +60,8 @@
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="Severity" />
-			<definition value="Slice to hold phenotype abnormality severity" />
+			<short value="Slice to hold phenotype abnormality severity, short."/>
+			<definition value="Slice to hold phenotype abnormality severity, definition." />
 			<max value="1" />
 		</element>
 		<element>
