@@ -33,15 +33,24 @@
 			</type>
 		</element>
 
-		<!-- slicing on .code only for the severity and modifiers -->
-		<element id="Observation.component.SlicingA">
+		<!-- slicing on code.coding.system AND code.coding.code for the severity 
+			and modifiers components -->
+		<element>
 			<path value="Observation.component" />
 			<slicing>
 				<discriminator>
 					<type value="value" />
+					<path value="code.coding.system" />
+				</discriminator>
+				<discriminator>
+					<type value="value" />
 					<path value="code.coding.code" />
 				</discriminator>
-				<description value="Slicing for severity and clinical modifier" />
+				<discriminator>
+					<type value="type" />
+					<path value="value" />
+				</discriminator>
+				<description value="Slicing for severity and clinical modifier(s)" />
 				<ordered value="false" />
 				<rules value="open" />
 			</slicing>
@@ -51,8 +60,13 @@
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="Severity" />
-			<definition value="Slice to hold phenotype abnormality severity" />
+			<short value="Slice to hold phenotype abnormality severity, short."/>
+			<definition value="Slice to hold phenotype abnormality severity, definition." />
 			<max value="1" />
+		</element>
+		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 		</element>
 		<element>
 			<path value="Observation.component.code.coding.code" />
@@ -78,10 +92,13 @@
 			<max value="*" />
 		</element>
 		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+		</element>
+		<element>
 			<path value="Observation.component.code.coding.code" />
 			<fixedCode value="HP:0012823" />
 		</element>
-
 		<element>
 			<path value="Observation.component.value[x]" />
 			<min value="1" />
@@ -94,29 +111,12 @@
 			</binding>
 		</element>
 
+
 		<!-- Slicing on .code and type to allow 0-2 instances of age representation. 
 			One is Quanity, other is CodableConcept -->
 		<!-- This could made to have max 1 to force either CodeableConcept or Quantity, 
 			but that's too strong of a constraint at this point. We should allow both 
 			for now. -->
-
-		<element id="Observation.component.SlicingB">
-			<path value="Observation.component" />
-			<slicing>
-				<discriminator>
-					<type value="value" />
-					<path value="code.coding.code" />
-				</discriminator>
-				<discriminator>
-					<type value="type" />
-					<path value="value[x]" />
-				</discriminator>
-				<description value="Slicing for onset as Quantity or CodeableConcept" />
-				<ordered value="false" />
-				<rules value="open" />
-			</slicing>
-			<max value="2" />
-		</element>
 
 		<!-- Onset CodeableConcept slice -->
 		<element>
@@ -125,11 +125,15 @@
 			<max value="1" />
 		</element>
 		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+		</element>
+		<element>
 			<path value="Observation.component.code.coding.code" />
 			<fixedCode value="HP:0003674" />
 		</element>
 		<element>
-			<path value="Observation.component.value[x]" />
+			<path value="Observation.component.value" />
 			<min value="1" />
 			<type>
 				<code value="CodeableConcept" />
@@ -147,6 +151,10 @@
 			<max value="1" />
 		</element>
 		<element>
+			<path value="Observation.component.code.coding.system" />
+			<fixedUri value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+		</element>
+		<element>
 			<path value="Observation.component.code.coding.code" />
 			<fixedCode value="HP:0003674" />
 		</element>
@@ -157,5 +165,6 @@
 				<code value="Quantity" />
 			</type>
 		</element>
+
 	</differential>
 </StructureDefinition>

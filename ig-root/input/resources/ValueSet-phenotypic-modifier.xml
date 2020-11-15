@@ -24,7 +24,16 @@
       </concept>
     </exclude>
 
-    <!-- exclude the severity hierarchy -->
+    <!-- Exclude this one just for demonstratin of the invalid-1 example-->
+    <!-- TODO: remove this exclusion at some point -->
+    <exclude>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+      <concept>
+        <code value="HP:0031375" />
+      </concept>
+    </exclude>
+
+    <!-- exclude the severity sub hierarchy -->
     <exclude>
       <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
       <filter>
