@@ -133,7 +133,7 @@
 			<fixedCode value="HP:0003674" />
 		</element>
 		<element>
-			<path value="Observation.component.value" />
+			<path value="Observation.component.value[x]" />
 			<min value="1" />
 			<type>
 				<code value="CodeableConcept" />
