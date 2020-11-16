@@ -1,0 +1,14 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": [
+        "/ig-root/input/examples/*.json",
+        "/ig-root/input/resources/*.json"
+      ],
+      "url": "http://www.hl7.org/fhir/R4/fhir.schema.json"
+    }
+  ],
+  "[xml]": {
+    "editor.defaultFormatter": "redhat.vscode-xml"
+  }
+}
