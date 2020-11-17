@@ -9,20 +9,20 @@
   <compose>
     <include>
       <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-      
+
       <!-- clinical modifier -->
       <concept>
         <code value="HP:0012823" />
       </concept>
-      
+
       <!-- severity -->
       <concept>
         <code value="HP:0012824" />
       </concept>
-      
+
       <!-- onset -->
       <concept>
-        <code value="HP:0003674" /> 
+        <code value="HP:0003674" />
       </concept>
     </include>
 

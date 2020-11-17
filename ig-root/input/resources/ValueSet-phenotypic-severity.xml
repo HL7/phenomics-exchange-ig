@@ -18,9 +18,9 @@
 
     <!-- root concept can be excluded-->
     <exclude>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
       <concept>
-        <code value="HP:0012824"/>
+        <code value="HP:0012824" />
       </concept>
     </exclude>
   </compose>

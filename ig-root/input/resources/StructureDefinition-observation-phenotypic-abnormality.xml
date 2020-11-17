@@ -3,9 +3,9 @@
 	<id value="observation-phenotypic-abnormality" />
 	<text>
 		<status value="additional" />
-    <h:div>
-      <h:p>Some limited HTML content.</h:p>
-    </h:div>
+		<h:div>
+			<h:p>Some limited HTML content.</h:p>
+		</h:div>
 	</text>
 	<url value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality" />
 	<name value="ObservationPhenotypicAbnormality" />
@@ -60,7 +60,7 @@
 		<element>
 			<path value="Observation.component" />
 			<sliceName value="Severity" />
-			<short value="Slice to hold phenotype abnormality severity, short."/>
+			<short value="Slice to hold phenotype abnormality severity, short." />
 			<definition value="Slice to hold phenotype abnormality severity, definition." />
 			<max value="1" />
 		</element>
