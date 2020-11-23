@@ -13,5 +13,5 @@ How to run the FHIR server in this project
 - run: mvn jetty:run  to start the server. It binds to port 8080.  The web interface is at / and the FHIR endpoint is at /fhir
 - CTRL-C ,or something like that on Mac, to kill the server
 - To start the server with a clean empty database, or if the database gets corrupted or locked due to a crash, run mvn clean jetty:run
-- If you would like the server to apply validation, you need to run  mvn -Dspring.config.location=classpath:/application-validate.yaml jetty:run
+- If you would like the server to apply validation, you need to run  mvn -D"spring.config.location=classpath:/application-validate.yaml" jetty:run
 
