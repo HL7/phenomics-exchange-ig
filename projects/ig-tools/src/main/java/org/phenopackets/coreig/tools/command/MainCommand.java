@@ -10,7 +10,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.List;
+import java.util.concurrent.Callable;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -194,7 +196,7 @@ public class MainCommand {
 	}
 
 	private void log(int level, String message, Logger logger2) {
-		if(reporter!=null) {
+		if (reporter != null) {
 			try {
 				reporter.flush();
 			} catch (IOException e) {
@@ -262,16 +264,25 @@ public class MainCommand {
 		if (command == null) {
 			commander.usage();
 		} else {
+
+			Callable<Void> commandObject = null;
 			switch (command) {
 			case "hello":
-				hello.call();
+				commandObject = hello;
 				break;
 			case "load":
-				load.call();
+				commandObject = load;
 				break;
 			default:
 				commander.usage();
+				return;
 			}
+			
+			main.info("", true, mainLogger);
+			main.info("Running command: " + commandObject.getClass().getName() + " on: " + new Date().toString(), true,
+					mainLogger);
+			main.info("===================================", true, mainLogger);
+			commandObject.call();
 		}
 
 		if (reporter != null) {

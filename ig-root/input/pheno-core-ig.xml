@@ -26,6 +26,22 @@
     </resource>
     <resource>
       <reference>
+        <reference value="CodeSystem/karyotypic-sex" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/karyotypic-sex" />
+      </reference>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/karyotypic-sex" />
+      </reference>
+    </resource>
+
+    <resource>
+      <reference>
         <reference value="ValueSet/phenotypic-abnormality" />
       </reference>
     </resource>
@@ -70,6 +86,22 @@
       <name value="An INVALID phenotypic abnormality Observation example."/>
       <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality"/>
     </resource>
+    
+    <resource>
+      <reference>
+        <reference value="Observation/karyotypic-sex-invalid-1"/>
+      </reference>
+      <name value="An INVALID karyotypic sex Observation instance."/>
+      <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="Observation/karyotypic-sex-valid-1"/>
+      </reference>
+      <name value="A VALID karyotypic sex Observation instance."/>
+      <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex"/>
+    </resource>
+
 
     <!-- Base resoruces to have a placeholder page in the IG-->
     <!-- 

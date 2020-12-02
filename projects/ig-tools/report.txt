@@ -238,3 +238,132 @@ Search returned: ImplementationGuide/http://localhost:8080/fhir/ImplementationGu
 Response resource: ImplementationGuide/ImplementationGuide/8/_history/3, revision: 3
 Validate outcome issues:
 
+
+Running load command...
+=======================
+Loading: CodeSystem/CodeSystem/hpo, url:http://github.com/phenopackets/core-ig/CodeSystem/hpo
+Search returned: CodeSystem/http://localhost:8080/fhir/CodeSystem/1/_history/4, revision: 4
+Response resource: CodeSystem/CodeSystem/1/_history/4, revision: 4
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-severity, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-severity
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/4/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/4/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-onset, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/2/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/2/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/6/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/6/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-component, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-component
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/5/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/5/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-modifier, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/3/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/3/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: StructureDefinition/StructureDefinition/observation-phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality
+Search returned: StructureDefinition/http://localhost:8080/fhir/StructureDefinition/7/_history/3, revision: 3
+Response resource: StructureDefinition/StructureDefinition/7/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ImplementationGuide/ImplementationGuide/pheno-core-ig, url:http://github.com/phenopackets/core-ig/ImplementationGuide/pheno-core-ig
+Search returned: ImplementationGuide/http://localhost:8080/fhir/ImplementationGuide/8/_history/3, revision: 3
+Response resource: ImplementationGuide/ImplementationGuide/8/_history/3, revision: 3
+Validate outcome issues:
+
+
+Running load command on: Wed Dec 02 13:02:02 PST 2020
+=======================
+Loading: CodeSystem/CodeSystem/hpo, url:http://github.com/phenopackets/core-ig/CodeSystem/hpo
+Search returned: CodeSystem/http://localhost:8080/fhir/CodeSystem/1/_history/4, revision: 4
+Response resource: CodeSystem/CodeSystem/1/_history/4, revision: 4
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-onset, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/2/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/2/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-severity, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-severity
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/4/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/4/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/6/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/6/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-modifier, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/3/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/3/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-component, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-component
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/5/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/5/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: StructureDefinition/StructureDefinition/observation-phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality
+Search returned: StructureDefinition/http://localhost:8080/fhir/StructureDefinition/7/_history/3, revision: 3
+Response resource: StructureDefinition/StructureDefinition/7/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ImplementationGuide/ImplementationGuide/pheno-core-ig, url:http://github.com/phenopackets/core-ig/ImplementationGuide/pheno-core-ig
+Search returned: ImplementationGuide/http://localhost:8080/fhir/ImplementationGuide/8/_history/3, revision: 3
+Response resource: ImplementationGuide/ImplementationGuide/8/_history/3, revision: 3
+Validate outcome issues:
+
+
+Running command: java.lang.String on: Wed Dec 02 13:04:04 PST 2020
+=======================
+Loading: CodeSystem/CodeSystem/hpo, url:http://github.com/phenopackets/core-ig/CodeSystem/hpo
+Search returned: CodeSystem/http://localhost:8080/fhir/CodeSystem/1/_history/4, revision: 4
+Response resource: CodeSystem/CodeSystem/1/_history/4, revision: 4
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-onset, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-onset
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/2/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/2/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-severity, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-severity
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/4/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/4/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/6/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/6/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-modifier, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/3/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/3/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ValueSet/ValueSet/phenotypic-component, url:http://github.com/phenopackets/core-ig/ValueSet/phenotypic-component
+Search returned: ValueSet/http://localhost:8080/fhir/ValueSet/5/_history/3, revision: 3
+Response resource: ValueSet/ValueSet/5/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: StructureDefinition/StructureDefinition/observation-phenotypic-abnormality, url:http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality
+Search returned: StructureDefinition/http://localhost:8080/fhir/StructureDefinition/7/_history/3, revision: 3
+Response resource: StructureDefinition/StructureDefinition/7/_history/3, revision: 3
+Validate outcome issues:
+
+Loading: ImplementationGuide/ImplementationGuide/pheno-core-ig, url:http://github.com/phenopackets/core-ig/ImplementationGuide/pheno-core-ig
+Search returned: ImplementationGuide/http://localhost:8080/fhir/ImplementationGuide/8/_history/3, revision: 3
+Response resource: ImplementationGuide/ImplementationGuide/8/_history/3, revision: 3
+Validate outcome issues:
+

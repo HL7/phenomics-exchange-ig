@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+  <id value="karyotypic-sex" />
+  <text>
+    <status value="generated" />
+    <h:div>
+      <h:p>Some limited HTML content.</h:p>
+    </h:div>
+  </text>
+  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex" />
+  <name value="KaryotypicSexSD" />
+  <title value="Karyotypic sex Observation profile" />
+  <status value="draft" />
+  <description value="Some description" />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <type value="Observation" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Observation" />
+  <derivation value="constraint" />
+
+  <differential>
+
+    <element id="Observation.code">
+      <path value="Observation.code" />
+      <short value="Fixing to GSSO chromosomal sex for now."/>
+      <definition value="Definition: Fixing to GSSO chromosomal sex for now."/>
+      <fixedCodeableConcept>
+        <coding>
+          <system value="http://purl.obolibrary.org/obo/GSSO"/>
+          <code value="GSSO:000113"/>
+        </coding>
+      </fixedCodeableConcept>
+    </element>
+
+    <element>
+      <path value="Observation.value[x]"/>
+      <short value="Short desc"/>
+      <definition value="Defintion.."/>
+      <min value="1"/>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <binding>
+        <strength value="required"/>
+        <description value="Some binding description"/>
+        <valueSet value="http://github.com/phenopackets/core-ig/ValueSet/karyotypic-sex"/>
+      </binding>
+    </element>
+
+  </differential>
+</StructureDefinition>
