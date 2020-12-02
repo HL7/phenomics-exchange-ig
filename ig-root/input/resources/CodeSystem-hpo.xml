@@ -19,6 +19,16 @@
     <description value="Holds references to other codes in the form of Coding. This could be done in ConceptMap as well and that would be more useful. This is just a demo for how this works."></description>
     <type value="Coding" />
   </property>
+  <property>
+    <code value="parent"/>
+    <uri value="http://hl7.org/fhir/concept-properties#parent"/>
+    <type value="code"/>
+  </property>
+  <property>
+    <code value="child"/>
+    <uri value="http://hl7.org/fhir/concept-properties#child"/>
+    <type value="code"/>
+  </property>
 
   <concept>
     <code value="HP:0000001" />
@@ -28,6 +38,10 @@
       <code value="HP:0000118" />
       <display value="Phenotypic abnormality" />
 
+      <property>
+        <code value="child"/>
+        <valueCode value="HP:0032223"/>
+      </property>
 
       <concept>
         <code value="HP:0000707" />
@@ -160,4 +174,12 @@
 
   </concept>
 
+  <concept>
+    <code value="HP:0032223" />
+    <display value="Blood group" />
+    <property>
+      <code value="parent" />
+      <valueCode value="HP:0000118"/>
+    </property>
+  </concept>
 </CodeSystem>

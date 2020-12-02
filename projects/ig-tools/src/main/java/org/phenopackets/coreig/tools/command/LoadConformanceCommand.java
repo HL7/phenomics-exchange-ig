@@ -10,9 +10,7 @@ import java.util.concurrent.Callable;
 
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
-import org.hl7.fhir.r4.model.IdType;
 import org.hl7.fhir.r4.model.ImplementationGuide;
-import org.hl7.fhir.r4.model.ImplementationGuide.ImplementationGuideDefinitionComponent;
 import org.hl7.fhir.r4.model.ImplementationGuide.ImplementationGuideDefinitionResourceComponent;
 import org.hl7.fhir.r4.model.MetadataResource;
 import org.hl7.fhir.r4.model.OperationOutcome;
@@ -20,17 +18,26 @@ import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.StringType;
+import org.phenopackets.coreig.tools.util.Utils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
 import ca.uhn.fhir.rest.gclient.StringClientParam;
 
 public class LoadConformanceCommand implements Callable<Void> {
+	
+	private static Logger logger = LoggerFactory.getLogger(LoadConformanceCommand.class);
 
 	private final MainCommand main;
-	private final StringBuilder sb = new StringBuilder();
 
-	private final Map<String, Set<Reference>> resources = new HashMap<>();
+	private final Map<String, Set<Reference>> refTypeMap = new HashMap<>();
+	private final List<ImplementationGuideDefinitionResourceComponent> examples = new ArrayList<>();
+	private ImplementationGuide ig;
+	private String igPrefix;
+	private String tagSystem;
+	
 
 	public LoadConformanceCommand(MainCommand main) {
 		this.main = main;
@@ -38,19 +45,27 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
-		ImplementationGuide ig = main.getIg();
-		ImplementationGuideDefinitionComponent definition = ig.getDefinition();
+		ig = main.getIg();
+		igPrefix = Utils.getIgPrefix(ig.getUrl());
+		tagSystem = igPrefix+"/idtag";
 		List<ImplementationGuideDefinitionResourceComponent> toRemove = new ArrayList<>();
+
 		for (ImplementationGuideDefinitionResourceComponent rc : ig.getDefinition().getResource()) {
+
+			if (rc.hasExample()) {
+				examples.add(rc);
+				continue;
+			}
+
 			Reference ref = rc.getReference();
-			String[] reference = ref.getReference().split("/");
-			if (reference.length == 2) {
-				Set<Reference> list = resources.get(reference[0]);
+			String[] refParts = ref.getReference().split("/");
+			if (refParts.length == 2) {
+				Set<Reference> list = refTypeMap.get(refParts[0]);
 				if (list == null) {
-					list = new HashSet();
-					resources.put(reference[0], list);
+					list = new HashSet<>();
+					refTypeMap.put(refParts[0], list);
 				}
-				switch (reference[0]) {
+				switch (refParts[0]) {
 				case "CodeSystem":
 				case "ValueSet":
 				case "StructureDefinition":
@@ -63,15 +78,22 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		}
 
+		// remove any references we haven't dealth with so far in terms of loading them
+		// to the server
 		ig.getDefinition().getResource().removeAll(toRemove);
 
-		loadResrouces(resources.get("CodeSystem"));
-		loadResrouces(resources.get("ValueSet"));
-		loadResrouces(resources.get("StructureDefinition"));
+		loadResrouces(refTypeMap.get("CodeSystem"));
+		loadResrouces(refTypeMap.get("ValueSet"));
+		loadResrouces(refTypeMap.get("StructureDefinition"));
+		loadExamples();
 		loadUpdate(ig);
 
-		System.out.println(sb.toString());
 		return null;
+	}
+
+	private void loadExamples() {
+		// TODO Auto-generated method stub
+
 	}
 
 	private void loadResrouces(Set<Reference> references) {
@@ -80,15 +102,13 @@ public class LoadConformanceCommand implements Callable<Void> {
 			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"));
 			String id = updatedMetadata.getIdElement().asStringValue();
 			reference.setReferenceElement(new StringType(id));
-			IdType it = new IdType();
-
-			System.out.println("debug");
 		}
 	}
 
 	private MetadataResource loadUpdate(MetadataResource resource) {
-		sb.append("Loading: ");
-		sb.append(resource.getResourceType().name() + "/" + resource.getId() + ", url:" + resource.getUrl() + "\n");
+		Utils.tagResourceId(resource, resource, tagSystem);
+		main.info("Loading: " + resource.getResourceType().name() + "/" + resource.getId() + ", url:"
+				+ resource.getUrl(), true, logger);
 		IGenericClient client = main.getClient();
 		String url = resource.getUrl();
 		Bundle bundle = (Bundle) client.search().forResource(resource.getClass())
@@ -99,40 +119,40 @@ public class LoadConformanceCommand implements Callable<Void> {
 		MethodOutcome crudOutcome = null;
 		if (entries.size() > 1) {
 			String json = main.getJsonParser().encodeResourceToString(bundle);
-			sb.append("Search returned: multiple bundle entries. JSON:\n");
-			sb.append(json);
-			sb.append("\nSkipping loading this resource\n\n");
+			main.warn("Search returned: multiple bundle entries. JSON:", true, logger);
+			main.warn(json, true, logger);
+			main.warn("Skipping loading this resource.", true, logger);
+			return null;
 
 		} else if (entries.size() == 1) {
 			existingResource = (MetadataResource) entries.get(0).getResource();
-			sb.append("Search returned: " + existingResource.getResourceType() + "/" + existingResource.getId()
-					+ ", revision: " + existingResource.getMeta().getVersionId() + "\n");
+			main.info("Search returned: " + existingResource.getResourceType() + "/" + existingResource.getId()
+					+ ", revision: " + existingResource.getMeta().getVersionId(), true, logger);
 			MetadataResource newResource = resource.copy();
 			newResource.setId(existingResource.getId());
 			crudOutcome = client.update().resource(newResource).execute();
 		} else {
-			sb.append("Creating new resource");
+			main.info("Creating new resource", true, logger);
 			crudOutcome = client.create().resource(resource).execute();
 		}
 
 		MetadataResource returnedResource = (MetadataResource) crudOutcome.getResource();
 		if (returnedResource != null) {
-			sb.append("Response resource: " + returnedResource.getResourceType().name() + "/" + returnedResource.getId()
-					+ ", revision: " + returnedResource.getMeta().getVersionId());
+			main.info("Response resource: " + returnedResource.getResourceType().name() + "/" + returnedResource.getId()
+					+ ", revision: " + returnedResource.getMeta().getVersionId(), true, logger);
 
 			OperationOutcome validateOutcome = (OperationOutcome) client.validate().resource(returnedResource).execute()
 					.getOperationOutcome();
-			sb.append("Validate outcome issues:\n");
+			main.info("Validate outcome issues:", true, logger);
 			for (OperationOutcomeIssueComponent issueComp : validateOutcome.getIssue()) {
 				IssueSeverity severity = issueComp.getSeverity();
 				switch (severity) {
 				case FATAL:
 				case ERROR:
-					sb.append(severity.name() + ": code:" + issueComp.getCode());
+					main.error(severity.name() + ": code:" + issueComp.getCode(), false, logger);
 					if (issueComp.getDetails() != null)
-						sb.append(", detail:" + issueComp.getDetails());
-					sb.append(", diagnostics:" + issueComp.getDiagnostics());
-					sb.append("\n");
+						main.error(", detail:" + issueComp.getDetails(), false, logger);
+					main.info(", diagnostics:" + issueComp.getDiagnostics(), true, logger);
 					break;
 				default:
 
@@ -142,24 +162,24 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		OperationOutcome outcome = (OperationOutcome) crudOutcome.getOperationOutcome();
 		if (outcome != null) {
-			sb.append("CRUD outcome issues:\n");
+			main.info("CRUD outcome issues:", true, logger);
 			for (OperationOutcomeIssueComponent issueComp : outcome.getIssue()) {
 				IssueSeverity severity = issueComp.getSeverity();
 				switch (severity) {
 				case FATAL:
 				case ERROR:
-					sb.append(severity.name() + ": code:" + issueComp.getCode());
+					main.info(severity.name() + ": code:" + issueComp.getCode(), false, logger);
 					if (issueComp.getDetails() != null)
-						sb.append(", detail:" + issueComp.getDetails().getCoding().get(0).getCode());
-					sb.append(", diagnostics:" + issueComp.getDiagnostics());
-					sb.append("\n");
+						main.info(", detail:" + issueComp.getDetails().getCoding().get(0).getCode(), false, logger);
+					main.info(", diagnostics:" + issueComp.getDiagnostics(), true, logger);
+
 					break;
 				default:
 
 				}
 			}
 		}
-		sb.append("\n");
+		main.info("", true, logger);
 		return returnedResource;
 
 	}

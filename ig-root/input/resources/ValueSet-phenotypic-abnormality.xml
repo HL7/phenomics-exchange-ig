@@ -12,7 +12,7 @@
       <filter>
         <property value="concept" />
         <op value="is-a" />
-        <value value="HP:0000118"></value>
+        <value value="HP:0000118"/>
       </filter>
     </include>
 
