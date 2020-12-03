@@ -35,15 +35,15 @@
 
     <element>
       <path value="Observation.value[x]"/>
-      <short value="Short desc"/>
-      <definition value="Defintion.."/>
+      <short value="karyotpic sex"/>
+      <definition value="This field must contain a value from the karyotypic sex value set"/>
       <min value="1"/>
       <type>
         <code value="CodeableConcept"/>
       </type>
       <binding>
         <strength value="required"/>
-        <description value="Some binding description"/>
+        <description value="One of the allowed values for karyotypic sex"/>
         <valueSet value="http://github.com/phenopackets/core-ig/ValueSet/karyotypic-sex"/>
       </binding>
     </element>

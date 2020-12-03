@@ -4,7 +4,7 @@
   <text>
     <status value="generated" />
     <h:div>
-      <h:p>Some limited HTML content.</h:p>
+      <h:p>The code system represents the karyotypic sex of an individual (also known as chromosomal sex).</h:p>
     </h:div>
   </text>
   <url value="http://github.com/phenopackets/core-ig/CodeSystem/karyotypic-sex" />
@@ -13,7 +13,7 @@
   <title value="Karyotypic sex code system" />
   <status value="draft" />
   <experimental value="true" />
-  <description value="Some description" />
+  <description value="karyotypic sex of an individual (also known as chromosomal sex)" />
   <content value="complete" />
 
   <concept>
@@ -24,7 +24,49 @@
 
   <concept>
     <code value="XX" />
-    <display value="XX" />
+    <display value="XX karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XY" />
+    <display value="XY karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XO" />
+    <display value="XO karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XXY" />
+    <display value="XXY karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XXX" />
+    <display value="XXX karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XXYY" />
+    <display value="XXYY karyotypic sex" />
+  </concept>
+
+  <concept>
+    <code value="XXXY" />
+    <display value="XXXY karyotypic sex" />
+  </concept>
+  <concept>
+    <code value="XXXX" />
+    <display value="XXXX karyotypic sex" />
+  </concept>
+  <concept>
+    <code value="XYY" />
+    <display value="XYY karyotypic sex" />
+  </concept>
+  <concept>
+    <code value="OTHER_KARYOTYPE" />
+    <display value="Other karyotype" />
   </concept>
 
 </CodeSystem>
