@@ -25,48 +25,58 @@
   <concept>
     <code value="XX" />
     <display value="XX karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes"/>
   </concept>
 
   <concept>
     <code value="XY" />
     <display value="XY karyotypic sex" />
+    <definition value="Karyotype with one X chromosome and one Y chromosome"/>
   </concept>
 
   <concept>
     <code value="XO" />
     <display value="XO karyotypic sex" />
+    <definition value="Karyotype with one X chromosome"/>
   </concept>
 
   <concept>
     <code value="XXY" />
     <display value="XXY karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes and one Y chromosome"/>
   </concept>
 
   <concept>
     <code value="XXX" />
     <display value="XXX karyotypic sex" />
+    <definition value="Karyotype with three X chromosomes"/>
   </concept>
 
   <concept>
     <code value="XXYY" />
     <display value="XXYY karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes and two Y chromosomes"/>
   </concept>
 
   <concept>
     <code value="XXXY" />
     <display value="XXXY karyotypic sex" />
+    <definition value="Karyotype with three X chromosomes and one Y chromosome"/>
   </concept>
   <concept>
     <code value="XXXX" />
     <display value="XXXX karyotypic sex" />
+    <definition value="Karyotype with four X chromosomes"/>
   </concept>
   <concept>
     <code value="XYY" />
     <display value="XYY karyotypic sex" />
+    <definition value="Karyotype with one X chromosome and two Y chromosomes"/>
   </concept>
   <concept>
     <code value="OTHER_KARYOTYPE" />
     <display value="Other karyotype" />
+    <definition value="Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY"/>
   </concept>
 
 </CodeSystem>
