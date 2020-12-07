@@ -182,5 +182,15 @@
       <valueCode value="HP:0000118" />
     </property>
   </concept>
+  <!-- This works properly, i.e. child of a chile is also recognized as an "is-a" relation -->
+  <!-- And this gets a level 2 in the docs! -->
+  <concept>
+    <code value="HP:0011793" />
+    <display value="Neoplasm by anatomical site" />
+    <property>
+      <code value="parent" />
+      <valueCode value="HP:0002664" />
+    </property>
+  </concept>
 
 </CodeSystem>
