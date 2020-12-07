@@ -1,6 +1,7 @@
 package org.phenopackets.coreig.tools.command;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -45,6 +46,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
+		
 		ig = main.getIg();
 		igPrefix = Utils.getIgPrefix(ig.getUrl());
 		tagSystem = igPrefix+"/idtag";

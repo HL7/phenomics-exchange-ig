@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeSystem xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+  <id value="karyotypic-sex" />
+  <text>
+    <status value="generated" />
+    <h:div>
+      <h:p>The code system represents the karyotypic sex of an individual (also known as chromosomal sex).</h:p>
+    </h:div>
+  </text>
+  <url value="http://github.com/phenopackets/core-ig/CodeSystem/karyotypic-sex" />
+  <version value="0.0.1" />
+  <name value="KaryotypicSexCS" />
+  <title value="Karyotypic sex code system" />
+  <status value="draft" />
+  <experimental value="true" />
+  <description value="karyotypic sex of an individual (also known as chromosomal sex)" />
+  <content value="complete" />
+
+  <concept>
+    <code value="UNKNOWN_KARYOTYPE" />
+    <display value="UNKNOWN_KARYOTYPE" />
+    <definition value="Untyped or inconclusive karyotyping"/>
+  </concept>
+
+  <concept>
+    <code value="XX" />
+    <display value="XX karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes"/>
+  </concept>
+
+  <concept>
+    <code value="XY" />
+    <display value="XY karyotypic sex" />
+    <definition value="Karyotype with one X chromosome and one Y chromosome"/>
+  </concept>
+
+  <concept>
+    <code value="XO" />
+    <display value="XO karyotypic sex" />
+    <definition value="Karyotype with one X chromosome"/>
+  </concept>
+
+  <concept>
+    <code value="XXY" />
+    <display value="XXY karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes and one Y chromosome"/>
+  </concept>
+
+  <concept>
+    <code value="XXX" />
+    <display value="XXX karyotypic sex" />
+    <definition value="Karyotype with three X chromosomes"/>
+  </concept>
+
+  <concept>
+    <code value="XXYY" />
+    <display value="XXYY karyotypic sex" />
+    <definition value="Karyotype with two X chromosomes and two Y chromosomes"/>
+  </concept>
+
+  <concept>
+    <code value="XXXY" />
+    <display value="XXXY karyotypic sex" />
+    <definition value="Karyotype with three X chromosomes and one Y chromosome"/>
+  </concept>
+  <concept>
+    <code value="XXXX" />
+    <display value="XXXX karyotypic sex" />
+    <definition value="Karyotype with four X chromosomes"/>
+  </concept>
+  <concept>
+    <code value="XYY" />
+    <display value="XYY karyotypic sex" />
+    <definition value="Karyotype with one X chromosome and two Y chromosomes"/>
+  </concept>
+  <concept>
+    <code value="OTHER_KARYOTYPE" />
+    <display value="Other karyotype" />
+    <definition value="Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY"/>
+  </concept>
+
+</CodeSystem>

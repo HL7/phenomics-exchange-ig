@@ -3,7 +3,7 @@
   <id value=".." />
   <text>
     <status value="generated" />
-    <h:div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+    <h:div>
       <h:p>Some limited HTML content.</h:p>
     </h:div>
   </text>
@@ -14,7 +14,7 @@
   <status value="draft" />
   <experimental value="true" />
   <description value="" />
-  <content value="example" />
+  <content value="complete" />
   <concept>
     <code value="" />
     <display value="" />
