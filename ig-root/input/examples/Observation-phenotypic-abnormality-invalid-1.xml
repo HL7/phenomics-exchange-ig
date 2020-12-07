@@ -8,6 +8,9 @@
       <h:p>Some example text. This comes from the .txt.div element.</h:p>
     </h:div>
   </text>
+  <extension url="http://github.com/phenopackets/core-ig/ig-tools/validation-error-count">
+    <valueInteger value="4" />
+  </extension>
   <status value="final" />
 
   <!-- This is the overall phenotypic abnormality -->

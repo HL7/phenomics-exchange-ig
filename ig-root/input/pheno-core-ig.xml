@@ -71,6 +71,14 @@
       </reference>
     </resource>
 
+
+    <!-- Extensions -->
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-validation-error-count" />
+      </reference>
+    </resource>
+
     <!-- Examples-->
     <resource>
       <reference>
@@ -101,6 +109,7 @@
       <name value="A VALID karyotypic sex Observation instance."/>
       <exampleCanonical value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex"/>
     </resource>
+
 
 
     <!-- Base resoruces to have a placeholder page in the IG-->

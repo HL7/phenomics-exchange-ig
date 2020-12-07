@@ -7,8 +7,9 @@
   <title value="A stub HPO CodeSystem" />
   <status value="active" />
   <experimental value="true" />
-  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." />
-  <content value="complete" />
+  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." /><hierarchyMeaning
+	value="is-a" />
+	<content value="complete" />
   <property>
     <code value="synonym" />
     <description value="Holds synonyms as strings" />

@@ -17,6 +17,7 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.hl7.fhir.r4.model.CodeSystem;
+import org.hl7.fhir.r4.model.DomainResource;
 import org.hl7.fhir.r4.model.ImplementationGuide;
 import org.hl7.fhir.r4.model.MetadataResource;
 import org.hl7.fhir.r4.model.StructureDefinition;
@@ -64,8 +65,11 @@ public class MainCommand {
 	@Parameter(names = "--lpath", description = "Path to logging file. Defaults to console.", converter = PathConverter.class)
 	private Path lpath = null;
 
-	@Parameter(names = "--quiet", description = "If set, no console log/reporting output.")
-	private boolean quiet = false;
+	@Parameter(names = "--rquiet", description = "If set, no console reporting output.")
+	private boolean rquiet = false;
+
+	@Parameter(names = "--lquiet", description = "If set, no console logging output.")
+	private boolean lquiet = false;
 
 	/////////////////////
 
@@ -84,6 +88,11 @@ public class MainCommand {
 	private IGenericClient client = null;
 
 	private OutputStreamWriter reporter = null;
+
+	private int errors = 0;
+	private int warnings = 0;
+	private int infos = 0;
+	private int debugs = 0;
 
 	public IGenericClient getClient() {
 		return client;
@@ -133,6 +142,15 @@ public class MainCommand {
 		return null;
 	}
 
+	public DomainResource loadResource(String fileName) {
+		try {
+			return (DomainResource) xmlParser.parseResource(new FileInputStream(igOutPath.resolve(fileName).toFile()));
+		} catch (ConfigurationException | DataFormatException | FileNotFoundException e) {
+			rethrow(e);
+		}
+		return null;
+	}
+
 	public ImplementationGuide getIg() {
 		List<Path> paths = null;
 		try {
@@ -165,24 +183,44 @@ public class MainCommand {
 		throw new RuntimeException(t);
 	}
 
-	public void error(String message, boolean newline, Logger logger) {
-		report(1, message, newline, logger);
+	public void header(String message, Logger l) {
+		if (rpath != null || !rquiet) {
+			// basically, if quiet and the reporter is console, don't print.
+			try {
+				reporter.write(message + "\n");
+
+			} catch (IOException e) {
+				rethrow(e);
+			}
+		}
+
+		// log as error to make sure it shows at all levels
+		l.error("RPRT HEADER: " + message);
 
 	}
 
-	public void warn(String message, boolean newline, Logger logger) {
-		report(2, message, newline, logger);
+	public void error(String message, boolean newline, Logger l) {
+		++errors;
+		report(1, message, newline, l);
+
 	}
 
-	public void info(String message, boolean newline, Logger logger) {
-		report(3, message, newline, logger);
+	public void warn(String message, boolean newline, Logger l) {
+		++warnings;
+		report(2, message, newline, l);
 	}
 
-	public void debug(String message, boolean newline, Logger logger) {
-		report(4, message, newline, logger);
+	public void info(String message, boolean newline, Logger l) {
+		++infos;
+		report(3, message, newline, l);
 	}
 
-	private void report(int level, String message, boolean newLine, Logger logger) {
+	public void debug(String message, boolean newline, Logger l) {
+		++debugs;
+		report(4, message, newline, l);
+	}
+
+	private void report(int level, String message, boolean newLine, Logger l) {
 		if (rlevel >= level && reporter != null) {
 			try {
 				reporter.write(message);
@@ -192,11 +230,12 @@ public class MainCommand {
 				rethrow(e);
 			}
 		}
-		log(level, "REPORT: " + message, logger);
+		log(level, "RPRT: " + message, l);
 	}
 
-	private void log(int level, String message, Logger logger2) {
+	private void log(int level, String message, Logger l) {
 		if (reporter != null) {
+			// just to make sure output is flushed to show in order
 			try {
 				reporter.flush();
 			} catch (IOException e) {
@@ -205,16 +244,16 @@ public class MainCommand {
 		}
 		switch (level) {
 		case 1:
-			logger2.error(message);
+			l.error(message);
 			break;
 		case 2:
-			logger2.warn(message);
+			l.warn(message);
 			break;
 		case 3:
-			logger2.info(message);
+			l.info(message);
 			break;
 		case 4:
-			logger2.debug(message);
+			l.debug(message);
 			break;
 		}
 
@@ -297,7 +336,7 @@ public class MainCommand {
 		LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
 		ch.qos.logback.classic.Logger rootLogger = context.getLogger(Logger.ROOT_LOGGER_NAME);
 		context.getLogger(Logger.ROOT_LOGGER_NAME).setLevel(llevel);
-		if (quiet) {
+		if (lquiet) {
 			rootLogger.detachAppender("STDOUT");
 		}
 		if (lpath != null) {
@@ -325,9 +364,8 @@ public class MainCommand {
 				rethrow(e);
 			}
 		} else {
-			if (!quiet) {
+			if (!rquiet)
 				reporter = new OutputStreamWriter(System.out);
-			}
 		}
 	}
 

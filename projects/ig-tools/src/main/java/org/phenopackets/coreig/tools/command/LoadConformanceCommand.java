@@ -11,6 +11,7 @@ import java.util.concurrent.Callable;
 
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
+import org.hl7.fhir.r4.model.DomainResource;
 import org.hl7.fhir.r4.model.ImplementationGuide;
 import org.hl7.fhir.r4.model.ImplementationGuide.ImplementationGuideDefinitionResourceComponent;
 import org.hl7.fhir.r4.model.MetadataResource;
@@ -25,10 +26,16 @@ import org.slf4j.LoggerFactory;
 
 import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
+import ca.uhn.fhir.rest.gclient.ICriterion;
 import ca.uhn.fhir.rest.gclient.StringClientParam;
+import ca.uhn.fhir.rest.gclient.TokenClientParam;
 
+/**
+ * @author essaids
+ *
+ */
 public class LoadConformanceCommand implements Callable<Void> {
-	
+
 	private static Logger logger = LoggerFactory.getLogger(LoadConformanceCommand.class);
 
 	private final MainCommand main;
@@ -36,9 +43,6 @@ public class LoadConformanceCommand implements Callable<Void> {
 	private final Map<String, Set<Reference>> refTypeMap = new HashMap<>();
 	private final List<ImplementationGuideDefinitionResourceComponent> examples = new ArrayList<>();
 	private ImplementationGuide ig;
-	private String igPrefix;
-	private String tagSystem;
-	
 
 	public LoadConformanceCommand(MainCommand main) {
 		this.main = main;
@@ -48,8 +52,6 @@ public class LoadConformanceCommand implements Callable<Void> {
 	public Void call() throws Exception {
 		
 		ig = main.getIg();
-		igPrefix = Utils.getIgPrefix(ig.getUrl());
-		tagSystem = igPrefix+"/idtag";
 		List<ImplementationGuideDefinitionResourceComponent> toRemove = new ArrayList<>();
 
 		for (ImplementationGuideDefinitionResourceComponent rc : ig.getDefinition().getResource()) {
@@ -74,6 +76,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 					list.add(ref);
 					break;
 				default:
+					main.info("Ignoring reference: " + rc.getReference().getReference(), true, logger);
 					toRemove.add(rc);
 				}
 			}
@@ -88,29 +91,158 @@ public class LoadConformanceCommand implements Callable<Void> {
 		loadResrouces(refTypeMap.get("ValueSet"));
 		loadResrouces(refTypeMap.get("StructureDefinition"));
 		loadExamples();
-		loadUpdate(ig);
+		loadUpdate(ig, true);
 
 		return null;
 	}
 
+	/**
+	 * the overall goal here is to load the examples both with a profile under
+	 * .meta.profile, and without a profile.
+	 * 
+	 * if the ig specifies the profile for the example, we make sure we add that
+	 * profile to one instance of the example if the example already has the profile
+	 * indicated by the ig, we load a copy of it without that profile
+	 * 
+	 * we'll add a reference to the ig instance for the additional copies loaded,
+	 * and tag that reference with a tooling extension.
+	 */
 	private void loadExamples() {
-		// TODO Auto-generated method stub
+		List<ImplementationGuideDefinitionResourceComponent> addedComponents = new ArrayList<>();
+		for (ImplementationGuideDefinitionResourceComponent rc : examples) {
+			String ref = rc.getReference().getReference();
+			String refProfile = rc.getExampleCanonicalType().asStringValue();
+
+			String[] refParts = ref.split("/");
+			DomainResource example = main.loadResource(refParts[0] + "-" + refParts[1] + ".xml");
+			main.header("Loading example: " + example.getId(), logger);
+
+			// search if already loaded
+			DomainResource existing = null;
+			DomainResource existingGenerated = null;
+
+			TokenClientParam tokenParam = new TokenClientParam("_tag");
+			ICriterion<TokenClientParam> tokenCriterion = tokenParam.exactly().systemAndCode(Utils.ID_TAG_IRI, ref);
+			Bundle bundle = (Bundle) main.getClient().search().forResource(example.getClass()).and(tokenCriterion)
+					.execute();
+
+			for (BundleEntryComponent entry : bundle.getEntry()) {
+				DomainResource resource = (DomainResource) entry.getResource();
+				if (resource.getMeta().getTag(Utils.TAG_URI, Utils.TAG_GENERATED) != null) {
+					existingGenerated = resource;
+					main.info("Found existing generated:" + existingGenerated.getId(), true, logger);
+				} else {
+					existing = resource;
+					main.info("Found existing:" + existing.getId(), true, logger);
+				}
+			}
+
+			// create or update original
+			DomainResource updated = null;
+			main.header("Creating or updating...", logger);
+
+			// without profile first
+			DomainResource exampleCopy = example.copy();
+			Utils.tagResourceId(exampleCopy, example);
+			MethodOutcome methodOutcome = null;
+			boolean created = false;
+			if (existing != null) {
+				exampleCopy.setId(existing.getId());
+				methodOutcome = main.getClient().update().resource(exampleCopy).execute();
+			} else {
+				methodOutcome = main.getClient().create().resource(exampleCopy).execute();
+				created = true;
+			}
+			Utils.checkOutcome(main, (OperationOutcome) methodOutcome.getOperationOutcome(), logger);
+			updated = (DomainResource) methodOutcome.getResource();
+			if (created) {
+				main.info("Created: " + updated.getId(), true, logger);
+			} else {
+				main.info("Updated: " + updated.getId(), true, logger);
+
+			}
+			rc.getReference().setReference(updated.getIdElement().asStringValue());
+
+			main.header("Validating...", logger);
+			Utils.validate(main, updated, refProfile, logger);
+
+			
+			// if the example doesn't already have the profile, and we have a profile, we'll
+			// add another example instance with the profile
+			DomainResource updatedGenerated = null;
+			if (refProfile != null && !updated.getMeta().hasProfile(refProfile)) {
+				// we'll add the profile to .meta.profile and create/update
+				DomainResource generatedCopy = example.copy();
+				generatedCopy.getMeta().addProfile(refProfile);
+				generatedCopy.getMeta().addTag(Utils.TAG_URI, "generated", "generated");
+				Utils.tagResourceId(generatedCopy, example);
+				MethodOutcome mo = null;
+				if (existingGenerated != null) {
+					generatedCopy.setId(existingGenerated.getId());
+					mo = main.getClient().update().resource(generatedCopy).execute();
+				} else {
+					mo = main.getClient().create().resource(generatedCopy).execute();
+				}
+				Utils.checkOutcome(main, (OperationOutcome) mo.getOperationOutcome(), logger);
+				generatedCopy = (DomainResource) mo.getResource();
+				Reference r = new Reference(generatedCopy);
+				ImplementationGuideDefinitionResourceComponent rcGenerated = new ImplementationGuideDefinitionResourceComponent();
+				rcGenerated.getReference().setReference(generatedCopy.getId());
+				rcGenerated.addExtension(Utils.TAG_URI, new StringType("generated"));
+				addedComponents.add(rcGenerated);
+				
+
+			} else {
+				// skip but delete any existing generated instance from the past.
+				if (existingGenerated != null) {
+					MethodOutcome execute = main.getClient().delete().resource(existingGenerated).execute();
+					Utils.checkOutcome(main, (OperationOutcome) execute.getOperationOutcome(), logger);
+				}
+			}
+
+//			//
+//			// now if we have a profile for the example, update or create
+//			if (refProfile != null) {
+//				exampleCopy = example.copy();
+//				Utils.tagResourceId(exampleCopy, example);
+//				if (!exampleCopy.getMeta().hasProfile(refProfile)) {
+//					exampleCopy.getMeta().addProfile(refProfile);
+//				}
+//				if (existingGenerated != null) {
+//					exampleCopy.setId(existingGenerated.getId());
+//					methodOutcome = main.getClient().update().resource(exampleCopy).execute();
+//				} else {
+//					methodOutcome = main.getClient().create().resource(exampleCopy).execute();
+//				}
+//				updatedGenerated = (DomainResource) methodOutcome.getResource();
+//			}
+//
+//			// TODO: validation and reporting
+		}
+		
+		ig.getDefinition().getResource().addAll(addedComponents);
 
 	}
 
 	private void loadResrouces(Set<Reference> references) {
 		for (Reference reference : references) {
 			String[] parts = reference.getReference().split("/");
-			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"));
-			String id = updatedMetadata.getIdElement().asStringValue();
-			reference.setReferenceElement(new StringType(id));
+			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"), false);
+			if (updatedMetadata != null) {
+				String id = updatedMetadata.getIdElement().asStringValue();
+				main.debug("Updating IG reference from:" + reference.getReference() + " to:" + id, true, logger);
+				reference.setReferenceElement(new StringType(id));
+			}
 		}
 	}
 
-	private MetadataResource loadUpdate(MetadataResource resource) {
-		Utils.tagResourceId(resource, resource, tagSystem);
-		main.info("Loading: " + resource.getResourceType().name() + "/" + resource.getId() + ", url:"
-				+ resource.getUrl(), true, logger);
+	private MetadataResource loadUpdate(MetadataResource resource, boolean deleteExisting) {
+		main.info(
+				"Loading: " + resource.getResourceType().name() + "/" + resource.getId() + ", url:" + resource.getUrl(),
+				true, logger);
+		MetadataResource resourceCopy = resource.copy();
+		Utils.tagResourceId(resourceCopy, resource);
+		
 		IGenericClient client = main.getClient();
 		String url = resource.getUrl();
 		Bundle bundle = (Bundle) client.search().forResource(resource.getClass())
@@ -118,71 +250,36 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		List<BundleEntryComponent> entries = bundle.getEntry();
 		MetadataResource existingResource = null;
-		MethodOutcome crudOutcome = null;
+		
 		if (entries.size() > 1) {
 			String json = main.getJsonParser().encodeResourceToString(bundle);
-			main.warn("Search returned: multiple bundle entries. JSON:", true, logger);
-			main.warn(json, true, logger);
-			main.warn("Skipping loading this resource.", true, logger);
+			main.warn("Search returned: multiple bundle entries. Skippping. JSON:", true, logger);
+			main.debug(json, true, logger);
 			return null;
 
 		} else if (entries.size() == 1) {
 			existingResource = (MetadataResource) entries.get(0).getResource();
 			main.info("Search returned: " + existingResource.getResourceType() + "/" + existingResource.getId()
 					+ ", revision: " + existingResource.getMeta().getVersionId(), true, logger);
-			MetadataResource newResource = resource.copy();
-			newResource.setId(existingResource.getId());
-			crudOutcome = client.update().resource(newResource).execute();
-		} else {
-			main.info("Creating new resource", true, logger);
-			crudOutcome = client.create().resource(resource).execute();
+		} 
+		
+		
+		if(deleteExisting && existingResource != null ) {
+			main.getClient().delete().resource(existingResource).execute();
+			existingResource = null;
+		}
+		
+		MethodOutcome mo = null;
+		
+		if (existingResource == null) {
+			 mo = main.getClient().create().resource(resourceCopy).execute();
+		}else {
+			resourceCopy.setId(existingResource.getId());
+			mo = main.getClient().update().resource(resourceCopy).execute();
 		}
 
-		MetadataResource returnedResource = (MetadataResource) crudOutcome.getResource();
-		if (returnedResource != null) {
-			main.info("Response resource: " + returnedResource.getResourceType().name() + "/" + returnedResource.getId()
-					+ ", revision: " + returnedResource.getMeta().getVersionId(), true, logger);
+		
 
-			OperationOutcome validateOutcome = (OperationOutcome) client.validate().resource(returnedResource).execute()
-					.getOperationOutcome();
-			main.info("Validate outcome issues:", true, logger);
-			for (OperationOutcomeIssueComponent issueComp : validateOutcome.getIssue()) {
-				IssueSeverity severity = issueComp.getSeverity();
-				switch (severity) {
-				case FATAL:
-				case ERROR:
-					main.error(severity.name() + ": code:" + issueComp.getCode(), false, logger);
-					if (issueComp.getDetails() != null)
-						main.error(", detail:" + issueComp.getDetails(), false, logger);
-					main.info(", diagnostics:" + issueComp.getDiagnostics(), true, logger);
-					break;
-				default:
-
-				}
-			}
-		}
-
-		OperationOutcome outcome = (OperationOutcome) crudOutcome.getOperationOutcome();
-		if (outcome != null) {
-			main.info("CRUD outcome issues:", true, logger);
-			for (OperationOutcomeIssueComponent issueComp : outcome.getIssue()) {
-				IssueSeverity severity = issueComp.getSeverity();
-				switch (severity) {
-				case FATAL:
-				case ERROR:
-					main.info(severity.name() + ": code:" + issueComp.getCode(), false, logger);
-					if (issueComp.getDetails() != null)
-						main.info(", detail:" + issueComp.getDetails().getCoding().get(0).getCode(), false, logger);
-					main.info(", diagnostics:" + issueComp.getDiagnostics(), true, logger);
-
-					break;
-				default:
-
-				}
-			}
-		}
-		main.info("", true, logger);
-		return returnedResource;
-
+		return (MetadataResource) mo.getResource();
 	}
 }

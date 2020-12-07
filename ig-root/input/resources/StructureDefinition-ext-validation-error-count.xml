@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+  <id value="ext-validation-error-count" />
+  <text>
+    <status value="generated" />
+    <h:div>
+      <h:p>Some limited HTML content.</h:p>
+    </h:div>
+  </text>
+  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/ext-validation-error-count" />
+  <name value="ValidationErrorCountExt" />
+  <title value="Validation error count" />
+  <status value="draft" />
+  <description value="An extension to use on any example resource to indicate count of number of validation errors expected based on the intended profile. This is a tooling related extension." />
+  <fhirVersion value="4.0.1" />
+  <kind value="resource" />
+  <abstract value="false" />
+  <context>
+    <type value="element" />
+    <expression value="Resource" />
+  </context>
+  <type value="Extension" />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Extension" />
+  <derivation value="constraint" />
+  <differential>
+    <element>
+      <path value="Extension.url" />
+      <fixedUri value="http://github.com/phenopackets/core-ig/ig-tools/validation-error-count" />
+    </element>
+    <element>
+      <path value="Extension.value[x]" />
+      <type>
+        <code value="integer" />
+      </type>
+    </element>
+  </differential>
+</StructureDefinition>
