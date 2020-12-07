@@ -7,9 +7,9 @@
   <title value="A stub HPO CodeSystem" />
   <status value="active" />
   <experimental value="true" />
-  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." /><hierarchyMeaning
-	value="is-a" />
-	<content value="complete" />
+  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." />
+  <hierarchyMeaning value="is-a" />
+  <content value="complete" />
   <property>
     <code value="synonym" />
     <description value="Holds synonyms as strings" />
@@ -21,15 +21,15 @@
     <type value="Coding" />
   </property>
   <property>
-    <code value="parent"/>
-    <uri value="http://hl7.org/fhir/concept-properties#parent"/>
-    <type value="code"/>
+    <code value="parent" />
+    <uri value="http://hl7.org/fhir/concept-properties#parent" />
+    <type value="code" />
   </property>
-  <property>
-    <code value="child"/>
-    <uri value="http://hl7.org/fhir/concept-properties#child"/>
-    <type value="code"/>
-  </property>
+<!--   <property>
+    <code value="child" />
+    <uri value="http://hl7.org/fhir/concept-properties#child" />
+    <type value="code" />
+  </property> -->
 
   <concept>
     <code value="HP:0000001" />
@@ -38,11 +38,6 @@
     <concept>
       <code value="HP:0000118" />
       <display value="Phenotypic abnormality" />
-
-      <property>
-        <code value="child"/>
-        <valueCode value="HP:0032223"/>
-      </property>
 
       <concept>
         <code value="HP:0000707" />
@@ -175,12 +170,17 @@
 
   </concept>
 
+  <!-- This is an example for how to place a concept in a hierarchy with the "parent" property -->
+  <!-- It works with multiple parents as well. But, the "level" will remain at 1 in the generagted HTML page for the CodeSystem. Not a big deal. -->
+  <!-- The ValueSet generation will include this concept as a child of its parent. -->
+  <!-- The other piece to make this work is needing the (hierarchyMeaning value="is-a") setting around line 11 above. -->
   <concept>
-    <code value="HP:0032223" />
-    <display value="Blood group" />
+    <code value="HP:0002664" />
+    <display value="Neoplasm" />
     <property>
       <code value="parent" />
-      <valueCode value="HP:0000118"/>
+      <valueCode value="HP:0000118" />
     </property>
   </concept>
+
 </CodeSystem>
