@@ -7,7 +7,7 @@
       <h:p>The word phenotype is used with many different meanings, including ‘the observable traits of an organism’. In medicine, the word can be used with at least two different meanings. It is used to refer to some observed deviation from normal morphology, physiology, or behavior. In contrast, the disease is a diagnosis, i.e., and inference or hypothesis about the cause underlying the observed phenotypic abnormalities.</h:p>
     </h:div>
   </text>
-  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/.." />
+  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/Disease" />
   <name value="DiseaseSD" />
   <title value="Disease Condition profile" />
   <status value="draft" />
@@ -16,7 +16,7 @@
   <kind value="resource" />
   <abstract value="false" />
   <type value="" />
-  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/.." />
+  <baseDefinition value="http://hl7.org/fhir/StructureDefinition/Condition" />
   <derivation value="constraint" />
   <differential>
     <element id="Condition.code">
