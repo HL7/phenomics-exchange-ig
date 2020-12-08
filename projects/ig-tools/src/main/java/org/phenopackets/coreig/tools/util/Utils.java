@@ -22,6 +22,7 @@ import org.phenopackets.coreig.tools.command.MainCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.server.exceptions.PreconditionFailedException;
 
 public class Utils {
@@ -82,21 +83,27 @@ public class Utils {
 		if (validationExt != null) {
 			maxErrors = Integer.valueOf(validationExt.getValue().primitiveValue());
 		}
-		main.info("Validating with profile: "+profile +", and max errors: "+maxErrors, true, l);
+		main.info("Validating with profile: " + profile + ", and max errors: " + maxErrors, true, l);
 		Parameters params = new Parameters();
 		if (profile != null) {
 			params.addParameter("profile", profile);
 		}
-		OperationOutcome outcome = null;
+		MethodOutcome methodOutcome = null;
+		OperationOutcome operationOutcome = null;
 		try {
-			outcome = (OperationOutcome) main.getClient().operation().onInstance(resource.getId()).named("$validate")
-					.withParameters(params).returnMethodOutcome().execute().getOperationOutcome();
+			methodOutcome = main.getClient().operation().onInstance(resource.getId()).named("$validate")
+					.withParameters(params).returnMethodOutcome().execute();
+			if (methodOutcome.getResource() instanceof OperationOutcome) {
+				operationOutcome = (OperationOutcome) methodOutcome.getResource();
+			} else {
+				operationOutcome = (OperationOutcome) methodOutcome.getOperationOutcome();
+			}
 		} catch (PreconditionFailedException e) {
 			// TODO Auto-generated catch block
-			outcome = (OperationOutcome) e.getOperationOutcome();
+			operationOutcome = (OperationOutcome) e.getOperationOutcome();
 		}
-		
-		int actualErrors = checkOutcome(main, outcome, l);
+
+		int actualErrors = checkOutcome(main, operationOutcome, l);
 
 		if (actualErrors > maxErrors) {
 			main.error("Validation error count of: " + actualErrors + " exceeded max allowed validation error count of:"
@@ -109,7 +116,7 @@ public class Utils {
 	}
 
 	public static int checkOutcome(MainCommand main, OperationOutcome outcome, Logger l) {
-		
+
 		Map<IssueSeverity, List<String>> issues = new HashMap<>();
 		issues.put(IssueSeverity.FATAL, new ArrayList<>());
 		issues.put(IssueSeverity.ERROR, new ArrayList<>());
@@ -137,7 +144,7 @@ public class Utils {
 		sb.append(issues.get(IssueSeverity.FATAL).size() + " fatals,");
 		sb.append(issues.get(IssueSeverity.ERROR).size() + " errors,");
 		sb.append(issues.get(IssueSeverity.WARNING).size() + " warnings,");
-		sb.append(issues.get(IssueSeverity.INFORMATION).size() + " infos,");
+		sb.append(issues.get(IssueSeverity.INFORMATION).size() + " infos");
 		main.header(sb.toString(), l);
 
 		// for each severity

@@ -50,6 +50,10 @@ public class MainCommand {
 	@Parameter(names = { "--server" }, description = "The server URL.")
 	private String serverUrl = null;
 
+	public String getServerUrl() {
+		return serverUrl;
+	}
+
 	@Parameter(names = {
 			"--rlevel" }, description = "The reporting level. OFF, ERROR, WARN, INFO, or DEBUG. Default is INFO. "
 					+ "Reporting is different than logging.", converter = RLevelConverter.class)

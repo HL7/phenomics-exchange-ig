@@ -19,6 +19,7 @@ import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
 import org.hl7.fhir.r4.model.Reference;
+import org.hl7.fhir.r4.model.Resource;
 import org.hl7.fhir.r4.model.StringType;
 import org.phenopackets.coreig.tools.util.Utils;
 import org.slf4j.Logger;
@@ -50,8 +51,10 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
-		
+
 		ig = main.getIg();
+		main.header("Loading IG: " + ig.getUrl() + " to server: " + main.getServerUrl(), logger);
+
 		List<ImplementationGuideDefinitionResourceComponent> toRemove = new ArrayList<>();
 
 		for (ImplementationGuideDefinitionResourceComponent rc : ig.getDefinition().getResource()) {
@@ -83,8 +86,14 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		}
 
-		// remove any references we haven't dealth with so far in terms of loading them
+		// remove any references we haven't dealt with so far in terms of loading them
 		// to the server
+		if (toRemove.size() > 0) {
+			main.info("Not loading the following resources...", true, logger);
+			for (ImplementationGuideDefinitionResourceComponent resource : toRemove) {
+				main.info(resource.getId(), true, logger);
+			}
+		}
 		ig.getDefinition().getResource().removeAll(toRemove);
 
 		loadResrouces(refTypeMap.get("CodeSystem"));
@@ -94,6 +103,18 @@ public class LoadConformanceCommand implements Callable<Void> {
 		loadUpdate(ig, true);
 
 		return null;
+	}
+
+	private void loadResrouces(Set<Reference> references) {
+		for (Reference reference : references) {
+			String[] parts = reference.getReference().split("/");
+			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"), false);
+			if (updatedMetadata != null) {
+				String id = updatedMetadata.getIdElement().asStringValue();
+				main.debug("Updating IG reference from:" + reference.getReference() + " to:" + id, true, logger);
+				reference.setReferenceElement(new StringType(id));
+			}
+		}
 	}
 
 	/**
@@ -115,6 +136,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 			String[] refParts = ref.split("/");
 			DomainResource example = main.loadResource(refParts[0] + "-" + refParts[1] + ".xml");
+			main.header("\n", logger);
 			main.header("Loading example: " + example.getId(), logger);
 
 			// search if already loaded
@@ -130,16 +152,15 @@ public class LoadConformanceCommand implements Callable<Void> {
 				DomainResource resource = (DomainResource) entry.getResource();
 				if (resource.getMeta().getTag(Utils.TAG_URI, Utils.TAG_GENERATED) != null) {
 					existingGenerated = resource;
-					main.info("Found existing generated:" + existingGenerated.getId(), true, logger);
+					main.info("Found existing generated: " + existingGenerated.getId(), true, logger);
 				} else {
 					existing = resource;
-					main.info("Found existing:" + existing.getId(), true, logger);
+					main.info("Found existing: " + existing.getId(), true, logger);
 				}
 			}
 
 			// create or update original
 			DomainResource updated = null;
-			main.header("Creating or updating...", logger);
 
 			// without profile first
 			DomainResource exampleCopy = example.copy();
@@ -153,20 +174,17 @@ public class LoadConformanceCommand implements Callable<Void> {
 				methodOutcome = main.getClient().create().resource(exampleCopy).execute();
 				created = true;
 			}
-			Utils.checkOutcome(main, (OperationOutcome) methodOutcome.getOperationOutcome(), logger);
 			updated = (DomainResource) methodOutcome.getResource();
 			if (created) {
 				main.info("Created: " + updated.getId(), true, logger);
 			} else {
 				main.info("Updated: " + updated.getId(), true, logger);
-
 			}
+			Utils.checkOutcome(main, (OperationOutcome) methodOutcome.getOperationOutcome(), logger);
 			rc.getReference().setReference(updated.getIdElement().asStringValue());
 
-			main.header("Validating...", logger);
 			Utils.validate(main, updated, refProfile, logger);
 
-			
 			// if the example doesn't already have the profile, and we have a profile, we'll
 			// add another example instance with the profile
 			DomainResource updatedGenerated = null;
@@ -180,8 +198,10 @@ public class LoadConformanceCommand implements Callable<Void> {
 				if (existingGenerated != null) {
 					generatedCopy.setId(existingGenerated.getId());
 					mo = main.getClient().update().resource(generatedCopy).execute();
+					main.info("Updated generated example: " + ((Resource) mo.getResource()).getId(), true, logger);
 				} else {
 					mo = main.getClient().create().resource(generatedCopy).execute();
+					main.info("Created generated example: " + ((Resource) mo.getResource()).getId(), true, logger);
 				}
 				Utils.checkOutcome(main, (OperationOutcome) mo.getOperationOutcome(), logger);
 				generatedCopy = (DomainResource) mo.getResource();
@@ -190,59 +210,47 @@ public class LoadConformanceCommand implements Callable<Void> {
 				rcGenerated.getReference().setReference(generatedCopy.getId());
 				rcGenerated.addExtension(Utils.TAG_URI, new StringType("generated"));
 				addedComponents.add(rcGenerated);
-				
 
 			} else {
 				// skip but delete any existing generated instance from the past.
 				if (existingGenerated != null) {
+					main.info("Deleting no longer needed existing generated example: " + existingGenerated.getId(),
+							true, logger);
 					MethodOutcome execute = main.getClient().delete().resource(existingGenerated).execute();
 					Utils.checkOutcome(main, (OperationOutcome) execute.getOperationOutcome(), logger);
 				}
 			}
 
-//			//
-//			// now if we have a profile for the example, update or create
-//			if (refProfile != null) {
-//				exampleCopy = example.copy();
-//				Utils.tagResourceId(exampleCopy, example);
-//				if (!exampleCopy.getMeta().hasProfile(refProfile)) {
-//					exampleCopy.getMeta().addProfile(refProfile);
-//				}
-//				if (existingGenerated != null) {
-//					exampleCopy.setId(existingGenerated.getId());
-//					methodOutcome = main.getClient().update().resource(exampleCopy).execute();
-//				} else {
-//					methodOutcome = main.getClient().create().resource(exampleCopy).execute();
-//				}
-//				updatedGenerated = (DomainResource) methodOutcome.getResource();
-//			}
-//
-//			// TODO: validation and reporting
+			// //
+			// // now if we have a profile for the example, update or create
+			// if (refProfile != null) {
+			// exampleCopy = example.copy();
+			// Utils.tagResourceId(exampleCopy, example);
+			// if (!exampleCopy.getMeta().hasProfile(refProfile)) {
+			// exampleCopy.getMeta().addProfile(refProfile);
+			// }
+			// if (existingGenerated != null) {
+			// exampleCopy.setId(existingGenerated.getId());
+			// methodOutcome = main.getClient().update().resource(exampleCopy).execute();
+			// } else {
+			// methodOutcome = main.getClient().create().resource(exampleCopy).execute();
+			// }
+			// updatedGenerated = (DomainResource) methodOutcome.getResource();
+			// }
+			//
+			// // TODO: validation and reporting
 		}
-		
+
 		ig.getDefinition().getResource().addAll(addedComponents);
 
 	}
 
-	private void loadResrouces(Set<Reference> references) {
-		for (Reference reference : references) {
-			String[] parts = reference.getReference().split("/");
-			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"), false);
-			if (updatedMetadata != null) {
-				String id = updatedMetadata.getIdElement().asStringValue();
-				main.debug("Updating IG reference from:" + reference.getReference() + " to:" + id, true, logger);
-				reference.setReferenceElement(new StringType(id));
-			}
-		}
-	}
-
 	private MetadataResource loadUpdate(MetadataResource resource, boolean deleteExisting) {
-		main.info(
-				"Loading: " + resource.getResourceType().name() + "/" + resource.getId() + ", url:" + resource.getUrl(),
-				true, logger);
+		main.header("\n", logger);
+		main.header("Loading: " + resource.getId() + ", url:" + resource.getUrl(), logger);
 		MetadataResource resourceCopy = resource.copy();
 		Utils.tagResourceId(resourceCopy, resource);
-		
+
 		IGenericClient client = main.getClient();
 		String url = resource.getUrl();
 		Bundle bundle = (Bundle) client.search().forResource(resource.getClass())
@@ -250,7 +258,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		List<BundleEntryComponent> entries = bundle.getEntry();
 		MetadataResource existingResource = null;
-		
+
 		if (entries.size() > 1) {
 			String json = main.getJsonParser().encodeResourceToString(bundle);
 			main.warn("Search returned: multiple bundle entries. Skippping. JSON:", true, logger);
@@ -259,26 +267,31 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		} else if (entries.size() == 1) {
 			existingResource = (MetadataResource) entries.get(0).getResource();
-			main.info("Search returned: " + existingResource.getResourceType() + "/" + existingResource.getId()
-					+ ", revision: " + existingResource.getMeta().getVersionId(), true, logger);
-		} 
-		
-		
-		if(deleteExisting && existingResource != null ) {
+			main.info("Search returned: " + existingResource.getId(), true, logger);
+		}
+
+		if (deleteExisting && existingResource != null) {
+			main.info("Deleting resource: " + existingResource.getId(), true, logger);
 			main.getClient().delete().resource(existingResource).execute();
 			existingResource = null;
 		}
-		
+
 		MethodOutcome mo = null;
-		
+
 		if (existingResource == null) {
-			 mo = main.getClient().create().resource(resourceCopy).execute();
-		}else {
+			main.info("Creating resource...", true, logger);
+			mo = main.getClient().create().resource(resourceCopy).execute();
+		} else {
 			resourceCopy.setId(existingResource.getId());
+			main.info("Updating resource: " + resourceCopy.getId(), true, logger);
 			mo = main.getClient().update().resource(resourceCopy).execute();
 		}
 
-		
+		Utils.checkOutcome(main, (OperationOutcome) mo.getOperationOutcome(), logger);
+
+		MetadataResource mr = (MetadataResource) mo.getResource();
+
+		Utils.validate(main, mr, null, logger);
 
 		return (MetadataResource) mo.getResource();
 	}
