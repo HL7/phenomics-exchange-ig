@@ -1,5 +1,8 @@
 package org.phenopackets.coreig.tools.command;
 
+import java.io.IOException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -135,7 +138,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 			String refProfile = rc.getExampleCanonicalType().asStringValue();
 
 			String[] refParts = ref.split("/");
-			DomainResource example = main.loadResource(refParts[0] + "-" + refParts[1] + ".xml");
+			DomainResource example = (DomainResource) main.loadResource(refParts[0] + "-" + refParts[1] + ".xml");
 			main.header("\n", logger);
 			main.header("Loading example: " + example.getId(), logger);
 
@@ -256,6 +259,8 @@ public class LoadConformanceCommand implements Callable<Void> {
 		Bundle bundle = (Bundle) client.search().forResource(resource.getClass())
 				.and(new StringClientParam("url").matchesExactly().value(url)).execute();
 
+
+
 		List<BundleEntryComponent> entries = bundle.getEntry();
 		MetadataResource existingResource = null;
 
@@ -276,6 +281,9 @@ public class LoadConformanceCommand implements Callable<Void> {
 			existingResource = null;
 		}
 
+		Utils.logRequest(main, logger);
+		Utils.logResponse(main, logger);
+		
 		MethodOutcome mo = null;
 
 		if (existingResource == null) {

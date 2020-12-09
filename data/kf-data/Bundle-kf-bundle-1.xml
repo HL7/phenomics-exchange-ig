@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+	<id value="kf-bundle-1" />
+	<type value="transaction" />
+
+	<!-- <entry> -->
+	<!-- <resource> -->
+	<!-- <Patient> -->
+	<!-- <id value="" /> -->
+	<!-- <meta> -->
+	<!-- <tag> -->
+	<!-- <system -->
+	<!-- value="http://github.com/phenopackets/core-ig/ig-tools/tag" /> -->
+	<!-- <code value="kfdata" /> -->
+	<!-- </tag> -->
+	<!-- </meta> -->
+	<!-- </Patient> -->
+	<!-- </resource> -->
+	<!-- <request> -->
+	<!-- <method value="POST" /> -->
+	<!-- <url value="" /> -->
+	<!-- </request> -->
+	<!-- </entry> -->
+
+	<!-- The patient for the second KF table here: https://phenopackets-analysis.readthedocs.io/en/latest/usecases-driver.html -->
+	<entry>
+		<resource>
+			<Patient>
+				<id value="patient-1" />
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+			</Patient>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Patient" />
+		</request>
+	</entry>
+
+	<entry>
+		<resource>
+			<Observation>
+				<id value="phenotype-1" />
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0011994" />
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient-1"></reference>
+				</subject>
+				<valueBoolean value="true" />
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<entry>
+		<resource>
+			<Observation>
+				<id value="phenotype-2" />
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0011563" />
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient-1"></reference>
+				</subject>
+				<valueBoolean value="true" />
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+
+
+
+</Bundle>

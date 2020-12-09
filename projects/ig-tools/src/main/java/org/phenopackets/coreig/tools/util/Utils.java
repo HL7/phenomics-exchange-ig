@@ -1,5 +1,10 @@
 package org.phenopackets.coreig.tools.util;
 
+import java.io.IOException;
+import java.io.Reader;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -23,6 +28,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import ca.uhn.fhir.rest.api.MethodOutcome;
+import ca.uhn.fhir.rest.client.apache.ApacheHttpRequest;
+import ca.uhn.fhir.rest.client.apache.ApacheHttpResponse;
+import ca.uhn.fhir.rest.client.api.IHttpRequest;
+import ca.uhn.fhir.rest.client.api.IHttpResponse;
 import ca.uhn.fhir.rest.server.exceptions.PreconditionFailedException;
 
 public class Utils {
@@ -106,11 +115,11 @@ public class Utils {
 		int actualErrors = checkOutcome(main, operationOutcome, l);
 
 		if (actualErrors > maxErrors) {
-			main.error("Validation error count of: " + actualErrors + " exceeded max allowed validation error count of:"
+			main.error("VALIDATION ERROR COUNT OF: " + actualErrors + " exceeded max allowed validation error count of:"
 					+ maxErrors, true, l);
 		}
 		if (actualErrors < maxErrors) {
-			main.warn("Validation error count of: " + actualErrors + " less than max allowed validation error count of:"
+			main.warn("VALIDATION ERROR COUNT OF: " + actualErrors + " less than max allowed validation error count of:"
 					+ maxErrors, true, l);
 		}
 	}
@@ -186,6 +195,116 @@ public class Utils {
 		}
 
 		return sb.toString();
+	}
+
+	public static String logRequest(MainCommand main, Logger l) {
+		String request = getRequest(main);
+		main.debug(request, true, l);
+		return request;
+	}
+
+	public static String getRequest(MainCommand main) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(getRequestMethod(main) + "\n");
+		sb.append(getRequestHeaders(main) + "\n");
+		sb.append(getRequestBody(main) + "\n");
+		return sb.toString();
+	}
+
+	public static String getRequestMethod(MainCommand main) {
+		ApacheHttpRequest request = (ApacheHttpRequest) main.getCapturing().getLastRequest();
+		StringBuilder sb = new StringBuilder();
+		sb.append(request.getHttpVerbName() + " ");
+		try {
+			sb.append(URLDecoder.decode(request.getUri(), StandardCharsets.UTF_8.toString()));
+		} catch (UnsupportedEncodingException e) {
+			main.rethrow(e);
+		}
+		sb.append(" " + request.getApacheRequest().getProtocolVersion());
+		return sb.toString();
+	}
+
+	public static String getRequestHeaders(MainCommand main) {
+		ApacheHttpRequest request = (ApacheHttpRequest) main.getCapturing().getLastRequest();
+		StringBuilder sb = new StringBuilder();
+		for (String header : request.getAllHeaders().keySet()) {
+			sb.append(header + ": " + request.getAllHeaders().get(header) + "\n");
+		}
+		return sb.toString();
+	}
+
+	public static String getRequestBody(MainCommand main) {
+		ApacheHttpRequest request = (ApacheHttpRequest) main.getCapturing().getLastRequest();
+		StringBuilder sb = new StringBuilder();
+		String bodyFromStream = null;
+		try {
+			bodyFromStream = request.getRequestBodyFromStream();
+			if (bodyFromStream == null) {
+				sb.append("NO BODY AVAILABLE");
+			} else {
+				sb.append(bodyFromStream);
+			}
+		} catch (IOException e) {
+			main.rethrow(e);
+			;
+		}
+		sb.append("\n");
+		return sb.toString();
+	}
+
+	public static String logResponse(MainCommand main, Logger l) {
+		String request = getResponse(main);
+		main.debug(request, true, l);
+		return request;
+	}
+
+	public static String getResponse(MainCommand main) {
+		StringBuilder sb = new StringBuilder();
+		sb.append(getResponseStatus(main) + "\n");
+		sb.append(getResponseHeaders(main) + "\n");
+		sb.append(getResponseBody(main) + "\n");
+		return sb.toString();
+	}
+
+	public static String getResponseStatus(MainCommand main) {
+		ApacheHttpResponse response = (ApacheHttpResponse) main.getCapturing().getLastResponse();
+		return response.getResponse().getStatusLine().toString();
+	}
+
+	public static String getResponseHeaders(MainCommand main) {
+		ApacheHttpResponse response = (ApacheHttpResponse) main.getCapturing().getLastResponse();
+		StringBuilder sb = new StringBuilder();
+		for (String header : response.getAllHeaders().keySet()) {
+			sb.append(header + ": " + response.getAllHeaders().get(header) + "\n");
+		}
+		return sb.toString();
+	}
+
+	public static String getResponseBody(MainCommand main) {
+		ApacheHttpResponse response = (ApacheHttpResponse) main.getCapturing().getLastResponse();
+		StringBuilder sb = new StringBuilder();
+		try {
+			sb.append(readReader(main,response.createReader()));
+		} catch (IOException e) {
+			main.rethrow(e);
+		}
+
+		return sb.toString();
+	}
+
+	private static String readReader(MainCommand main, Reader reader) {
+
+		char[] buffer = new char[4096];
+		StringBuilder builder = new StringBuilder();
+		int numChars;
+		try {
+			while ((numChars = reader.read(buffer)) >= 0) {
+				builder.append(buffer, 0, numChars);
+			}
+		} catch (IOException e) {
+			main.rethrow(e);
+		}
+		return builder.toString();
 	}
 
 }

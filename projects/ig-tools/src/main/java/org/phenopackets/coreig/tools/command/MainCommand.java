@@ -20,6 +20,7 @@ import org.hl7.fhir.r4.model.CodeSystem;
 import org.hl7.fhir.r4.model.DomainResource;
 import org.hl7.fhir.r4.model.ImplementationGuide;
 import org.hl7.fhir.r4.model.MetadataResource;
+import org.hl7.fhir.r4.model.Resource;
 import org.hl7.fhir.r4.model.StructureDefinition;
 import org.phenopackets.coreig.tools.util.LevelConverter;
 import org.phenopackets.coreig.tools.util.RLevelConverter;
@@ -35,6 +36,7 @@ import ca.uhn.fhir.context.FhirContext;
 import ca.uhn.fhir.parser.DataFormatException;
 import ca.uhn.fhir.parser.IParser;
 import ca.uhn.fhir.rest.client.api.IGenericClient;
+import ca.uhn.fhir.rest.client.interceptor.CapturingInterceptor;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.LoggerContext;
 import ch.qos.logback.classic.encoder.PatternLayoutEncoder;
@@ -98,6 +100,12 @@ public class MainCommand {
 	private int infos = 0;
 	private int debugs = 0;
 
+	private CapturingInterceptor capturing;
+
+	public CapturingInterceptor getCapturing() {
+		return capturing;
+	}
+
 	public IGenericClient getClient() {
 		return client;
 	}
@@ -146,9 +154,13 @@ public class MainCommand {
 		return null;
 	}
 
-	public DomainResource loadResource(String fileName) {
+	/**
+	 * @param fileName is relative to the IG output directory.
+	 * @return
+	 */
+	public Resource loadResource(String fileName) {
 		try {
-			return (DomainResource) xmlParser.parseResource(new FileInputStream(igOutPath.resolve(fileName).toFile()));
+			return (Resource) xmlParser.parseResource(new FileInputStream(igOutPath.resolve(fileName).toFile()));
 		} catch (ConfigurationException | DataFormatException | FileNotFoundException e) {
 			rethrow(e);
 		}
@@ -278,8 +290,9 @@ public class MainCommand {
 	public final static MainCommand main = new MainCommand();
 	public final static JCommander commander = new JCommander(main);
 
-	public final static HelloCommand hello = new HelloCommand(main);
 	public final static LoadConformanceCommand load = new LoadConformanceCommand(main);
+	public final static KFLoadData kfload = new KFLoadData(main);
+	public final static KFClearData kfclear = new KFClearData(main);
 
 	private static Logger mainLogger = LoggerFactory.getLogger(MainCommand.class);
 
@@ -300,8 +313,11 @@ public class MainCommand {
 		ctx = FhirContext.forR4();
 		xmlParser = ctx.newXmlParser();
 		jsonParser = ctx.newJsonParser().setPrettyPrint(true);
-		if (serverUrl != null)
+		if (serverUrl != null) {
 			client = ctx.newRestfulGenericClient(serverUrl);
+			this.capturing = new CapturingInterceptor();
+			client.registerInterceptor(capturing);
+		}
 
 		String command = commander.getParsedCommand();
 		if (command == null) {
@@ -310,17 +326,20 @@ public class MainCommand {
 
 			Callable<Void> commandObject = null;
 			switch (command) {
-			case "hello":
-				commandObject = hello;
-				break;
 			case "load":
 				commandObject = load;
+				break;
+			case "kfload":
+				commandObject = kfload;
+				break;
+			case "kfclear":
+				commandObject = kfclear;
 				break;
 			default:
 				commander.usage();
 				return;
 			}
-			
+
 			main.info("", true, mainLogger);
 			main.info("Running command: " + commandObject.getClass().getName() + " on: " + new Date().toString(), true,
 					mainLogger);
@@ -374,8 +393,9 @@ public class MainCommand {
 	}
 
 	private static void addCommands() {
-		commander.addCommand("hello", hello);
 		commander.addCommand("load", load);
+		commander.addCommand("kfload", kfload);
+		commander.addCommand("kfclear", kfclear);
 
 	}
 }

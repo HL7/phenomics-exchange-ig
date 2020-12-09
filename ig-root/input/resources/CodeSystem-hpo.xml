@@ -1,196 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<CodeSystem xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
-  <id value="hpo" />
-  <url value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-  <version value="0.0.1" />
-  <name value="HPO" />
-  <title value="A stub HPO CodeSystem" />
-  <status value="active" />
-  <experimental value="true" />
-  <description value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." />
-  <hierarchyMeaning value="is-a" />
-  <content value="complete" />
-  <property>
-    <code value="synonym" />
-    <description value="Holds synonyms as strings" />
-    <type value="string" />
-  </property>
-  <property>
-    <code value="xref" />
-    <description value="Holds references to other codes in the form of Coding. This could be done in ConceptMap as well and that would be more useful. This is just a demo for how this works."></description>
-    <type value="Coding" />
-  </property>
-  <property>
-    <code value="parent" />
-    <uri value="http://hl7.org/fhir/concept-properties#parent" />
-    <type value="code" />
-  </property>
-<!--   <property>
-    <code value="child" />
-    <uri value="http://hl7.org/fhir/concept-properties#child" />
-    <type value="code" />
-  </property> -->
+<CodeSystem xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+	<id value="hpo" />
+	<url value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+	<version value="0.0.1" />
+	<name value="HPO" />
+	<title value="A stub HPO CodeSystem" />
+	<status value="active" />
+	<experimental value="true" />
+	<description
+		value="A stub for the real HPO CodeSystem to use in other resources until we have a permanent HPO setup." />
+	<hierarchyMeaning value="is-a" />
+	<content value="complete" />
+	<property>
+		<code value="synonym" />
+		<description value="Holds synonyms as strings" />
+		<type value="string" />
+	</property>
+	<property>
+		<code value="xref" />
+		<description
+			value="Holds references to other codes in the form of Coding. This could be done in ConceptMap as well and that would be more useful. This is just a demo for how this works."></description>
+		<type value="Coding" />
+	</property>
+	<property>
+		<code value="parent" />
+		<uri value="http://hl7.org/fhir/concept-properties#parent" />
+		<type value="code" />
+	</property>
+	<!-- <property> <code value="child" /> <uri value="http://hl7.org/fhir/concept-properties#child" 
+		/> <type value="code" /> </property> -->
 
-  <concept>
-    <code value="HP:0000001" />
-    <display value="All" />
+	<concept>
+		<code value="HP:0000001" />
+		<display value="All" />
+	</concept>
 
-    <concept>
-      <code value="HP:0000118" />
-      <display value="Phenotypic abnormality" />
+	<concept>
+		<code value="HP:0000118" />
+		<display value="Phenotypic abnormality" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000001" />
+		</property>
+	</concept>
 
-      <concept>
-        <code value="HP:0000707" />
-        <display value="Abnormality of the nervous system" />
-
-        <!-- This is a nested/child concept-->
-        <!-- Showing how to represent synonynms both ways, and the xref info. other concepts are simple code/display -->
-        <!-- This info is from: https://hpo.jax.org/app/browse/term/0003429 -->
-        <concept>
-          <code value="HP:0003429" />
-          <display value="CNS hypomyelination" />
-          <definition value="Reduced amount of myelin in the central nervous system resulting from defective myelinogenesis." />
-          <designation>
-            <language value="en" />
-            <use>
-              <system value="http://snomed.info/sct" />
-              <code value="900000000000013009" />
-              <display value="Synonym" />
-            </use>
-            <value value="hypomyelination" />
-          </designation>
-          <property>
-            <code value="synonym" />
-            <valueString value="hypomyelination" />
-          </property>
-          <property>
-            <code value="xref" />
-            <valueCoding>
-              <system value="http://www.nlm.nih.gov/research/umls" />
-              <code value="C0544820" />
-            </valueCoding>
-          </property>
-          <property>
-            <code value="xref" />
-            <valueCoding>
-              <system value="http://www.nlm.nih.gov/research/umls" />
-              <code value="C4025616" />
-            </valueCoding>
-          </property>
-          <property>
-            <code value="xref" />
-            <valueCoding>
-              <system value="http://snomed.info/sct" />
-              <code value="111007000" />
-            </valueCoding>
-          </property>
-        </concept>
-
-        <concept>
-          <code value="HP:0001249" />
-          <display value="Intellectual disability" />
-        </concept>
-
-        <concept>
-          <code value="HP:0001298" />
-          <display value="Encephalopathy" />
-        </concept>
-      </concept>
-
-      <concept>
-        <code value="HP:0000486" />
-        <display value="Strabismus" />
-      </concept>
+	<concept>
+		<code value="HP:0000707" />
+		<display value="Abnormality of the nervous system" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000118" />
+		</property>
+	</concept>
 
 
-      <concept>
-        <code value="HP:0002650" />
-        <display value="Scoliosis" />
-      </concept>
+	<!-- This is a nested/child concept -->
+	<!-- Showing how to represent synonynms both ways, and the xref info. other 
+		concepts are simple code/display -->
+	<!-- This info is from: https://hpo.jax.org/app/browse/term/0003429 -->
+	<concept>
+		<code value="HP:0003429" />
+		<display value="CNS hypomyelination" />
+		<definition
+			value="Reduced amount of myelin in the central nervous system resulting 
+		from defective myelinogenesis." />
+		<designation>
+			<language value="en" />
+			<use>
+				<system value="http://snomed.info/sct" />
+				<code value="900000000000013009" />
+				<display value="Synonym" />
+			</use>
+			<value value="hypomyelination" />
+		</designation>
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000707" />
+		</property>
+		<property>
+			<code value="synonym" />
+			<valueString value="hypomyelination" />
+		</property>
+		<property>
+			<code value="xref" />
+			<valueCoding>
+				<system value="http://www.nlm.nih.gov/research/umls" />
+				<code value="C0544820" />
+			</valueCoding>
+		</property>
+		<property>
+			<code value="xref" />
+			<valueCoding>
+				<system value="http://www.nlm.nih.gov/research/umls" />
+				<code value="C4025616" />
+			</valueCoding>
+		</property>
+		<property>
+			<code value="xref" />
+			<valueCoding>
+				<system value="http://snomed.info/sct" />
+				<code value="111007000" />
+			</valueCoding>
+		</property>
+	</concept>
 
-    </concept>
+	<concept>
+		<code value="HP:0001249" />
+		<display value="Intellectual disability" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000707" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0001298" />
+		<display value="Encephalopathy" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000707" />
+		</property>
+	</concept>
 
 
-    <!--  clinical modifier hierarchy-->
-    <concept>
-      <code value="HP:0012823" />
-      <display value="Clinical modifier" />
+	<concept>
+		<code value="HP:0000486" />
+		<display value="Strabismus" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000118" />
+		</property>
+	</concept>
 
-      <concept>
-        <code value="HP:0410401" />
-        <display value="Worse in evening" />
-      </concept>
-      <concept>
-        <code value="HP:0031375" />
-        <display value="Refractory" />
-      </concept>
+	<concept>
+		<code value="HP:0002650" />
+		<display value="Scoliosis" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000118" />
+		</property>
+	</concept>
 
-      <!--  severity clinical modifier sub hierarchy-->
-      <concept>
-        <code value="HP:0012824" />
-        <display value="Severity" />
+	<!-- clinical modifier hierarchy -->
+	<concept>
+		<code value="HP:0012823" />
+		<display value="Clinical modifier" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000001" />
+		</property>
+	</concept>
 
-        <concept>
-          <code value="HP:0012825" />
-          <display value="Mild" />
-        </concept>
-        <concept>
-          <code value="HP:0012826" />
-          <display value="Moderate" />
-        </concept>
+	<!-- severity clinical modifier sub hierarchy -->
+	<concept>
+		<code value="HP:0012824" />
+		<display value="Severity" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0012823" />
+		</property>
+	</concept>
 
-      </concept>
+	<concept>
+		<code value="HP:0012825" />
+		<display value="Mild" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0012824" />
+		</property>
+	</concept>
 
-    </concept>
+	<concept>
+		<code value="HP:0012826" />
+		<display value="Moderate" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0012824" />
+		</property>
+	</concept>
 
-    <!-- clinical course hierarchy -->
-    <concept>
-      <code value="HP:0031797" />
-      <display value="Clinical course" />
+	<concept>
+		<code value="HP:0410401" />
+		<display value="Worse in evening" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0012823" />
+		</property>
+	</concept>
 
-      <!--  onset sub hierarchy-->
-      <concept>
-        <code value="HP:0003674" />
-        <display value="Onset" />
+	<concept>
+		<code value="HP:0031375" />
+		<display value="Refractory" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0012823" />
+		</property>
+	</concept>
 
-        <concept>
-          <code value="HP:0003577" />
-          <display value="Congenital onset" />
-        </concept>
+	<!-- clinical course hierarchy -->
+	<concept>
+		<code value="HP:0031797" />
+		<display value="Clinical course" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000001" />
+		</property>
+	</concept>
 
-        <concept>
-          <code value="HP:0003623" />
-          <display value="Neonatal onset" />
-        </concept>
+	<!-- onset sub hierarchy -->
+	<concept>
+		<code value="HP:0003674" />
+		<display value="Onset" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0031797" />
+		</property>
+	</concept>
 
-      </concept>
+	<concept>
+		<code value="HP:0003577" />
+		<display value="Congenital onset" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0003674" />
+		</property>
+	</concept>
 
-    </concept>
+	<concept>
+		<code value="HP:0003623" />
+		<display value="Neonatal onset" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0003674" />
+		</property>
+	</concept>
 
+	<concept>
+		<code value="HP:0002664" />
+		<display value="Neoplasm" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000118" />
+		</property>
+	</concept>
 
-  </concept>
+	<concept>
+		<code value="HP:0011793" />
+		<display value="Neoplasm by anatomical site" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0002664" />
+		</property>
+	</concept>
 
-  <!-- This is an example for how to place a concept in a hierarchy with the "parent" property -->
-  <!-- It works with multiple parents as well. But, the "level" will remain at 1 in the generagted HTML page for the CodeSystem. Not a big deal. -->
-  <!-- The ValueSet generation will include this concept as a child of its parent. -->
-  <!-- The other piece to make this work is needing the (hierarchyMeaning value="is-a") setting around line 11 above. -->
-  <concept>
-    <code value="HP:0002664" />
-    <display value="Neoplasm" />
-    <property>
-      <code value="parent" />
-      <valueCode value="HP:0000118" />
-    </property>
-  </concept>
-  <!-- This works properly, i.e. child of a chile is also recognized as an "is-a" relation -->
-  <!-- And this gets a level 2 in the docs! -->
-  <concept>
-    <code value="HP:0011793" />
-    <display value="Neoplasm by anatomical site" />
-    <property>
-      <code value="parent" />
-      <valueCode value="HP:0002664" />
-    </property>
-  </concept>
+	<concept>
+		<code value="HP:0001627" />
+		<display value="Abnormal heart morphology" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0000118" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0001671" />
+		<display value="Abnormal cardiac septum morphology" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0001627" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0011994" />
+		<display value="Abnormal atrial septum morphology" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0001671" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0011545" />
+		<display value="Abnormal connection of the cardiac segments" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0001627" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0011563" />
+		<display value="Abnormal ventriculoarterial connection" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0011545" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0001654" />
+		<display value="Abnormal heart valve morphology" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0001627" />
+		</property>
+	</concept>
+
+	<concept>
+		<code value="HP:0001641" />
+		<display value="Abnormal pulmonary valve morphology" />
+		<property>
+			<code value="parent" />
+			<valueCode value="HP:0001654" />
+		</property>
+	</concept>
+
+	<!-- <concept> -->
+	<!-- <code value="" /> -->
+	<!-- <display value="" /> -->
+	<!-- <property> -->
+	<!-- <code value="parent" /> -->
+	<!-- <valueCode value="" /> -->
+	<!-- </property> -->
+	<!-- </concept> -->
 
 </CodeSystem>
