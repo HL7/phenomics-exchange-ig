@@ -30,8 +30,6 @@ import org.slf4j.LoggerFactory;
 import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.apache.ApacheHttpRequest;
 import ca.uhn.fhir.rest.client.apache.ApacheHttpResponse;
-import ca.uhn.fhir.rest.client.api.IHttpRequest;
-import ca.uhn.fhir.rest.client.api.IHttpResponse;
 import ca.uhn.fhir.rest.server.exceptions.PreconditionFailedException;
 
 public class Utils {
