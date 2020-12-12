@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- This bundle is meant to capture the phenopacket aspect of the data shown 
+	here: https://phenopackets-analysis.readthedocs.io/en/latest/usecases-driver.html#id3 -->
+<!-- Some analysis and reasoning for choices is explained inline and should 
+	be migrated to the DAD and and or the IG -->
+
+<Bundle xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+	<id value="phenopacket-data" />
+	<meta>
+		<tag>
+			<system
+				value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+			<code value="clinical-usecase" />
+		</tag>
+	</meta>
+
+	<!-- This type means the resource entries in the Bundle will only be represented 
+		in the bundle. They will not be instantiated as actual resource instances. 
+		However, the entries will have the needed <request> entries to also be able 
+		to use this bundel with type "transaction" to create the resources in the 
+		entries. The created resources will then needs some updates to link to the 
+		correct patient, etc. -->
+	<type value="collection" />
+
+	<!-- This captures the age of the patient when this phenopacket/phenotype 
+		content was observed. This can't go on Patient, and Observation is a good 
+		place for holding it. The coding is just an example and stable codes, units, 
+		etc. will be needed later. -->
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct" />
+						<code value="424144002" />
+						<display
+							value="Current chronological age (observable entity)" />
+					</coding>
+				</code>
+				<subject>
+					<!-- This reference needs to be updated if we instantiate this observation -->
+					<reference value="Patient/example-patient" />
+				</subject>
+				<valueQuantity>
+					<!-- We can hold the original value with this general extension. -->
+					<!-- https://www.hl7.org/fhir/extension-originaltext.html -->
+					<extension
+						url="http://hl7.org/fhir/StructureDefinition/originalText">
+						<valueString value="P10Y" />
+					</extension>
+					<value value="3652.5" />
+					<unit value="day" />
+					<system value="http://unitsofmeasure.org" />
+				</valueQuantity>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- -->
+</Bundle>

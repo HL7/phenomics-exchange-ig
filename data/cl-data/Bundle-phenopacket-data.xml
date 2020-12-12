@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<Bundle xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+	<id value="phenopacket-data" />
+	<type value="transaction" />
+	<!-- <entry> -->
+	<!-- <resource> -->
+	<!-- <Bundle> -->
+	<!-- <id value="nested" /> -->
+	<!-- <type value="transaction" /> -->
+	<!-- </Bundle> -->
+	<!-- </resource> -->
+	<!-- <request> -->
+	<!-- <method value="POST" /> -->
+	<!-- <url value="" /> -->
+	<!-- </request> -->
+	<!-- </entry> -->
+	<entry>
+		<resource>
+			<Patient>
+				<id value="outer" />
+				<name>
+					<family value="Doe" />
+					<given value="John" />
+				</name>
+			</Patient>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Patient" />
+		</request>
+	</entry>
+</Bundle>

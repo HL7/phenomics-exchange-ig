@@ -1,12 +1,16 @@
 package org.phenopackets.coreig.tools.util;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Reader;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
@@ -27,6 +31,9 @@ import org.phenopackets.coreig.tools.command.MainCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
 import ca.uhn.fhir.rest.api.MethodOutcome;
 import ca.uhn.fhir.rest.client.apache.ApacheHttpRequest;
 import ca.uhn.fhir.rest.client.apache.ApacheHttpResponse;
@@ -35,6 +42,12 @@ import ca.uhn.fhir.rest.server.exceptions.PreconditionFailedException;
 public class Utils {
 
 	private static Logger logger = LoggerFactory.getLogger(Utils.class);
+	private static ObjectMapper objectMapper = null;
+	public static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyyMMdd_HHmmss.SSS");
+
+	static {
+		objectMapper = new ObjectMapper().enable(SerializationFeature.INDENT_OUTPUT);
+	}
 
 	public static String ID_TAG_IRI = "http://github.com/phenopackets/core-ig/ig-tools/id-tag";
 	public static String TAG_URI = "http://github.com/phenopackets/core-ig/ig-tools/tag";
@@ -196,12 +209,12 @@ public class Utils {
 	}
 
 	public static String logRequest(MainCommand main, Logger l) {
-		String request = getRequest(main);
+		String request = getRequest(main, l);
 		main.debug(request, true, l);
 		return request;
 	}
 
-	public static String getRequest(MainCommand main) {
+	public static String getRequest(MainCommand main, Logger l) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(getRequestMethod(main) + "\n");
 		sb.append(getRequestHeaders(main) + "\n");
@@ -240,6 +253,8 @@ public class Utils {
 			if (bodyFromStream == null) {
 				sb.append("NO BODY AVAILABLE");
 			} else {
+				Object json = objectMapper.readValue(bodyFromStream, Object.class);
+				bodyFromStream = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(json);
 				sb.append(bodyFromStream);
 			}
 		} catch (IOException e) {
@@ -251,12 +266,12 @@ public class Utils {
 	}
 
 	public static String logResponse(MainCommand main, Logger l) {
-		String request = getResponse(main);
+		String request = getResponse(main, l);
 		main.debug(request, true, l);
 		return request;
 	}
 
-	public static String getResponse(MainCommand main) {
+	public static String getResponse(MainCommand main, Logger l) {
 		StringBuilder sb = new StringBuilder();
 		sb.append(getResponseStatus(main) + "\n");
 		sb.append(getResponseHeaders(main) + "\n");
@@ -282,12 +297,45 @@ public class Utils {
 		ApacheHttpResponse response = (ApacheHttpResponse) main.getCapturing().getLastResponse();
 		StringBuilder sb = new StringBuilder();
 		try {
-			sb.append(readReader(main,response.createReader()));
+			sb.append(readReader(main, response.createReader()));
 		} catch (IOException e) {
 			main.rethrow(e);
 		}
 
 		return sb.toString();
+	}
+
+//	public static File saveToStepFile(MainCommand main, Logger l, String content, String fileName) {
+//		File file = new File(main.getStepOutput(), (dateFormat.format(new Date()) + "_" + fileName));
+//		try {
+//			try (FileWriter writer = new FileWriter(file)) {
+//				writer.write(content);
+//			}
+//		} catch (IOException e) {
+//			main.rethrow(e);
+//		}
+//		return file;
+//	}
+
+	public static String saveToStepFile(MainCommand main, Logger l, String stepName) {
+	
+		String requestString = Utils.logRequest(main, l);
+		
+		String responseString = Utils.logResponse(main, l);
+		
+		String content =  requestString + responseString;
+		
+		File file = new File(main.getStepOutput(), (dateFormat.format(new Date()) + "_" + stepName));
+		try {
+			try (FileWriter writer = new FileWriter(file)) {
+				writer.write(content);
+			}
+		} catch (IOException e) {
+			main.rethrow(e);
+		}
+		
+		
+		return content;
 	}
 
 	private static String readReader(MainCommand main, Reader reader) {

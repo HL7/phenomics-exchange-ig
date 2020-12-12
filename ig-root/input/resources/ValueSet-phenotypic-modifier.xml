@@ -1,49 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ValueSet xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
-  <url value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier" />
-  <name value="PhenotypicModifierValueSet" />
-  <title value="Phenotypic modifier ValueSet" />
-  <status value="active" />
-  <description value="ValueSet description here" />
-  <compose>
-    <include>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-      <filter>
-        <property value="concept" />
-        <op value="is-a" />
-        <value value="HP:0012823" />
-      </filter>
-    </include>
+<ValueSet xmlns="http://hl7.org/fhir"
+	xmlns:h="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+	<url
+		value="http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier" />
+	<name value="PhenotypicModifierValueSet" />
+	<title value="Phenotypic modifier ValueSet" />
+	<status value="active" />
+	<description value="ValueSet description here" />
+	<compose>
+		<include>
+			<system
+				value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+			<filter>
+				<property value="concept" />
+				<op value="is-a" />
+				<value value="HP:0012823" />
+			</filter>
+		</include>
 
-    <!-- root concept can be excluded-->
-    <exclude>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-      <concept>
-        <code value="HP:0012823" />
-      </concept>
-    </exclude>
+		<!-- root concept can be excluded -->
+		<exclude>
+			<system
+				value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+			<concept>
+				<code value="HP:0012823" />
+			</concept>
+		</exclude>
 
-    <!-- Exclude this one just for demonstratin of the invalid-1 example-->
-    <!-- TODO: remove this exclusion at some point -->
-    <!--     <exclude>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-      <concept>
-        <code value="HP:0031375" />
-      </concept>
-    </exclude> -->
+		<!-- Exclude this one just for demonstration of the invalid-1 example -->
+		<!-- TODO: remove this exclusion at some point -->
+		<exclude>
+			<system
+				value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+			<concept>
+				<code value="HP:0031375" />
+			</concept>
+		</exclude>
 
-    <!-- exclude the severity sub hierarchy -->
-    <!-- Enabling this with the flat CodeSystem concept layout with parnet properties breaks this whole ValueSet. this is a bug that needs to be reported -->
-    <!--  TODO: report to FHIR Chat and update -->
-    <!--     <exclude>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-      <filter>
-        <property value="concept" />
-        <op value="is-a" />
-        <value value="HP:0012824" />
-      </filter>
-    </exclude> -->
+		<!-- exclude the severity sub hierarchy -->
+		<!-- Enabling this with the flat CodeSystem concept layout with parent 
+			properties breaks this whole ValueSet. this is a bug that needs to be reported -->
+		<!-- TODO: report to FHIR Chat and update -->
+		<exclude>
+			<system
+				value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+			<filter>
+				<property value="concept" />
+				<op value="is-a" />
+				<value value="HP:0012824" />
+			</filter>
+		</exclude>
 
-  </compose>
+	</compose>
 
 </ValueSet>

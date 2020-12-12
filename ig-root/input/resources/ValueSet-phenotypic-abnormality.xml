@@ -17,14 +17,12 @@
     </include>
 
     <!-- root concept can be excluded-->
-    <!--
     <exclude>
       <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
       <concept>
         <code value="HP:0000118"/>
       </concept>
     </exclude>
-    -->
   </compose>
 
 </ValueSet>
