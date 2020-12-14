@@ -175,7 +175,7 @@ public class ClinicalUsecase implements Callable<Void> {
 		 * resource instead of Bundle.
 		 */
 		main.info("", true, logger);
-		main.info("Linking collection bundle to patient with the \"about\" relationship.", true, logger);
+		main.info("==================  Linking collection bundle to patient with the \"about\" relationship. ============", true, logger);
 		linkCollectionToPatient();
 		main.info("Updated PP collection bundel to: " + createdPhenopacketBundle.getIdElement().getId(), true, logger);
 
@@ -183,7 +183,8 @@ public class ClinicalUsecase implements Callable<Void> {
 		 * Now we'll submit a lab request and use the phenopacket Bundle as supporting
 		 * info.
 		 */
-		main.info("Submitting exom request...", true, logger);
+		main.info("", true, logger);
+		main.info("==================  Submitting exom request  ==========================", true, logger);
 		submitExomRequest();
 		main.info("Created ServiceRequest: " + createdServiceRequest.getId(), true, logger);
 
