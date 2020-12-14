@@ -349,6 +349,10 @@ public class MainCommand {
 			error(exception.getStackTrace().toString(), true, mainLogger);
 		}
 
+		if (exception != null) {
+			Utils.saveToStepFile(main, mainLogger, "exitException");
+		}
+		
 		if (reporter != null) {
 			reporter.flush();
 			reporter.close();

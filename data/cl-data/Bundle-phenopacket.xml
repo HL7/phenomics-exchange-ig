@@ -16,6 +16,11 @@
 				value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
 			<code value="clinical-usecase" />
 		</tag>
+		<tag>
+			<system
+				value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+			<code value="bundle-type-phenopacket" />
+		</tag>
 	</meta>
 
 	<!-- This type means the resource entries in the Bundle will only be represented 
@@ -25,6 +30,46 @@
 		entries. The created resources will then needs some updates to link to the 
 		correct patient, etc. -->
 	<type value="collection" />
+
+	<!-- =========================== DocumentReference ================================== -->
+
+	<!-- This is an example of how to embed the original JSON phenopacket in 
+		a DocumentReference. This is a json file base64 encoded. The JSON file is 
+		this one: https://github.com/phenopackets/core-ig/blob/master/data/native-pp/usecase-2-phenopacket.json -->
+	<entry>
+		<resource>
+			<DocumentReference>
+				<id value="pp" />
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<!-- Some external identifier of the PP instance -->
+				<identifier>
+					<system value="http://example.com/some/phenopacket/system" />
+					<value value="some-external-pp-id" />
+				</identifier>
+				<status value="current" />
+				<content>
+					<attachment>
+						<contentType value="application/pp+json" />
+						<!-- The base64 encoded JSON -->
+						<data
+							value="ewogICAgImlkIjogInVjMi1wcDEiLAogICAgInN1YmplY3QiOiB7CiAgICAgICAgImlkIjogIlBhdGllbnQtMzYtMTZERzExMjMiLAogICAgICAgICJhZ2UiOiB7CiAgICAgICAgICAgICJhZ2UiOiAiUDEwWSIKICAgICAgICB9LAogICAgICAgICJzZXgiOiAiRkVNQUxFIgogICAgfSwKICAgICJwaGVub3R5cGljX2ZlYXR1cmVzIjogWwogICAgICAgIHsKICAgICAgICAgICAgInR5cGUiOiB7CiAgICAgICAgICAgICAgICAiaWQiOiAiSFA6MDAwMzQyOSIsCiAgICAgICAgICAgICAgICAibGFiZWwiOiAiQ05TIGh5cG9teWVsaW5hdGlvbiIKICAgICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAidHlwZSI6IHsKICAgICAgICAgICAgICAgICJpZCI6ICJIUDowMDAxMjQ5IiwKICAgICAgICAgICAgICAgICJsYWJlbCI6ICJJbnRlbGxlY3R1YWwgZGlzYWJpbGl0eSIKICAgICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAidHlwZSI6IHsKICAgICAgICAgICAgICAgICJpZCI6ICJIUDowMDAxMjk4KSIsCiAgICAgICAgICAgICAgICAibGFiZWwiOiAiRW5jZXBoYWxvcGF0aHkiCiAgICAgICAgICAgIH0KICAgICAgICB9LAogICAgICAgIHsKICAgICAgICAgICAgInR5cGUiOiB7CiAgICAgICAgICAgICAgICAiaWQiOiAiSFA6MDAwMDQ4NiIsCiAgICAgICAgICAgICAgICAibGFiZWwiOiAiU3RyYWJpc211cyIKICAgICAgICAgICAgfQogICAgICAgIH0sCiAgICAgICAgewogICAgICAgICAgICAidHlwZSI6IHsKICAgICAgICAgICAgICAgICJpZCI6ICJIUDowMDAyNjUwIiwKICAgICAgICAgICAgICAgICJsYWJlbCI6ICJTY29saW9zaXMiCiAgICAgICAgICAgIH0KICAgICAgICB9CiAgICBdLAogICAgIm1ldGFfZGF0YSI6IHsKICAgICAgICAicmVzb3VyY2VzIjogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiaWQiOiAiaHAiLAogICAgICAgICAgICAgICAgIm5hbWUiOiAiaHVtYW4gcGhlbm90eXBlIG9udG9sb2d5IiwKICAgICAgICAgICAgICAgICJ2ZXJzaW9uIjogIjIwMjAtMTAtMTIiLAogICAgICAgICAgICAgICAgIm5hbWVzcGFjZV9wcmVmaXgiOiAiSFAiLAogICAgICAgICAgICAgICAgInVybCI6ICJodHRwOi8vcHVybC5vYm9saWJyYXJ5Lm9yZy9vYm8vaHAub3dsIiwKICAgICAgICAgICAgICAgICJpcmlfcHJlZml4IjogImh0dHA6Ly9wdXJsLm9ib2xpYnJhcnkub3JnL29iby9IUF8iCiAgICAgICAgICAgIH0KICAgICAgICBdCiAgICB9Cn0=" />
+					</attachment>
+				</content>
+			</DocumentReference>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="DocumentReference" />
+		</request>
+	</entry>
+
+	<!-- ================================= Age Observation ======================================== -->
 
 	<!-- This captures the age of the patient when this phenopacket/phenotype 
 		content was observed. This can't go on Patient, and Observation is a good 
@@ -64,6 +109,11 @@
 					<unit value="day" />
 					<system value="http://unitsofmeasure.org" />
 				</valueQuantity>
+				<!-- This says this Observation is derived from the original PP in the 
+					DocumentReference -->
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
 			</Observation>
 		</resource>
 		<request>
@@ -72,5 +122,310 @@
 		</request>
 	</entry>
 
-	<!-- -->
+	<!-- ============================ Karyotypic sex Observation ================================== -->
+
+	<!-- This is a demo for how to capture karyotypic sex assuming the use case 
+		had this data. We're using the "female" info to justify this entry, and to 
+		demo the idea of this being an Observation. See the following like for justification 
+		based on FHIR guidance: https://www.hl7.org/fhir/patient.html#gender -->
+
+	<!-- Our Core IG POC profile is here: http://phenopackets.org/core-ig/master/StructureDefinition-karyotypic-sex.html -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<code>
+					<coding>
+						<system value="http://purl.obolibrary.org/obo/GSSO" />
+						<code value="GSSO:000113" />
+					</coding>
+
+				</code>
+				<valueCodeableConcept>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/karyotypic-sex" />
+						<code value="XX" />
+					</coding>
+				</valueCodeableConcept>
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Phenotype Observation ================================== -->
+
+	<!-- CNS hypomyelination (HP:0003429) -->
+
+	<!-- Our Core IG POC profile is here: http://phenopackets.org/core-ig/master/StructureDefinition-observation-phenotypic-abnormality.html#tabs-diff -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0003429" />
+						<display value="CNS hypomyelination" />
+					</coding>
+				</code>
+				<valueBoolean value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Phenotype Observation ================================== -->
+
+	<!-- Intellectual disability (HP:0001249) -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0001249" />
+						<display value="Intellectual disability" />
+					</coding>
+				</code>
+				<valueBoolean value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Phenotype Observation ================================== -->
+
+	<!-- Encephalopathy (HP:0001298) -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0001298" />
+						<display value="Encephalopathy" />
+					</coding>
+				</code>
+				<valueBoolean value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Phenotype Observation ================================== -->
+
+	<!-- Strabismus (HP:0000486) -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0000486" />
+						<display value="Strabismus" />
+					</coding>
+				</code>
+				<valueBoolean value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Phenotype Observation ================================== -->
+
+	<!-- Scoliosis (HP:0002650) -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+						<code value="HP:0002650" />
+						<display value="Scoliosis" />
+					</coding>
+				</code>
+				<valueBoolean value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- ============================ Non conforming phenotype Observation ================================== -->
+
+	<!-- Some invalid concept name (HP:INVALID) -->
+
+	<entry>
+		<resource>
+			<Observation>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="clinical-usecase" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<category>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/categories" />
+						<code value="phenotype" />
+					</coding>
+				</category>
+				<code>
+					<coding>
+						<system
+							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
+
+						<!-- Non conforming code for both ValueSet binding, and CodeSystem 
+							content. -->
+						<code value="HP:INVALID" />
+
+						<display value="Some invalid concept name" />
+					</coding>
+				</code>
+
+				<!-- Non conforming value type -->
+				<valueString value="true" />
+				<derivedFrom>
+					<reference value="DocumentReference/pp" />
+				</derivedFrom>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+
 </Bundle>

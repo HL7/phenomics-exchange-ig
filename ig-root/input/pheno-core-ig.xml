@@ -76,7 +76,7 @@
 		</resource>
 
 		<!-- Categories vocab -->
-		
+
 		<resource>
 			<reference>
 				<reference value="CodeSystem/categories" />
@@ -134,7 +134,7 @@
 			<exampleCanonical
 				value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex" />
 		</resource>
-		
+
 		<resource>
 			<reference>
 				<reference value="ValueSet/test" />
@@ -142,8 +142,19 @@
 		</resource>
 
 
+		<!-- Search parameters -->
 
-		<!-- Base resoruces to have a placeholder page in the IG -->
+		<resource>
+			<reference>
+				<reference
+					value="SearchParameter/service-request-supporting-info" />
+			</reference>
+		</resource>
+
+
+
+		<!-- Base resources to have a placeholder page in the IG -->
+
 		<!-- <resource> <reference> <reference value="StructureDefinition/Patient" 
 			/> </reference> <name value="Base Patient profile" /> <description value="Base 
 			Patient profile description" /> <groupingId value="base-profiles" /> </resource> 

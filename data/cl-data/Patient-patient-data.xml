@@ -18,6 +18,14 @@
 			<h:p>Some limited HTML content.</h:p>
 		</h:div>
 	</text>
+
+	<!-- This is a US Core based extension to capture birth sex. Extension: 
+		https://www.hl7.org/fhir/us/core/StructureDefinition-us-core-birthsex.html -->
+	<extension
+		url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
+		<valueCode value="F" />
+	</extension>
+	
 	<identifier>
 		<system value="http://example.com/mrn" />
 		<value value="123" />
@@ -26,5 +34,10 @@
 		<family value="Doe" />
 		<given value="Jane" />
 	</name>
+
+	<!-- One place to capture the "female" info from the use case but this is 
+		administrative in nature. We'll also capture it as karyotypic sex XX in the 
+		PP Bundle for demo purposes -->
+	<gender value="female" />
 
 </Patient>

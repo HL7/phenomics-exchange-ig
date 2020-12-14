@@ -20,6 +20,7 @@ import java.util.stream.Collectors;
 import org.hl7.fhir.instance.model.api.IBaseCoding;
 import org.hl7.fhir.instance.model.api.IBaseResource;
 import org.hl7.fhir.r4.model.CanonicalType;
+import org.hl7.fhir.r4.model.CodeableConcept;
 import org.hl7.fhir.r4.model.DomainResource;
 import org.hl7.fhir.r4.model.Extension;
 import org.hl7.fhir.r4.model.OperationOutcome;
@@ -133,6 +134,15 @@ public class Utils {
 			main.warn("VALIDATION ERROR COUNT OF: " + actualErrors + " less than max allowed validation error count of:"
 					+ maxErrors, true, l);
 		}
+	}
+
+	public static boolean hasCategory(List<CodeableConcept> concepts, String category) {
+		for (CodeableConcept concept : concepts) {
+			if (concept.hasCoding("http://github.com/phenopackets/core-ig/CodeSystem/categories", category)) {
+				return true;
+			}
+		}
+		return false;
 	}
 
 	public static int checkOutcome(MainCommand main, OperationOutcome outcome, Logger l) {
@@ -318,23 +328,24 @@ public class Utils {
 //	}
 
 	public static String saveToStepFile(MainCommand main, Logger l, String stepName) {
-	
+
 		String requestString = Utils.logRequest(main, l);
-		
+
 		String responseString = Utils.logResponse(main, l);
-		
-		String content =  requestString + responseString;
-		
-		File file = new File(main.getStepOutput(), (dateFormat.format(new Date()) + "_" + stepName));
+
+		String content = requestString + responseString;
+
+		String fileName = dateFormat.format(new Date()) + "_" + stepName;
+		File file = new File(main.getStepOutput(), fileName);
 		try {
 			try (FileWriter writer = new FileWriter(file)) {
 				writer.write(content);
+				main.info("Step file: " + fileName, true, l);
 			}
 		} catch (IOException e) {
 			main.rethrow(e);
 		}
-		
-		
+
 		return content;
 	}
 

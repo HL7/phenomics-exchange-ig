@@ -79,6 +79,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 				case "CodeSystem":
 				case "ValueSet":
 				case "StructureDefinition":
+				case "SearchParameter":
 					list.add(ref);
 					break;
 				default:
@@ -102,6 +103,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 		loadResrouces(refTypeMap.get("CodeSystem"));
 		loadResrouces(refTypeMap.get("ValueSet"));
 		loadResrouces(refTypeMap.get("StructureDefinition"));
+		loadResrouces(refTypeMap.get("SearchParameter"));
 		loadExamples();
 		loadUpdate(ig, true);
 

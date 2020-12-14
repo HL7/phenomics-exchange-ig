@@ -26,7 +26,7 @@ public class ClinicalUsecaseClear implements Callable<Void> {
 	public Void call() throws Exception {
 
 		@SuppressWarnings("unchecked")
-		Class<? extends Resource>[] classes = new Class[] { Observation.class, Patient.class };
+		Class<? extends Resource>[] classes = new Class[] { Observation.class, Patient.class, Bundle.class };
 
 		for (Class<? extends Resource> clas : classes) {
 			Thread.sleep(1000);
@@ -39,7 +39,14 @@ public class ClinicalUsecaseClear implements Callable<Void> {
 					for (BundleEntryComponent entry : bundle.getEntry()) {
 						if (clas.isInstance(entry.getResource())) {
 							Resource r = entry.getResource();
-							main.getClient().delete().resource(r).execute();
+							// to work around an apparent bug with Bundle id in the API
+//							if (clas != Bundle.class) {
+							main.getClient().delete().resourceById(r.getResourceType().name(),
+									r.getIdElement().getIdPart()).execute();
+//							} else {
+//								main.getClient().delete().resourceById("Bundle", r.getIdElement().getIdPart())
+//										.execute();
+//							}
 							Utils.saveToStepFile(main, logger,
 									r.fhirType() + "-delete-" + r.getIdElement().getIdPart());
 						}
