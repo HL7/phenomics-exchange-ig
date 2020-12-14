@@ -335,7 +335,7 @@ public class Utils {
 
 		String content = requestString + responseString;
 
-		String fileName = dateFormat.format(new Date()) + "_" + stepName;
+		String fileName = dateFormat.format(new Date()) + "_" + stepName+".txt";
 		File file = new File(main.getStepOutput(), fileName);
 		try {
 			try (FileWriter writer = new FileWriter(file)) {

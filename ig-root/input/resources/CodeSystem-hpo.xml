@@ -94,13 +94,11 @@
 				<concept>
 					<code value="HP:0001249" />
 					<display value="Intellectual disability" />
-
 				</concept>
 
 				<concept>
 					<code value="HP:0001298" />
 					<display value="Encephalopathy" />
-
 				</concept>
 
 			</concept>
@@ -108,13 +106,11 @@
 			<concept>
 				<code value="HP:0000486" />
 				<display value="Strabismus" />
-
 			</concept>
 
 			<concept>
 				<code value="HP:0002650" />
 				<display value="Scoliosis" />
-
 			</concept>
 
 
@@ -124,13 +120,13 @@
 				<concept>
 					<code value="HP:0011793" />
 					<display value="Neoplasm by anatomical site" />
-
 				</concept>
 			</concept>
 
 			<concept>
 				<code value="HP:0001627" />
 				<display value="Abnormal heart morphology" />
+
 				<concept>
 					<code value="HP:0001671" />
 					<display value="Abnormal cardiac septum morphology" />
@@ -138,29 +134,28 @@
 					<concept>
 						<code value="HP:0011994" />
 						<display value="Abnormal atrial septum morphology" />
-
 					</concept>
 				</concept>
 				<concept>
 					<code value="HP:0011545" />
 					<display
 						value="Abnormal connection of the cardiac segments" />
+
 					<concept>
 						<code value="HP:0011563" />
 						<display value="Abnormal ventriculoarterial connection" />
-
 					</concept>
 				</concept>
+
 				<concept>
 					<code value="HP:0001654" />
 					<display value="Abnormal heart valve morphology" />
+
 					<concept>
 						<code value="HP:0001641" />
 						<display value="Abnormal pulmonary valve morphology" />
-
 					</concept>
 				</concept>
-
 			</concept>
 
 		</concept>
@@ -188,15 +183,12 @@
 			<concept>
 				<code value="HP:0410401" />
 				<display value="Worse in evening" />
-
 			</concept>
 
 			<concept>
 				<code value="HP:0031375" />
 				<display value="Refractory" />
-
 			</concept>
-
 
 		</concept>
 
@@ -207,16 +199,15 @@
 			<concept>
 				<code value="HP:0003674" />
 				<display value="Onset" />
+
 				<concept>
 					<code value="HP:0003577" />
 					<display value="Congenital onset" />
-
 				</concept>
 
 				<concept>
 					<code value="HP:0003623" />
 					<display value="Neonatal onset" />
-
 				</concept>
 			</concept>
 		</concept>

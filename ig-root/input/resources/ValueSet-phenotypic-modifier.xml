@@ -29,16 +29,6 @@
 			</concept>
 		</exclude>
 
-		<!-- Exclude this one just for demonstration of the invalid-1 example -->
-		<!-- TODO: remove this exclusion at some point -->
-		<exclude>
-			<system
-				value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
-			<concept>
-				<code value="HP:0031375" />
-			</concept>
-		</exclude>
-
 		<!-- exclude the severity sub hierarchy -->
 		<!-- Enabling this with the flat CodeSystem concept layout with parent 
 			properties breaks this whole ValueSet. this is a bug that needs to be reported -->
