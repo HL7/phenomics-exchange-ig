@@ -104,6 +104,8 @@ public class ClinicalUsecase implements Callable<Void> {
 		 * 6. The lab searches for ServiceRequests that have supportingInfo to a Bundle tagged 
 		 * with "bundle-type-phenopacket", status active, and subject our patient.
 		 * 
+		 * This needed a custom SearchParameter defined in the IG. 
+		 * 
 		 * 7. The lab processes the SerivceRequests to extract the phenopacket information. 
 		 * It does this by finding age, the karyotypic sex, and the phenotypes. For demonstration 
 		 * purposes the phenopacket Bundle contains a non conforming phenotype. The lab 
