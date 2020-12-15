@@ -175,7 +175,9 @@ public class ClinicalUsecase implements Callable<Void> {
 		 * resource instead of Bundle.
 		 */
 		main.info("", true, logger);
-		main.info("==================  Linking collection bundle to patient with the \"about\" relationship. ============", true, logger);
+		main.info(
+				"==================  Linking collection bundle to patient with the \"about\" relationship. ============",
+				true, logger);
 		linkCollectionToPatient();
 		main.info("Updated PP collection bundel to: " + createdPhenopacketBundle.getIdElement().getId(), true, logger);
 
@@ -248,7 +250,7 @@ public class ClinicalUsecase implements Callable<Void> {
 
 	private void linkCollectionToPatient() {
 		createdPhenopacketBundle.addLink().setRelation("about")
-				.setUrl("http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1");
+				.setUrl("Patient/" + createdPatient.getIdElement().getIdPart());
 		MethodOutcome mo = main.getClient().update().resource(createdPhenopacketBundle).execute();
 		writeStep("linkPhenopacketBundleCollection");
 		createdPhenopacketBundle = (Bundle) mo.getResource();
