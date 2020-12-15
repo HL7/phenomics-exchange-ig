@@ -1,5 +1,6 @@
 package org.phenopackets.coreig.tools.command;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -8,6 +9,7 @@ import java.io.OutputStreamWriter;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -22,8 +24,13 @@ import org.hl7.fhir.r4.model.ImplementationGuide;
 import org.hl7.fhir.r4.model.MetadataResource;
 import org.hl7.fhir.r4.model.Resource;
 import org.hl7.fhir.r4.model.StructureDefinition;
+import org.phenopackets.coreig.tools.command.cl.ClinicalUsecase;
+import org.phenopackets.coreig.tools.command.cl.ClinicalUsecaseClear;
+import org.phenopackets.coreig.tools.command.kf.KFClearData;
+import org.phenopackets.coreig.tools.command.kf.KFLoadData;
 import org.phenopackets.coreig.tools.util.LevelConverter;
 import org.phenopackets.coreig.tools.util.RLevelConverter;
+import org.phenopackets.coreig.tools.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -101,6 +108,13 @@ public class MainCommand {
 	private int debugs = 0;
 
 	private CapturingInterceptor capturing;
+
+	private File stepOutput;
+
+	private Callable<Void> commandObject;
+
+	private String parsedCommand;
+	private Date runDate = new Date();
 
 	public CapturingInterceptor getCapturing() {
 		return capturing;
@@ -287,12 +301,16 @@ public class MainCommand {
 		}
 	}
 
-	public final static MainCommand main = new MainCommand();
-	public final static JCommander commander = new JCommander(main);
+	private final static MainCommand main = new MainCommand();
+	private final static JCommander commander = new JCommander(main);
 
-	public final static LoadConformanceCommand load = new LoadConformanceCommand(main);
-	public final static KFLoadData kfload = new KFLoadData(main);
-	public final static KFClearData kfclear = new KFClearData(main);
+	private final static LoadConformanceCommand load = new LoadConformanceCommand(main);
+	private final static KFLoadData kfload = new KFLoadData(main);
+	private final static KFClearData kfclear = new KFClearData(main);
+
+	// clinical us
+	private final static ClinicalUsecase CLINICAL_USECASE = new ClinicalUsecase(main);
+	private final static ClinicalUsecaseClear CLINICAL_USECASE_CLEAR = new ClinicalUsecaseClear(main);
 
 	private static Logger mainLogger = LoggerFactory.getLogger(MainCommand.class);
 
@@ -304,28 +322,66 @@ public class MainCommand {
 	}
 
 	private void run() throws Exception {
-		if (igOutPath != null)
-			igOutPath = igOutPath.toAbsolutePath().normalize();
 
+		setupParams();
 		setupLogger();
 		setupReporter();
+		setupFhirClient();
 
-		ctx = FhirContext.forR4();
-		xmlParser = ctx.newXmlParser();
-		jsonParser = ctx.newJsonParser().setPrettyPrint(true);
-		if (serverUrl != null) {
-			client = ctx.newRestfulGenericClient(serverUrl);
-			this.capturing = new CapturingInterceptor();
-			client.registerInterceptor(capturing);
+		setupCommand();
+
+		setupStepOutput();
+
+		main.info("", true, mainLogger);
+		main.info("Running command: " + commandObject.getClass().getName() + " on: " + new Date().toString(), true,
+				mainLogger);
+		main.info("===================================", true, mainLogger);
+
+		Exception exception = null;
+		try {
+			commandObject.call();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			exception = e;
 		}
 
-		String command = commander.getParsedCommand();
-		if (command == null) {
+		if (exception != null) {
+			error(exception.getStackTrace().toString(), true, mainLogger);
+		}
+
+		if (exception != null) {
+			Utils.saveToStepFile(main, mainLogger, "exitException");
+		}
+		
+		if (reporter != null) {
+			reporter.flush();
+			reporter.close();
+		}
+
+		if (exception != null) {
+			throw exception;
+		}
+
+	}
+
+	private void setupStepOutput() {
+		stepOutput = Paths.get("stepOutput/" + Utils.dateFormat.format((runDate)) + "_" + parsedCommand)
+				.toAbsolutePath().normalize().toFile();
+		if (!stepOutput.exists()) {
+			stepOutput.mkdirs();
+		} else if (!stepOutput.isDirectory()) {
+			throw new IllegalStateException("Step output directory path is not a directory: " + stepOutput.toString());
+		}
+	}
+
+	private void setupCommand() throws Exception {
+		parsedCommand = commander.getParsedCommand();
+		if (parsedCommand == null) {
 			commander.usage();
 		} else {
 
-			Callable<Void> commandObject = null;
-			switch (command) {
+			commandObject = null;
+			switch (parsedCommand) {
 			case "load":
 				commandObject = load;
 				break;
@@ -335,23 +391,41 @@ public class MainCommand {
 			case "kfclear":
 				commandObject = kfclear;
 				break;
+			case "clinical-usecase":
+				commandObject = CLINICAL_USECASE;
+				break;
+			case "clinical-usecase-clear":
+				commandObject = CLINICAL_USECASE_CLEAR;
+				break;
 			default:
 				commander.usage();
 				return;
 			}
 
-			main.info("", true, mainLogger);
-			main.info("Running command: " + commandObject.getClass().getName() + " on: " + new Date().toString(), true,
-					mainLogger);
-			main.info("===================================", true, mainLogger);
-			commandObject.call();
 		}
 
-		if (reporter != null) {
-			reporter.flush();
-			reporter.close();
+	}
+
+	private void setupFhirClient() {
+		ctx = FhirContext.forR4();
+		xmlParser = ctx.newXmlParser();
+		jsonParser = ctx.newJsonParser().setPrettyPrint(true);
+		if (serverUrl != null) {
+			client = ctx.newRestfulGenericClient(serverUrl);
+			this.capturing = new CapturingInterceptor();
+			client.registerInterceptor(capturing);
 		}
 
+	}
+
+	private void setupParams() {
+		if (igOutPath != null)
+			igOutPath = igOutPath.toAbsolutePath().normalize();
+
+	}
+
+	public FhirContext getFhirContext() {
+		return ctx;
 	}
 
 	private void setupLogger() {
@@ -396,6 +470,12 @@ public class MainCommand {
 		commander.addCommand("load", load);
 		commander.addCommand("kfload", kfload);
 		commander.addCommand("kfclear", kfclear);
+		commander.addCommand("clinical-usecase", CLINICAL_USECASE);
+		commander.addCommand("clinical-usecase-clear", CLINICAL_USECASE_CLEAR);
 
+	}
+
+	public File getStepOutput() {
+		return stepOutput;
 	}
 }

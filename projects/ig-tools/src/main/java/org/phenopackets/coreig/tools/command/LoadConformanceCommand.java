@@ -21,9 +21,12 @@ import org.hl7.fhir.r4.model.MetadataResource;
 import org.hl7.fhir.r4.model.OperationOutcome;
 import org.hl7.fhir.r4.model.OperationOutcome.IssueSeverity;
 import org.hl7.fhir.r4.model.OperationOutcome.OperationOutcomeIssueComponent;
+import org.hl7.fhir.r4.model.Parameters;
 import org.hl7.fhir.r4.model.Reference;
 import org.hl7.fhir.r4.model.Resource;
 import org.hl7.fhir.r4.model.StringType;
+import org.hl7.fhir.r4.model.ValueSet;
+import org.hl7.fhir.r4.model.ValueSet.ValueSetExpansionComponent;
 import org.phenopackets.coreig.tools.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -79,6 +82,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 				case "CodeSystem":
 				case "ValueSet":
 				case "StructureDefinition":
+				case "SearchParameter":
 					list.add(ref);
 					break;
 				default:
@@ -100,8 +104,13 @@ public class LoadConformanceCommand implements Callable<Void> {
 		ig.getDefinition().getResource().removeAll(toRemove);
 
 		loadResrouces(refTypeMap.get("CodeSystem"));
+		Thread.sleep(30000);
 		loadResrouces(refTypeMap.get("ValueSet"));
+		Thread.sleep(30000);
 		loadResrouces(refTypeMap.get("StructureDefinition"));
+		Thread.sleep(30000);
+		loadResrouces(refTypeMap.get("SearchParameter"));
+		Thread.sleep(30000);
 		loadExamples();
 		loadUpdate(ig, true);
 
@@ -112,12 +121,28 @@ public class LoadConformanceCommand implements Callable<Void> {
 		for (Reference reference : references) {
 			String[] parts = reference.getReference().split("/");
 			MetadataResource updatedMetadata = loadUpdate(main.loadMetadata(parts[0] + "-" + parts[1] + ".xml"), false);
+			if (ValueSet.class.isInstance(updatedMetadata)) {
+				// we need to expand it on the server
+				ValueSet vs = (ValueSet) updatedMetadata;
+				updatedMetadata = expandValueSet(vs);
+			}
 			if (updatedMetadata != null) {
 				String id = updatedMetadata.getIdElement().asStringValue();
 				main.debug("Updating IG reference from:" + reference.getReference() + " to:" + id, true, logger);
 				reference.setReferenceElement(new StringType(id));
 			}
 		}
+	}
+
+	private ValueSet expandValueSet(ValueSet vs) {
+		Parameters parameters = main.getClient().operation().onInstance("ValueSet/" + vs.getIdElement().getIdPart())
+				.named("expand").withNoParameters(Parameters.class).execute();
+		ValueSet expanded = (ValueSet) parameters.getParameterFirstRep().getResource();
+		ValueSetExpansionComponent expansion = expanded.getExpansion();
+		vs.setExpansion(expansion);
+		MethodOutcome mo = main.getClient().update().resource(vs).execute();
+		vs = (ValueSet) mo.getResource();
+		return vs;
 	}
 
 	/**
@@ -259,8 +284,6 @@ public class LoadConformanceCommand implements Callable<Void> {
 		Bundle bundle = (Bundle) client.search().forResource(resource.getClass())
 				.and(new StringClientParam("url").matchesExactly().value(url)).execute();
 
-
-
 		List<BundleEntryComponent> entries = bundle.getEntry();
 		MetadataResource existingResource = null;
 
@@ -283,7 +306,7 @@ public class LoadConformanceCommand implements Callable<Void> {
 
 		Utils.logRequest(main, logger);
 		Utils.logResponse(main, logger);
-		
+
 		MethodOutcome mo = null;
 
 		if (existingResource == null) {

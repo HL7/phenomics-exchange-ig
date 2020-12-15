@@ -1,7 +1,8 @@
-package org.phenopackets.coreig.tools.command;
+package org.phenopackets.coreig.tools.command.tmpl;
 
 import java.util.concurrent.Callable;
 
+import org.phenopackets.coreig.tools.command.MainCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

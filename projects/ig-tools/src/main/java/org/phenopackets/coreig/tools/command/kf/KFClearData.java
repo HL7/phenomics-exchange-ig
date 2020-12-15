@@ -1,18 +1,16 @@
-package org.phenopackets.coreig.tools.command;
+package org.phenopackets.coreig.tools.command.kf;
 
 import java.util.concurrent.Callable;
 
-import org.hl7.fhir.instance.model.api.IBaseBundle;
 import org.hl7.fhir.r4.model.Bundle;
 import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Patient;
 import org.hl7.fhir.r4.model.Resource;
+import org.phenopackets.coreig.tools.command.MainCommand;
 import org.phenopackets.coreig.tools.util.Utils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import ca.uhn.fhir.rest.gclient.IQuery;
 
 public class KFClearData implements Callable<Void> {
 
