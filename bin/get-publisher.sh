@@ -29,6 +29,8 @@ else
     exit 1
 fi
 
+echo "Retrieving Publisher from ${JAR_LOCATION}"
+
 mkdir -p "${GIT_ROOT}/ig-root/input-cache/"
 wget --output-document="${GIT_ROOT}/ig-root/input-cache/publisher.jar" \
     "$JAR_LOCATION"
