@@ -19,7 +19,6 @@ import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import org.hl7.fhir.r4.model.CodeSystem;
-import org.hl7.fhir.r4.model.DomainResource;
 import org.hl7.fhir.r4.model.ImplementationGuide;
 import org.hl7.fhir.r4.model.MetadataResource;
 import org.hl7.fhir.r4.model.Resource;
@@ -28,6 +27,7 @@ import org.phenopackets.coreig.tools.command.cl.ClinicalUsecase;
 import org.phenopackets.coreig.tools.command.cl.ClinicalUsecaseClear;
 import org.phenopackets.coreig.tools.command.kf.KFClearData;
 import org.phenopackets.coreig.tools.command.kf.KFLoadData;
+import org.phenopackets.coreig.tools.command.kf.KFUseCase;
 import org.phenopackets.coreig.tools.util.LevelConverter;
 import org.phenopackets.coreig.tools.util.RLevelConverter;
 import org.phenopackets.coreig.tools.util.Utils;
@@ -305,8 +305,9 @@ public class MainCommand {
 	private final static JCommander commander = new JCommander(main);
 
 	private final static LoadConformanceCommand load = new LoadConformanceCommand(main);
-	private final static KFLoadData kfload = new KFLoadData(main);
-	private final static KFClearData kfclear = new KFClearData(main);
+	private final static KFUseCase KF_USECASE = new KFUseCase(main);
+	private final static KFClearData KF_CLEAR_DATA = new KFClearData(main);
+	private final static KFLoadData KF_LOAD_DATA = new KFLoadData(main);
 
 	// clinical us
 	private final static ClinicalUsecase CLINICAL_USECASE = new ClinicalUsecase(main);
@@ -350,9 +351,9 @@ public class MainCommand {
 		}
 
 		if (exception != null) {
-			Utils.saveToStepFile(main, mainLogger, "exitException");
+			Utils.saveRequestResponse(main, mainLogger, "exitException");
 		}
-		
+
 		if (reporter != null) {
 			reporter.flush();
 			reporter.close();
@@ -385,11 +386,14 @@ public class MainCommand {
 			case "load":
 				commandObject = load;
 				break;
-			case "kfload":
-				commandObject = kfload;
+			case "kf-usecase":
+				commandObject = KF_USECASE;
 				break;
-			case "kfclear":
-				commandObject = kfclear;
+			case "kf-clear-data":
+				commandObject = KF_CLEAR_DATA;
+				break;
+			case "kf-load-data":
+				commandObject = KF_LOAD_DATA;
 				break;
 			case "clinical-usecase":
 				commandObject = CLINICAL_USECASE;
@@ -468,11 +472,11 @@ public class MainCommand {
 
 	private static void addCommands() {
 		commander.addCommand("load", load);
-		commander.addCommand("kfload", kfload);
-		commander.addCommand("kfclear", kfclear);
+		commander.addCommand("kf-usecase", KF_USECASE);
+		commander.addCommand("kf-clear-data", KF_CLEAR_DATA);
+		commander.addCommand("kf-load-data", KF_LOAD_DATA);
 		commander.addCommand("clinical-usecase", CLINICAL_USECASE);
 		commander.addCommand("clinical-usecase-clear", CLINICAL_USECASE_CLEAR);
-
 	}
 
 	public File getStepOutput() {

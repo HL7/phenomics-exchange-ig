@@ -1,0 +1,101 @@
+
+Running command: org.phenopackets.coreig.tools.command.cl.ClinicalUsecase on: Wed Dec 16 09:57:22 PST 2020
+===================================
+
+=============== Creating the patient for this demo ===================
+Patient/25/_history/1 created
+
+============== Reading phenopacket bundle from: /core-ig/data/cl-data/Bundle-phenopacket.xml ===============
+
+================ Creating the phenopacket bundle as a collection on the server =============
+Phenopacket collection Bundle 26 created...
+
+==================  Linking collection bundle to patient with the "about" relationship. ============
+Updated PP collection bundel to: null
+
+==================  Submitting exom request  ==========================
+Created ServiceRequest: ServiceRequest/28/_history/1
+
+================== Lab searching for patient's requests =============
+
+================= Lab processing ServiceRequests =================
+Age: 10.0
+Karyotypic sex: XX
+Phenotypes:
+	HP:0003429 CNS hypomyelination
+	HP:0001249 Intellectual disability
+	HP:0001298 Encephalopathy
+	HP:0000486 Strabismus
+	HP:0002650 Scoliosis
+
+Invalide phenotypes:
+	HP:INVALID Some invalid concept name
+		Error: Unknown code {http://github.com/phenopackets/core-ig/CodeSystem/hpo}HP:INVALID for 'http://github.com/phenopackets/core-ig/CodeSystem/hpo#HP:INVALID'
+		Error: None of the codes provided are in the value set http://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality (http://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality), and a code from this value set is required) (codes = http://github.com/phenopackets/core-ig/CodeSystem/hpo#HP:INVALID)
+		Error: The Profile 'http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality' definition allows for the type boolean but found type string
+
+Original phenopacket JSON:
+{
+    "id": "uc2-pp1",
+    "subject": {
+        "id": "Patient-36-16DG1123",
+        "age": {
+            "age": "P10Y"
+        },
+        "sex": "FEMALE"
+    },
+    "phenotypic_features": [
+        {
+            "type": {
+                "id": "HP:0003429",
+                "label": "CNS hypomyelination"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0001249",
+                "label": "Intellectual disability"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0001298)",
+                "label": "Encephalopathy"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0000486",
+                "label": "Strabismus"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0002650",
+                "label": "Scoliosis"
+            }
+        }
+    ],
+    "meta_data": {
+        "resources": [
+            {
+                "id": "hp",
+                "name": "human phenotype ontology",
+                "version": "2020-10-12",
+                "namespace_prefix": "HP",
+                "url": "http://purl.obolibrary.org/obo/hp.owl",
+                "iri_prefix": "http://purl.obolibrary.org/obo/HP_"
+            }
+        ]
+    }
+}
+Lab creating exome Observation
+Observation/29/_history/1 created.
+Lab creating exome DiagnosticReport
+DiagnosticReport/30/_history/1 created.
+Lab updating ServiceRequest to completed.
+ServiceRequest/28/_history/2 updated.
+
+================= Retrieving exome analysis results ====================
+Obs: NKX6-2 mutation (GRCh37, chr:10: 134599256CG>C), notes: Some exome analysis notes.
+DiagnositcReport: Spastic ataxia 8, autosomal recessive, with hypomyelinating leukodystrophy (OMIM:617560) https://www.omim.org/clinicalSynopsis/617560 

@@ -7,25 +7,6 @@
 	<id value="kf-bundle-1" />
 	<type value="transaction" />
 
-	<!-- <entry> -->
-	<!-- <resource> -->
-	<!-- <Patient> -->
-	<!-- <id value="" /> -->
-	<!-- <meta> -->
-	<!-- <tag> -->
-	<!-- <system -->
-	<!-- value="http://github.com/phenopackets/core-ig/ig-tools/tag" /> -->
-	<!-- <code value="kfdata" /> -->
-	<!-- </tag> -->
-	<!-- </meta> -->
-	<!-- </Patient> -->
-	<!-- </resource> -->
-	<!-- <request> -->
-	<!-- <method value="POST" /> -->
-	<!-- <url value="" /> -->
-	<!-- </request> -->
-	<!-- </entry> -->
-
 	<!-- The patient for the second KF table here: https://phenopackets-analysis.readthedocs.io/en/latest/usecases-driver.html -->
 	<entry>
 		<resource>
@@ -38,6 +19,7 @@
 						<code value="kfdata" />
 					</tag>
 				</meta>
+				<gender value="female" />
 			</Patient>
 		</resource>
 		<request>
@@ -46,10 +28,48 @@
 		</request>
 	</entry>
 
+	<!-- Age -->
+
 	<entry>
 		<resource>
 			<Observation>
-				<id value="phenotype-1" />
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<status value="final" />
+				<code>
+					<coding>
+						<system value="http://snomed.info/sct" />
+						<code value="424144002" />
+						<display
+							value="Current chronological age (observable entity)" />
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient-1" />
+				</subject>
+				<valueQuantity>
+					<value value="82" />
+					<unit value="day" />
+					<system value="http://unitsofmeasure.org" />
+				</valueQuantity>
+			</Observation>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Observation" />
+		</request>
+	</entry>
+
+	<!-- Abnormal Atrial Septum (HP:0011994) -->
+	<entry>
+		<resource>
+			<Observation>
+				<!-- <id value="phenotype-1" /> -->
 				<meta>
 					<tag>
 						<system
@@ -70,6 +90,7 @@
 						<system
 							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 						<code value="HP:0011994" />
+						<display value="Abnormal Atrial Septum" />
 					</coding>
 				</code>
 				<subject>
@@ -87,7 +108,7 @@
 	<entry>
 		<resource>
 			<Observation>
-				<id value="phenotype-2" />
+				<!-- <id value="phenotype-2" /> -->
 				<meta>
 					<tag>
 						<system
@@ -108,6 +129,7 @@
 						<system
 							value="http://github.com/phenopackets/core-ig/CodeSystem/hpo" />
 						<code value="HP:0011563" />
+						<display value="Abnormal Ventriculo-arterial Connection" />
 					</coding>
 				</code>
 				<subject>
@@ -122,7 +144,129 @@
 		</request>
 	</entry>
 
+	<!-- Ventricular septal defect, single (MONDO:0002070; NCIT:C84506) -->
+	<entry>
+		<resource>
+			<Condition>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://mondo" />
+						<code value="MONDO:0002070" />
+						<display value="Ventricular septal defect, single" />
+					</coding>
+					<coding>
+						<system value="http://ncit" />
+						<code value="NCIT:C84506" />
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient-1"></reference>
+				</subject>
 
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Condition" />
+		</request>
+	</entry>
+
+	<!-- Dysplastic tricuspid valve (MONDO:0020288; NCIT:C50842) -->
+	<entry>
+		<resource>
+			<Condition>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<code>
+					<coding>
+						<system value="http://mondo" />
+						<code value="MONDO:0020288" />
+						<display value="Dysplastic tricuspid valve" />
+					</coding>
+					<coding>
+						<system value="http://ncit" />
+						<code value="NCIT:C50842" />
+					</coding>
+				</code>
+				<subject>
+					<reference value="Patient/patient-1"></reference>
+				</subject>
+
+			</Condition>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Condition" />
+		</request>
+	</entry>
+
+	<!-- Stub specimen -->
+	<entry>
+		<resource>
+			<Specimen>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<type>
+					<coding>
+						<display value="Normal blood, DNA analyte" />
+					</coding>
+				</type>
+				<subject>
+					<reference value="Patient/patient-1" />
+				</subject>
+			</Specimen>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Specimen" />
+		</request>
+	</entry>
+
+	<!-- Experiment -->
+	<entry>
+		<resource>
+			<Task>
+				<meta>
+					<tag>
+						<system
+							value="http://github.com/phenopackets/core-ig/ig-tools/tag" />
+						<code value="kfdata" />
+					</tag>
+				</meta>
+				<status value="completed" />
+				<intent value="original-order" />
+				<code>
+					<coding>
+						<display value="Whole Genome Sequencing" />
+					</coding>
+				</code>
+				<focus>
+					<reference value="Patient/patient-1" />
+				</focus>
+			</Task>
+		</resource>
+		<request>
+			<method value="POST" />
+			<url value="Task" />
+		</request>
+	</entry>
 
 
 </Bundle>

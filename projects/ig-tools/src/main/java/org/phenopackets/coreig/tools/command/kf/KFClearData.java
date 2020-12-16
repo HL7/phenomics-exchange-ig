@@ -3,10 +3,13 @@ package org.phenopackets.coreig.tools.command.kf;
 import java.util.concurrent.Callable;
 
 import org.hl7.fhir.r4.model.Bundle;
+import org.hl7.fhir.r4.model.Condition;
 import org.hl7.fhir.r4.model.Bundle.BundleEntryComponent;
 import org.hl7.fhir.r4.model.Observation;
 import org.hl7.fhir.r4.model.Patient;
 import org.hl7.fhir.r4.model.Resource;
+import org.hl7.fhir.r4.model.Specimen;
+import org.hl7.fhir.r4.model.Task;
 import org.phenopackets.coreig.tools.command.MainCommand;
 import org.phenopackets.coreig.tools.util.Utils;
 import org.slf4j.Logger;
@@ -32,7 +35,8 @@ public class KFClearData implements Callable<Void> {
 		// "kfdata").execute();
 
 		@SuppressWarnings("unchecked")
-		Class<? extends Resource>[] classes = new Class[] { Observation.class, Patient.class };
+		Class<? extends Resource>[] classes = new Class[] { Observation.class, Task.class, Condition.class,
+				Specimen.class, Patient.class };
 
 		for (Class<? extends Resource> clas : classes) {
 			Thread.sleep(1000);
@@ -46,8 +50,8 @@ public class KFClearData implements Callable<Void> {
 					for (BundleEntryComponent entry : bundle.getEntry()) {
 						if (clas.isInstance(entry.getResource())) {
 							main.getClient().delete().resource(entry.getResource()).execute();
-							Utils.logRequest(main, logger);
-							Utils.logResponse(main, logger);
+							Utils.saveRequestResponse(main, logger, "detete-" + entry.getResource().fhirType() + "-"
+									+ entry.getResource().getIdElement().getIdPart());
 						}
 					}
 				} else {

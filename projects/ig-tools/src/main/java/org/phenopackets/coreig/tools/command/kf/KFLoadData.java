@@ -20,16 +20,20 @@ public class KFLoadData implements Callable<Void> {
 
 	@Override
 	public Void call() throws Exception {
+
+		loadData();
+
+		return null;
+	}
+
+	private void loadData() {
 		Bundle bundle = (Bundle) main.loadResource("../../data/kf-data/Bundle-kf-bundle-1.xml");
 		main.getClient().transaction().withBundle(bundle).execute();
-		Utils.logRequest(main, logger);
-		Utils.logResponse(main, logger);
-		
+		Utils.saveRequestResponse(main, logger, "dataBundle1");
+
 		bundle = (Bundle) main.loadResource("../../data/kf-data/Bundle-kf-bundle-2.xml");
 		main.getClient().transaction().withBundle(bundle).execute();
-		Utils.logRequest(main, logger);
-		Utils.logResponse(main, logger);
-		return null;
+		Utils.saveRequestResponse(main, logger, "dataBundle2");
 	}
 
 }

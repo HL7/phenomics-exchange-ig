@@ -33,7 +33,7 @@ public class ClinicalUsecaseClear implements Callable<Void> {
 			while (true) {
 				Bundle bundle = (Bundle) main.getClient().search().forResource(clas)
 						.withTag(Utils.TAG_URI, "clinical-usecase").execute();
-				Utils.saveToStepFile(main, logger, clas.getSimpleName() + "-search-bundle");
+				Utils.saveRequestResponse(main, logger, clas.getSimpleName() + "-search-bundle");
 
 				if (bundle.getEntry().size() > 0) {
 					for (BundleEntryComponent entry : bundle.getEntry()) {
@@ -47,7 +47,7 @@ public class ClinicalUsecaseClear implements Callable<Void> {
 //								main.getClient().delete().resourceById("Bundle", r.getIdElement().getIdPart())
 //										.execute();
 //							}
-							Utils.saveToStepFile(main, logger,
+							Utils.saveRequestResponse(main, logger,
 									r.fhirType() + "-delete-" + r.getIdElement().getIdPart());
 						}
 					}

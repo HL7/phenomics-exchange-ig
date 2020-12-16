@@ -12,7 +12,7 @@
     <stringAttribute key="org.eclipse.jdt.launching.CLASSPATH_PROVIDER" value="org.eclipse.m2e.launchconfig.classpathProvider"/>
     <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.phenopackets.coreig.tools.command.MainCommand"/>
     <stringAttribute key="org.eclipse.jdt.launching.MODULE_NAME" value="ig-tools"/>
-    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--ig-out ../../ig-root/output&#13;&#10;--server &quot;http://localhost:8080/fhir&quot;&#13;&#10;--rlevel DEBUG&#13;&#10;--llevel DEBUG&#13;&#10;--lpath log.txt&#13;&#10;--lquiet&#13;&#10;kfload"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="--ig-out ../../ig-root/output&#13;&#10;--server &quot;http://localhost:8080/fhir&quot;&#13;&#10;--rlevel INFO&#13;&#10;--llevel DEBUG&#13;&#10;--lpath log.txt&#13;&#10;--lquiet&#13;&#10;kf-usecase"/>
     <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="ig-tools"/>
     <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.m2e.launchconfig.sourcepathProvider"/>
 </launchConfiguration>

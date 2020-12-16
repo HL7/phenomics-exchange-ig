@@ -269,7 +269,7 @@ public class ClinicalUsecase implements Callable<Void> {
 				.setCode("clinical-usecase");
 
 		createdSpecimen = new Specimen();
-		createdSpecimen.setSubjectTarget(createdPatient);
+		createdSpecimen.setSubject(new Reference(createdPatient));
 		// just an example, from: https://www.hl7.org/fhir/v2/0487/index.html
 		createdSpecimen.getType().addCoding().setSystem("http://terminology.hl7.org/CodeSystem/v2-0487").setCode("BLD");
 
@@ -487,7 +487,7 @@ public class ClinicalUsecase implements Callable<Void> {
 	}
 
 	private void writeStep(String step) {
-		Utils.saveToStepFile(main, logger, step);
+		Utils.saveRequestResponse(main, logger, step);
 	}
 
 }

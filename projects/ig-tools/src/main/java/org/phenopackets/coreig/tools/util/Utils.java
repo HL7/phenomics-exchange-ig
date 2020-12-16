@@ -327,7 +327,7 @@ public class Utils {
 //		return file;
 //	}
 
-	public static String saveToStepFile(MainCommand main, Logger l, String stepName) {
+	public static String saveRequestResponse(MainCommand main, Logger l, String stepName) {
 
 		String requestString = Utils.logRequest(main, l);
 
@@ -340,7 +340,7 @@ public class Utils {
 		try {
 			try (FileWriter writer = new FileWriter(file)) {
 				writer.write(content);
-				main.info("Step file: " + fileName, true, l);
+				main.debug("Step file: " + fileName, true, l);
 			}
 		} catch (IOException e) {
 			main.rethrow(e);

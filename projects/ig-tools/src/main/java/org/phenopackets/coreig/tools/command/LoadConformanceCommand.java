@@ -104,13 +104,13 @@ public class LoadConformanceCommand implements Callable<Void> {
 		ig.getDefinition().getResource().removeAll(toRemove);
 
 		loadResrouces(refTypeMap.get("CodeSystem"));
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		loadResrouces(refTypeMap.get("ValueSet"));
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		loadResrouces(refTypeMap.get("StructureDefinition"));
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		loadResrouces(refTypeMap.get("SearchParameter"));
-		Thread.sleep(30000);
+		Thread.sleep(5000);
 		loadExamples();
 		loadUpdate(ig, true);
 
