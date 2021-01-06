@@ -14,3 +14,5 @@ script:
 branches:
     only:
         - master
+
+if: NOT branch = data-example-1
