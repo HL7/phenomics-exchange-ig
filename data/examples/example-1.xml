@@ -17,6 +17,11 @@
 				</link>
 			</Person>
 		</resource>
+		<!-- The "request" is to specify how the above resource should be submitted to the FHIR API when this 
+			Bundle is sent to the server as a "transaction". So, the request below says "take the above Person instance 
+			and submit it to the API with a PUT request to the http:/server/fhir/Person endpoint". All the requests 
+			for each entry happen in a transaction and the full Bundle transaction have to succeed before the transaction 
+			is committed. See: https://www.hl7.org/fhir/http.html#transaction -->
 		<request>
 			<method value="PUT" />
 			<url value="Person" />
@@ -36,5 +41,5 @@
 			<url value="Patient" />
 		</request>
 	</entry>
-	
+
 </Bundle>
