@@ -7,7 +7,7 @@
       <h:p>Some limited HTML content.</h:p>
     </h:div>
   </text>
-  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/karyotypic-sex" />
+  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-karyotypic-sex" />
   <name value="KaryotypicSexSD" />
   <title value="Karyotypic sex Observation profile" />
   <status value="draft" />
