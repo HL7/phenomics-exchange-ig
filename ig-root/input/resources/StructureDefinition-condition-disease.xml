@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<StructureDefinition xmlns="http://hl7.org/fhir" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
+<StructureDefinition xmlns="http://hl7.org/fhir" 
+    xmlns:h="http://www.w3.org/1999/xhtml" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
   <id value="condition-disease" />
   <text>
     <status value="generated" />
@@ -7,7 +10,7 @@
       <h:p>The word phenotype is used with many different meanings, including ‘the observable traits of an organism’. In medicine, the word can be used with at least two different meanings. It is used to refer to some observed deviation from normal morphology, physiology, or behavior. In contrast, the disease is a diagnosis, i.e., and inference or hypothesis about the cause underlying the observed phenotypic abnormalities.</h:p>
     </h:div>
   </text>
-  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/condition-sisease" />
+  <url value="http://github.com/phenopackets/core-ig/StructureDefinition/condition-disease" />
   <name value="DiseaseSD" />
   <title value="Disease Condition profile" />
   <status value="draft" />
@@ -23,6 +26,5 @@
       <path value="Condition.code" />
       <min value="1"/>
     </element>
-
   </differential>
 </StructureDefinition>

@@ -17,7 +17,7 @@
   </code>
   <valueCodeableConcept>
     <coding>
-      <system value="http://github.com/phenopackets/core-ig/CodeSystem/karyotypic-sex" />
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/observation-karyotypic-sex" />
       <code value="XXW" />
     </coding>
   </valueCodeableConcept>

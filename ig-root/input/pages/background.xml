@@ -1,9 +1,8 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
-	<h3>Heading 1</h3>
+	<h3>Phenopackets FHIR IG</h3>
 	<p>
-		Some text
+	This IG is a FHIR representation of the <a href="https://github.com/phenopackets/phenopacket-schema" target="_blank">GA4GH Phenopacket schema</a>.
 	</p>
-	<h3>Heading 2</h3>
 </div>
