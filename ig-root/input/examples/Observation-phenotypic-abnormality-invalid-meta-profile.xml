@@ -4,7 +4,7 @@
 	xmlns:h="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://hl7.org/fhir http://hl7.org/fhir/R4/fhir-single.xsd http://www.w3.org/1999/xhtml http://hl7.org/fhir/R4/fhir-xhtml.xsd">
-	<id value="phenotypic-abnormality-invalid-1" />
+	<id value="phenotypic-abnormality-invalid-meta-profile" />
 	<meta>
 		<profile value="http://github.com/phenopackets/core-ig/StructureDefinition/observation-phenotypic-abnormality" />
 	</meta>

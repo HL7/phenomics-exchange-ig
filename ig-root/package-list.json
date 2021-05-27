@@ -1,6 +1,6 @@
 {
  "package-id" : "hl7.fhir.uv.myig",
- "title" : "Your User Friendly Name for MyIG Here", 
+ "title" : "FHIR Phenopackets Implementation Guide", 
  "canonical" : "http://hl7.org/fhir/uv/myig", 
  "introduction" : "The introduction that should appear in the FHIR IG registry",
  "list" : [{
