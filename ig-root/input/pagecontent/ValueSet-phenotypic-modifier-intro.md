@@ -1,3 +1,0 @@
-# Phenotypic clinical modifier ValueSet
-
-Add introductory text here...

@@ -1,0 +1,15 @@
+{
+  "package-id": "org.ga4gh.phenopacket",
+  "title": "FHIR Implementation Guide: GA4GH Phenopacket",
+  "canonical": "https://github.com/phenopackets/core-ig",
+  "introduction": "This implementation guide design document creates a set of profiles and extensions to implement the GA4GH Phenopacket",
+  "list": [
+    {
+      "version": "current",
+      "desc": "Continuous Integration Build (latest in version control)",
+      "path": "http://phenopackets.org/core-ig/master/",
+      "status": "ci-build",
+      "current": true
+    }
+  ]
+}
