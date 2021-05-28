@@ -1,3 +1,0 @@
-# Phenotypic component ValueSet
-
-Add introductory text here...

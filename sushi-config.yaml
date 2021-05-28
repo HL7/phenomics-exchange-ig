@@ -1,0 +1,32 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: ga4gh.fhir.phenopacket
+canonical: https://github.com/phenopackets/core-ig
+name: GA4GHPhenopacketIG
+title: "GA4GH Phenopacket FHIR Implementation Guide"
+description: "FHIR implementation guide for the Global Alliance for Genomics and Health Phenopacket standard."
+status: draft
+license: CC0-1.0
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+copyright: "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"
+releaseLabel: ci-build
+publisher:
+  name: "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"
+  url: https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Table of Contents: toc.html
+  Artifacts: artifacts.html
+
+parameters:
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true

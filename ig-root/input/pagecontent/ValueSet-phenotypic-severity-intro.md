@@ -1,3 +1,0 @@
-# Phenotypic severity ValueSet
-
-Add introductory text here...
