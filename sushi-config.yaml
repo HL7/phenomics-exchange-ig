@@ -5,11 +5,11 @@
 id: ga4gh.fhir.phenopacket
 canonical: https://github.com/phenopackets/core-ig
 name: GA4GHPhenopacketIG
-title: "GA4GH Phenopacket FHIR Implementation Guide"
+title: "GA4GH Phenopacket (version 2) FHIR Implementation Guide"
 description: "FHIR implementation guide for the Global Alliance for Genomics and Health Phenopacket standard."
 status: draft
 license: CC0-1.0
-version: 0.1.0
+version: 0.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 copyright: "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"
