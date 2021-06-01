@@ -37,7 +37,7 @@ git add -A &> /dev/null
 git commit -m "Preparing build of $GIT_BRANCH"
 git push -f --set-upstream "https://${COREIGTOKEN}@github.com/phenopackets/core-ig.git" gh-pages
 
-cd $GIT_ROOT/ig-root
+cd $GIT_ROOT/fsh-generated
 if [[ ! -f input-cache/publisher.jar ]]; then
 	#./_updatePublisher.sh -f -y
     ${GIT_ROOT}/bin/get-publisher.sh
