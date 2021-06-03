@@ -8,6 +8,25 @@ Description: "Various categories or tags"
 * ^content = #complete
 * #phenotype "Phenotype"
 
+
+CodeSystem: HtsFormat
+Id: HtsFormat
+Title: "HTS Format"
+Description: "An enumeration used to represent different high-throughput sequencing file formats."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* ^content = #complete
+* #UNKNOWN "Unknown"
+* #SAM "SAM"
+* #BAM "BAM"
+* #CRAM "CRAM"
+* #VCF "VCF"
+* #BCF "BCF"
+* #GVCF "GVCF"
+
 CodeSystem: KaryotypicSexCS
 Id: KaryotypicSex
 Title: "Karyotypic sex code system"
