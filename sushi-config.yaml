@@ -23,12 +23,15 @@ pages:
     title: Home
   ga4gh.md:
     title: GA4GH
+  phenotype.md:
+    title: Deep phenotyping
 
 menu:
   Home: index.html
   Table of Contents: toc.html
   Background:
     GA4GH: ga4gh.html
+    Deep phenotyping: phenotype.html
 #    Disease: group-disease.html
 #    Assessment: group-assessment.html
 #    Genomics: group-genomics.html
