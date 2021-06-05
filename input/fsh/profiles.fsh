@@ -8,12 +8,12 @@ Description: "This profile stipulates that a FHIR Condition must have a codeable
 * ^date = "2021-06-03T09:49:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
-* extension contains
-    CodedOnset named CodedOnset ..1 MS //and
+//* extension contains
+//    CodedOnset named CodedOnset ..1 MS //and
 //    TumorStage named TumorStage ..1 MS
-* code MS
-* subject MS
-* onset[x] MS
+//* code MS
+//* subject MS
+//* onset[x] MS
 
 
 Profile: Individual
