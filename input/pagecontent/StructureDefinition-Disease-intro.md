@@ -16,9 +16,9 @@ or other precise diagnosis at the time the Phenopacket is generated, and the spe
 Thus, the Disease element can be used to model disease diagnoses at different levels of granularity depending 
 on the preciseness of the clinical diagnosis.
 
-## Mapping FHIR to the GA4GH phenopacket-schema.
+## The FHIR Condition and the GA4GH phenopacket-schema Disease.
 
-The GA4GH Disease element can be coded using the native FHIR Condition element. The following explains how this should be done.
+The GA4GH ``Disease`` element can be coded using the native FHIR [Condition](http://hl7.org/fhir/R4/condition.html) element. The following explains how this should be done.
 
 1. In the GA4GH phenopacket, the ``term`` element is an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html#rstontologyclass) that represents the disease diagnosis. This corresponds to the ``code`` element of Condition.
 

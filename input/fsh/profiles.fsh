@@ -16,6 +16,18 @@ Description: "This profile stipulates that a FHIR Condition must have a codeable
 //* onset[x] MS
 
 
+Profile: Measurement
+Parent: Observation
+Id: Measurement
+Title: "Measurement"
+Description: "This profile defines the GA4GH Measurement element in terms of the FHIR Observation"
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-03T09:49:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+
+
 Profile: Individual
 Parent: Patient
 Id: Individual
