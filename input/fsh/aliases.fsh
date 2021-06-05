@@ -5,3 +5,5 @@ Alias: $observation-karyotypic-sex = http://github.com/phenopackets/core-ig/Code
 Alias: $OTHER = http://github.com/phenopackets/core-ig/CodeSystem/OTHER
 Alias: $sct = http://snomed.info/sct
 Alias: $umls = http://www.nlm.nih.gov/research/umls
+Alias: $ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
+Alias: $IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
