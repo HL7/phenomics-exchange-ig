@@ -8,3 +8,4 @@ Alias: $sct = http://snomed.info/sct
 Alias: $umls = http://www.nlm.nih.gov/research/umls
 Alias: $ClinStatus = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $SectionType = http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType

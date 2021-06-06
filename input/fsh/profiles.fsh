@@ -15,19 +15,6 @@ Description: "This profile stipulates that a FHIR Condition must have a codeable
 //* subject MS
 //* onset[x] MS
 
-
-Profile: Measurement
-Parent: Observation
-Id: Measurement
-Title: "Measurement"
-Description: "This profile defines the GA4GH Measurement element in terms of the FHIR Observation"
-* ^version = "0.1.0"
-* ^status = #active
-* ^date = "2021-06-03T09:49:00-04:00"
-* ^publisher = "GA4GH Phenopacket Working Group"
-* ^contact.name = "Peter Robinson"
-
-
 Profile: Individual
 Parent: Patient
 Id: Individual
@@ -43,3 +30,29 @@ Description: "The subject of the Phenopacket is represented by an Individual ele
 * identifier MS
 * gender MS
 * birthDate MS
+
+
+Profile: Measurement
+Parent: Observation
+Id: Measurement
+Title: "Measurement"
+Description: "This profile defines the GA4GH Measurement element in terms of the FHIR Observation"
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-03T09:49:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+
+Profile: PhenotypicFeature
+Parent: Condition
+Id: PhenotypicFeature
+Title: "Phenotypic Feature"
+Description: "This profile defines the GA4GH PhenotypicFeature element in terms of the FHIR Condition"
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-03T09:49:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+* code 1..1 MS
+* severity 0..1 MS
+* clinicalStatus 0..1 MS

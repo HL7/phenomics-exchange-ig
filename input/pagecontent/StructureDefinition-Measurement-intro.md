@@ -1,6 +1,6 @@
 # Introduction
 
-In the phenopacket-schema, an Phenopacket representing clinical data about an individual can have zero to many 
+In the phenopacket-schema, a Phenopacket representing clinical data about an individual can have zero to many 
 [Measurements](https://phenopacket-schema.readthedocs.io/en/latest/measurement.html). The measurement element
 is designed to capture quantitative, ordinal (e.g., absent/present), or categorical measurements. The difference between
 a ``Measurement`` and a ``PhenotypicFeature`` is that the latter is intended to represent characteristic findings. The findings
