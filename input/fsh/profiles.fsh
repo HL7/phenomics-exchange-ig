@@ -44,7 +44,7 @@ Description: "This profile defines the GA4GH Measurement element in terms of the
 * ^contact.name = "Peter Robinson"
 
 Profile: PhenotypicFeature
-Parent: Condition
+Parent: Observation
 Id: PhenotypicFeature
 Title: "Phenotypic Feature"
 Description: "This profile defines the GA4GH PhenotypicFeature element in terms of the FHIR Condition"
@@ -54,5 +54,14 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
 * code 1..1 MS
-* severity 0..1 MS
-* clinicalStatus 0..1 MS
+* value[x] 1..1 MS
+* value[x] only CodeableConcept
+* value[x] ^short = "Superclass of ontology terms used to denote phenotypic feature"
+//* severity 0..1 MS
+//* clinicalStatus 0..1 MS
+* specimen ..0
+* device ..0
+* referenceRange ..0
+* hasMember ..0
+* component ..0
+
