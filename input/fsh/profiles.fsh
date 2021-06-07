@@ -42,6 +42,17 @@ Description: "This profile defines the GA4GH Measurement element in terms of the
 * ^date = "2021-06-03T09:49:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
+* identifier 0..0
+* basedOn 0..0
+* code 1..1 MS
+* partOf 0..0
+* category 0..0
+* subject 0..0
+* focus 0..0
+* encounter 0..0
+* issued 0..0
+* performer 0..0
+* dataAbsentReason 0..0
 
 Profile: PhenotypicFeature
 Parent: Observation
@@ -57,8 +68,6 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * value[x] 1..1 MS
 * value[x] only CodeableConcept
 * value[x] ^short = "Superclass of ontology terms used to denote phenotypic feature"
-//* severity 0..1 MS
-//* clinicalStatus 0..1 MS
 * specimen ..0
 * device ..0
 * referenceRange ..0
