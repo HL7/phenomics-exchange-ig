@@ -21,7 +21,7 @@ GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
 
 BRANCHES=($(git for-each-ref --format="%(refname)"))
 
-cd ${GIT_ROOT}/../core-ig-gh-pages
+cd ${GIT_ROOT}/.. -gh-pages
 
 # clean directories for non existing branches
 IFSO="$IFS"
