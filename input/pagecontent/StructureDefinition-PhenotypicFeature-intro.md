@@ -7,29 +7,14 @@ This element is intended to be used to describe a phenotype that characterizes t
 no exact correspondence in the FHIR standard, we shoose to base it on the FHIR [Observation](https://www.hl7.org/fhir/observation.html), which is used to specify a <cite>Measurements and simple assertions made about a patient, device or other subject</cite>. In our case, a PhenotypicFeature
 is intended to be an assertion about a specific phenotypic abnormality that is a component of a disease.
 
-1. In the GA4GH phenopacket, the ``description`` element is string that can be used for comments or arbitrary additional information. We do not consider this to be an essential or even recommended part of the ``PhenotypicFeature`` and choose not to model it explictly in this IG. Implementers of software to transform FHIR code to GA4GH phenopacket code are free to use this field to record additional information in the FHR record as dictated by project needs, but that is outside the scope of this IG.
+1. In the GA4GH phenopacket, the ``description`` element is string that can be used for comments or arbitrary additional information. We do not consider this to be an essential or even recommended part of the ``PhenotypicFeature`` and choose not to model it explictly in this IG. Implementers of software to transform FHIR code to GA4GH phenopacket code are free to use this field to record additional information in the FHR record as dictated by project needs, but that is outside the scope of this IG. For instance, implementations may record information in the ``note`` field that will be inserted into the ``description`` element of the GA4GH ``PhenopacketFeature``. However, we recommend that implementers avoid using free text wherever possible.
 
-2. In the GA4GH phenopacket, the ``type`` element is an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html#rstontologyclass) that corresponds to the ``code`` element of ``Condition``. For the intended use cases of the phenopacket, all `PhenotypicFeature``s should be terms used for a specific project should come from a single ontology or at most a small number of ontologies. The ``code`` element should be set to the superclass of all such codes in the ontology. For instance, to use [Human Phenotype Ontology](https://hpo.jax.org/app/) phenotypic feature codes, the superclass should be indicated here -- [Phenotypic abnormality](https://hpo.jax.org/app/browse/term/HP:0000118)(HP:0000118). The actual code should be indicated in the value section of the ``Observation``, as a ``valueCodeableConcept``. In this IG, we have constrained the ``value`` field to be a ``valueCodeableConcept`` with cardinality 1. We do not contrain the field to be a concept from a particular ontology. We envision that other IGs for specific use cases will additionally constrain this IG.
+2. In the GA4GH phenopacket, the ``type`` element is an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html#rstontologyclass) that corresponds to the ``code`` element of ``Condition``. 
 
 
-3. In the GA4GH phenopacket, ``excluded`` is a boolean that is false by default. If set true, the meaning is that the phenotypic feature indicated by the ``type`` element was explicitly excluded by clinical examination. The equivalent
-way of doing this in FHIR is to include a 'negated' coding as shown in the following.
-
-```
-"valueCodeableConcept": {
-  "coding": [
-	{
-	  "system": "http://snomed.info/sct",
-	  "code": "260385009",
-	  "display": "Negative"
-	}, {
-	  "system": "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
-	  "code": "HP:0002875",
-	  "display": "Exertional dyspnea"
-	}
-],
-}
-```
+3. In the GA4GH phenopacket, ``excluded`` is a boolean that is false by default. If set true, the meaning is that the phenotypic feature indicated by the ``type`` element was explicitly excluded by clinical examination. In this IG, if
+a phenotype term is observed, then the ``value`` field should be set to ``true``. If the phenotypic feature was excluded,
+the ``value`` field should be set to ``false``. We show an observed and excluded phenotypic feature in the Examples.
 
 
 

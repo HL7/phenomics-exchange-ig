@@ -65,9 +65,9 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
 * code 1..1 MS
+* value[x] only boolean
 * value[x] 1..1 MS
-* value[x] only CodeableConcept
-* value[x] ^short = "Superclass of ontology terms used to denote phenotypic feature"
+* value[x] ^short = "true: observed; false: excluded"
 * specimen ..0
 * device ..0
 * referenceRange ..0
