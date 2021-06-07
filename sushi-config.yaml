@@ -18,15 +18,38 @@ publisher:
   name: "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"
   url: https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/
 
-# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
-# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
-# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+pages:
+  index.md:
+    title: Home
+  ga4gh.md:
+    title: GA4GH
+  phenotype.md:
+    title: Deep phenotyping
+
 menu:
   Home: index.html
-#  Table of Contents: toc.html
-#  Artifacts: artifacts.html
+  Table of Contents: toc.html
+  Background:
+    GA4GH: ga4gh.html
+    Deep phenotyping: phenotype.html
+#    Disease: group-disease.html
+#    Assessment: group-assessment.html
+#    Genomics: group-genomics.html
+#    Treatment: group-treatment.html
+#    Outcome: group-outcome.html
+#  Conformance:
+#    General Expectations: conformance-general.html
+#    Identifying mCODE Patients: conformance-patients.html
+#    Profile Conformance: conformance-profiles.html
+#    Terminology: terminology.html
+#  Extended Example: examples.html
+  Artifacts: artifacts.html
+#  History:
+#    Change Log: change_log.html
+#    Other Versions: http://hl7.org/fhir/us/mcode/history.html
 
-#parameters:
-#  apply-contact: true
-#  apply-jurisdiction: true
-#  apply-publisher: true
+
+parameters:
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true

@@ -39,20 +39,32 @@ Description: "ValueSet description here"
 * $hpo#HP:0012823
 * include codes from system $hpo where concept is-a #HP:0012824
 
-ValueSet: PhenotypicOnsetValueSet
-Id: phenotypic-onset
-Title: "Phenotypic onset ValueSet"
-Description: "ValueSet description here"
+ValueSet: Onset
+Id: Onset
+Title: "Onset ValueSet"
+Description: "Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007)."
 * ^status = #active
-* $hpo#HP:0003674
-* $hpo#HP:0003623
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-03T10:26:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+* include codes from system $hpo where concept is-a #HP:0003674
+* include codes from system SNOMED_CT where concept descendent-of #282032007
 
-ValueSet: PhenotypicSeverityValueSet
-Id: phenotypic-severity
-Title: "Phenotypic severity ValueSet"
-Description: "ValueSet description here"
+
+ValueSet: Severity
+Id: Severity
+Title: "Severity"
+Description: "Phenotypic feature severity codes from the Human Phenotype Ontology and SNOMED CT."
+* ^version = "0.1.0"
 * ^status = #active
-* $hpo#HP:0012824
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $hpo where concept descendent-of #HP:0012824
+* include codes from system SNOMED_CT where concept descendent-of #272141005
+
 
 ValueSet: Test
 Id: test

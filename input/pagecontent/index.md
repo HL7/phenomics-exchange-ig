@@ -1,6 +1,8 @@
 # GA4GH Phenopacket FHIR Implementation Guide
 
-TODO
+The goal of the phenopacket-schema is to define the phenotypic description of a patient/sample in the context of rare disease, common/complex disease, or cancer. The schema as well as source code in Java, C++, and Python is available from the phenopacket-schema [GitHub repository](https://github.com/phenopackets/phenopacket-schema).
+
+The phenopacket schema is being developed under the auspices of the Global Alliance for Genomics and Health, [GA4GH](https://www.ga4gh.org/). The native version is developed using Google's [Protocol buffers](https://developers.google.com/protocol-buffers), i.e., protobuf (version 3).
 
 ### Understanding FHIR (Prerequisite)
 
