@@ -5,7 +5,7 @@ Description: "PhenotypicFeature Example for arachnodactyly"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001166 "Arachnodactyly"
-* value[x] = true
+* valueBoolean = true
 
 
 Instance: lvdysfunction-excluded
@@ -15,7 +15,7 @@ Description: "PhenotypicFeature Example for exclusion of LV dysfunction"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0025168 "Left ventricular diastolic dysfunction"
-* value[x] = false
+* valueBoolean = false
 
 Instance: MVP-with-onset
 InstanceOf: PhenotypicFeature
@@ -24,5 +24,5 @@ Description: "PhenotypicFeature Example for mitral value prolapse with onset"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001634 "Mitral valve prolapse"
-* value[x] = true
+* valueBoolean = true
 * effectiveDateTime = "2018-03-06"
