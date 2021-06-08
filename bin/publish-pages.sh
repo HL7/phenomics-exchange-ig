@@ -21,7 +21,7 @@ GIT_BRANCH=${TRAVIS_PULL_REQUEST_BRANCH:-${TRAVIS_BRANCH}}
 
 BRANCHES=($(git for-each-ref --format="%(refname)"))
 
-cd ${GIT_ROOT}/../core-ig-gh-pages
+cd ${GIT_ROOT} -gh-pages
 
 # clean directories for non existing branches
 IFSO="$IFS"
@@ -36,7 +36,7 @@ do
 done
 
 # copy over build
-cp -ra ${GIT_ROOT}/ig-root/output "$GIT_BRANCH"
+cp -ra ${GIT_ROOT}/output "$GIT_BRANCH"
 #cp -ra ${GIT_ROOT}/ig-root "$GIT_BRANCH"
 
 rm README.md
@@ -44,7 +44,7 @@ echo "# Built branches" > README.md
 for i in $(ls -d */)
 do 
     echo >> README.md
-    echo Branch "["${i%%/}"]("${i}") is [published](http://phenopackets.org/core-ig/"${i}") with [QA report](http://phenopackets.org/core-ig/"${i}"qa.html)" >> README.md
+    echo Branch "["${i%%/}"]("${i}") is [published](http://phenopackets.org/"${i}") with [QA report](http://phenopackets.org/"${i}"qa.html)" >> README.md
 done
 
 echo >> README.md
