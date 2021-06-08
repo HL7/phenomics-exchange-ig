@@ -1,3 +1,19 @@
+Profile: Biosample
+Parent: Specimen
+Id: Biosample
+Title: "Biosample"
+Description: "A unit of biological material from which the substrate molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. sequencing, array hybridisation, mass-spectrometry) are extracted."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-08T09:49:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+* identifier 1..1 MS
+* type MS
+* subject MS
+* note MS
+
+
 Profile: Disease
 Parent: Condition
 Id: Disease
