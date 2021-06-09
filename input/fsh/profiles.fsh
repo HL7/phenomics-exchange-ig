@@ -10,6 +10,7 @@ Description: "A unit of biological material from which the substrate molecules (
 * ^contact.name = "Peter Robinson"
 * identifier 1..1 MS
 * type MS
+* subject only Reference(Patient)
 * subject MS
 * note MS
 
