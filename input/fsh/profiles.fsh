@@ -13,6 +13,8 @@ Description: "A unit of biological material from which the substrate molecules (
 * subject only Reference(Patient)
 * subject MS
 * note MS
+* collection.bodySite MS
+* collection.bodySite ^short = "Anatomical collection site. Corresponds to sampled_tissue (GA4GH Biosample)"
 
 
 Profile: Disease
