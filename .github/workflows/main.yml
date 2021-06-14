@@ -10,6 +10,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -23,23 +24,18 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      - name: Update the image to the latest publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_updatePublisher.sh --force
-
-      - name: Run sushi to generate the ig.ini file
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: sushi
-
-      - name: Run the IG publisher
-        uses: docker://hl7fhir/ig-publisher-base:latest
-        with:
-          args: ./_genonce.sh -no-sushi
+      - name: Build Implementation Guide
+        run: |
+          docker run \
+            -v $(pwd):/home/publisher/ig \
+            hl7fhir/ig-publisher-base \
+            sh -c "./_updatePublisher.sh -y && ./_genonce.sh"
+      - name: Move to output to docs subdirectory
+        run: |
+          mkdir ./public
+          mv ./output ./public/docs
           
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./output
