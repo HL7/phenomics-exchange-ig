@@ -1,10 +1,25 @@
-ValueSet: ObservationCategories
-Id: observation-categories
-Title: "Observation categories"
-Description: "ValueSet description here"
-* ^status = #draft
-* include codes from valueset $observation-category
-* Categories#phenotype
+ValueSet: DiagnosticMarker
+Id: DiagnosticMarker
+Title: "Diagnostic Marker"
+Description: "Codes to indicate clinically relevant bio markers."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $ncit.owl where concept descendent-of #NCIT:C36292
+
+ValueSet: HistologicalDiagnosis
+Id: HistologicalDiagnosis
+Title: "HistologicalDiagnosis"
+Description: "Histological diagnosis codes from NCIT."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $ncit.owl where concept descendent-of #NCIT:C28101
+* include codes from system $ncit.owl where concept descendent-of #NCIT:C2991
 
 ValueSet: KaryotypicSex
 Id: KaryotypicSex
@@ -13,6 +28,16 @@ Description: "The karyotypic (chromosomal) sex of an individual"
 * ^status = #active
 * ^date = "2021-05-28T17:06:00-04:00"
 * include codes from system KaryotypicSex
+
+
+ValueSet: ObservationCategories
+Id: observation-categories
+Title: "Observation categories"
+Description: "ValueSet description here"
+* ^status = #draft
+* include codes from valueset $observation-category
+* Categories#phenotype
+
 
 ValueSet: PhenotypicAbnormalityValueSet
 Id: phenotypic-abnormality
@@ -66,9 +91,48 @@ Description: "Phenotypic feature severity codes from the Human Phenotype Ontolog
 * include codes from system SNOMED_CT where concept descendent-of #272141005
 
 
-ValueSet: Test
-Id: test
-Title: "test"
-Description: "ValueSet description here"
-* ^status = #draft
-* include codes from system $hpo where concept is-a #HP:0000001
+ValueSet: Taxonomy
+Id: Taxonomy
+Title: "Taxonomy"
+Description: "Taxonomic identifiers of an organism."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $ncbitaxon.owl
+
+ValueSet: TumorGrade
+Id: TumorGrade
+Title: "Tumor Grade"
+Description: "Codes to indicate the grade of a tumor."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $ncit.owl where concept descendent-of #NCIT:C28076
+
+ValueSet: TumorProgression
+Id: TumorProgression
+Title: "Tumor Progression"
+Description: "Codes to indicate if a specimen is from the primary tumor, a metastasis or a recurrence."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* $ncit.owl#NCIT:C8509 "Primary Neoplasm"
+* $ncit.owl#NCIT:C3261 "Metastatic Neoplasm"
+* $ncit.owl#NCIT:C4798 "Recurrent Neoplasm"
+
+ValueSet: TumorStage
+Id: TumorStage
+Title: "Tumor Stage"
+Description: "Codes to represent the stage of a tumor."
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2020-02-14T16:13:10+10:00"
+* ^publisher = "Alejandro Metke"
+* ^contact.name = "Alejandro Metke"
+* include codes from system $ncit.owl where concept descendent-of #NCIT:C48232
