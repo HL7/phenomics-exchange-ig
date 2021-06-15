@@ -9,10 +9,32 @@ Description: "A unit of biological material from which the substrate molecules (
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
 * identifier 1..1 MS
+* identifier ^short = "Corresponds to id (GA4GH)"
 * type MS
+* type ^short = "Corresponds to sample_type (GA4GH)"
 * subject only Reference(Patient)
 * subject MS
+* subject ^short = "Patient.identifier corresponds to individual_id (GA4GH)"
 * note MS
+* note ^short = "Corresponds to description (GA4GH)"
+* collection.bodySite MS
+* collection.bodySite ^short = "Anatomical collection site. Corresponds to sampled_tissue (GA4GH)"
+* extension contains
+    PhenotypicFeatureExt named PhenotypicFeature 1.. MS and
+    MeasurementExt named Measurement 1.. MS and
+    Taxonomy named Taxonomy 0..1 MS and
+    HistologicalDiagnosis named HistologicalDiagnosis 0.. MS and
+    TumorProgression named TumorProgression 0..1 MS and
+    TumorGrade named TumorGrade 0.. MS and
+    PathologicalStage named PathologicalStage 0.. MS and
+    PathologicalTnmFinding named PathologicalTnmFinding 0.. MS and
+    DiagnosticMarker named DiagnosticMarker 0.. MS and
+    MaterialSample named MaterialSample 0..1 MS
+* collection.collected[x] MS 
+* collection.collected[x] ^short = "Corresponds to time_of_collection (GA4GH)"
+* processing.procedure MS
+* processing.procedure ^short = "Corresponds to procedure (GA4GH)"
+
 
 
 Profile: Disease
