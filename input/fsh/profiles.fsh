@@ -113,3 +113,22 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * hasMember ..0
 * component ..0
 
+Profile: Treatment
+Parent: MedicationAdministration
+Id: Treatment
+Title: "Treatment"
+Description: "This profile defines the GA4GH Treatment element in terms of the FHIR MedicationAdministration"
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2021-06-18T09:49:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Peter Robinson"
+* category MS
+* category ^short = "Corresponds to drug_type (GA4GH)"
+* medication[x] 1..1 MS
+* effective[x] MS
+* effective[x] ^short = "Information from effective and dosage is required for dose_intervals (GA4GH)"
+* dosage MS
+* dosage ^short = "Information from effective and dosage is required for dose_intervals (GA4GH)"
+* dosage.route MS
+* dosage.route ^short = "Corresponds to route_of_administration (GA4GH)"

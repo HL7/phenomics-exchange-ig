@@ -32,16 +32,23 @@ menu:
   Background:
     GA4GH: ga4gh.html
     Deep phenotyping: phenotype.html
-#    Disease: group-disease.html
-#    Assessment: group-assessment.html
-#    Genomics: group-genomics.html
-#    Treatment: group-treatment.html
-#    Outcome: group-outcome.html
-#  Conformance:
-#    General Expectations: conformance-general.html
-#    Identifying mCODE Patients: conformance-patients.html
-#    Profile Conformance: conformance-profiles.html
-#    Terminology: terminology.html
+  Profiles:
+    Biosample: StructureDefinition-Biosample.html
+    Disease: StructureDefinition-Disease.html
+    Individual: StructureDefinition-Individual.html
+    Measurement: StructureDefinition-Measurement.html
+    PhenotypicFeature: StructureDefinition-PhenotypicFeature.html
+    Phenopacket: StructureDefinition-Phenopacket.html
+    Treatment: StructureDefinition-Treatment.html
+  Extensions:
+    CodedOnset: StructureDefinition-CodedOnset.html
+    DiagnosticMarker: StructureDefinition-DiagnosticMarker.html
+    KaryotypicSex: StructureDefinition-KaryotypicSex.html
+    MaterialSample: StructureDefinition-MaterialSample.html
+  Examples:
+    Excluded disease: Condition-id.1.html
+    Vitreoretinochoroidopathy: Condition-id.2.html
+    Thrombocytopenia: Observation-id.11.html
 #  Extended Example: examples.html
   Artifacts: artifacts.html
 #  History:
