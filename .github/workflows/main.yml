@@ -17,25 +17,49 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [10, 12]
      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-
-      - name: Build Implementation Guide
-        run: |
-          docker run \
-            -v $(pwd):/home/publisher/ig \
-            hl7fhir/ig-publisher-base \
-            sh -c "./_updatePublisher.sh -y && ./_genonce.sh"
-      - name: Move to output to docs subdirectory
-        run: |
-          mkdir ./public
-          mv ./output ./public/docs
-          
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+      - name: Check out branch
+        uses: actions/checkout@v2
+      
+      - name: Set up OpenJDK
+        uses: actions/setup-java@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          java-version: 8
+
+      - name: Set up Jekyll
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install ruby-full build-essential zlib1g-dev
+          sudo gem install jekyll bundler
+      
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Install SUSHI and add FSH definitions
+        run: |
+          npm install -g fsh-sushi
+          sushi .
+      
+      - name: Update IG publisher
+        run: |
+          sudo apt-get -y install iputils-ping
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+
+      - name: Validate IG
+        run: |
+          chmod +x ./_genonce.sh
+          ./_genonce.sh
+      - name: Publish IG
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: output
