@@ -20,8 +20,6 @@ Description: "A unit of biological material from which the substrate molecules (
 * collection.bodySite MS
 * collection.bodySite ^short = "Anatomical collection site. Corresponds to sampled_tissue (GA4GH)"
 * extension contains
-    PhenotypicFeatureExt named PhenotypicFeature 1.. MS and
-    MeasurementExt named Measurement 1.. MS and
     Taxonomy named Taxonomy 0..1 MS and
     HistologicalDiagnosis named HistologicalDiagnosis 0.. MS and
     TumorProgression named TumorProgression 0..1 MS and
@@ -111,7 +109,9 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * device ..0
 * referenceRange ..0
 * hasMember ..0
-* component ..0
+* component MS
+* component ^short = "GA4GH severity and modifiers should be coded as CodeableConcepts in the code field of the component"
+* component.value[x] only boolean
 
 Profile: Treatment
 Parent: MedicationAdministration
