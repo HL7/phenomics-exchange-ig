@@ -27,7 +27,7 @@ We represent the GA4GH phenopacket-schema ``Measurement`` by profiling the stand
 
 2. In the GA4GH phenopacket, the ``assay`` element an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html) that denotes the assay used to produce the measurement.  This corresponds to the ``code`` element of the ``Observation``. For instance, we might use a LOINC code to denote a laboratory test.
 
-3. In the GA4GH phenopacket, the ``measurement_value`` is either a [Value](https://phenopacket-schema.readthedocs.io/en/latest/value.html) or a [ComplexValue](https://phenopacket-schema.readthedocs.io/en/latest/complex-value) that represents the result of the measurement.  This corresponds to the ``value`` element of the ``Obsersavation``. Software for transforming this IG into a GA4GH phenopacket must support transforming the following subelements of the value element.
+3. In the GA4GH phenopacket, the ``measurement_value`` is either a [Value](https://phenopacket-schema.readthedocs.io/en/latest/value.html) or a [ComplexValue](https://phenopacket-schema.readthedocs.io/en/latest/complex-value) that represents the result of the measurement.  This corresponds to the ``value`` element of the ``Observation``. Software for transforming this IG into a GA4GH phenopacket must support transforming the following subelements of the value element.
 
 - valueQuantity
 - valueCodeableConcept

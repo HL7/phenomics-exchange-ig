@@ -30,7 +30,6 @@ pages:
 
 menu:
   Home: index.html
-  Table of Contents: toc.html
   Background:
     GA4GH: ga4gh.html
     Deep phenotyping: phenotype.html
@@ -52,7 +51,6 @@ menu:
     Excluded disease: Condition-id.1.html
     Vitreoretinochoroidopathy: Condition-id.2.html
     Thrombocytopenia: Observation-id.11.html
-#  Extended Example: examples.html
   Artifacts: artifacts.html
 #  History:
 #    Change Log: change_log.html
