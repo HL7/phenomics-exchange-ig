@@ -1,6 +1,6 @@
 Profile: Phenopacket
 Parent: Composition
-Id: composition-phenopacket
+Id: Phenopacket
 Title: "Phenopacket profile"
 Description: "This is the main element that represents the Phenopacket in FHIR."
 * ^status = #draft
