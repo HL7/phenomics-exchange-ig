@@ -19,6 +19,5 @@ from the biopsy as a separate ``Biosample`` object and would set ``derived_from_
 6.  In the GA4GH phenopacket, the ``sample_type`` is an optional  [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html) that denotes the type of material, e.g., RNA, DNA, Cultured cells. If available, this field should be initialized based on infomration from the
 ``collection`` and ``processing`` fields of the FHIR ``Specimen``.
 
-7. In the GA4GH phenopacket, ``phenotypic_features`` represents a list of zero to multiple PhenotypicFeature elements representing a list of phenotypic abnormalities of the sample (e.g., histological findings). This is not currently supported by this IG.
+7. In the GA4GH phenopacket, ``phenotypic_features`` and ``measurement_value`` represent PhenotypeFeatures or Measurements that pertain specifically to the Biosample. In FHIR, we represent this using the corresponding fields of the upper level Phenopacket but require these to reference the ``id`` of this Biospecimen. Software for transforming FHIR to GA4GH Phenopackets should place such  PhenotypeFeatures or Measurements in the [Biosample](https://phenopacket-schema.readthedocs.io/en/latest/biosample.html).
 
-8. 

@@ -25,6 +25,8 @@ pages:
     title: GA4GH
   phenotype.md:
     title: Deep phenotyping
+  modeling.md:
+    title: Modeling phenotypic data
 
 menu:
   Home: index.html
@@ -32,6 +34,7 @@ menu:
   Background:
     GA4GH: ga4gh.html
     Deep phenotyping: phenotype.html
+    Modeling: modeling.html
   Profiles:
     Biosample: StructureDefinition-Biosample.html
     Disease: StructureDefinition-Disease.html
