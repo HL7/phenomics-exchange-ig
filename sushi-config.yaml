@@ -23,6 +23,8 @@ pages:
     title: Home
   ga4gh.md:
     title: GA4GH
+  genomicDiagnostics.md:
+    title: Genomic Diagnostics
   phenotype.md:
     title: Deep phenotyping
   modeling.md:
@@ -34,6 +36,7 @@ menu:
     GA4GH: ga4gh.html
     Deep phenotyping: phenotype.html
     Modeling: modeling.html
+    Genomic Diagnostics: genomicDiagnostics.html
   Profiles:
     Biosample: StructureDefinition-Biosample.html
     Disease: StructureDefinition-Disease.html
