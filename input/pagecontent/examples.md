@@ -27,6 +27,12 @@ TODO
 
 * [Vitreoretinochoroidopathy](Condition-id.disease.2.html)
 * [Bacterial infectious disease (excluded)](Condition-id.disease.1.html)
+* [Congestive heart failure (with stage)](Condition-id.disease.3.html)
+
+
+### Biosample
+
+* [Bladder carcinoma](Specimen-biosample.specimen.id.1.xml.html)
 
 ### Individual
 

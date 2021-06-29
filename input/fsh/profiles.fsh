@@ -9,7 +9,7 @@ Description: "A unit of biological material from which the substrate molecules (
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
 * identifier 1..1 MS
-* identifier ^short = "Corresponds to id (GA4GH)"
+* identifier ^short = "Corresponds to id (GA4GH), i.e.,  a specimen identifier"
 * type MS
 * type ^short = "Corresponds to sample_type (GA4GH)"
 * subject only Reference(Patient)
