@@ -3,6 +3,7 @@ Alias: $GSSO = http://purl.obolibrary.org/obo/GSSO
 Alias: $hpo = http://github.com/phenopackets/core-ig/CodeSystem/hpo
 Alias: $IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $mondo = https://github.com/monarch-initiative/mondo
+Alias: $efo = https://github.com/EBISPOT/efo
 Alias: $LOINC = http://loinc.org
 Alias: $ncbitaxon.owl = http://purl.obolibrary.org/obo/ncbitaxon.owl
 Alias: $ncit.owl = http://purl.obolibrary.org/obo/ncit.owl
