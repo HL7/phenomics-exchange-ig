@@ -29,6 +29,8 @@ pages:
     title: Deep phenotyping
   modeling.md:
     title: Modeling phenotypic data
+  examples.md:
+    title: Examples
 
 menu:
   Home: index.html
@@ -50,10 +52,7 @@ menu:
     DiagnosticMarker: StructureDefinition-DiagnosticMarker.html
     KaryotypicSex: StructureDefinition-KaryotypicSex.html
     MaterialSample: StructureDefinition-MaterialSample.html
-  Examples:
-    Excluded disease: Condition-id.1.html
-    Vitreoretinochoroidopathy: Condition-id.2.html
-    Thrombocytopenia: Observation-id.11.html
+  Examples: examples.html
   Artifacts: artifacts.html
 #  History:
 #    Change Log: change_log.html
