@@ -38,5 +38,9 @@ TODO
 
 * [Example patient](Patient-example-patient.html)
 
+### Treatment
+
+ * [losartan](MedicationAdministration-id.treatment.1.xml.html)
+
 
 
