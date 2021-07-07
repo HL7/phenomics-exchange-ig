@@ -7,7 +7,7 @@ Description: "Codes to indicate clinically relevant bio markers."
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* include codes from system $ncit.owl where concept descendent-of #NCIT:C36292
+* include codes from system $ncit where concept descendent-of #NCIT:C36292
 
 ValueSet: HistologicalDiagnosis
 Id: HistologicalDiagnosis
@@ -18,8 +18,8 @@ Description: "Histological diagnosis codes from NCIT."
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* include codes from system $ncit.owl where concept descendent-of #NCIT:C28101
-* include codes from system $ncit.owl where concept descendent-of #NCIT:C2991
+* include codes from system $ncit where concept descendent-of #NCIT:C28101
+* include codes from system $ncit where concept descendent-of #NCIT:C2991
 
 ValueSet: KaryotypicSex
 Id: KaryotypicSex
@@ -100,7 +100,7 @@ Description: "Taxonomic identifiers of an organism."
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* include codes from system $ncbitaxon.owl
+* include codes from system $ncbitaxon
 
 ValueSet: TumorGrade
 Id: TumorGrade
@@ -111,7 +111,7 @@ Description: "Codes to indicate the grade of a tumor."
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* include codes from system $ncit.owl where concept descendent-of #NCIT:C28076
+* include codes from system $ncit where concept descendent-of #NCIT:C28076
 
 ValueSet: TumorProgression
 Id: TumorProgression
@@ -122,9 +122,9 @@ Description: "Codes to indicate if a specimen is from the primary tumor, a metas
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* $ncit.owl#NCIT:C8509 "Primary Neoplasm"
-* $ncit.owl#NCIT:C3261 "Metastatic Neoplasm"
-* $ncit.owl#NCIT:C4798 "Recurrent Neoplasm"
+* $ncit#NCIT:C8509 "Primary Neoplasm"
+* $ncit#NCIT:C3261 "Metastatic Neoplasm"
+* $ncit#NCIT:C4798 "Recurrent Neoplasm"
 
 ValueSet: TumorStage
 Id: TumorStage
@@ -135,4 +135,4 @@ Description: "Codes to represent the stage of a tumor."
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
-* include codes from system $ncit.owl where concept descendent-of #NCIT:C48232
+* include codes from system $ncit where concept descendent-of #NCIT:C48232
