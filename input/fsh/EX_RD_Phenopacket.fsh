@@ -8,7 +8,7 @@ Description: "Example use case for a child with undiagnosed developmental delay"
 * title = "Phenopacket (static snapshot of clinical findings to support differential diagnosis of a child with developmental delay)."
 * author = Reference(PeterGeneticist)
 * subject = Reference(Proband1)
-//* extension[phenotypic_features] = Reference(longPhiltrum)
+//* phenotypic_features = Reference(longPhiltrum)
 
 
 

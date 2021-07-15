@@ -29,6 +29,8 @@ pages:
     title: Deep phenotyping
   modeling.md:
     title: Modeling phenotypic data
+  hpo.md:
+    title: Human Phenotype Ontology
   examples.md:
     title: Examples
 
@@ -37,6 +39,7 @@ menu:
   Background:
     GA4GH: ga4gh.html
     Deep phenotyping: phenotype.html
+    HPO: hpo.html
     Modeling: modeling.html
     Genomic Diagnostics: genomicDiagnostics.html
   Profiles:
