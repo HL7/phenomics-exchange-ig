@@ -5,10 +5,11 @@ This page offers links to examples for each of the elements of the Phenopacket.
 
 ## Extended example
 
-THe following example simulates the situation in which a child presents with developmental delay of unclear etiology. In addition to the delay,
-there are several other phenotypic features that can be used to support the differential diagnosis, potentially in combination with genome sequencing.
+THe following example simulates the situation in which a child presents with developmental delay, microphthalmia, and muscle weakness. The goal
+is to identify the etiological (genetic) diagnosis. The phenotypic features that can be used to support the differential diagnosis, potentially in combination with genome sequencing.
+The example is based on [Muscular dystrophy-dystroglycanopathy (congenital with brain and eye anomalies), type A, 4](https://omim.org/entry/253800).
 
-* [Child with developmental delay](Composition-id.treatment.1.xml.html)
+* [Muscular dystrophy-dystroglycanopathy](Composition-id.treatment.1.xml.html)
 
 ## Examples 
 

@@ -8,11 +8,26 @@ Description: "Example use case for a child with undiagnosed developmental delay"
 * title = "Phenopacket (static snapshot of clinical findings to support differential diagnosis of a child with developmental delay)."
 * author = Reference(PeterGeneticist)
 * subject = Reference(Proband1)
-//* phenotypic_features = Reference(longPhiltrum)
+* section[diseases].entry[0] = Reference(intellectualDisabilityDisease)
+* section[phenotypic_features].entry[+] = Reference(longPhiltrum)
+* section[phenotypic_features].entry[+] = Reference(microphthalmia)
+* section[phenotypic_features].entry[+] = Reference(retinalDetachment)
+* section[phenotypic_features].entry[+] = Reference(tga)
+* section[phenotypic_features].entry[+] = Reference(reducedVisualAcuity)
+* section[phenotypic_features].entry[+] = Reference(lowSetEars)
+* section[phenotypic_features].entry[+] = Reference(globalDevelopmentalDelay)
+* section[phenotypic_features].entry[+] = Reference(muscleWeakness)
+* section[phenotypic_features].entry[+] = Reference(amyotrophy)
+* section[biosamples].entry[+] = Reference(muscleBiopsy)
 
 
 
-
+Instance: intellectualDisabilityDisease
+InstanceOf: Disease
+Description: "Intellectual disability (disease)"
+* id = "id.disease.intellectualDisability"
+* code  = $mondo#MONDO_0001071  "Intellectual disability"
+* subject = Reference(Proband1)
 
 
 Instance: longPhiltrum
@@ -33,22 +48,22 @@ Description: "Long philtrum (HP:0000568)"
 * code = $hpo#HP:0000568 "Microphthalmia"
 * valueBoolean = true
 
-Instance: irisColoboma
+Instance: retinalDetachment
 InstanceOf: PhenotypicFeature
-Description: "Iris coloboma (HP:0000612)"
-* id = "hp.0000612"
+Description: "Retinal detachment (HP:0000541)"
+* id = "hp.0000541"
 * status = #active "active"
 * subject = Reference(Proband1)
-* code = $hpo#HP:0000612 "Iris coloboma"
+* code = $hpo#HP:0000541 "Retinal detachment"
 * valueBoolean = true
 
-Instance: Hypertelorism
+Instance: tga
 InstanceOf: PhenotypicFeature
-Description: "Hypertelorism (HP:0000316)"
-* id = "hp.0000316"
+Description: "Transposition of the great arteries (HP:0001669)"
+* id = "hp.0001669"
 * status = #active "active"
 * subject = Reference(Proband1)
-* code = $hpo#HP:0000316 "Hypertelorism"
+* code = $hpo#HP:0001669 "Transposition of the great arteries"
 * valueBoolean = true
 
 Instance: reducedVisualAcuity
@@ -60,13 +75,13 @@ Description: "Reduced visual acuity (HP:0007663)"
 * code = $hpo#HP:0007663 "Reduced visual acuity"
 * valueBoolean = true
 
-Instance: lowSetEars 
+Instance: hpotonia 
 InstanceOf: PhenotypicFeature
-Description: "Low-set ears (HP:0000369)"
-* id = "hp.0000369"
+Description: "Hypotonia (HP:0001252)"
+* id = "hp.0001252"
 * status = #active "active"
 * subject = Reference(Proband1)
-* code = $hpo#HP:0000369 "Low-set ears"
+* code = $hpo#HP:0001252 "Hypotonia"
 * valueBoolean = true
 
 
@@ -78,6 +93,30 @@ Description: "Global developmental delay (HP:0001263)"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001263 "Global developmental delay"
 * valueBoolean = true
+
+Instance: muscleWeakness
+InstanceOf: PhenotypicFeature
+Description: "Muscle weakness (HP:0001324)"
+* id = "hp.0001324"
+* status = #active "active"
+* subject = Reference(Proband1)
+* code = $hpo#HP:0001324 "Muscle weakness"
+* valueBoolean = true
+
+
+Instance: amyotrophy
+InstanceOf: PhenotypicFeature
+Description: "Skeletal muscle atrophy (HP:0003202)"
+* id = "hp.0003202"
+* status = #active "active"
+* subject = Reference(Proband1)
+* code = $hpo#HP:0003202 "Skeletal muscle atrophy"
+* valueBoolean = true
+
+
+
+
+
 
 Instance: Proband1
 InstanceOf: Individual
@@ -121,3 +160,17 @@ Description: "Extended example: example practitioner"
 * gender = #male
 * qualification.code = http://terminology.hl7.org/CodeSystem/v2-0360#MD
 * qualification.code.coding[0].version = "2.7"
+
+
+
+Instance: muscleBiopsy
+InstanceOf: Biosample
+Description: "Biosample Example -- muscle biopsy"
+* id = "biosample.specimen.id.2"
+* collection.bodySite = $uberon#UBERON_0001388  "gastrocnemius"
+//* type =  $efo#EFO_0010942 "primary tumor sample"
+* subject = Reference(Proband1)
+* identifier.value = "arbitrary identifier"
+* extension[MaterialSample].valueCoding = $efo#EFO_0009655 "abnormal sample"
+* processing.procedure = $ncit#NCIT_C51895 "Muscle Biopsy"
+* collection.collectedDateTime = "2021-01-20"
