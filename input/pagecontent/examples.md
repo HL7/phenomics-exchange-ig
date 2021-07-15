@@ -5,7 +5,10 @@ This page offers links to examples for each of the elements of the Phenopacket.
 
 ## Extended example
 
-TODO
+THe following example simulates the situation in which a child presents with developmental delay of unclear etiology. In addition to the delay,
+there are several other phenotypic features that can be used to support the differential diagnosis, potentially in combination with genome sequencing.
+
+* [Child with developmental delay](Composition-id.treatment.1.xml.html)
 
 ## Examples 
 

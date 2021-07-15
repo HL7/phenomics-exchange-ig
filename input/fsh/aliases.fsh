@@ -5,6 +5,7 @@ Alias: $GSSO = http://purl.obolibrary.org/obo/GSSO
 Alias: $hpo = http://github.com/phenopackets/core-ig/CodeSystem/hpo
 Alias: $IDTYPE = http://terminology.hl7.org/CodeSystem/v2-0203
 Alias: $LOINC = http://loinc.org
+Alias: $MedReqCat = http://terminology.hl7.org/CodeSystem/medicationrequest-category
 Alias: $mondo = https://github.com/monarch-initiative/mondo
 Alias: $ncbitaxon = http://purl.obolibrary.org/obo/ncbitaxon.owl
 Alias: $ncit = http://purl.obolibrary.org/obo/ncit.owl
@@ -16,4 +17,5 @@ Alias: $SectionType = http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType
 Alias: $uberon = https://github.com/obophenotype/uberon
 Alias: $umls = http://www.nlm.nih.gov/research/umls
 Alias: $units = http://purl.obolibrary.org/obo/uo.owl
-Alias: $MedReqCat = http://terminology.hl7.org/CodeSystem/medicationrequest-category
+Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
+
