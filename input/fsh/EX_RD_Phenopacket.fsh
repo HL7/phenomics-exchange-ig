@@ -17,7 +17,9 @@ Description: "Example use case for a child with undiagnosed developmental delay"
 * section[phenotypic_features].entry[+] = Reference(lowSetEars)
 * section[phenotypic_features].entry[+] = Reference(globalDevelopmentalDelay)
 * section[phenotypic_features].entry[+] = Reference(muscleWeakness)
+* section[phenotypic_features].entry[+] = Reference(hypotonia)
 * section[phenotypic_features].entry[+] = Reference(amyotrophy)
+* section[phenotypic_features].entry[+] = Reference(fiberSizeVariability)
 * section[biosamples].entry[+] = Reference(muscleBiopsy)
 
 
@@ -75,7 +77,7 @@ Description: "Reduced visual acuity (HP:0007663)"
 * code = $hpo#HP:0007663 "Reduced visual acuity"
 * valueBoolean = true
 
-Instance: hpotonia 
+Instance: hypotonia 
 InstanceOf: PhenotypicFeature
 Description: "Hypotonia (HP:0001252)"
 * id = "hp.0001252"
@@ -174,3 +176,18 @@ Description: "Biosample Example -- muscle biopsy"
 * extension[MaterialSample].valueCoding = $efo#EFO_0009655 "abnormal sample"
 * processing.procedure = $ncit#NCIT_C51895 "Muscle Biopsy"
 * collection.collectedDateTime = "2021-01-20"
+
+
+Instance: fiberSizeVariability
+InstanceOf: PhenotypicFeature
+Description: "Increased variability in muscle fiber diameter (HP:0003557)"
+* id = "hp.0003557"
+* status = #active "active"
+* focus = Reference(muscleBiopsy)
+* code = $hpo#HP:0003557 "Increased variability in muscle fiber diameter"
+* valueBoolean = true
+
+
+
+
+ 
