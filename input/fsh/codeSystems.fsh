@@ -9,6 +9,16 @@ Description: "Various categories or tags"
 * #phenotype "Phenotype"
 
 
+CodeSystem: PhenotypicFeatureStatusCS
+Id: phenotypicFeatureStatusCS
+Title: "Categories"
+Description: "Various categories or tags"
+* ^version = "0.1.0"
+* ^status = #active
+* ^content = #complete
+* #Absent "Absent"
+* #Present "Present"
+
 CodeSystem: HtsFormat
 Id: HtsFormat
 Title: "HTS Format"

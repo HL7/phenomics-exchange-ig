@@ -102,7 +102,8 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
 * code 1..1 MS
-* value[x] only boolean
+* value[x] only CodeableConcept
+* value[x] from PhenotypicFeatureStatusValueSet
 * value[x] 1..1 MS
 * value[x] ^short = "true: observed; false: excluded"
 * specimen ..0

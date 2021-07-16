@@ -39,7 +39,7 @@ Description: "Long philtrum (HP:0000343)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000343 "Long philtrum"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: microphthalmia
 InstanceOf: PhenotypicFeature
@@ -48,7 +48,7 @@ Description: "Long philtrum (HP:0000568)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000568 "Microphthalmia"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: retinalDetachment
 InstanceOf: PhenotypicFeature
@@ -57,7 +57,7 @@ Description: "Retinal detachment (HP:0000541)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000541 "Retinal detachment"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: tga
 InstanceOf: PhenotypicFeature
@@ -66,7 +66,7 @@ Description: "Transposition of the great arteries (HP:0001669)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001669 "Transposition of the great arteries"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: reducedVisualAcuity
 InstanceOf: PhenotypicFeature
@@ -75,7 +75,7 @@ Description: "Reduced visual acuity (HP:0007663)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0007663 "Reduced visual acuity"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: hypotonia 
 InstanceOf: PhenotypicFeature
@@ -84,7 +84,7 @@ Description: "Hypotonia (HP:0001252)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001252 "Hypotonia"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 
 Instance: globalDevelopmentalDelay
@@ -94,7 +94,7 @@ Description: "Global developmental delay (HP:0001263)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001263 "Global developmental delay"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 Instance: muscleWeakness
 InstanceOf: PhenotypicFeature
@@ -103,7 +103,7 @@ Description: "Muscle weakness (HP:0001324)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001324 "Muscle weakness"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 
 Instance: amyotrophy
@@ -113,7 +113,7 @@ Description: "Skeletal muscle atrophy (HP:0003202)"
 * status = #active "active"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0003202 "Skeletal muscle atrophy"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 
 
@@ -185,7 +185,7 @@ Description: "Increased variability in muscle fiber diameter (HP:0003557)"
 * status = #active "active"
 * focus = Reference(muscleBiopsy)
 * code = $hpo#HP:0003557 "Increased variability in muscle fiber diameter"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 
 
