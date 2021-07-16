@@ -13,7 +13,11 @@ is intended to be an assertion about a specific phenotypic abnormality that is a
 
 
 3. In the GA4GH phenopacket, ``excluded`` is a boolean that is false by default. If set true, the meaning is that the phenotypic feature indicated by the ``type`` element was explicitly excluded by clinical examination. In this IG, if
-a phenotype term is observed, then the ``value`` field should be set to ``true``. If the phenotypic feature was excluded,
+a phenotype term is observed, then the ``value`` should be set to the LOINC code for [present](https://loinc.org/LL1937-3/), and if the phenotypic
+feature was explicitly exclude, the ``value`` should be set to the LOINC code for [absent](https://loinc.org/LL1937-3/).
+
+
+If the phenotypic feature was excluded,
 the ``value`` field should be set to ``false``. We show an observed and excluded phenotypic feature in the Examples.
 
 

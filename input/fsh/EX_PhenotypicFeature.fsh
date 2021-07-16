@@ -5,7 +5,7 @@ Description: "PhenotypicFeature Example for arachnodactyly"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001166 "Arachnodactyly"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 
 
 Instance: lvdysfunction-excluded
@@ -15,7 +15,7 @@ Description: "PhenotypicFeature Example for exclusion of LV dysfunction"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0025168 "Left ventricular diastolic dysfunction"
-* valueBoolean = false
+* valueCodeableConcept = $LOINC#LA9634-2 "Absent"
 
 Instance: MVP-with-onset
 InstanceOf: PhenotypicFeature
@@ -24,7 +24,7 @@ Description: "PhenotypicFeature Example for mitral value prolapse with onset"
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001634 "Mitral valve prolapse"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 * effectiveDateTime = "2018-03-06"
 
 Instance: CHF-with-severity
@@ -34,7 +34,7 @@ Description: "PhenotypicFeature Example for severe Low-output congestive heart f
 * status = #active "active"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0009805 "Low-output congestive heart failure"
-* valueBoolean = true
+* valueCodeableConcept = $LOINC#LA9633-4 "Present"
 * effectiveDateTime = "2018-03-06"
 * component.code = $hpo#HP:0012828 "Severe"
 * component.valueBoolean = true
