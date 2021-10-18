@@ -2,6 +2,7 @@
 Alias: PPIS = https://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
 Alias: PPTA = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
 Alias: PPAPC= https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
+Alias: PPMC= https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs
@@ -34,4 +35,13 @@ Description: "Describes the ACMG five-tier pathogenicity classification system (
 * PPAPC#3  "LIKELY_BENIGN"
 * PPAPC#4  "BENIGN"
 
-//Placeholder for MoleculeContext value set
+ValueSet: MoleculeContextVS
+Id: moleculeContext-vs
+Title: "Molecule Context Value Set"
+Description: "Describes The molecular context of the variant. Default is unspecified_molecule_context."
+* ^copyright = "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"
+* PPMC#0  "unspecified_molecule_context"
+* PPMC#1  "genomic"
+* PPMC#2  "transcript"
+* PPMC#3  "protein"
+
