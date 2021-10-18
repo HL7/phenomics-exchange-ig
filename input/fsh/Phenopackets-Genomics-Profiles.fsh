@@ -1,5 +1,5 @@
 Profile: PhenopacketsVariant
-Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant 
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant // Genomics Reporting Variant profile
 Id: phenopackets-variant
 Title: "Phenopackets Variant"
 Description: "A profile of Genomics Reporting Variant profile that represents relevant phenopackets building blocks."
@@ -64,6 +64,19 @@ Description: "Filter status: PASS if this position has passed all filters." // M
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
 //place holder for VcfRecord.info element. More discussions are needed.
+
+Profile: PhenopacketsGenomicInterpretation
+Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
+Id: phenopackets-genomic-interpretation
+Title: "Phenopackets Genomic Interpretation"
+Description: ""A profile of Genomics Reporting Genomics Report profile that represents relevant phenopackets building blocks.""
+* ^status = #draft // This would be changed later to active
+* ^version = "0.1.0"
+* ^date = "2021-10-18T09:00:00-04:00"
+* ^publisher = "GA4GH Phenopacket Working Group"
+* ^contact.name = "Aly Khalifa"
+//Phenopackets GenomicInterpretation
+
 
 
 
