@@ -34,4 +34,4 @@ Description: "Describes the ACMG five-tier pathogenicity classification system (
 * PPAPC#3  "LIKELY_BENIGN"
 * PPAPC#4  "BENIGN"
 
-//Placeholder for MoleculeContext
+//Placeholder for MoleculeContext value set
