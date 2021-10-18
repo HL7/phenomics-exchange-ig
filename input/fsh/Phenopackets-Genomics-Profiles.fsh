@@ -41,20 +41,20 @@ Extension: PhredQualityScore
 Id: phred-quality-score
 Title: "Phred Quality Score"
 Description: "Used to include Phred-scaled quality score for the assertion made in ALT."
-* value[x] only Ratio or SimpleQuantity // Do you prefer another FHIR data type?
+* value[x] only integer // Do you prefer another FHIR data type?
 
 // Declaring an extension for the filter status
 Extension: FilterStatus
 Id: filter-status
 Title: "Filter Status"
 Description: "Filter status: PASS if this position has passed all filters." // More informative description may need to be added.
-*  value[x] only CodeableConcept or boolean or string
+*  value[x] only CodeableConcept or string
 
 //Phenopackets VcfRecord
 * component[ref-sequence-assembly] 1..1 // genome_assembly
 * component[cytogenetic-location] 1..1 // chrom
 * component[exact-start-end] 1..1 // pos
-* component[exact-start-end].extension contains Filter 0..1 // filter. PASS if this position has passed all filters
+* component[exact-start-end].extension contains FilterStatus named filterStatus 0..1 // filter. PASS if this position has passed all filters
 * component[coordinate-system] 1..1 // pos
 * component[dbSNP-id] 0..1 // id
 // Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should be used instead.
@@ -64,6 +64,13 @@ Description: "Filter status: PASS if this position has passed all filters." // M
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
 //place holder for VcfRecord.info element. More discussions are needed.
+* component[alt-allele].extension contains VCFInfo named vcfInfo 0..1
+
+Extension: VCFInfo
+Id: vcf-info
+Title: "VCF Info"
+Description: "Additional information: Semicolon-separated series of additional information fields from VCF info field."
+* value[x] only string
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
@@ -80,7 +87,6 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 Invariant: phenopackets-subject-or-specimen-id // we may change the name of this invariant to be numbered. It was just kept to cleary reflect its purpose.
 Description: "subject.id and/or specimen.id SHALL be presentsub"
 Expression: "subject.identifier.exists() or specimen.identifier.exists()" // we may need to revise this in corresponding patient and biosample mappings
-
 Severity: #error
 XPath: ""
 
