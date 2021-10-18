@@ -6,6 +6,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * ^status = #draft // This would be changed later to active
 //Phenopackets GeneDescriptor
 //This is a placeholder for all Must-support elements (MS)
+// Placeholder for constrained elements of 0..0 cardinlaity
 * component[gene-studied] 1..1
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID
@@ -29,4 +30,3 @@ Description: "Used to provide identifiers to alternative resources representing 
 * component[cytogenetic-location] 1..1 // chrom
 * component[exact-start-end] 1..1 // pos
 
-// Placeholder for constrained elements to 0..0 cardinlaity
