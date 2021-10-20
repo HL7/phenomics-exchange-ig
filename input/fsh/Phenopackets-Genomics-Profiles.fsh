@@ -22,6 +22,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //alternate_ids and alternate_symbols would be additional codings.codes and codings.display
 * component[gene-studied].extension contains RelatedConceptID named relatedConceptID 0..*
 
+
 //Declaring an extension for xrefs
 Extension: RelatedConceptID
 Id: related-concept-id
@@ -66,6 +67,14 @@ Description: "Filter status: PASS if this position has passed all filters." // M
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
 //place holder for VcfRecord.info element. More discussions are needed.
 * component[alt-allele].extension contains VCFInfo named vcfInfo 0..1
+//VariantInterpretation
+* extension contains
+    AcmgPathogenicityClassification named acmgPathogenicity 1..1
+    TherapeuticActionability name therapeuticActionability 1..1
+* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
+* extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
+* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
+* extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 
 Extension: VCFInfo
 Id: vcf-info
@@ -80,6 +89,22 @@ Description: "Describes the conclusion made about the genomic interpretation."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from PPIS (required)
+
+Extension: AcmgPathogenicityClassification
+Id: acmg-pathogenicity-classification
+Title: "ACMG Pathogenicity Classification"
+Description: "One of the five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from PPAPC (required)
+
+Extension: TherapeuticActionability
+Id: therapeutic-actionability
+Title: "Therapeutic Actionability"
+Description: "one of the five ACMG pathogenicity categories, or NOT_PROVIDED. The default is NOT_PROVIDED."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from PPTA (required)
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
