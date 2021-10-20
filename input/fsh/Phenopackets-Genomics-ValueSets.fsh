@@ -45,4 +45,3 @@ Description: "Describes The molecular context of the variant. Default is unspeci
 * PPMC#1  "genomic"
 * PPMC#2  "transcript"
 * PPMC#3  "protein"
-

@@ -62,18 +62,3 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * modifierExtension contains 
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
 * result:variant 1..1
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
