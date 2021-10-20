@@ -1,3 +1,4 @@
+//we need to add the FHIR Clinical Genomics-Genomics Reporting Implementation Guide STU1 as a dependency
 Profile: PhenopacketsVariant
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/variant // Genomics Reporting Variant profile
 Id: phenopackets-variant
@@ -16,7 +17,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID
 //* component[gene-studied].valueCodeableConcept.coding.display from https://www.genenames.org/ //symbol => HGNC approved symbol
 // component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ //value_id => HGNC ID
-//* component[gene-studied].valueCodableConcept.text from https://www.genenames.org/ //description => HGNC approved name
+//* component[gene-studied].valueCodeableConcept.text from https://www.genenames.org/ //description => HGNC approved name
 //* component[gene-studied].valueCodeableConcept.coding.system = https://www.genenames.org/ // "HUGO Gene Nomenclature Committee"
 //alternate_ids and alternate_symbols would be additional codings.codes and codings.display
 * component[gene-studied].extension contains RelatedConceptID named relatedConceptID 0..*
@@ -72,6 +73,14 @@ Title: "VCF Info"
 Description: "Additional information: Semicolon-separated series of additional information fields from VCF info field."
 * value[x] only string
 
+Extension: InterpretationStatus
+Id: interpretation-status
+Title: "Interpretation Status"
+Description: "Describes the conclusion made about the genomic interpretation."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from PPIS (required)
+
 Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
 Id: phenopackets-genomic-interpretation
@@ -83,12 +92,19 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
 //Phenopackets GenomicInterpretation
+* subject 0..1 obeys phenopackets-subject-or-specimen-id
+* specimen 0..1 obeys phenopackets-subject-or-specimen-id
+* modifierExtension contains 
+    InterpretationStatus named interpretationStatus 1..1 // interpretation_status
+* result:variant 1..1
 
 Invariant: phenopackets-subject-or-specimen-id // we may change the name of this invariant to be numbered. It was just kept to cleary reflect its purpose.
 Description: "subject.id and/or specimen.id SHALL be presentsub"
 Expression: "subject.identifier.exists() or specimen.identifier.exists()" // we may need to revise this in corresponding patient and biosample mappings
 Severity: #error
-XPath: ""
+//XPath: ""//this is optional
+
+
 
 
 
