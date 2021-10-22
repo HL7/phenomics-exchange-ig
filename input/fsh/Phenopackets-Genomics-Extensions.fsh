@@ -56,3 +56,10 @@ Description: "one of the five ACMG pathogenicity categories, or NOT_PROVIDED. Th
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from PPTA (required)
+
+Extension: VrsObject
+Id: vrs-object
+Title: "VRS Object"
+Description: "The VRS Variation object (Link: https://vrs.ga4gh.org/en/stable/)"
+* value[x] only Attachment
+* valueAttachment 1..1

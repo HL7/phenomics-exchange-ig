@@ -36,15 +36,21 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
 //place holder for VcfRecord.info element. More discussions are needed.
-* component[alt-allele].extension contains VCFInfo named vcfInfo 0..1
+* component[alt-allele].extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
 //VariantInterpretation
 * extension contains
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
-    TherapeuticActionability name therapeuticActionability 1..1
+    TherapeuticActionability named therapeuticActionability 1..1
+    VrsObject named vrsObject  1..1 // Variation as VRS
 * extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
 * extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
 * extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
 * extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
+//VariationDescriptor
+* component[variation-code] 1..1
+// component[variation-code].valueCodeable is the location where one or more CURIE identifier could be added, 
+    i.e. ID and alternate_ids
+//VRS object is modeled as extension of Attachment datatype
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
