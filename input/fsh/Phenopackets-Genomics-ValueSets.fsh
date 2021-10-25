@@ -54,8 +54,8 @@ Title: "Sequence Ontology Structural Variant Value Set"
 Description: "Descendent terms of SO:0001537."
 * include codes from system SO where concept is-a SO#SO:0001537
 
-ValueSet: GeneOntologyAllelicStateVS
-Id: gene-ontology-allelic-state-vs
-Title: "Gene Ontology Allelic State Value Set "
+ValueSet: GenoOntologyAllelicStateVS
+Id: geno-ontology-allelic-state-vs
+Title: "GENO Ontology Allelic State Value Set "
 Description: "Descendent terms of GENO_0000875"
 * include codes from system SO where concept is-a GENO#GENO_0000875 
