@@ -63,3 +63,11 @@ Title: "VRS Object"
 Description: "The VRS Variation object (Link: https://vrs.ga4gh.org/en/stable/)"
 * value[x] only Attachment
 * valueAttachment 1..1
+
+Extension: MoleculeContext
+Id: molecule-context
+Title: "Molecule Context"
+Description: "The molecular context of the vrs variation."
+* value[x] only CodeableConcept
+* valueCodeableConcept 1..1
+* valueCodeableConcept from PPMC (required)

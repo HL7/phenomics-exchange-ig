@@ -3,6 +3,7 @@ Alias: PPIS = https://phenopacket-schema.readthedocs.io/en/v2/genomic-interpreta
 Alias: PPTA = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
 Alias: PPAPC= https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
 Alias: PPMC= https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
+Alias: SO= http://www.sequenceontology.org/ 
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs
@@ -45,3 +46,9 @@ Description: "Describes The molecular context of the variant. Default is unspeci
 * PPMC#1  "genomic"
 * PPMC#2  "transcript"
 * PPMC#3  "protein"
+
+ValueSet: SequenceOntologyStructuralVariantVS
+Id: sequence-ontology-structural-variant-vs
+Title: "Sequence Ontology Structural Variant Value Set"
+Description: "Descendent terms of SO:0001537."
+* * include codes from system SO where concept is-a #SO:0001537

@@ -12,7 +12,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //Phenopackets GeneDescriptor
 //This is a placeholder for all Must-support elements (MS)
 // Placeholder for constrained elements of 0..0 cardinlaity
-* component[gene-studied] 1..1
+* component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID
 //* component[gene-studied].valueCodeableConcept.coding.display from https://www.genenames.org/ //symbol => HGNC approved symbol
@@ -20,7 +20,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //* component[gene-studied].valueCodeableConcept.text from https://www.genenames.org/ //description => HGNC approved name
 //* component[gene-studied].valueCodeableConcept.coding.system = https://www.genenames.org/ // "HUGO Gene Nomenclature Committee"
 //alternate_ids and alternate_symbols would be additional codings.codes and codings.display
-* component[gene-studied].extension contains RelatedConceptID named relatedConceptID 0..*
+* component[gene-studied].extension contains RelatedConceptID named relatedConceptID 0..* //xref
 
 //Phenopackets VcfRecord
 * component[ref-sequence-assembly] 1..1 // genome_assembly
@@ -42,6 +42,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
     TherapeuticActionability named therapeuticActionability 1..1
     VrsObject named vrsObject  1..1 // Variation as VRS
+    MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
 * extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
 * extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
 * extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
@@ -49,8 +50,21 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //VariationDescriptor
 * component[variation-code] 1..1
 // component[variation-code].valueCodeable is the location where one or more CURIE identifier could be added, 
-    i.e. ID and alternate_ids
-//VRS object is modeled as extension of Attachment datatype
+    i.e. ID and alternate_ids as codings, while label would be the coding.display
+//VRS object is modeled as extension of Attachment datatype as listed above
+component[variation-code].valueCodeable.coding 1..*
+//component[variation-code].valueCodeable.text 0..1 //description
+//VariationDescriptor.gene_context is represented above as component[gene-studied]
+//VariationDescriptor.expressions is represented above as component[dna-chg].valueCodeableConcept-as one or more codings
+//VariationDescriptor.vcf_record is represented above
+* component[variation-code].extension contains RelatedConceptID named relatedConceptID 0..* //xref
+//VariationDescriptor.alternate_labels is represented above as part of component[variation-code].valueCodeable
+//VariationDescriptor.molecule_context is represented above as part of extension
+* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
+* extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
+* component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
+
+
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
