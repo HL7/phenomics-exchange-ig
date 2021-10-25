@@ -63,6 +63,8 @@ component[variation-code].valueCodeable.coding 1..*
 * extension[moleculeContext] ^defaultValue[x] only CodeableConcept
 * extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
 * component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
+//VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
+* component[allelic-state].valueCodeableConcept from GeneOntologyAllelicStateVS (required) //allelic_state
 
 
 

@@ -1,9 +1,10 @@
 /*This FSH file cotains the FHIR representations of phenopackets controlled terminologies/codes of genomics building blocks value sets */
 Alias: PPIS = https://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
 Alias: PPTA = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
-Alias: PPAPC= https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
-Alias: PPMC= https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
-Alias: SO= http://www.sequenceontology.org/ 
+Alias: PPAPC = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
+Alias: PPMC = https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
+Alias: SO = http://www.sequenceontology.org/ 
+Alias: GENO = https://www.ebi.ac.uk/ols/ontologies/geno 
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs
@@ -51,4 +52,10 @@ ValueSet: SequenceOntologyStructuralVariantVS
 Id: sequence-ontology-structural-variant-vs
 Title: "Sequence Ontology Structural Variant Value Set"
 Description: "Descendent terms of SO:0001537."
-* * include codes from system SO where concept is-a #SO:0001537
+* include codes from system SO where concept is-a SO#SO:0001537
+
+ValueSet: GeneOntologyAllelicStateVS
+Id: gene-ontology-allelic-state-vs
+Title: "Gene Ontology Allelic State Value Set "
+Description: "Descendent terms of GENO_0000875"
+* include codes from system SO where concept is-a GENO#GENO_0000875 
