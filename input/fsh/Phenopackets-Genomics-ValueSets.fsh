@@ -58,4 +58,4 @@ ValueSet: GenoOntologyAllelicStateVS
 Id: geno-ontology-allelic-state-vs
 Title: "GENO Ontology Allelic State Value Set "
 Description: "Descendent terms of GENO_0000875"
-* include codes from system SO where concept is-a GENO#GENO_0000875 
+* include codes from system GENO where concept is-a GENO#GENO_0000875 
