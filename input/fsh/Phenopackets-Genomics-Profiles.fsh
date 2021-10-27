@@ -31,6 +31,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[dbSNP-id] 0..1 // id
 // Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should be used instead.
 * component[dna-chg].extension contains AdditionalVariantIdentifier named additionalVariantIdentifier 0..*
+//>>>>>>>>>>>>Place holder for genomic changes and amino-acids changes, i.e., variations
 * component[ref-allele] 1..1 // ref
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
