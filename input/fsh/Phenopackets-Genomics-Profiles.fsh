@@ -29,9 +29,14 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[exact-start-end].extension contains FilterStatus named filterStatus 0..1 // filter. PASS if this position has passed all filters
 * component[coordinate-system] 1..1 // pos
 * component[dbSNP-id] 0..1 // id
-// Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should be used instead.
-* component[dna-chg].extension contains AdditionalVariantIdentifier named additionalVariantIdentifier 0..*
+// Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should 
+be used instead.
 //>>>>>>>>>>>>Place holder for genomic changes and amino-acids changes, i.e., variations
+* component[amino-acid-chg] 0..1 //protein variations
+* component[genomic-dna-chg] 0..1 //genomic variations
+* component[dna-chg] 0..1 //transcript variations
+* component[dna-chg].extension contains AdditionalVariantIdentifier named additionalVariantIdentifier 0..*
+
 * component[ref-allele] 1..1 // ref
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
