@@ -3,3 +3,5 @@ Description: "subject.id and/or specimen.id SHALL be presentsub"
 Expression: "subject.identifier.exists() or specimen.identifier.exists()" // we may need to revise this in corresponding patient and biosample mappings
 Severity: #error
 //XPath: ""//this is optional
+
+//Place holder for an invariant that links variation components and molecule context extension 
