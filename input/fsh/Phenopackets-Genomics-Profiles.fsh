@@ -33,7 +33,10 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 be used instead.
 //>>>>>>>>>>>>Place holder for genomic changes and amino-acids changes, i.e., variations
 * component[amino-acid-chg] 0..1 //protein variations
-* component[genomic-dna-chg] 0..1 //genomic variations
+* component[genomic-dna-chg] 0..1 //genomic variations, structural variants
+* component[copy-number] 0..1 //copy number variation
+* component[variation-code] 0..1 //for simple variants. "This term is used to report the unique identifier of the simple variant found in this study."
+* component[cytogenomic-nomenclature] 0..1 //"Fully describes a variant with a single code. Typically a large variant such as a mosaic, abnormal chromosome numbers,"
 * component[dna-chg] 0..1 //transcript variations
 * component[dna-chg].extension contains AdditionalVariantIdentifier named additionalVariantIdentifier 0..*
 
