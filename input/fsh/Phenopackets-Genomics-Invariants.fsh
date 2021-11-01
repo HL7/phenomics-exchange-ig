@@ -7,9 +7,19 @@ Severity: #error
 //Place-holder for an invariant that links variation components and molecule context extension 
 Invariant: phenopackets-moleculeContext-align-with-result-component
 Description: "The extension[moleculeContext].value SHALL be aligned the Variant results components for values 
-                other than PPMC#0  'unspecified_molecule_context'. Where "
+                other than PPMC#0  'unspecified_molecule_context'. Where 
+                - PPMC#1  'genomic' corresponds to variation-code; dna-chg; or genomic-dna-chg,
+                - PPMC#2  'transcript' corresponds to variation-code; or dna-chg;
+                - PPMC#3  'protein' corresponds to variation-code; or amino-acid-chg"
 //Expression: ""
 Severity: #error
 //XPath: ""
 
-//Place-holder for dbsnp-id variation identifier vs other CURIE identifiers invariant
+//Place-holder for dbSNP-id variation identifier vs other CURIE identifiers invariant
+Invariant: phenopackets-sbsnp-id-and-other-ids
+Description: "component-dbSNP-id SHAll be used to represent dbSNP-ids. For other ids, corresponding components 
+                SHALL be used"
+//Expression: ""
+Severity: #error
+//XPath: ""
+

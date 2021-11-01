@@ -29,8 +29,8 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[exact-start-end].extension contains FilterStatus named filterStatus 0..1 // filter. PASS if this position has passed all filters
 * component[coordinate-system] 1..1 // pos
 * component[dbSNP-id] 0..1 // id
-// Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should 
-be used instead.
+// Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should be used instead. Other IDs could be used by various variation components, e.g.,  using HGVS
+* component[dbSNP-id] obeys phenopackets-sbsnp-id-and-other-ids
 //>>>>>>>>>>>>Place holder for genomic changes and amino-acids changes, i.e., variations
 * component[amino-acid-chg] 0..1 //protein variations
 * component[genomic-dna-chg] 0..1 //genomic variations, structural variants
@@ -71,6 +71,7 @@ component[variation-code].valueCodeable.coding 1..*
 //VariationDescriptor.molecule_context is represented above as part of extension
 * extension[moleculeContext] ^defaultValue[x] only CodeableConcept
 * extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
+* extension[moleculeContext] obeys phenopackets-moleculeContext-align-with-result-component
 * component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
 //VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
 * component[allelic-state].valueCodeableConcept from GenoOntologyAllelicStateVS (required) //allelic_state
