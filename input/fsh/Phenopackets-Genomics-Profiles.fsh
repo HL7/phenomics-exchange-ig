@@ -34,11 +34,21 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //>>>>>>>>>>>>Place holder for genomic changes and amino-acids changes, i.e., variations
 * component[amino-acid-chg] 0..1 //protein variations
 * component[genomic-dna-chg] 0..1 //genomic variations, structural variants
-* component[copy-number] 0..1 //copy number variation
+//* component[copy-number] 0..1 //copy number variation
 * component[variation-code] 0..1 //for simple variants. "This term is used to report the unique identifier of the simple variant found in this study."
-* component[cytogenomic-nomenclature] 0..1 //"Fully describes a variant with a single code. Typically a large variant such as a mosaic, abnormal chromosome numbers,"
+//* component[cytogenomic-nomenclature] 0..1 //"Fully describes a variant with a single code. Typically a large variant such as a mosaic, abnormal chromosome numbers,"
 * component[dna-chg] 0..1 //transcript variations
 * component[dna-chg].extension contains AdditionalVariantIdentifier named additionalVariantIdentifier 0..*
+//obeys phenopackets-one-variation-identifier-component
+* component[variation-code] obeys phenopackets-one-variation-identifier-component
+* component[dna-chg] obeys phenopackets-one-variation-identifier-component
+* component[genomic-dna-chg] obeys phenopackets-one-variation-identifier-component
+* component[amino-acid-chg] obeys phenopackets-one-variation-identifier-component
+//obeys phenopackets-moleculeContext-align-with-result-component
+* component[variation-code] obeys phenopackets-moleculeContext-align-with-result-component
+* component[dna-chg] obeys phenopackets-moleculeContext-align-with-result-component
+* component[genomic-dna-chg] obeys phenopackets-moleculeContext-align-with-result-component
+* component[amino-acid-chg] obeys phenopackets-moleculeContext-align-with-result-component
 
 * component[ref-allele] 1..1 // ref
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
@@ -57,9 +67,9 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
 * extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 //VariationDescriptor
-* component[variation-code] 1..1
-// component[variation-code].valueCodeable is the location where one or more CURIE identifier could be added, 
-    i.e. ID and alternate_ids as codings, while label would be the coding.display
+* component[variation-code] 0..1
+/*component[variation-code].valueCodeable is the attribute where one or more CURIE identifier could be added, 
+    i.e. ID and alternate_ids as codings, while label would be the coding.display*/
 //VRS object is modeled as extension of Attachment datatype as listed above
 component[variation-code].valueCodeable.coding 1..*
 //component[variation-code].valueCodeable.text 0..1 //description

@@ -15,6 +15,18 @@ Description: "The extension[moleculeContext].value SHALL be aligned the Variant 
 Severity: #error
 //XPath: ""
 
+Invariant: phenopackets-one-variation-identifier-component
+Description: "Only one of the following components SHALL be used to describe the intended variation
+                - component:variation-code
+                - component:dna-chg
+                - component:genomic-dna-chg.valueCodeableConcept
+                - component:amino-acid-chg.valueCodeableConcept"
+//Expression: ""
+Severity: #error
+//XPath: ""
+
+
+
 //Place-holder for dbSNP-id variation identifier vs other CURIE identifiers invariant
 Invariant: phenopackets-sbsnp-id-and-other-ids
 Description: "component-dbSNP-id SHAll be used to represent dbSNP-ids. For other ids, corresponding components 
