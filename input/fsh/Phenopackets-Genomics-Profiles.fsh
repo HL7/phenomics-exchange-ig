@@ -12,6 +12,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //Phenopackets GeneDescriptor
 //This is a placeholder for all Must-support elements (MS)
 // Placeholder for constrained elements of 0..0 cardinlaity
+// Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID

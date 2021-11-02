@@ -35,3 +35,4 @@ Description: "component-dbSNP-id SHAll be used to represent dbSNP-ids. For other
 Severity: #error
 //XPath: ""
 
+//Place-holder for primary identifier and alternate identifiers invariant
