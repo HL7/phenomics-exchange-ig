@@ -109,4 +109,4 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * specimen 0..1 obeys phenopackets-subject-or-specimen-id
 * modifierExtension contains 
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
-* result:variant 1..1
+* result:variant 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
