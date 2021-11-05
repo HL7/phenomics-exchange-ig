@@ -5,6 +5,7 @@ Alias: PPAPC = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpret
 Alias: PPMC = https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
 Alias: SO = http://www.sequenceontology.org/ 
 Alias: GENO = https://www.ebi.ac.uk/ols/ontologies/geno 
+Alias: LNC = https://loinc.org 
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs

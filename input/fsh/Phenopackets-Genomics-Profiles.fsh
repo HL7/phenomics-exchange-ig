@@ -33,6 +33,7 @@ component[allelic-state] MS SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity
+
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
@@ -140,3 +141,14 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
 * result[variant] Reference(phenopackets-variant)
 * subject and specimen and result[variant] MS SU
+* status = #unknown /*This is 1..1 element in parent profile. This status code 
+                    was selected to avoid providing any un-necessary information 
+                    according to phenopackets V1 specification*/
+* code = LNC#phenopackets-genomic-interpretation // This is a hypothetical code. LOINC may be asked to develop codes for phenopackets
+//Place-holder for elements of 0..0 cardinality
+* RelatedArtifact 0..0
+* RecommendedAction 0..0
+* SupportingInfo 0..0
+* diagnosticReport-risk 0..0
+* basedOn 0..0
+* category 0..0
