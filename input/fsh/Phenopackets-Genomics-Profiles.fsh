@@ -144,7 +144,7 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
                     according to phenopackets V1 specification*/
-* code = LNC#phenopackets-genomic-interpretation // This is a hypothetical code. LOINC may be asked to develop codes for phenopackets
+* code = LNC#phenopackets-genomic-interpretation // This is 1..1 element in parent profile. This is a hypothetical LOINC code. LOINC may be asked to develop codes for phenopackets
 //Place-holder for elements of 0..0 cardinality
 * RelatedArtifact 0..0
 * RecommendedAction 0..0
@@ -152,3 +152,27 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * diagnosticReport-risk 0..0
 * basedOn 0..0
 * category 0..0
+* encounter 0..0
+* effective[x] 0..0
+* issued 0..0
+* performer 0..0
+* resultsInterpreter 0..0
+* result[gen-grouper] 0..0
+* result[overall] 0..0
+* result[inh-dis-path] 0..0
+* result[som-diagnostic] 0..0
+* result[som-prognostic] 0..0
+* result[som-predictive] 0..0
+* result[med-metabolism] 0..0
+* result[med-efficacy] 0..0
+* result[med-transporter] 0..0
+* result[med-high-risk] 0..0
+* result[genotype] 0..0
+* result[haplotype] 0..0
+* result[sequence-phase-relation] 0..0
+* result[region-studied] 0..0
+* media 0..0
+* conclusion 0..0
+* conclusionCode 0..0
+* presentedForm 0..0
+
