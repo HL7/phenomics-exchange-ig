@@ -31,7 +31,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[coordinate-system] 1..1 // pos
 * component[dbSNP-id] 0..1 // id
 // Used to  list of unique identifiers where available. If this is a dbSNP variant, component[dbSNP-id] should be used instead. Other IDs could be used by various variation components, e.g.,  using HGVS
-* component[dbSNP-id] obeys phenopackets-sbsnp-id-and-other-ids
+* component[dbSNP-id] obeys phenopackets-dbsnp-id-and-other-ids
 
 * component[ref-allele] 1..1 // ref
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
