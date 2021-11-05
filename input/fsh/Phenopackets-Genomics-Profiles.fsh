@@ -15,6 +15,7 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
+* component[gene-studied].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID
 //* component[gene-studied].valueCodeableConcept.coding.display from https://www.genenames.org/ //symbol => HGNC approved symbol
 // component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ //value_id => HGNC ID
@@ -76,6 +77,11 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * component[dna-chg].valueCodeable.coding 1..*
 * component[genomic-dna-chg].valueCodeable.coding 1..*
 * component[amino-acid-chg].valueCodeable.coding 1..*
+//obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[variation-code].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[genomic-dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[amino-acid-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
 //VariationDescriptor.gene_context is represented above as component[gene-studied]
 //VariationDescriptor.expressions is represented above as component[dna-chg].valueCodeableConcept-as one or more codings
 //VariationDescriptor.vcf_record is represented above
