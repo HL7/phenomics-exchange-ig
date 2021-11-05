@@ -32,7 +32,40 @@ component[functional-annotation] and
 component[allelic-state] MS SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
-// Placeholder for constrained elements of 0..0 cardinlaity
+// Placeholder for constrained elements of 0..0 cardinlaity and mandatory elements in parent profile
+* bodySite 0..0
+* observation-secondaryFinding 0..0
+* basedOn 0..0
+* partOf 0..0
+* status = #unknown /*This is 1..1 element in parent profile. This status code 
+                    was selected to avoid providing any un-necessary information 
+                    according to phenopackets V2 specification*/
+* category 1..1 //This is 1..* element in parent profile.
+//category.code = #laboratory //This is 1..1 element in parent profile and this is the fixed value. 
+// code 1..1 //This is 1..1 element in parent profile as 1..1 with fixed value
+* focus 0..0
+* encounter 0..0
+* effective[x] 0..0
+* issued 0..0
+* performer 0..0
+* valueCodeableConcept = #Present /*This is 1..1 element in parent profile as 
+                                    1..1 and we selected #Present as a fixed value.*/
+* dataAbsentReason 0..0
+* note 0..0
+// bodysite 0..0 //There are two elements of the same name, i.e., bodySite
+* method 0..0
+* specimen 0..0 //This may be modified later
+* device 0..0
+* referenceRange 0..0
+* hasMember 0..0
+* derivedFrom 0..0
+* component[dna-chg-type] 0..0 //This may be modified later.
+* component[genomic-source-class] 0..0 //This may be modified later.
+* component[amino-acid-chg-type] 0..0 //This may be modified later
+* component[transcript-ref-seq] 0..0
+* component[genomic-ref-seq] 0..0
+
+
 
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
@@ -143,7 +176,7 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * subject and specimen and result[variant] MS SU
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
-                    according to phenopackets V1 specification*/
+                    according to phenopackets V2 specification*/
 * code = LNC#phenopackets-genomic-interpretation // This is 1..1 element in parent profile. This is a hypothetical LOINC code. LOINC may be asked to develop codes for phenopackets
 //Place-holder for elements of 0..0 cardinality
 * RelatedArtifact 0..0
