@@ -48,7 +48,7 @@ component[allelic-state] MS SU
 * effective[x] 0..0
 * issued 0..0
 * performer 0..0
-* valueCodeableConcept = #Present /*This is 1..1 element in parent profile as 
+* valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
                                     1..1 and we selected #Present as a fixed value.*/
 * dataAbsentReason 0..0
 * note 0..0
@@ -62,10 +62,26 @@ component[allelic-state] MS SU
 * component[dna-chg-type] 0..0 //This may be modified later.
 * component[genomic-source-class] 0..0 //This may be modified later.
 * component[amino-acid-chg-type] 0..0 //This may be modified later
-* component[transcript-ref-seq] 0..0
-* component[genomic-ref-seq] 0..0
-
-
+* component[transcript-ref-seq] 0..0 //This may be modified later
+* component[genomic-ref-seq] 0..0 //This may be modified later
+* component[sample-allelic-frequency] 0..0
+* component[allelic-read-depth] 0..0
+* component[copy-number] 0..0 //This may be modified later
+* component[variant-length] 0..0
+* component[outer-start-end] 0..0
+* component[inner-start-end] 0..0
+* component[chromosome-copy-number-change-type] 0..0	
+* component[arrCGH-ratio] 0..0
+* component[complex-var-type] 0..0
+* component[cytogenomic-nomenclature] 0..0 //This may be modified later
+* component[variant-inheritance] 0..0
+//value[x] or valueCodeableConcept 1..1 /* There are two elements of 1..1 cardinality, 
+            and of the same name i.e.,value[x]. 
+            First one is for (Present|Absent|No call|Indeterminate)
+            Second one is for  Variant Inheritance from  http://sequenceontology.org 
+            where concept descends from SO:0001762*/
+* dataAbsentReason.coding.code = #unsupported 0..0 // There are two elements of the same name, i.e., dataAbsentReason one for each of the first value[x] elements mentioned above
+* referenceRange 0..0
 
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
