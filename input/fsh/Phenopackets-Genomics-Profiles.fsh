@@ -29,7 +29,7 @@ component[genomic-dna-chg] and
 // component[cytogenomic-nomenclature] and
 extension[moleculeContext] and
 component[functional-annotation] and
-component[allelic-state] MS
+component[allelic-state] MS SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity
@@ -136,4 +136,7 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * specimen 0..1 obeys phenopackets-subject-or-specimen-id
 * modifierExtension contains 
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
-* result:variant 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
+* modifierExtension[interpretationStatus] ?!
+* result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
+* result[variant] Reference(phenopackets-variant)
+* subject and specimen and result[variant] MS SU
