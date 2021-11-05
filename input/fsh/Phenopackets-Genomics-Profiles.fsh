@@ -10,7 +10,28 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
 //Phenopackets GeneDescriptor
-//This is a placeholder for all Must-support elements (MS)
+//This is a placeholder for all Must-support elements (MS). Based on a team discussion, all elements should be MS.
+* component[gene-studied] and 
+component[ref-sequence-assembly] and 
+component[cytogenetic-location] and
+component[exact-start-end] and
+component[coordinate-system] and
+component[dbSNP-id] and
+component[ref-allele] and
+component[alt-allele] and
+extension[acmgPathogenicity] and
+extension[therapeuticActionability] and
+component[variation-code] and
+component[dna-chg] and
+component[amino-acid-chg] and
+component[genomic-dna-chg] and
+// component[copy-number] and
+// component[cytogenomic-nomenclature] and
+extension[moleculeContext] and
+component[functional-annotation] and
+component[allelic-state] MS
+
+// The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
