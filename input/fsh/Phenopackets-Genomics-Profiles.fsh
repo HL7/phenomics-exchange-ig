@@ -9,7 +9,8 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * ^date = "2021-10-18T06:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
-//Phenopackets GeneDescriptor
+* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
+            phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
 //This is a placeholder for all Must-support elements (MS). Based on a team discussion, all elements should be MS.
 * component[gene-studied] and 
 component[ref-sequence-assembly] and 
@@ -84,7 +85,45 @@ component[allelic-state] MS SU
 * referenceRange 0..0
 
 // Placeholer for descriptions, i.e., ^short
+* component[gene-studied] ^short = "Phenopackets GeneDescriptor: This element represents an identifier for a gene, 
+                                    using the Gene Descriptor from the VRSATILE Framework."
+* component[ref-sequence-assembly] ^short = "Phenopackets VcfRecord.genome_assembly: Identifier for the genome assembly 
+                                             used to call the allele. REQUIRED."
+* component[cytogenetic-location] ^short = "Phenopackets VcfRecord.chrom: Chromosome or contig identifier."
+* component[exact-start-end] ^short = "Phenopackets VcfRecord.pos: The reference position, with the 1st base having position 1.
+                                       Check component[coordinate-system]"
+* component[coordinate-system] ^short = "Phenopackets VcfRecord.pos: The reference position, with the 1st base having position 1.
+                                         Check component[exact-start-end]"
+* component[dbSNP-id] ^short = "Phenopackets VcfRecord.id: If this is a dbSNP variant its number(s) should be used.
+                                Check component:variation-code[valueCodeableConcept], component:genomic-dna-chg[valueCodeableConcept],
+                                and component:amino-acid-chg[valueCodeableConcept] for relevant variant codes/ids."
+* component[ref-allele] ^short = "Phenopackets VcfRecord.ref: Reference base"
+* component[alt-allele] ^short = "Phenopackets VcfRecord.alt: Alternate base."
+* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: one of the 
+                                         five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
+* extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
+                                                therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
+* component[variation-code] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
+                                      (alternate_labels) of the variation, if available. This is for a simple variant."
+* component[dna-chg] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
+                                      (alternate_labels) of the variation, if available. This is for a single DNA marker."
+* component[amino-acid-chg] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
+                                      (alternate_labels) of the variation, if available. This is for an amino acid change."
+* component[genomic-dna-chg] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
+                                      (alternate_labels) of the variation, if available. This is for a structural variant."
+// component[copy-number] ^short = "" //This is a place-holer if copy-number component will be considered in future
+// component[cytogenomic-nomenclature] ^short = "" //This is a place-holer if cytogenomic-nomenclature component will be considered in future
+* extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
+                                       variation."
+* component[functional-annotation] ^short = "Phenopackets VariationDescriptor.structural_type: The structural variant type associated with 
+                                             this variant, such as a substitution, deletion, or fusion. We RECOMMEND using 
+                                             a descendent term of SO:0001537."
+* component[allelic-state] ^short = "Phenopackets VariationDescriptor.allelic_state:The zygosity of the variant as determined in all of the samples represented in 
+                                     this Phenopacket is represented using a list of terms taken from the Genotype 
+                                     Ontology (GENO)."
+//Phenopackets GeneDescriptor
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
+
 * component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
 * component[gene-studied].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID

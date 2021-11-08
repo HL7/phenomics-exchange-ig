@@ -45,7 +45,7 @@ Description: "primary ID SHALL be present in this component, while alternate id/
                  SHALL be added to it, if present. They SHALL be add as additional codings within the valueCodeableConcept
                  of this element/component"
 //Expression: ""
-Severity: #warning
+Severity: #warning //Is it better to be #error?
 //XPath: ""
 
 
