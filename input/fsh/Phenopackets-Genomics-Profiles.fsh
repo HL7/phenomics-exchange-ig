@@ -92,7 +92,7 @@ component[allelic-state] MS SU
                                 and component:amino-acid-chg[valueCodeableConcept] for relevant variant codes/ids."
 * component[ref-allele] ^short = "Phenopackets VcfRecord.ref: Reference base"
 * component[alt-allele] ^short = "Phenopackets VcfRecord.alt: Alternate base."
-* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: one of the 
+* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
                                          five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
 * extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
                                                 therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
@@ -231,14 +231,15 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * code = LNC#phenopackets-genomic-interpretation /* This is 1..1 element in parent profile. This is a hypothetical 
                                                    LOINC code. LOINC may be asked to develop codes for phenopackets */
 // Placeholer for descriptions, i.e., ^short
-* subject ^short = "Phenopackets subject_or_biosample_id: The id of the patient 
+* subject ^short = "Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
                     or biosample that is the subject being interpreted.
                     Check specimen element."
-* specimen ^short = "Phenopackets subject_or_biosample_id: The id of the patient 
+* specimen ^short = "Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
                     or biosample that is the subject being interpreted.
                     Check subject element."
-* modifierExtension[interpretationStatus] ^short = ""
-* result[variant] ^short = ""
+* modifierExtension[interpretationStatus] ^short = "Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."
+* result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
+                            i.e., oneof {GeneDescriptor | VariantInterpretation}"
 //Place-holder for elements of 0..0 cardinality
 * RelatedArtifact 0..0
 * RecommendedAction 0..0
