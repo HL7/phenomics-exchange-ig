@@ -228,7 +228,17 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
                     according to phenopackets V2 specification*/
-* code = LNC#phenopackets-genomic-interpretation // This is 1..1 element in parent profile. This is a hypothetical LOINC code. LOINC may be asked to develop codes for phenopackets
+* code = LNC#phenopackets-genomic-interpretation /* This is 1..1 element in parent profile. This is a hypothetical 
+                                                   LOINC code. LOINC may be asked to develop codes for phenopackets */
+// Placeholer for descriptions, i.e., ^short
+* subject ^short = "Phenopackets subject_or_biosample_id: The id of the patient 
+                    or biosample that is the subject being interpreted.
+                    Check specimen element."
+* specimen ^short = "Phenopackets subject_or_biosample_id: The id of the patient 
+                    or biosample that is the subject being interpreted.
+                    Check subject element."
+* modifierExtension[interpretationStatus] ^short = ""
+* result[variant] ^short = ""
 //Place-holder for elements of 0..0 cardinality
 * RelatedArtifact 0..0
 * RecommendedAction 0..0
