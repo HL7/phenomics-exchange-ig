@@ -76,13 +76,6 @@ component[allelic-state] MS SU
 * component[complex-var-type] 0..0
 * component[cytogenomic-nomenclature] 0..0 //This may be modified later
 * component[variant-inheritance] 0..0
-//value[x] or valueCodeableConcept 1..1 /* There are two elements of 1..1 cardinality, 
-            and of the same name i.e.,value[x]. 
-            First one is for (Present|Absent|No call|Indeterminate)
-            Second one is for  Variant Inheritance from  http://sequenceontology.org 
-            where concept descends from SO:0001762*/
-* dataAbsentReason.coding.code = #unsupported 0..0 // There are two elements of the same name, i.e., dataAbsentReason one for each of the first value[x] elements mentioned above
-* referenceRange 0..0
 
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] ^short = "Phenopackets GeneDescriptor: This element represents an identifier for a gene, 
