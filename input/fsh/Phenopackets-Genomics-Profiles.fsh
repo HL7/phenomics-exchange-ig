@@ -213,6 +213,9 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * ^date = "2021-10-18T09:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
+* ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
+            It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
+            individual variant or gene. "
 //Phenopackets GenomicInterpretation
 * subject 0..1 obeys phenopackets-subject-or-specimen-id
 * specimen 0..1 obeys phenopackets-subject-or-specimen-id
