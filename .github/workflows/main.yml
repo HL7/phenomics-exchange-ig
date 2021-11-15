@@ -1,0 +1,65 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [10, 12]
+     
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Check out branch
+        uses: actions/checkout@v2
+      
+      - name: Set up OpenJDK
+        uses: actions/setup-java@v1
+        with:
+          java-version: 8
+
+      - name: Set up Jekyll
+        run: |
+          sudo apt-get update
+          sudo apt-get -y install ruby-full build-essential zlib1g-dev
+          sudo gem install jekyll bundler
+      
+      - name: Set up Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: Install SUSHI and add FSH definitions
+        run: |
+          npm install -g fsh-sushi
+          sushi .
+      
+      - name: Update IG publisher
+        run: |
+          sudo apt-get -y install iputils-ping
+          chmod +x ./_updatePublisher.sh
+          ./_updatePublisher.sh -y
+
+      - name: Validate IG
+        run: |
+          chmod +x ./_genonce.sh
+          ./_genonce.sh
+      - name: Publish IG
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: output
