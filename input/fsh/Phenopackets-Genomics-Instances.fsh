@@ -14,13 +14,22 @@ Description: "This is an example of phenopackets-genomic-interpretation
 // component[cytogenetic-location]
 * component[cytogenetic-location].valueCodeableConcept = LNC#LA21263-1 "10"
 // component[exact-start-end]
+* component[exact-start-end].valueRange.low = 121496701
+* component[exact-start-end].extension[filterStatus].valueString = "PASS"
 // component[coordinate-system]
+* component[coordinate-system].valueCodeableConcept = LNC#LA30102-0 "1-based character counting"
 // component[dbSNP-id]
+* component[dbSNP-id].valueCodeableConcept = dbSNP#rs121918506 "rs121918506, FGFR2 : Missense Variant"
 // component[ref-allele] 
+* component[ref-allele].valueString = "T"
 // component[alt-allele]
+* component[alt-allele].valueString = "G"
 // extension[acmgPathogenicity]
+* extension[acmgPathogenicity].valueCodeableConcept = PPAPC#5  "PATHOGENIC"
 // extension[therapeuticActionability]
+* extension[therapeuticActionability].valueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 // component[variation-code]
+* component[variation-code].valueCodeableConcept =
 // component[dna-chg]
 // component[amino-acid-chg]
 // component[genomic-dna-chg]

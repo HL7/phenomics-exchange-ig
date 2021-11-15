@@ -7,7 +7,9 @@ Alias: SO = http://www.sequenceontology.org/
 Alias: GENO = https://www.ebi.ac.uk/ols/ontologies/geno 
 Alias: LNC = https://loinc.org 
 Alias: HGNC = https://www.genenames.org/ 
+Alias: HGVS = https://www.hgvs.org/
 Alias: LNC = https://loinc.org/ 
+Alias: dbSNP = https://www.ncbi.nlm.nih.gov/snp/ 
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs
