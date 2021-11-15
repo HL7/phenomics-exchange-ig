@@ -60,5 +60,6 @@ Description: " This is an incomplete example that used as
                a placeholder for a curated specimen example"
 * id = "01"               
 * identifier.value = "01"
-* text = " This is an incomplete example that used as 
-               a placeholder for a curated specimen example"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as 
+               a placeholder for a curated specimen example</div>"
