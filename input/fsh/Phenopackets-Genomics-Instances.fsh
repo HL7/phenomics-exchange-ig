@@ -6,7 +6,27 @@ Description: "This is an example of phenopackets-genomic-interpretation
               which is a phenopackets profile of the genomics reporting Variant profile. 
               It represents phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, 
               and VariantInterpretation building blocks."
-* 
+// component[gene-studied]
+* component[gene-studied].valueCodeableConcept.coding[HGNC] = HGNC#HGNC:3477 "ETF1"
+//Place-holder for alternateIds
+// component[ref-sequence-assembly]
+* component[ref-sequence-assembly].valueCodeableConcept = LNC#LA26806-2 "GRCh38"
+// component[cytogenetic-location]
+* component[cytogenetic-location].valueCodeableConcept = LNC#LA21263-1 "10"
+// component[exact-start-end]
+// component[coordinate-system]
+// component[dbSNP-id]
+// component[ref-allele] 
+// component[alt-allele]
+// extension[acmgPathogenicity]
+// extension[therapeuticActionability]
+// component[variation-code]
+// component[dna-chg]
+// component[amino-acid-chg]
+// component[genomic-dna-chg]
+// extension[moleculeContext]
+// component[functional-annotation]
+// component[allelic-state]
 
 Instance: PhenopacketsGenomicInterpretationExample01
 InstanceOf: PhenopacketsGenomicInterpretation // we may use the URL later to refer to this profile
