@@ -207,7 +207,8 @@ Profile: PhenopacketsGenomicInterpretation
 Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
 Id: phenopackets-genomic-interpretation
 Title: "Phenopackets Genomic Interpretation"
-Description: ""A profile of Genomics Reporting Genomics Report profile that represents relevant phenopackets building blocks.""
+Description: "A profile of Genomics Reporting Genomics Report profile that represents relevant 
+              phenopackets building blocks."
 * ^status = #draft // This would be changed later to active
 * ^version = "0.1.0"
 * ^date = "2021-10-18T09:00:00-04:00"
@@ -215,7 +216,7 @@ Description: ""A profile of Genomics Reporting Genomics Report profile that repr
 * ^contact.name = "Aly Khalifa"
 * ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
             It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
-            individual variant or gene. "
+            individual variant or gene."
 //Phenopackets GenomicInterpretation
 * subject 0..1 obeys phenopackets-subject-or-specimen-id
 * specimen 0..1 obeys phenopackets-subject-or-specimen-id
