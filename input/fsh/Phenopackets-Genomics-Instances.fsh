@@ -29,13 +29,16 @@ Description: "This is an example of phenopackets-genomic-interpretation
 // extension[therapeuticActionability]
 * extension[therapeuticActionability].valueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 // component[variation-code]
-* component[variation-code].valueCodeableConcept =
+* component[variation-code].valueCodeableConcept = HGVS#NM_001144915.2 "NM_001144915.2:c.1427A>C"
 // component[dna-chg]
 // component[amino-acid-chg]
 // component[genomic-dna-chg]
 // extension[moleculeContext]
+* extension[moleculeContext].valueCodeableConcept = PPMC#1  "genomic"
 // component[functional-annotation]
+* component[functional-annotation].valueCodeableConcept = SO#0001878 "feature_variant (SO:0001878)"
 // component[allelic-state]
+* component[allelic-state].valueCodeableConcept = GENO#0000135 "Heterozygous"
 
 Instance: PhenopacketsGenomicInterpretationExample01
 InstanceOf: PhenopacketsGenomicInterpretation // we may use the URL later to refer to this profile
