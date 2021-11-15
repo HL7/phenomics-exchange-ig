@@ -17,6 +17,8 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               It represents phenopackets GenomicInterpretation building block, i.e., the 
               interpretation for an individual variant or gene."
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
+* modifierExtension[interpretationStatus]= PPIS#0  "UNKNOWN_STATUS"
+* result[variant] Reference(PhenopacketsVariantExample01)
 
 Instance: phenopacketSpecimenExample01
 InstanceOf: Specimen
