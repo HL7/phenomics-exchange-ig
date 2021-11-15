@@ -34,7 +34,7 @@ Description: "This is an example of phenopackets-genomic-interpretation
 // component[amino-acid-chg]
 // component[genomic-dna-chg]
 // extension[moleculeContext]
-* extension[moleculeContext].valueCodeableConcept = PPMC#1  "genomic"
+* extension[moleculeContext].valueCodeableConcept = PPMC#1 "genomic"
 // component[functional-annotation]
 * component[functional-annotation].valueCodeableConcept = SO#0001878 "feature_variant (SO:0001878)"
 // component[allelic-state]
