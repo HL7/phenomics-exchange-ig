@@ -20,22 +20,22 @@ component[coordinate-system] and
 component[dbSNP-id] and
 component[ref-allele] and
 component[alt-allele] and
-extension[acmgPathogenicity] and
-extension[therapeuticActionability] and
+//extension[acmgPathogenicity] and // Moved down by the end of the profile
+//extension[therapeuticActionability] and // Moved down by the end of the profile
 component[variation-code] and
 component[dna-chg] and
 component[amino-acid-chg] and
 component[genomic-dna-chg] and
 // component[copy-number] and
 // component[cytogenomic-nomenclature] and
-extension[moleculeContext] and
+//extension[moleculeContext] and // Moved down by the end of the profile
 component[functional-annotation] and
 component[allelic-state] MS SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity and mandatory elements in parent profile
 * bodySite 0..0
-* observation-secondaryFinding 0..0
+* extension[observation-secondaryFinding] 0..0
 * basedOn 0..0
 * partOf 0..0
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
@@ -46,7 +46,7 @@ component[allelic-state] MS SU
 // code 1..1 //This is 1..1 element in parent profile as 1..1 with fixed value
 * focus 0..0
 * encounter 0..0
-* effective[x] 0..0
+* effectiveDateTime 0..0
 * issued 0..0
 * performer 0..0
 * valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
@@ -92,10 +92,7 @@ component[allelic-state] MS SU
                                 and component:amino-acid-chg[valueCodeableConcept] for relevant variant codes/ids."
 * component[ref-allele] ^short = "Phenopackets VcfRecord.ref: Reference base"
 * component[alt-allele] ^short = "Phenopackets VcfRecord.alt: Alternate base."
-* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
-                                         five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
-* extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
-                                                therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
+
 * component[variation-code] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
                                       (alternate_labels) of the variation, if available. This is for a simple variant."
 * component[dna-chg] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
@@ -106,8 +103,7 @@ component[allelic-state] MS SU
                                       (alternate_labels) of the variation, if available. This is for a structural variant."
 // component[copy-number] ^short = "" //This is a place-holer if copy-number component will be considered in future
 // component[cytogenomic-nomenclature] ^short = "" //This is a place-holer if cytogenomic-nomenclature component will be considered in future
-* extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
-                                       variation."
+
 * component[functional-annotation] ^short = "Phenopackets VariationDescriptor.structural_type: The structural variant type associated with 
                                              this variant, such as a substitution, deletion, or fusion. We RECOMMEND using 
                                              a descendent term of SO:0001537."
@@ -204,7 +200,17 @@ component[allelic-state] MS SU
 //VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
 * component[allelic-state].valueCodeableConcept from GenoOntologyAllelicStateVS (required) //allelic_state
 
+* extension[acmgPathogenicity] and
+extension[therapeuticActionability] and
+extension[moleculeContext] MS SU
 
+* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
+                                         five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
+* extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
+                                                therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
+* extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
+                                       variation."
+                                       
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report // Genomics Reporting Genomics Report profile
@@ -229,7 +235,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
 * modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
-* result[variant] = Reference(phenopackets-variant)
+* result[variant] only Reference(phenopackets-variant)
 * subject and specimen and result[variant] MS SU
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
@@ -254,7 +260,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * basedOn 0..0
 * category 0..0
 * encounter 0..0
-* effective[x] 0..0
+* effectiveDateTime 0..0
 * issued 0..0
 * performer 0..0
 * resultsInterpreter 0..0
