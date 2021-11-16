@@ -146,8 +146,11 @@ component[allelic-state] MS SU
 //VariantInterpretation
 * extension contains
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
+* extension contains
     TherapeuticActionability named therapeuticActionability 1..1
+* extension contains
     VrsObject named vrsObject  1..1 // Variation as VRS
+* extension contains
     MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
 * extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
 * extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
