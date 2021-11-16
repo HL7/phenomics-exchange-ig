@@ -14,7 +14,7 @@ Description: "This is an example of phenopackets-genomic-interpretation
 // component[cytogenetic-location]
 * component[cytogenetic-location].valueCodeableConcept = LNC#LA21263-1 "10"
 // component[exact-start-end]
-* component[exact-start-end].valueRange.low = 121496701
+* component[exact-start-end].valueRange.low.value = 121496701
 * component[exact-start-end].extension[filterStatus].valueString = "PASS"
 // component[coordinate-system]
 * component[coordinate-system].valueCodeableConcept = LNC#LA30102-0 "1-based character counting"

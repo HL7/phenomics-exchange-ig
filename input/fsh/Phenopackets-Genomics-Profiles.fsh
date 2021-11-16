@@ -9,8 +9,8 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * ^date = "2021-10-18T06:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
-* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
-            phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
+//* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
+            //phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
 //This is a placeholder for all Must-support elements (MS). Based on a team discussion, all elements should be MS.
 * component[gene-studied] and 
 component[ref-sequence-assembly] and 
@@ -207,7 +207,7 @@ component[allelic-state] MS SU
 
 
 Profile: PhenopacketsGenomicInterpretation
-Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report // Genomics Reporting Genomics Report profile
 Id: phenopackets-genomic-interpretation
 Title: "Phenopackets Genomic Interpretation"
 Description: "A profile of Genomics Reporting Genomics Report profile that represents relevant 
@@ -217,9 +217,9 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * ^date = "2021-10-18T09:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
-* ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
-            It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
-            individual variant or gene."
+//* ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
+            //It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
+            //individual variant or gene."
 //Phenopackets GenomicInterpretation
 * subject obeys phenopackets-subject-or-specimen-id
 * specimen obeys phenopackets-subject-or-specimen-id
@@ -229,7 +229,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
 * modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
-* result[variant] Reference(phenopackets-variant)
+* result[variant] = Reference(phenopackets-variant)
 * subject and specimen and result[variant] MS SU
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
