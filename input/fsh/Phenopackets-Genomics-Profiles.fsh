@@ -171,19 +171,19 @@ component[allelic-state] MS SU
 * component[genomic-dna-chg] obeys phenopackets-moleculeContext-align-with-result-component
 * component[amino-acid-chg] obeys phenopackets-moleculeContext-align-with-result-component
 
-/*component[variation-code].valueCodeable is the attribute where one or more CURIE identifier could be added, 
+/*component[variation-code].valueCodeableConcept is the attribute where one or more CURIE identifier could be added, 
     i.e. ID and alternate_ids as codings, while label would be the coding.display*/
 //VRS object is modeled as extension of Attachment datatype as listed above
-* component[variation-code].valueCodeable.coding 1..*
-//component[variation-code].valueCodeable.text 0..1 //description
-* component[dna-chg].valueCodeable.coding 1..*
-* component[genomic-dna-chg].valueCodeable.coding 1..*
-* component[amino-acid-chg].valueCodeable.coding 1..*
+* component[variation-code].valueCodeableConcept.coding 1..*
+//component[variation-code].valueCodeableConcept.text 0..1 //description
+* component[dna-chg].valueCodeableConcept.coding 1..*
+* component[genomic-dna-chg].valueCodeableConcept.coding 1..*
+* component[amino-acid-chg].valueCodeableConcept.coding 1..*
 //obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[variation-code].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[genomic-dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[amino-acid-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[variation-code].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[dna-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[genomic-dna-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[amino-acid-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
 //VariationDescriptor.gene_context is represented above as component[gene-studied]
 //VariationDescriptor.expressions is represented above as component[dna-chg].valueCodeableConcept-as one or more codings
 //VariationDescriptor.vcf_record is represented above
@@ -196,7 +196,7 @@ component[allelic-state] MS SU
 //* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
 * extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
 * extension[moleculeContext] obeys phenopackets-moleculeContext-align-with-result-component
-* component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
+* component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (extensible) //structural_type
 //VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
 * component[allelic-state].valueCodeableConcept from GenoOntologyAllelicStateVS (required) //allelic_state
 
@@ -210,7 +210,7 @@ extension[moleculeContext] MS SU
                                                 therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
 * extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
                                        variation."
-                                       
+
 
 Profile: PhenopacketsGenomicInterpretation
 Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report // Genomics Reporting Genomics Report profile
@@ -253,10 +253,10 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
                             i.e., oneof {GeneDescriptor | VariantInterpretation}."
 //Place-holder for elements of 0..0 cardinality
-* RelatedArtifact 0..0
-* RecommendedAction 0..0
-* SupportingInfo 0..0
-* diagnosticReport-risk 0..0
+* extension[RelatedArtifact] 0..0
+* extension[RecommendedAction] 0..0
+* extension[SupportingInfo] 0..0
+* extension[risk] 0..0
 * basedOn 0..0
 * category 0..0
 * encounter 0..0

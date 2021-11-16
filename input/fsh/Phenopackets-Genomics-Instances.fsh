@@ -7,7 +7,7 @@ Description: "This is an example of phenopackets-genomic-interpretation
               It represents phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, 
               and VariantInterpretation building blocks."
 // component[gene-studied]
-* component[gene-studied].valueCodeableConcept.coding[HGNC] = HGNC#HGNC:3477 "ETF1"
+* component[gene-studied].valueCodeableConcept.coding = HGNC#HGNC:3477 "ETF1"
 //Place-holder for alternateIds
 // component[ref-sequence-assembly]
 * component[ref-sequence-assembly].valueCodeableConcept = LNC#LA26806-2 "GRCh38"
@@ -28,6 +28,8 @@ Description: "This is an example of phenopackets-genomic-interpretation
 * extension[acmgPathogenicity].valueCodeableConcept = PPAPC#5  "PATHOGENIC"
 // extension[therapeuticActionability]
 * extension[therapeuticActionability].valueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
+//extension[VrsObject]
+* extension[VrsObject].valueAttachment.title =  "VrsObject Example"
 // component[variation-code]
 * component[variation-code].valueCodeableConcept = HGVS#NM_001144915.2 "NM_001144915.2:c.1427A>C"
 // component[dna-chg]
