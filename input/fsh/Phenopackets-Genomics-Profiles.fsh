@@ -152,9 +152,9 @@ component[allelic-state] MS SU
     VrsObject named vrsObject  1..1 // Variation as VRS
 * extension contains
     MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
-* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
+//* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
 * extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
-* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
+//* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
 * extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 //VariationDescriptor
 * component[amino-acid-chg] 0..1 //protein variations
@@ -197,7 +197,7 @@ component[allelic-state] MS SU
 * component[amino-acid-chg].extension contains RelatedConceptID named relatedConceptID 0..* //xref
 //VariationDescriptor.alternate_labels is represented above as part of component[variation-code].valueCodeable
 //VariationDescriptor.molecule_context is represented above as part of extension
-* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
+//* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
 * extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
 * extension[moleculeContext] obeys phenopackets-moleculeContext-align-with-result-component
 * component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
