@@ -9,8 +9,8 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 * ^date = "2021-10-18T06:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
-* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
-            phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
+//* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
+            //phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
 //This is a placeholder for all Must-support elements (MS). Based on a team discussion, all elements should be MS.
 * component[gene-studied] and 
 component[ref-sequence-assembly] and 
@@ -20,22 +20,22 @@ component[coordinate-system] and
 component[dbSNP-id] and
 component[ref-allele] and
 component[alt-allele] and
-extension[acmgPathogenicity] and
-extension[therapeuticActionability] and
+//extension[acmgPathogenicity] and // Moved down by the end of the profile
+//extension[therapeuticActionability] and // Moved down by the end of the profile
 component[variation-code] and
 component[dna-chg] and
 component[amino-acid-chg] and
 component[genomic-dna-chg] and
 // component[copy-number] and
 // component[cytogenomic-nomenclature] and
-extension[moleculeContext] and
+//extension[moleculeContext] and // Moved down by the end of the profile
 component[functional-annotation] and
 component[allelic-state] MS SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity and mandatory elements in parent profile
 * bodySite 0..0
-* observation-secondaryFinding 0..0
+* extension[observation-secondaryFinding] 0..0
 * basedOn 0..0
 * partOf 0..0
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
@@ -46,7 +46,7 @@ component[allelic-state] MS SU
 // code 1..1 //This is 1..1 element in parent profile as 1..1 with fixed value
 * focus 0..0
 * encounter 0..0
-* effective[x] 0..0
+* effectiveDateTime 0..0
 * issued 0..0
 * performer 0..0
 * valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
@@ -92,10 +92,7 @@ component[allelic-state] MS SU
                                 and component:amino-acid-chg[valueCodeableConcept] for relevant variant codes/ids."
 * component[ref-allele] ^short = "Phenopackets VcfRecord.ref: Reference base"
 * component[alt-allele] ^short = "Phenopackets VcfRecord.alt: Alternate base."
-* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
-                                         five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
-* extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
-                                                therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
+
 * component[variation-code] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
                                       (alternate_labels) of the variation, if available. This is for a simple variant."
 * component[dna-chg] ^short = "Phenopackets VariationDescriptor primary (label + description) and 
@@ -106,8 +103,7 @@ component[allelic-state] MS SU
                                       (alternate_labels) of the variation, if available. This is for a structural variant."
 // component[copy-number] ^short = "" //This is a place-holer if copy-number component will be considered in future
 // component[cytogenomic-nomenclature] ^short = "" //This is a place-holer if cytogenomic-nomenclature component will be considered in future
-* extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
-                                       variation."
+
 * component[functional-annotation] ^short = "Phenopackets VariationDescriptor.structural_type: The structural variant type associated with 
                                              this variant, such as a substitution, deletion, or fusion. We RECOMMEND using 
                                              a descendent term of SO:0001537."
@@ -146,12 +142,15 @@ component[allelic-state] MS SU
 //VariantInterpretation
 * extension contains
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
+* extension contains
     TherapeuticActionability named therapeuticActionability 1..1
+* extension contains
     VrsObject named vrsObject  1..1 // Variation as VRS
+* extension contains
     MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
-* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
+//* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
 * extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
-* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
+//* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
 * extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 //VariationDescriptor
 * component[amino-acid-chg] 0..1 //protein variations
@@ -172,19 +171,19 @@ component[allelic-state] MS SU
 * component[genomic-dna-chg] obeys phenopackets-moleculeContext-align-with-result-component
 * component[amino-acid-chg] obeys phenopackets-moleculeContext-align-with-result-component
 
-/*component[variation-code].valueCodeable is the attribute where one or more CURIE identifier could be added, 
+/*component[variation-code].valueCodeableConcept is the attribute where one or more CURIE identifier could be added, 
     i.e. ID and alternate_ids as codings, while label would be the coding.display*/
 //VRS object is modeled as extension of Attachment datatype as listed above
-* component[variation-code].valueCodeable.coding 1..*
-//component[variation-code].valueCodeable.text 0..1 //description
-* component[dna-chg].valueCodeable.coding 1..*
-* component[genomic-dna-chg].valueCodeable.coding 1..*
-* component[amino-acid-chg].valueCodeable.coding 1..*
+* component[variation-code].valueCodeableConcept.coding 1..*
+//component[variation-code].valueCodeableConcept.text 0..1 //description
+* component[dna-chg].valueCodeableConcept.coding 1..*
+* component[genomic-dna-chg].valueCodeableConcept.coding 1..*
+* component[amino-acid-chg].valueCodeableConcept.coding 1..*
 //obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[variation-code].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[genomic-dna-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
-* component[amino-acid-chg].valueCodeable obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[variation-code].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[dna-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[genomic-dna-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
+* component[amino-acid-chg].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
 //VariationDescriptor.gene_context is represented above as component[gene-studied]
 //VariationDescriptor.expressions is represented above as component[dna-chg].valueCodeableConcept-as one or more codings
 //VariationDescriptor.vcf_record is represented above
@@ -194,17 +193,27 @@ component[allelic-state] MS SU
 * component[amino-acid-chg].extension contains RelatedConceptID named relatedConceptID 0..* //xref
 //VariationDescriptor.alternate_labels is represented above as part of component[variation-code].valueCodeable
 //VariationDescriptor.molecule_context is represented above as part of extension
-* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
+//* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
 * extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
 * extension[moleculeContext] obeys phenopackets-moleculeContext-align-with-result-component
-* component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (preferred) //structural_type
+* component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (extensible) //structural_type
 //VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
 * component[allelic-state].valueCodeableConcept from GenoOntologyAllelicStateVS (required) //allelic_state
 
+* extension[acmgPathogenicity] and
+extension[therapeuticActionability] and
+extension[moleculeContext] MS SU
+
+* extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
+                                         five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
+* extension[therapeuticActionability] ^short = "Phenopackets VariantInterpretation.therapeutic_actionability: The 
+                                                therapeutic actionability of the variant, default is UNKNOWN_ACTIONABILITY."
+* extension[moleculeContext] ^short = "Phenopackets VariationDescriptor.molecule_context: The molecular context of the vrs 
+                                       variation."
 
 
 Profile: PhenopacketsGenomicInterpretation
-Parent: https://hl7.org/fhir/uv/genomics-reporting/genomics-report.html // Genomics Reporting Genomics Report profile
+Parent: http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report // Genomics Reporting Genomics Report profile
 Id: phenopackets-genomic-interpretation
 Title: "Phenopackets Genomic Interpretation"
 Description: "A profile of Genomics Reporting Genomics Report profile that represents relevant 
@@ -214,17 +223,19 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * ^date = "2021-10-18T09:00:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Aly Khalifa"
-* ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
-            It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
-            individual variant or gene."
+//* ^short = "A phenopackets profile of the genomics reporting Genomics Report profile. 
+            //It represents phenopackets GenomicInterpretation building block, i.e., the interpretation for an 
+            //individual variant or gene."
 //Phenopackets GenomicInterpretation
-* subject 0..1 obeys phenopackets-subject-or-specimen-id
-* specimen 0..1 obeys phenopackets-subject-or-specimen-id
+* subject obeys phenopackets-subject-or-specimen-id
+* specimen obeys phenopackets-subject-or-specimen-id
+* subject 0..1 
+* specimen 0..1 
 * modifierExtension contains 
     InterpretationStatus named interpretationStatus 1..1 // interpretation_status
 * modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
-* result[variant] Reference(phenopackets-variant)
+* result[variant] only Reference(phenopackets-variant)
 * subject and specimen and result[variant] MS SU
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
@@ -242,14 +253,14 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
                             i.e., oneof {GeneDescriptor | VariantInterpretation}."
 //Place-holder for elements of 0..0 cardinality
-* RelatedArtifact 0..0
-* RecommendedAction 0..0
-* SupportingInfo 0..0
-* diagnosticReport-risk 0..0
+* extension[RelatedArtifact] 0..0
+* extension[RecommendedAction] 0..0
+* extension[SupportingInfo] 0..0
+* extension[risk] 0..0
 * basedOn 0..0
 * category 0..0
 * encounter 0..0
-* effective[x] 0..0
+* effectiveDateTime 0..0
 * issued 0..0
 * performer 0..0
 * resultsInterpreter 0..0
