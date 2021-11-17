@@ -7,14 +7,14 @@ Description: "This is an example of phenopackets-genomic-interpretation
               It represents phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, 
               and VariantInterpretation building blocks."
 // component[gene-studied]
-* component[gene-studied].valueCodeableConcept.coding[HGNC] = HGNC#HGNC:3477 "ETF1"
+* component[gene-studied].valueCodeableConcept.coding = HGNC#HGNC:3477 "ETF1"
 //Place-holder for alternateIds
 // component[ref-sequence-assembly]
 * component[ref-sequence-assembly].valueCodeableConcept = LNC#LA26806-2 "GRCh38"
 // component[cytogenetic-location]
 * component[cytogenetic-location].valueCodeableConcept = LNC#LA21263-1 "10"
 // component[exact-start-end]
-* component[exact-start-end].valueRange.low = 121496701
+* component[exact-start-end].valueRange.low.value = 121496701
 * component[exact-start-end].extension[filterStatus].valueString = "PASS"
 // component[coordinate-system]
 * component[coordinate-system].valueCodeableConcept = LNC#LA30102-0 "1-based character counting"
@@ -28,13 +28,15 @@ Description: "This is an example of phenopackets-genomic-interpretation
 * extension[acmgPathogenicity].valueCodeableConcept = PPAPC#5  "PATHOGENIC"
 // extension[therapeuticActionability]
 * extension[therapeuticActionability].valueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
+//extension[VrsObject]
+* extension[VrsObject].valueAttachment.title =  "VrsObject Example"
 // component[variation-code]
 * component[variation-code].valueCodeableConcept = HGVS#NM_001144915.2 "NM_001144915.2:c.1427A>C"
 // component[dna-chg]
 // component[amino-acid-chg]
 // component[genomic-dna-chg]
 // extension[moleculeContext]
-* extension[moleculeContext].valueCodeableConcept = PPMC#1  "genomic"
+* extension[moleculeContext].valueCodeableConcept = PPMC#1 "genomic"
 // component[functional-annotation]
 * component[functional-annotation].valueCodeableConcept = SO#0001878 "feature_variant (SO:0001878)"
 // component[allelic-state]
@@ -60,5 +62,6 @@ Description: " This is an incomplete example that used as
                a placeholder for a curated specimen example"
 * id = "01"               
 * identifier.value = "01"
-* text = " This is an incomplete example that used as 
-               a placeholder for a curated specimen example"
+* text.status = #generated
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as 
+               a placeholder for a curated specimen example</div>"
