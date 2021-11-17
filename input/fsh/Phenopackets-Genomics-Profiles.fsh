@@ -236,7 +236,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
 * result[variant] only Reference(phenopackets-variant)
-* subject and specimen and result[variant] MS SU
+* subject and result[variant] MS // SU
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
                     according to phenopackets V2 specification*/
