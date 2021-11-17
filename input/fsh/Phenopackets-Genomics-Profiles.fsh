@@ -202,7 +202,7 @@ component[allelic-state] MS //SU
 
 * extension[acmgPathogenicity] and
 extension[therapeuticActionability] and
-extension[moleculeContext] MS SU
+extension[moleculeContext] MS // SU
 
 * extension[acmgPathogenicity] ^short = "Phenopackets VariantInterpretation.acmg_pathogenicity_classification: One of the 
                                          five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
