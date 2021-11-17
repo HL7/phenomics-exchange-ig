@@ -13,7 +13,6 @@ PhenotypicSeverityValueSet                   ValueSet    valueSets.fsh
 Test                                         ValueSet    valueSets.fsh
 ValidationErrorCountExt                      Extension   extensions.fsh
 hpo                                          Instance    instances.fsh
-hpo-flat                                     Instance    instances.fsh
 karyotypic-sex-invalid-1                     Instance    instances.fsh
 karyotypic-sex-valid-1                       Instance    instances.fsh
 phenotypic-abnormality-invalid-1             Instance    instances.fsh

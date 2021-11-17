@@ -103,7 +103,7 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * ^contact.name = "Peter Robinson"
 * code 1..1 MS
 * value[x] only CodeableConcept
-* value[x] from PhenotypicFeatureStatusValueSet
+//* value[x] from PhenotypicFeatureStatusValueSet
 * value[x] 1..1 MS
 * value[x] ^short = "true: observed; false: excluded"
 * specimen ..0
