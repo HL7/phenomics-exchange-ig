@@ -30,7 +30,7 @@ component[genomic-dna-chg] and
 // component[cytogenomic-nomenclature] and
 //extension[moleculeContext] and // Moved down by the end of the profile
 component[functional-annotation] and
-component[allelic-state] MS SU
+component[allelic-state] MS //SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity and mandatory elements in parent profile
