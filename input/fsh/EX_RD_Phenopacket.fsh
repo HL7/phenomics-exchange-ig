@@ -36,7 +36,7 @@ Instance: longPhiltrum
 InstanceOf: PhenotypicFeature
 Description: "Long philtrum (HP:0000343)"
 * id = "hp.0000343"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000343 "Long philtrum"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -45,7 +45,7 @@ Instance: microphthalmia
 InstanceOf: PhenotypicFeature
 Description: "Long philtrum (HP:0000568)"
 * id = "hp.0000568"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000568 "Microphthalmia"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -54,7 +54,7 @@ Instance: retinalDetachment
 InstanceOf: PhenotypicFeature
 Description: "Retinal detachment (HP:0000541)"
 * id = "hp.0000541"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000541 "Retinal detachment"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -63,7 +63,7 @@ Instance: tga
 InstanceOf: PhenotypicFeature
 Description: "Transposition of the great arteries (HP:0001669)"
 * id = "hp.0001669"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001669 "Transposition of the great arteries"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -72,7 +72,7 @@ Instance: reducedVisualAcuity
 InstanceOf: PhenotypicFeature
 Description: "Reduced visual acuity (HP:0007663)"
 * id = "hp.0007663"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0007663 "Reduced visual acuity"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -81,7 +81,7 @@ Instance: hypotonia
 InstanceOf: PhenotypicFeature
 Description: "Hypotonia (HP:0001252)"
 * id = "hp.0001252"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001252 "Hypotonia"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -91,7 +91,7 @@ Instance: globalDevelopmentalDelay
 InstanceOf: PhenotypicFeature
 Description: "Global developmental delay (HP:0001263)"
 * id = "hp.0001263"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001263 "Global developmental delay"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -100,7 +100,7 @@ Instance: muscleWeakness
 InstanceOf: PhenotypicFeature
 Description: "Muscle weakness (HP:0001324)"
 * id = "hp.0001324"
-* status = #active "active"
+* status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001324 "Muscle weakness"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
