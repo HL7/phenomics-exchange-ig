@@ -1,14 +1,14 @@
 /*This FSH file cotains the FHIR representations of phenopackets controlled terminologies/codes of genomics building blocks value sets */
-Alias: PPIS = https://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
-Alias: PPTA = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
-Alias: PPAPC = https://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
-Alias: PPMC = https://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
+Alias: PPIS = http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
+Alias: PPTA = http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
+Alias: PPAPC = http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification 
+Alias: PPMC = http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
 Alias: SO = http://www.sequenceontology.org/ 
-Alias: GENO = https://www.ebi.ac.uk/ols/ontologies/geno 
-Alias: LNC = https://loinc.org 
-Alias: HGNC = https://www.genenames.org/ 
-Alias: HGVS = https://www.hgvs.org/
-Alias: dbSNP = https://www.ncbi.nlm.nih.gov/snp/ 
+Alias: GENO = http://www.ebi.ac.uk/ols/ontologies/geno 
+Alias: LNC = http://loinc.org 
+Alias: HGNC = http://www.genenames.org/ 
+Alias: HGVS = http://www.hgvs.org/
+Alias: dbSNP = http://www.ncbi.nlm.nih.gov/snp/ 
 
 ValueSet: InterpretationStatusVS
 Id: interpretationStatus-vs
