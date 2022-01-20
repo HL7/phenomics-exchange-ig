@@ -9,7 +9,7 @@ is intended to be an assertion about a specific phenotypic abnormality that is a
 
 1. In the GA4GH phenopacket, the ``description`` element is string that can be used for comments or arbitrary additional information. We do not consider this to be an essential or even recommended part of the ``PhenotypicFeature`` and choose not to model it explictly in this IG. Implementers of software to transform FHIR code to GA4GH phenopacket code are free to use this field to record additional information in the FHR record as dictated by project needs, but that is outside the scope of this IG. For instance, implementations may record information in the ``note`` field that will be inserted into the ``description`` element of the GA4GH ``PhenopacketFeature``. However, we recommend that implementers avoid using free text wherever possible.
 
-2. In the GA4GH phenopacket, the ``type`` element is an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html#rstontologyclass) that corresponds to the ``code`` element of ``Condition``. 
+2. In the GA4GH phenopacket, the ``type`` element is an [OntologyClass](https://phenopacket-schema.readthedocs.io/en/latest/ontologyclass.html#rstontologyclass) that corresponds to the ``code`` element of ``Observation``. 
 
 
 3. In the GA4GH phenopacket, ``excluded`` is a boolean that is false by default. If set true, the meaning is that the phenotypic feature indicated by the ``type`` element was explicitly excluded by clinical examination. In this IG, if
