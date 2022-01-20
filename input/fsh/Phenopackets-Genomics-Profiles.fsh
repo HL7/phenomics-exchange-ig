@@ -251,7 +251,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
                     Check subject element."
 * modifierExtension[interpretationStatus] ^short = "Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."
 * result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
-                            i.e., oneof {GeneDescriptor | VariantInterpretation}."
+                            i.e., oneof {GeneDescriptor|VariantInterpretation}."
 //Place-holder for elements of 0..0 cardinality
 * extension[RelatedArtifact] 0..0
 * extension[RecommendedAction] 0..0
