@@ -65,3 +65,12 @@ Description: " This is an incomplete example that used as
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as 
                a placeholder for a curated specimen example</div>"
+
+Instance: phenopacketPatientExample01
+InstanceOf: Patient
+Usage: #example
+Title: "phenopacket Patient Example01"
+Description: "This is an example of a patient resource to be used in the assocaited patient examples. It is not representative of phenopackets patient's data representation"
+* name.given = "John"
+* name.family = "Doe"
+* gender = #unknown
