@@ -6,6 +6,8 @@ Description: "This is an example of phenopackets-genomic-interpretation
               which is a phenopackets profile of the genomics reporting Variant profile. 
               It represents phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, 
               and VariantInterpretation building blocks."
+* id = "111.111.111.111"
+* subject = Reference(phenopacketPatientExample01)  
 // component[gene-studied]
 * component[gene-studied].valueCodeableConcept.coding = HGNC#HGNC:3477 "ETF1"
 //Place-holder for alternateIds
@@ -51,8 +53,13 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               It represents phenopackets GenomicInterpretation building block, i.e., the 
               interpretation for an individual variant or gene."
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
+* subject = Reference(phenopacketPatientExample01)
+* category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
+* id = "111.111.111.112" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
+* conclusion = "The detected variant is Likely-Pathogenic of Pfeiffer syndrome"
+* conclusionCode.coding = $sct#70410008 "Acrocephalosyndactyly type V (disorder)"
 
 Instance: phenopacketSpecimenExample01
 InstanceOf: Specimen
@@ -62,9 +69,11 @@ Description: " This is an incomplete example that used as
                a placeholder for a curated specimen example"
 * id = "01"               
 * identifier.value = "01"
+* identifier.use = #temp
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as 
                a placeholder for a curated specimen example</div>"
+* subject = Reference(phenopacketPatientExample01)               
 
 Instance: phenopacketPatientExample01
 InstanceOf: Patient
