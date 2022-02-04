@@ -14,11 +14,14 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
     phenotypic_features 0..1 and 
     measurements 0..* and 
     biosamples 0..* and
-    //interpretations 0..* and
+    interpretations 0..* and
     diseases 0..1
 * section[phenotypic_features].title = "phenotypic_features" (exactly)
 * section[phenotypic_features].code = $SectionType#phenotypic_features
 * section[phenotypic_features].entry only Reference(PhenotypicFeature)
+* section[interpretations].title = "interpretations" (exactly)
+* section[interpretations].code = $SectionType#phenopackets-genomic-interpretation
+* section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
 * section[measurements].title = "measurements" (exactly)
 * section[measurements].code = $SectionType#measurements
 * section[measurements].entry only Reference(Measurement)
