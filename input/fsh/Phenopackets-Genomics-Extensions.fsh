@@ -40,6 +40,8 @@ Description: "Describes the conclusion made about the genomic interpretation."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
 * valueCodeableConcept from PPIS (required)
+* . ^isModifier = true
+* . ^isModifierReason = "The interpretation status could be REJECTED which may affect how the whole interpretation is interpreted."
 
 Extension: AcmgPathogenicityClassification
 Id: acmg-pathogenicity-classification
