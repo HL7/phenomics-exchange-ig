@@ -231,8 +231,8 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * specimen obeys phenopackets-subject-or-specimen-id
 * subject 0..1 
 * specimen 0..1 
-* extension contains InterpretationStatus named interpretationStatus 1..1 // interpretation_status
-* extension[interpretationStatus] ?!
+* modifierExtension contains InterpretationStatus named interpretationStatus 1..1 // interpretation_status
+* modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
 * result[variant] only Reference(phenopackets-variant)
 * subject and result[variant] MS // SU
@@ -248,7 +248,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * specimen ^short = "Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
                     or biosample that is the subject being interpreted.
                     Check subject element."
-* extension[interpretationStatus] ^short = "Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."
+* modifierExtension[interpretationStatus] ^short = "Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."
 * result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
                             i.e., oneof {GeneDescriptor|VariantInterpretation}."
 //Place-holder for elements of 0..0 cardinality
