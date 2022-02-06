@@ -19,9 +19,6 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[phenotypic_features].title = "phenotypic_features" (exactly)
 * section[phenotypic_features].code = $SectionType#phenotypic_features
 * section[phenotypic_features].entry only Reference(PhenotypicFeature)
-* section[interpretations].title = "interpretations" (exactly)
-* section[interpretations].code = $SectionType#phenopackets-genomic-interpretation
-* section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
 * section[measurements].title = "measurements" (exactly)
 * section[measurements].code = $SectionType#measurements
 * section[measurements].entry only Reference(Measurement)
@@ -31,3 +28,7 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[biosamples].title = "biosamples" (exactly)
 * section[biosamples].code = $SectionType#biosamples
 * section[biosamples].entry only Reference(Biosample)
+// Genomic component phenopackets-genomic-interpretation (PhenopacketsGenomicInterpretation)that may include one or more pehnopacket variant profiles
+* section[interpretations].title = "interpretations" (exactly)
+* section[interpretations].code = $SectionType#interpretations
+* section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
