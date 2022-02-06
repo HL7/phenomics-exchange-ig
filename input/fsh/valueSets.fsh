@@ -81,7 +81,6 @@ Title: "Onset ValueSet"
 Description: "Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007)."
 * ^status = #active
 * ^version = "0.1.0"
-* ^status = #active
 * ^date = "2021-06-03T10:26:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
