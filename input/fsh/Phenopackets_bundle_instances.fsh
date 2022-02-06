@@ -30,6 +30,9 @@ Usage: #example
 //interpretation: PhenopacketsGenomicInterpretationExample02
 * entry[+].fullUrl = "http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html"
 * entry[=].resource = PhenopacketsGenomicInterpretationExample02
+//PhenopacketsGenomicInterpretationExample02
+* entry[+].fullUrl = "http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html"
+* entry[=].resource = PhenopacketsVariantExample01
 
 
 Instance: PhenopacketCompositionExample01
