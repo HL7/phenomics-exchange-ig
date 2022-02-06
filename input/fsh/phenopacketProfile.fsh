@@ -29,6 +29,7 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[biosamples].code = $SectionType#biosamples
 * section[biosamples].entry only Reference(Biosample)
 // Genomic component phenopackets-genomic-interpretation (PhenopacketsGenomicInterpretation)that may include one or more pehnopacket variant profiles
+* section[interpretations] ^short = "represent the interpretation of a genomic analysis, such as the report from a diagnostic laboratory."
 * section[interpretations].title = "interpretations" (exactly)
 * section[interpretations].code = $SectionType#interpretations
 * section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
