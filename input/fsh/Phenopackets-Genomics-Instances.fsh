@@ -6,7 +6,7 @@ Description: "This is an example of phenopackets-genomic-interpretation
               which is a phenopackets profile of the genomics reporting Variant profile. 
               It represents phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, 
               and VariantInterpretation building blocks."
-* id = "111.111.111.111"
+//* id = "111.111.111.111"
 * subject = Reference(phenopacketPatientExample01)  
 // component[gene-studied]
 * component[gene-studied].valueCodeableConcept.coding = HGNC#HGNC:3477 "ETF1"
@@ -55,7 +55,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-* id = "111.111.111.112" 
+//* id = "111.111.111.112" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
 * conclusion = "The detected variant is Likely-Pathogenic of Pfeiffer syndrome"
@@ -72,7 +72,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-* id = "111.111.111.117" 
+//* id = "111.111.111.117" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
 * conclusion = " A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
@@ -84,7 +84,7 @@ Usage: #example
 Title: "phenopacket Specimen Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated specimen example"
-* id = "01"               
+//* id = "01"               
 * identifier.value = "01"
 * identifier.use = #temp
 * text.status = #generated
@@ -107,7 +107,7 @@ Usage: #example
 Title: "phenopacket Practitioner Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated Practitioner example"
-* id = "3333.3333.3333.3333"               
+//* id = "3333.3333.3333.3333"               
 * identifier.value = "03"
 * identifier.use = #temp
 * text.status = #generated
