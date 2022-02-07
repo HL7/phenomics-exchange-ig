@@ -15,7 +15,9 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
     measurements 0..* and 
     biosamples 0..* and
     interpretations 0..* and
-    diseases 0..1
+    diseases 0..1 and
+    files 0..* and
+    medicalActions 0..*
 * section[phenotypic_features].title = "phenotypic_features" (exactly)
 * section[phenotypic_features].code = $SectionType#phenotypic_features
 * section[phenotypic_features].entry only Reference(PhenotypicFeature)
@@ -33,3 +35,18 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[interpretations].title = "interpretations" (exactly)
 * section[interpretations].code = $SectionType#interpretations
 * section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
+//placeholder for document reference
+* section[files] ^short = "relevant documents and files."
+* section[files].title = "files" (exactly)
+* section[files].code = $SectionType#files
+* section[files].entry only Reference(DocumentReference)
+//placeholder for medical actions including procedures, medication statment,
+* section[medicalActions] ^short = "relevant procedures, radiation therapies, therapeutic regimens, and treatments."
+* section[medicalActions].title = "medicalActions" (exactly)
+* section[medicalActions].code = $SectionType#medicalActions
+* section[medicalActions].entry only Reference(Procedure or 
+                                               Medication or 
+                                               MedicationStatement or 
+                                               MedicationDispense or 
+                                               MedicationAdministration or 
+                                               MedicationRequest)
