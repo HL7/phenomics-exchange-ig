@@ -48,5 +48,5 @@ Usage: #example
 * section[phenotypic_features].entry = Reference(CHF-with-severity) "Congestive heart failure"
 * section[measurements].entry = Reference(thrombocytopenia) "Thrombocytopenia"
 * section[diseases].entry = Reference(CHF-stageIII) "CHF-stageIII"
-* section[biosamples].entry = Reference(bladderCarcinoma) "Bladder Carcinom"
+* section[biosamples].entry = Reference(bladderCarcinoma) "Bladder Carcinoma"
 * section[interpretations].entry = Reference(PhenopacketsGenomicInterpretationExample02) "Obesity due to centrosomal protein 19 deficiency (disorder)"
