@@ -95,7 +95,7 @@ Profile: PhenotypicFeature
 Parent: Observation
 Id: PhenotypicFeature
 Title: "Phenotypic Feature"
-Description: "This profile defines the GA4GH PhenotypicFeature element in terms of the FHIR Condition"
+Description: "This profile defines the GA4GH PhenotypicFeature element in terms of the FHIR Observation"
 * ^version = "0.1.0"
 * ^status = #active
 * ^date = "2021-06-03T09:49:00-04:00"

@@ -34,48 +34,48 @@ component[allelic-state] MS // SU
 
 // The invariant flags, are dictated autimatically by their presence, no need to explicitly declare them.
 // Placeholder for constrained elements of 0..0 cardinlaity and mandatory elements in parent profile
-* bodySite 0..0
-* extension[observation-secondaryFinding] 0..0
-* basedOn 0..0
-* partOf 0..0
+// * bodySite 0..0
+// * extension[observation-secondaryFinding] 0..0
+// * basedOn 0..0
+// * partOf 0..0
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
                     according to phenopackets V2 specification*/
 * category 1..1 //This is 1..* element in parent profile.
 //category.code = #laboratory //This is 1..1 element in parent profile and this is the fixed value. 
 // code 1..1 //This is 1..1 element in parent profile as 1..1 with fixed value
-* focus 0..0
-* encounter 0..0
-* effectiveDateTime 0..0
-* issued 0..0
-* performer 0..0
+// * focus 0..0
+// * encounter 0..0
+// * effectiveDateTime 0..0
+// * issued 0..0
+// * performer 0..0
 * valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
                                     1..1 and we selected #Present as a fixed value.*/
-* dataAbsentReason 0..0
-* note 0..0
+// * dataAbsentReason 0..0
+// * note 0..0
 // bodysite 0..0 //There are two elements of the same name, i.e., bodySite
-* method 0..0
-* specimen 0..0 //This may be modified later
-* device 0..0
-* referenceRange 0..0
-* hasMember 0..0
-* derivedFrom 0..0
-* component[dna-chg-type] 0..0 //This may be modified later.
-* component[genomic-source-class] 0..0 //This may be modified later.
-* component[amino-acid-chg-type] 0..0 //This may be modified later
-* component[transcript-ref-seq] 0..0 //This may be modified later
-* component[genomic-ref-seq] 0..0 //This may be modified later
-* component[sample-allelic-frequency] 0..0
-* component[allelic-read-depth] 0..0
-* component[copy-number] 0..0 //This may be modified later
-* component[variant-length] 0..0
-* component[outer-start-end] 0..0
-* component[inner-start-end] 0..0
-* component[chromosome-copy-number-change-type] 0..0	
-* component[arrCGH-ratio] 0..0
-* component[complex-var-type] 0..0
-* component[cytogenomic-nomenclature] 0..0 //This may be modified later
-* component[variant-inheritance] 0..0
+// * method 0..0
+// * specimen 0..0 //This may be modified later
+// * device 0..0
+// * referenceRange 0..0
+// * hasMember 0..0
+// * derivedFrom 0..0
+// * component[dna-chg-type] 0..0 //This may be modified later.
+// * component[genomic-source-class] 0..0 //This may be modified later.
+// * component[amino-acid-chg-type] 0..0 //This may be modified later
+// * component[transcript-ref-seq] 0..0 //This may be modified later
+// * component[genomic-ref-seq] 0..0 //This may be modified later
+// * component[sample-allelic-frequency] 0..0
+// * component[allelic-read-depth] 0..0
+// * component[copy-number] 0..0 //This may be modified later
+// * component[variant-length] 0..0
+// * component[outer-start-end] 0..0
+// * component[inner-start-end] 0..0
+// * component[chromosome-copy-number-change-type] 0..0	
+// * component[arrCGH-ratio] 0..0
+// * component[complex-var-type] 0..0
+// * component[cytogenomic-nomenclature] 0..0 //This may be modified later
+// * component[variant-inheritance] 0..0
 
 // Placeholer for descriptions, i.e., ^short
 * component[gene-studied] ^short = "Phenopackets GeneDescriptor: This element represents an identifier for a gene, 
@@ -231,8 +231,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * specimen obeys phenopackets-subject-or-specimen-id
 * subject 0..1 
 * specimen 0..1 
-* modifierExtension contains 
-    InterpretationStatus named interpretationStatus 1..1 // interpretation_status
+* modifierExtension contains InterpretationStatus named interpretationStatus 1..1 // interpretation_status
 * modifierExtension[interpretationStatus] ?!
 * result[variant] 1..1 //this should be constrained to the newly developed variant profile, i.e., PhenopacketsVariant
 * result[variant] only Reference(phenopackets-variant)
@@ -251,35 +250,35 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
                     Check subject element."
 * modifierExtension[interpretationStatus] ^short = "Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."
 * result[variant] ^short = "Phenopackets GenomicInterpretation.call: Represents the interpretation, 
-                            i.e., oneof {GeneDescriptor | VariantInterpretation}."
+                            i.e., oneof {GeneDescriptor|VariantInterpretation}."
 //Place-holder for elements of 0..0 cardinality
-* extension[RelatedArtifact] 0..0
-* extension[RecommendedAction] 0..0
-* extension[SupportingInfo] 0..0
-* extension[risk] 0..0
-* basedOn 0..0
-* category 0..0
-* encounter 0..0
-* effectiveDateTime 0..0
-* issued 0..0
-* performer 0..0
-* resultsInterpreter 0..0
-* result[gen-grouper] 0..0
-* result[overall] 0..0
-* result[inh-dis-path] 0..0
-* result[som-diagnostic] 0..0
-* result[som-prognostic] 0..0
-* result[som-predictive] 0..0
-* result[med-metabolism] 0..0
-* result[med-efficacy] 0..0
-* result[med-transporter] 0..0
-* result[med-high-risk] 0..0
-* result[genotype] 0..0
-* result[haplotype] 0..0
-* result[sequence-phase-relation] 0..0
-* result[region-studied] 0..0
-* media 0..0
-* conclusion 0..0
-* conclusionCode 0..0
-* presentedForm 0..0
+// * extension[RelatedArtifact] 0..0
+// * extension[RecommendedAction] 0..0
+// * extension[SupportingInfo] 0..0
+// * extension[risk] 0..0
+// * basedOn 0..0
+// * category 0..0
+// * encounter 0..0
+// * effectiveDateTime 0..0
+// * issued 0..0
+// * performer 0..0
+// * resultsInterpreter 0..0
+// * result[gen-grouper] 0..0
+// * result[overall] 0..0
+// * result[inh-dis-path] 0..0
+// * result[som-diagnostic] 0..0
+// * result[som-prognostic] 0..0
+// * result[som-predictive] 0..0
+// * result[med-metabolism] 0..0
+// * result[med-efficacy] 0..0
+// * result[med-transporter] 0..0
+// * result[med-high-risk] 0..0
+// * result[genotype] 0..0
+// * result[haplotype] 0..0
+// * result[sequence-phase-relation] 0..0
+// * result[region-studied] 0..0
+// * media 0..0
+// * conclusion 0..0
+// * conclusionCode 0..0
+// * presentedForm 0..0
 
