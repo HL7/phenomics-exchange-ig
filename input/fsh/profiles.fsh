@@ -81,6 +81,7 @@ Description: "This profile defines the GA4GH Measurement element in terms of the
 * ^contact.name = "Peter Robinson"
 * basedOn 0..0
 * code 1..1 MS
+* subject 0..1 MS
 * category 0..0
 * focus 0..0
 * issued 0..0
