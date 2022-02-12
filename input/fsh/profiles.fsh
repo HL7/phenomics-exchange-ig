@@ -84,11 +84,9 @@ Description: "This profile defines the GA4GH Measurement element in terms of the
 * code 1..1 MS
 * partOf 0..0
 * category 0..0
-* subject 0..0
 * focus 0..0
 * encounter 0..0
 * issued 0..0
-* performer 0..0
 * dataAbsentReason 0..0
 
 Profile: PhenotypicFeature
