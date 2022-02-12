@@ -79,13 +79,7 @@ Description: "This profile defines the GA4GH Measurement element in terms of the
 * ^date = "2021-06-03T09:49:00-04:00"
 * ^publisher = "GA4GH Phenopacket Working Group"
 * ^contact.name = "Peter Robinson"
-* basedOn 0..0
 * code 1..1 MS
-* subject 0..1 MS
-* category 0..0
-* focus 0..0
-* issued 0..0
-* dataAbsentReason 0..0
 
 Profile: PhenotypicFeature
 Parent: Observation
