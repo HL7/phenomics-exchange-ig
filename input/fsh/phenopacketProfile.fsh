@@ -4,7 +4,7 @@ Id: Phenopacket
 Title: "Phenopacket profile"
 Description: "This is the main element that represents the Phenopacket in FHIR."
 * ^status = #draft
-* id 1..1 MS 
+* identifier 1..1 MS 
 * subject only Reference(Individual)
 * section ^slicing.discriminator.type = #value
 * section ^slicing.discriminator.path = "code"
