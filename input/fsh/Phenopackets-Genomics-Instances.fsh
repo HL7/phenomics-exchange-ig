@@ -27,7 +27,9 @@ Description: "This is an example of phenopackets-genomic-interpretation
 // component[alt-allele]
 * component[alt-allele].valueString = "G"
 // extension[acmgPathogenicity]
-* extension[acmgPathogenicity].valueCodeableConcept = PPAPC#5  "PATHOGENIC"
+* extension[acmgPathogenicity].valueCodeableConcept.coding[0] = PPAPC#5  "PATHOGENIC"
+// LOINC answerlist https://loinc.org/LL4034-6/
+* extension[acmgPathogenicity].valueCodeableConcept.coding[+] = LNC#LA6668-3  "PATHOGENIC"
 // extension[therapeuticActionability]
 * extension[therapeuticActionability].valueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 //extension[VrsObject]
