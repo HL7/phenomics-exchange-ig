@@ -11,7 +11,7 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section ^slicing.ordered = true
 * section ^slicing.rules = #closed
 * section contains
-    phenotypic_features 0..1 and 
+    phenotypic_features 0..* and 
     measurements 0..* and 
     biosamples 0..* and
     interpretations 0..* and
