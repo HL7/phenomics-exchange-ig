@@ -1,7 +1,7 @@
 Instance: DevelopmentalDelay
 InstanceOf: Phenopacket
 Description: "Example use case for a child with undiagnosed developmental delay"
-* id = "id.treatment.1"
+* identifier.value = "id.treatment.1"
 * status = #preliminary "preliminary"
 * type = $LOINC#LOINC_11516-2 "Physician Episode of care medical records"
 * date = "2018-03-16"
