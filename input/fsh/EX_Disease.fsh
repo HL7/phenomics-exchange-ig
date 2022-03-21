@@ -22,4 +22,5 @@ Description: "Congestive heart failure, New York Heart Association stage III"
 * clinicalStatus = $ClinStatus#active "Active"
 * code = $mondo#MONDO_0005009 "congestive heart failure"
 * subject = Reference(example-patient)
-* stage.type = $efo#EFO:0003148 "moderate heart failure"
+* stage.summary = $efo#EFO:0003148 "moderate heart failure"
+* stage.type = $sct#260998006 "Clinical staging"
