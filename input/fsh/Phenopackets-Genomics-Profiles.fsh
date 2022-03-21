@@ -49,7 +49,7 @@ component[allelic-state] MS // SU
 // * effectiveDateTime 0..0
 // * issued 0..0
 // * performer 0..0
-* valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
+* valueCodeableConcept = LNC#LA9633-4 "Present" /*This is 1..1 element value[x] in parent profile as 
                                     1..1 and we selected #Present as a fixed value.*/
 // * dataAbsentReason 0..0
 // * note 0..0

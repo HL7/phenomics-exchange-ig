@@ -57,7 +57,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-//* id = "111.111.111.112" 
+* id = "PhenopacketsGenomicInterpretationExample01" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
 * conclusion = "The detected variant is Likely-Pathogenic of Pfeiffer syndrome"
@@ -72,9 +72,10 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               It represents phenopackets GenomicInterpretation building block, i.e., the 
               interpretation for an individual variant or gene."
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
+* specimen.identifier.value = "01"
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-//* id = "111.111.111.117" 
+* id = "PhenopacketsGenomicInterpretationExample02" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
 * conclusion = "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
@@ -111,7 +112,7 @@ Usage: #example
 Title: "phenopacket Practitioner Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated Practitioner example"
-//* id = "3333.3333.3333.3333"               
+* id = "PhenopacketPractitionerExample01"               
 * identifier.value = "03"
 * identifier.use = #temp
 * text.status = #generated
