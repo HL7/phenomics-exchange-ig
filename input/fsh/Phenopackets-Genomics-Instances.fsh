@@ -77,7 +77,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 //* id = "111.111.111.117" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
-* conclusion = " A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
+* conclusion = "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
 * conclusionCode.coding = $sct#783549006 "Obesity due to centrosomal protein 19 deficiency (disorder)"
 
 Instance: phenopacketSpecimenExample01
@@ -86,7 +86,7 @@ Usage: #example
 Title: "phenopacket Specimen Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated specimen example"
-//* id = "01"               
+* id = "phenopacketSpecimenExample01"               
 * identifier.value = "01"
 * identifier.use = #temp
 * text.status = #generated
@@ -99,9 +99,11 @@ InstanceOf: Patient
 Usage: #example
 Title: "phenopacket Patient Example01"
 Description: "This is an example of a patient resource to be used in the assocaited patient examples. It is not representative of phenopackets patient's data representation"
+* id = "phenopacketPatientExample01" 
 * name.given = "John"
 * name.family = "Doe"
 * gender = #unknown
+
 
 Instance: PhenopacketPractitionerExample01
 InstanceOf: Practitioner
