@@ -71,8 +71,8 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               the genomics reporting Genomics Report profile. 
               It represents phenopackets GenomicInterpretation building block, i.e., the 
               interpretation for an individual variant or gene."
+* identifier.value = "02"
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
-* specimen.identifier.value = "01"
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
 * id = "PhenopacketsGenomicInterpretationExample02" 
@@ -100,7 +100,9 @@ InstanceOf: Patient
 Usage: #example
 Title: "phenopacket Patient Example01"
 Description: "This is an example of a patient resource to be used in the assocaited patient examples. It is not representative of phenopackets patient's data representation"
-* id = "phenopacketPatientExample01" 
+* id = "phenopacketPatientExample01"
+* identifier.value = "04"
+* identifier.use = #temp
 * name.given = "John"
 * name.family = "Doe"
 * gender = #unknown
