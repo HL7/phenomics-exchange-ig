@@ -39,6 +39,8 @@ Instance: PhenopacketCompositionExample01
 InstanceOf: Phenopacket
 Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket"
+* identifier.system = "urn:ietf:rfc:3986"
+* identifier.value = "urn:uuid:1111-1111-1111-1112"
 * status = #preliminary
 * type = LNC#11503-0 "Medical records" // we may need to change this later to a phenopacket loinc code
 * subject = Reference(example-patient) "Anyname A. Anyperson"
