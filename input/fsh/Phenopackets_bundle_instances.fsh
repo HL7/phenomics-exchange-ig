@@ -49,6 +49,6 @@ Usage: #example
 * title = "This is an example of a composition resource that represents some of the Phenopackets data elements"
 * section[phenotypic_features].entry = Reference(CHF-with-severity) "Congestive heart failure"
 * section[measurements].entry = Reference(thrombocytopenia) "Thrombocytopenia"
-* section[diseases].entry = Reference(CHF-stageIII) "CHF-stageIII"
 * section[biosamples].entry = Reference(bladderCarcinoma) "Bladder Carcinoma"
 * section[interpretations].entry = Reference(PhenopacketsGenomicInterpretationExample02) "Obesity due to centrosomal protein 19 deficiency (disorder)"
+* section[diseases].entry = Reference(CHF-stageIII) "CHF-stageIII"
