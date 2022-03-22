@@ -13,8 +13,8 @@ Usage: #example
 * entry[+].fullUrl = "http://phenopackets.org/core-ig/Patient-example-patient.html"
 * entry[=].resource = example-patient
 //PhenopacketPractitionerExample01
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Practitioner-PeterGeneticist.html"
-* entry[=].resource = PeterGeneticist
+* entry[+].fullUrl = "http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html"
+* entry[=].resource = PhenopacketPractitionerExample01
 //features: CHF-with-severity
 * entry[+].fullUrl = "http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html"
 * entry[=].resource = CHF-with-severity
@@ -49,6 +49,6 @@ Usage: #example
 * title = "This is an example of a composition resource that represents some of the Phenopackets data elements"
 * section[phenotypic_features].entry = Reference(CHF-with-severity) "Congestive heart failure"
 * section[measurements].entry = Reference(thrombocytopenia) "Thrombocytopenia"
-* section[diseases].entry = Reference(CHF-stageIII) "CHF-stageIII"
 * section[biosamples].entry = Reference(bladderCarcinoma) "Bladder Carcinoma"
 * section[interpretations].entry = Reference(PhenopacketsGenomicInterpretationExample02) "Obesity due to centrosomal protein 19 deficiency (disorder)"
+* section[diseases].entry = Reference(CHF-stageIII) "CHF-stageIII"

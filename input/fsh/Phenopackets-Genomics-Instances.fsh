@@ -57,7 +57,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-//* id = "111.111.111.112" 
+* id = "PhenopacketsGenomicInterpretationExample01" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
 * conclusion = "The detected variant is Likely-Pathogenic of Pfeiffer syndrome"
@@ -71,13 +71,14 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               the genomics reporting Genomics Report profile. 
               It represents phenopackets GenomicInterpretation building block, i.e., the 
               interpretation for an individual variant or gene."
+* identifier.value = "02"
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
 * category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
-//* id = "111.111.111.117" 
+* id = "PhenopacketsGenomicInterpretationExample02" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
-* conclusion = " A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
+* conclusion = "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."
 * conclusionCode.coding = $sct#783549006 "Obesity due to centrosomal protein 19 deficiency (disorder)"
 
 Instance: phenopacketSpecimenExample01
@@ -86,7 +87,7 @@ Usage: #example
 Title: "phenopacket Specimen Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated specimen example"
-//* id = "01"               
+* id = "phenopacketSpecimenExample01"               
 * identifier.value = "01"
 * identifier.use = #temp
 * text.status = #generated
@@ -99,9 +100,13 @@ InstanceOf: Patient
 Usage: #example
 Title: "phenopacket Patient Example01"
 Description: "This is an example of a patient resource to be used in the assocaited patient examples. It is not representative of phenopackets patient's data representation"
+* id = "phenopacketPatientExample01"
+* identifier.value = "04"
+* identifier.use = #temp
 * name.given = "John"
 * name.family = "Doe"
 * gender = #unknown
+
 
 Instance: PhenopacketPractitionerExample01
 InstanceOf: Practitioner
@@ -109,7 +114,7 @@ Usage: #example
 Title: "phenopacket Practitioner Example01"
 Description: " This is an incomplete example that used as 
                a placeholder for a curated Practitioner example"
-//* id = "3333.3333.3333.3333"               
+* id = "PhenopacketPractitionerExample01"               
 * identifier.value = "03"
 * identifier.use = #temp
 * text.status = #generated

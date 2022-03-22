@@ -24,9 +24,6 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[measurements].title = "measurements" (exactly)
 * section[measurements].code = $SectionType#measurements
 * section[measurements].entry only Reference(Measurement)
-* section[diseases].title = "diseases" (exactly)
-* section[diseases].code = $SectionType#diseases
-* section[diseases].entry only Reference(Disease)
 * section[biosamples].title = "biosamples" (exactly)
 * section[biosamples].code = $SectionType#biosamples
 * section[biosamples].entry only Reference(Biosample)
@@ -35,6 +32,9 @@ Description: "This is the main element that represents the Phenopacket in FHIR."
 * section[interpretations].title = "interpretations" (exactly)
 * section[interpretations].code = $SectionType#interpretations
 * section[interpretations].entry only Reference(PhenopacketsGenomicInterpretation)
+* section[diseases].title = "diseases" (exactly)
+* section[diseases].code = $SectionType#diseases
+* section[diseases].entry only Reference(Disease)
 //placeholder for document reference
 * section[files] ^short = "relevant documents and files."
 * section[files].title = "files" (exactly)

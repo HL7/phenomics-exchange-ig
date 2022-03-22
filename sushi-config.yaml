@@ -18,6 +18,8 @@ publisher:
   name: "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"
   url: https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/
 
+jurisdiction: urn:iso:std:iso:3166#US
+# jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 pages:
   index.md:
     title: Home
