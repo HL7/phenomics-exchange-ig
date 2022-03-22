@@ -110,7 +110,7 @@ Instance: amyotrophy
 InstanceOf: PhenotypicFeature
 Description: "Skeletal muscle atrophy (HP:0003202)"
 * id = "hp.0003202"
-* status = #active "active"
+* status = #final "Final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0003202 "Skeletal muscle atrophy"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"
@@ -182,7 +182,7 @@ Instance: fiberSizeVariability
 InstanceOf: PhenotypicFeature
 Description: "Increased variability in muscle fiber diameter (HP:0003557)"
 * id = "hp.0003557"
-* status = #active "active"
+* status = #final "Final"
 * focus = Reference(muscleBiopsy)
 * code = $hpo#HP:0003557 "Increased variability in muscle fiber diameter"
 * valueCodeableConcept = $LOINC#LA9633-4 "Present"

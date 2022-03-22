@@ -49,7 +49,7 @@ component[allelic-state] MS // SU
 // * effectiveDateTime 0..0
 // * issued 0..0
 // * performer 0..0
-* valueCodeableConcept = #Present /*This is 1..1 element value[x] in parent profile as 
+* valueCodeableConcept = LNC#LA9633-4 "Present" /*This is 1..1 element value[x] in parent profile as 
                                     1..1 and we selected #Present as a fixed value.*/
 // * dataAbsentReason 0..0
 // * note 0..0
@@ -239,8 +239,7 @@ Description: "A profile of Genomics Reporting Genomics Report profile that repre
 * status = #unknown /*This is 1..1 element in parent profile. This status code 
                     was selected to avoid providing any un-necessary information 
                     according to phenopackets V2 specification*/
-* code = LNC#phenopackets-genomic-interpretation /* This is 1..1 element in parent profile. This is a hypothetical 
-                                                   LOINC code. LOINC may be asked to develop codes for phenopackets */
+//* code = LNC#81247-9 "Master HL7 genetic variant reporting panel" /* This is 1..1 element in parent profile. LOINC may be asked to develop codes for phenopackets */
 // Placeholer for descriptions, i.e., ^short
 * subject ^short = "Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
                     or biosample that is the subject being interpreted.
