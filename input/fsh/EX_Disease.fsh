@@ -2,7 +2,7 @@ Instance: excluded-disease
 InstanceOf: Disease
 Description: "Phenopacket Example for an excluded disease"
 * id = "id.disease.1"
-* clinicalStatus = $sct#315215002 "Disorder excluded (situation)"
+* clinicalStatus = $ClinStatus#active "Active"
 * code  = $sct#87628006  "Bacterial infectious disease"
 * subject = Reference(example-patient)
 
