@@ -137,8 +137,7 @@ component[allelic-state] MS // SU
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
-//place holder for VcfRecord.info element. More discussions are needed.
-* component[alt-allele].extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
+
 //VariantInterpretation
 * extension contains
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
@@ -146,6 +145,8 @@ component[allelic-state] MS // SU
     TherapeuticActionability named therapeuticActionability 1..1
 * extension contains
     VrsObject named vrsObject  1..1 // Variation as VRS
+//place holder for VcfRecord.info element. More discussions are needed.
+* extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
 * extension contains
     MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
 //* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
