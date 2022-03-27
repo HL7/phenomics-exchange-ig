@@ -8,6 +8,7 @@ Description: "This is an example of phenopackets-genomic-interpretation
               and VariantInterpretation building blocks."
 //* id = "111.111.111.111"
 * subject = Reference(phenopacketPatientExample01)  
+* valueCodeableConcept = LNC#LA9633-4 "Present" 
 // component[gene-studied]
 * component[gene-studied].valueCodeableConcept.coding = HGNC#HGNC:3477 "ETF1"
 //Place-holder for alternateIds

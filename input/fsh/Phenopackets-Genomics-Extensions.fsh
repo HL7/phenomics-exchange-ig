@@ -18,7 +18,7 @@ Extension: PhredQualityScore
 Id: phred-quality-score
 Title: "Phred Quality Score"
 Description: "Used to include Phred-scaled quality score for the assertion made in ALT."
-* value[x] only integer // Do you prefer another FHIR data type? // make it a floating point 
+* value[x] only Quantity // Do you prefer another FHIR data type? // make it a floating point 
 
 // Declaring an extension for the filter status
 Extension: FilterStatus

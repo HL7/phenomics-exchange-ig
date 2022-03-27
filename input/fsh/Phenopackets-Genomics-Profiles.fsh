@@ -49,8 +49,8 @@ component[allelic-state] MS // SU
 // * effectiveDateTime 0..0
 // * issued 0..0
 // * performer 0..0
-* valueCodeableConcept = LNC#LA9633-4 "Present" /*This is 1..1 element value[x] in parent profile as 
-                                    1..1 and we selected #Present as a fixed value.*/
+//* valueCodeableConcept = LNC#LA9633-4 "Present" 
+/*This is 1..1 element value[x] in parent profile as 1..1 and we selected #Present as a fixed value.*/
 // * dataAbsentReason 0..0
 // * note 0..0
 // bodysite 0..0 //There are two elements of the same name, i.e., bodySite
@@ -137,8 +137,7 @@ component[allelic-state] MS // SU
 //* component:genomic-ref-seq 0..1 // may be used to formally identify ref-sequence
 * component[alt-allele] 1..1 // alt. Is it really one alternative allele?
 * component[alt-allele].extension contains PhredQualityScore named phredQualityScore 0..1
-//place holder for VcfRecord.info element. More discussions are needed.
-* component[alt-allele].extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
+
 //VariantInterpretation
 * extension contains
     AcmgPathogenicityClassification named acmgPathogenicity 1..1
@@ -146,12 +145,14 @@ component[allelic-state] MS // SU
     TherapeuticActionability named therapeuticActionability 1..1
 * extension contains
     VrsObject named vrsObject  1..1 // Variation as VRS
+//place holder for VcfRecord.info element. More discussions are needed.
+* extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
 * extension contains
     MoleculeContext named moleculeContext  1..1 // VariationDescriptor.molecule_context
 //* extension[acmgPathogenicity] ^defaultValue[x] only CodeableConcept
-* extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
+//* extension[acmgPathogenicity] ^defaultValueCodeableConcept = PPAPC#0 "NOT_PROVIDED"
 //* extension[therapeuticActionability] ^defaultValue[x] only CodeableConcept
-* extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
+//* extension[therapeuticActionability] ^defaultValueCodeableConcept = PPTA#0  "UNKNOWN_ACTIONABILITY"
 //VariationDescriptor
 * component[amino-acid-chg] 0..1 //protein variations
 * component[genomic-dna-chg] 0..1 //genomic variations, structural variants
@@ -194,7 +195,7 @@ component[allelic-state] MS // SU
 //VariationDescriptor.alternate_labels is represented above as part of component[variation-code].valueCodeable
 //VariationDescriptor.molecule_context is represented above as part of extension
 //* extension[moleculeContext] ^defaultValue[x] only CodeableConcept
-* extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
+//* extension[moleculeContext] ^defaultValueCodeableConcept = PPMC#0  "unspecified_molecule_context" //molecule_context
 * extension[moleculeContext] obeys phenopackets-moleculeContext-align-with-result-component
 * component[functional-annotation].valueCodeableConcept from SequenceOntologyStructuralVariantVS (extensible) //structural_type
 //VariationDescriptor.vrs_ref_allele_seq is represented above as part of component[ref-allele] and it is 1..1
