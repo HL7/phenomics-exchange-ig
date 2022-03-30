@@ -52,6 +52,8 @@ menu:
     PhenotypicFeature: StructureDefinition-PhenotypicFeature.html
     Phenopacket: StructureDefinition-Phenopacket.html
     Treatment: StructureDefinition-Treatment.html
+    PhenopacketsVariant: StructureDefinition-phenopackets-variant.html
+    PhenopacketsGenomicInterpretation: StructureDefinition-phenopackets-genomic-interpretation.html
   Extensions:
     CodedOnset: StructureDefinition-CodedOnset.html
     DiagnosticMarker: StructureDefinition-DiagnosticMarker.html

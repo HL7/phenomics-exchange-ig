@@ -18,7 +18,7 @@ Extension: PhredQualityScore
 Id: phred-quality-score
 Title: "Phred Quality Score"
 Description: "Used to include Phred-scaled quality score for the assertion made in ALT."
-* value[x] only integer // Do you prefer another FHIR data type? // make it a floating point 
+* value[x] only Quantity // Do you prefer another FHIR data type? // make it a floating point 
 
 // Declaring an extension for the filter status
 Extension: FilterStatus
@@ -39,7 +39,7 @@ Title: "Interpretation Status"
 Description: "Describes the conclusion made about the genomic interpretation."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from PPIS (required)
+* valueCodeableConcept from InterpretationStatusVS (required)
 * . ^isModifier = true
 * . ^isModifierReason = "The interpretation status could be REJECTED which may affect how the whole interpretation is interpreted."
 
@@ -49,7 +49,7 @@ Title: "ACMG Pathogenicity Classification"
 Description: "One of the five ACMG pathogenicity categories, default is UNCERTAIN_SIGNIFICANCE."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from PPAPC (required)
+* valueCodeableConcept from AcmgPathogenicityClassificationVS (required)
 
 Extension: TherapeuticActionability
 Id: therapeutic-actionability
@@ -57,7 +57,7 @@ Title: "Therapeutic Actionability"
 Description: "one of the five ACMG pathogenicity categories, or NOT_PROVIDED. The default is NOT_PROVIDED."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from PPTA (required)
+* valueCodeableConcept from TherapeuticActionabilityVS (required)
 
 Extension: VrsObject
 Id: vrs-object
@@ -72,4 +72,4 @@ Title: "Molecule Context"
 Description: "The molecular context of the vrs variation."
 * value[x] only CodeableConcept
 * valueCodeableConcept 1..1
-* valueCodeableConcept from PPMC (required)
+* valueCodeableConcept from MoleculeContextVS (required)
