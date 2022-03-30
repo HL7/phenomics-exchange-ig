@@ -113,7 +113,7 @@ component[allelic-state] MS // SU
 //Phenopackets GeneDescriptor
 * component[gene-studied] 1..1 //Also represents the VariationDescriptor.gene_context
 
-* component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
+//* component[gene-studied].valueCodeableConcept from https://www.genenames.org/ //This is already the default and extensible binding
 * component[gene-studied].valueCodeableConcept obeys phenopackets-primary-and-alternate-ids-or-labels
 //* component[gene-studied].valueCodeableConcept.coding.code from https://www.genenames.org/ // value_id => HGNC ID
 //* component[gene-studied].valueCodeableConcept.coding.display from https://www.genenames.org/ //symbol => HGNC approved symbol
@@ -144,7 +144,7 @@ component[allelic-state] MS // SU
 * extension contains
     TherapeuticActionability named therapeuticActionability 1..1
 * extension contains
-    VrsObject named vrsObject  1..1 // Variation as VRS
+    VrsObject named vrsObject  0..1 // Variation as VRS
 //place holder for VcfRecord.info element. More discussions are needed.
 * extension contains VCFInfo named vcfInfo 0..1 //VcfRecord
 * extension contains
