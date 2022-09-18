@@ -44,7 +44,7 @@ Id: phenotypic-abnormality
 Title: "Phenotypic abnormality ValueSet"
 Description: "ValueSet description here"
 * ^status = #active
-* $hpo#HP:0000118
+* include codes from system $ncit where concept descendent-of $hpo#HP:0000118
 
 ValueSet: PhenotypicComponentValueSet
 Id: phenotypic-component
