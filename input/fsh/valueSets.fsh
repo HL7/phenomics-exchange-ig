@@ -58,7 +58,7 @@ Description: "ValueSet description here"
 ValueSet: PhenotypicModifierValueSet
 Id: PhenotypicModifierValueSet
 Title: "Phenotypic modifier ValueSet"
-Description: "ValueSet description here"
+Description: "Human Phenotype Ontology (HPO) Clinical Modifier terms"
 * ^url = "http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier"
 * ^status = #active
 * $hpo#HP:0012823
@@ -86,19 +86,6 @@ Description: "Set of HPO codes that denote the onset of a disease or phenotypic 
 * ^contact.name = "Peter Robinson"
 * include codes from system $hpo where concept is-a #HP:0003674
 * include codes from system SNOMED_CT where concept descendent-of #282032007
-
-
-ValueSet: Severity
-Id: Severity
-Title: "Severity"
-Description: "Phenotypic feature severity codes from the Human Phenotype Ontology and SNOMED CT."
-* ^version = "0.1.0"
-* ^status = #active
-* ^date = "2020-02-14T16:13:10+10:00"
-* ^publisher = "Alejandro Metke"
-* ^contact.name = "Alejandro Metke"
-* include codes from system $hpo where concept descendent-of #HP:0012824
-* include codes from system SNOMED_CT where concept descendent-of #272141005
 
 
 ValueSet: Taxonomy
@@ -146,3 +133,18 @@ Description: "Codes to represent the stage of a tumor."
 * ^publisher = "Alejandro Metke"
 * ^contact.name = "Alejandro Metke"
 * include codes from system $ncit where concept descendent-of #NCIT:C48232
+
+
+ValueSet: HpoSeverityVS
+Id: HpoSeverity
+Title: "Hpo Severity Value Set"
+Description: "The HPO codes for phenotypic feature severity"
+* ^version = "0.1.0"
+* ^status = #active
+* ^date = "2022-09-19T16:13:10+10:00"
+// This would be equivalent to the following* include codes from system $hpo where concept descendent-of #hpo:0012824
+* $hpo#HP:0012828 "Severe"
+* $hpo#HP:0012826 "Moderate"
+* $hpo#HP:0012825 "Mild"
+* $hpo#HP:0012827 "Borderline"
+* $hpo#HP:0012829 "Profound"
