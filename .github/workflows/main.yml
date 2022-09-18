@@ -17,10 +17,10 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10, 12]
+        node-version: [14, 16]
      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -30,7 +30,7 @@ jobs:
       - name: Set up OpenJDK
         uses: actions/setup-java@v1
         with:
-          java-version: 8
+          java-version: 11
 
       - name: Set up Jekyll
         run: |
