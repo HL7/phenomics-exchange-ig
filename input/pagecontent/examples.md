@@ -17,8 +17,9 @@ The example is based on [Muscular dystrophy-dystroglycanopathy (congenital with 
 
 * [Arachnodactyly](Observation-id.phenotypicfeature.1.html)
 * [Left ventricular dysfunction (excluded)](Observation-id.phenotypicfeature.2.html)
-* [Mitral valve prolapse (with onset)](Observation-id.phenotypicfeature.3.html))
-* [Low output congestive heart failre (with severity)](Observation-id.phenotypicfeature.4.html))
+* [Mitral valve prolapse (with onset)](Observation-id.phenotypicfeature.3.html)
+* [Low output congestive heart failure (with severity)](Observation-id.phenotypicfeature.4.html)
+* [Polydactyly (with clinical modifier)](Observation-id.bilateral-polydactyly.phenotypic-feature.html)
 
 The following Phenotypic features are references by the Phenopacket extended example
 * [Long philtrum](Observation-hp.0000343.xml.html)
