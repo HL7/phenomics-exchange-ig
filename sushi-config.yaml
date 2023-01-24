@@ -72,7 +72,7 @@ parameters:
   apply-publisher: true
 
 dependencies:
-  hl7.fhir.uv.genomics-reporting: 1.0.0
+  hl7.fhir.uv.genomics-reporting: 2.0.0
 #    id: genomics-reporting
 #    uri: http://hl7.org/fhir/uv/genomics-reporting/ 
 #    version: 1.0.0  
