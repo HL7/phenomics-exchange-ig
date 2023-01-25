@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "phenotypic-abnormality",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  HP:0000118</li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality",
+  "version" : "0.1.0",
+  "name" : "PhenotypicAbnormalityValueSet",
+  "title" : "Phenotypic abnormality ValueSet",
+  "status" : "active",
+  "date" : "2023-01-25T22:15:53+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "ValueSet description here",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://purl.obolibrary.org/obo/ncit.owl",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "HP:0000118"
+      }]
+    }]
+  }
+}

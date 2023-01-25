@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "Onset",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code> where concept  is-a  HP:0003674</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  282032007 (Periods of life)</li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/Onset",
+  "version" : "0.1.0",
+  "name" : "Onset",
+  "title" : "Onset ValueSet",
+  "status" : "active",
+  "date" : "2021-06-03T10:26:00-04:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007).",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "HP:0003674"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "282032007"
+      }]
+    }]
+  }
+}

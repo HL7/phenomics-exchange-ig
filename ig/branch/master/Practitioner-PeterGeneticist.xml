@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Practitioner xmlns="http://hl7.org/fhir">
+  <id value="PeterGeneticist"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Practitioner</b><a name="PeterGeneticist"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Practitioner &quot;PeterGeneticist&quot; </p></div><p><b>identifier</b>: id: practitioner.id1</p><p><b>name</b>: Peter Geneticist </p><p><b>address</b>: 123 Yellow Brick Drive Anytown MA 12345 US (WORK)</p><p><b>gender</b>: male</p><h3>Qualifications</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td></tr><tr><td>*</td><td>Doctor of Medicine <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (degreeLicenseCertificate[2.7]#MD)</span></td></tr></table></div>
+  </text>
+  <identifier>
+    <value value="practitioner.id1"/>
+  </identifier>
+  <name>
+    <family value="Geneticist"/>
+    <given value="Peter"/>
+    <prefix value="Dr."/>
+  </name>
+  <address>
+    <use value="work"/>
+    <line value="123 Yellow Brick Drive"/>
+    <city value="Anytown"/>
+    <state value="MA"/>
+    <postalCode value="12345"/>
+    <country value="US"/>
+  </address>
+  <gender value="male"/>
+  <qualification>
+    <code>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+        <version value="2.7"/>
+        <code value="MD"/>
+      </coding>
+    </code>
+  </qualification>
+</Practitioner>

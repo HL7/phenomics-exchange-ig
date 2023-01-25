@@ -1,0 +1,79 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HtsFormat"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">UNKNOWN<a name=\"HtsFormat-UNKNOWN\"> </a></td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">SAM<a name=\"HtsFormat-SAM\"> </a></td><td>SAM</td></tr><tr><td style=\"white-space:nowrap\">BAM<a name=\"HtsFormat-BAM\"> </a></td><td>BAM</td></tr><tr><td style=\"white-space:nowrap\">CRAM<a name=\"HtsFormat-CRAM\"> </a></td><td>CRAM</td></tr><tr><td style=\"white-space:nowrap\">VCF<a name=\"HtsFormat-VCF\"> </a></td><td>VCF</td></tr><tr><td style=\"white-space:nowrap\">BCF<a name=\"HtsFormat-BCF\"> </a></td><td>BCF</td></tr><tr><td style=\"white-space:nowrap\">GVCF<a name=\"HtsFormat-GVCF\"> </a></td><td>GVCF</td></tr></table></div>"
+  ]; # 
+  fhir:CodeSystem.url [ fhir:value "https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat"]; # 
+  fhir:CodeSystem.version [ fhir:value "0.1.0"]; # 
+  fhir:CodeSystem.name [ fhir:value "HtsFormat"]; # 
+  fhir:CodeSystem.title [ fhir:value "HTS Format"]; # 
+  fhir:CodeSystem.status [ fhir:value "active"]; # 
+  fhir:CodeSystem.date [ fhir:value "2020-02-14T16:13:10+10:00"^^xsd:dateTime]; # 
+  fhir:CodeSystem.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.description [ fhir:value "An enumeration used to represent different high-throughput sequencing file formats."]; # 
+  fhir:CodeSystem.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ]; # 
+  fhir:CodeSystem.copyright [ fhir:value "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"]; # 
+  fhir:CodeSystem.content [ fhir:value "complete"]; # 
+  fhir:CodeSystem.count [ fhir:value "7"^^xsd:nonNegativeInteger]; # 
+  fhir:CodeSystem.concept [
+     fhir:index 0;
+     fhir:CodeSystem.concept.code [ fhir:value "UNKNOWN" ];
+     fhir:CodeSystem.concept.display [ fhir:value "Unknown" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeSystem.concept.code [ fhir:value "SAM" ];
+     fhir:CodeSystem.concept.display [ fhir:value "SAM" ]
+  ], [
+     fhir:index 2;
+     fhir:CodeSystem.concept.code [ fhir:value "BAM" ];
+     fhir:CodeSystem.concept.display [ fhir:value "BAM" ]
+  ], [
+     fhir:index 3;
+     fhir:CodeSystem.concept.code [ fhir:value "CRAM" ];
+     fhir:CodeSystem.concept.display [ fhir:value "CRAM" ]
+  ], [
+     fhir:index 4;
+     fhir:CodeSystem.concept.code [ fhir:value "VCF" ];
+     fhir:CodeSystem.concept.display [ fhir:value "VCF" ]
+  ], [
+     fhir:index 5;
+     fhir:CodeSystem.concept.code [ fhir:value "BCF" ];
+     fhir:CodeSystem.concept.display [ fhir:value "BCF" ]
+  ], [
+     fhir:index 6;
+     fhir:CodeSystem.concept.code [ fhir:value "GVCF" ];
+     fhir:CodeSystem.concept.display [ fhir:value "GVCF" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

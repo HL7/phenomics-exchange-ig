@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="id.bilateral-polydactyly.phenotypic-feature"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="id.bilateral-polydactyly.phenotypic-feature"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;id.bilateral-polydactyly.phenotypic-feature&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-PhenotypicFeature.html">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Postaxial hand polydactyly <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (hpo#HP:0001162)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2022-09-18</p><p><b>value</b>: Present <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA9633-4)</span></p><h3>Components</h3><table class="grid"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Clinical modifier <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (hpo#HP:0012823)</span></td><td>Bilateral <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (hpo#HP:0012832)</span></td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <code value="HP:0001162"/>
+      <display value="Postaxial hand polydactyly"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-patient"/>
+  </subject>
+  <effectiveDateTime value="2022-09-18"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA9633-4"/>
+      <display value="Present"/>
+    </coding>
+  </valueCodeableConcept>
+  <component>
+    <code>
+      <coding>
+        <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+        <code value="HP:0012823"/>
+        <display value="Clinical modifier"/>
+      </coding>
+    </code>
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+        <code value="HP:0012832"/>
+        <display value="Bilateral"/>
+      </coding>
+    </valueCodeableConcept>
+  </component>
+</Observation>
