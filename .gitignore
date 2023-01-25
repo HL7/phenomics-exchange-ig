@@ -1,9 +1,3 @@
 /.project
 *.jar
 .idea/
-
-fsh-generated/
-input-cache/
-output/
-temp/
-template/

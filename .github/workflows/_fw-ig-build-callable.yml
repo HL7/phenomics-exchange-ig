@@ -1,0 +1,262 @@
+# The goal of this callable workflow is to build and publish an IG, and
+# - Have a "branch-build" that is the ref that has the latest changes for an IG.
+# - Have a "merge-build" that attempts to merge the branch with a merge target and then build the merge result.
+#   - The git merge might fail.
+#   - The IG build might fail.
+# - Publish the branch and merge builds, update the .md file with links to the GitHub Pages home page for the IGs' builds
+# - Output useful summary information for the build
+
+name: IG build and publish
+
+defaults:
+  run:
+    shell: bash
+
+on:
+  workflow_call:
+    inputs:
+
+# --- Related to the repo and ref containing the changes being built.
+      ig-owner-repo:
+        description: The "owner/repo" that has the branch to be built. For a PR, this could be a different "owner/repo" than the "owner/repo" running this workflow.
+        type: string
+        required: true
+
+      ig-ref:
+        description: The ref to build. For a PR, this will be the branch name of the PR in its "ig-owner-repo".
+        type: string
+        required: true
+
+      # build related
+      ig-path:
+        description: The relative path, in the checkout of the "ig-owner-repo" at the "ig-ref", to the IG root folder. This folder is mounted to /ig in the Docker container.
+        required: true
+        type: string
+
+      ig-read-secret-name:
+        description: The secret name for read access to the ig-owner-repo
+        type: string
+        required: true
+
+#      ig-write-secret-name:
+#        description: The secret name for write access to the ig-owner-repo
+#        type: string
+#        required: true
+
+
+      pr-base-ref:
+        description: The PR base ref
+        type: string
+
+      pr-number:
+        description: PR number
+        type: string
+
+# --- Publisher related
+
+      publisher-args:
+        description: The parameters to pass to the publisher.jar. Keep in mind that the IG root folder is at /ig for these arguments.
+        required: true
+        type: string
+
+      docker-publisher-tag:
+        description: "The Docker publisher tag to use from: https://hub.docker.com/repository/docker/sessaid/ig-publisher/tags"
+        type: string
+        default: latest
+
+# --- Publishing related
+      io-owner:
+        description: the owner name of the IO repo
+        type: string
+
+      io-repo:
+        description: If set, it is a GitHub dedicated repository (repo name only) for publishing the IG's output.
+        type: string
+
+      io-branch:
+        description: The branch to use for publishing the IG's output. gh-pages by default so it works on github.io
+        type: string
+
+      io-path:
+        description: "A path to publish under. If not set, a default is calculated. TODO: document this."
+        type: string
+
+      io-path-merged:
+        description: "A path to publish the merged results under. If not set, a default is calculated. TODO: document this."
+        type: string
+
+      io-write-secret-name:
+        description: The secret name for writing to the IO repository
+        type: string
+
+
+jobs:
+  docker-build:
+    name: Build and Publish IG
+    runs-on: ubuntu-latest
+    steps:
+      - name: Env setup
+        id: env
+        run: |
+          echo "NOW=$(date +%Y%m%d_%H%M%S)" >> $GITHUB_ENV
+
+      - name: Debug inputs
+        run: |
+          echo Running IG build with inputs: '${{ toJSON(inputs) }}'
+          echo Running IG build with env: '${{ toJSON(env) }}'
+          echo Running IG build with secrets: '${{ toJSON(secrets) }}'
+
+      - name: Checkout IG ${{ inputs.owner-repo }}/${{inputs.ig-root}} ref:${{ inputs.ig-ref }}
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ inputs.ig-owner-repo }}
+          ref: ${{ inputs.ig-ref }}
+          path: ig-clone
+          token: ${{ secrets[inputs.ig-read-secret-name] }}
+
+      # We should always have a
+      - name: Building IG from ig-ref
+        id: branch
+        run: |
+          set -x
+          git config --global user.name 'GitHub Actions IG build'
+          git config --global user.email 'user@example.com'
+          cd ig-clone
+          echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+          echo Running IG build with inputs: '${{ toJSON(inputs) }}'
+          #mkdir -p "${{inputs.ig-root}}/output"; echo hello branch build $(date) > "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-root}}/output/index.html"
+          #docker pull "sessaid/ig-publisher:${{inputs.docker-publisher-tag}}"
+          docker run --rm --volume "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}:/ig" "sessaid/ig-publisher:${{inputs.docker-publisher-tag}}"  ${{ inputs.publisher-args }}
+          echo $NOW > "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}/output/gh-actions-build-timestamp.txt"
+          mv "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}/output"  "${GITHUB_WORKSPACE}/output-ref"
+
+      # Do a merge build if pr-base-ref
+      - name: Building IG for merge with pr-base-ref
+        id: merge
+        if: inputs.pr-base-ref != ''
+        # try to merge and build again
+        # TODO: try to optimize the full fetch
+        run: |
+          set -x
+          # echo doing base merge and build
+          cd ig-clone
+          git fetch --unshallow
+          git clean -fdx
+          git remote add upstream "https://github.com/${{ github.repository }}"
+          git fetch --all
+          git checkout -b upstream-${{ inputs.pr-base-ref }} --track  "upstream/${{ inputs.pr-base-ref }}"
+          # check if the pr ref and base have diverged, and need a merge
+          if ! git merge-base --is-ancestor upstream-${{ inputs.pr-base-ref }} ${{ inputs.ig-ref }}; then
+            # Diverged
+            if git merge "${{ inputs.ig-ref }}"; then
+              # Merge succeeded
+              echo "sha=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
+              echo merge was successful
+              #mkdir -p "${{inputs.ig-path}}/output"; echo hello merged branch build $(date) > "${{inputs.ig-root}}/output/index.html"
+              docker run --rm --volume "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}:/ig" "sessaid/ig-publisher:${{inputs.docker-publisher-tag}}"  ${{ inputs.publisher-args }}
+              echo $NOW > "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}/output/gh-actions-build-timestamp.txt"
+              mv "${GITHUB_WORKSPACE}/ig-clone/${{inputs.ig-path}}/output" "${GITHUB_WORKSPACE}/output-merge"
+            else
+              echo merge has conflicts
+              git merge --abort
+            fi
+            echo "skip-merge=false" >> $GITHUB_OUTPUT
+          else
+            echo "skip-merge=true" >> $GITHUB_OUTPUT
+          fi
+          
+
+      - name: Create IO branch if needed
+        if: inputs.io-repo != ''
+        run: |
+          if git ls-remote --exit-code --heads 'https://${{inputs.io-owner}}:${{secrets[inputs.io-write-secret-name]}}@github.com/${{inputs.io-owner}}/${{inputs.io-repo}}.git' ${{inputs.io-branch}}; then
+            echo IO repo ${{inputs.io-owner}}/${{inputs.io-repo}} and branch ${{inputs.io-branch}} exists
+          else
+            echo repo or branch does not exist, creating branch
+            mkdir io-create-branch
+            cd io-create-branch
+            git init --initial-branch=${{inputs.io-branch}} .
+            echo "Auto created branch" > README.md
+            git add -A
+            git commit -m "Auto created branch for IG IO."
+            git push -f 'https://${{inputs.io-owner}}:${{secrets[inputs.io-write-secret-name]}}@github.com/${{inputs.io-owner}}/${{inputs.io-repo}}.git' ${{inputs.io-branch}}:${{inputs.io-branch}}
+            cd ..
+            rm -rf io-create-branch
+          fi
+     
+
+      # Publish if requested
+      - name: Checking out IO repo
+        if: inputs.io-repo != ''
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ inputs.io-owner }}/${{ inputs.io-repo }}
+          ref: ${{ inputs.io-branch }}
+          path: io-clone
+          token: ${{ secrets[inputs.io-write-secret-name] }}
+
+
+      - name: Publishing IG
+        if: inputs.io-repo != ''
+        run: |
+          set -x
+          cd io-clone
+          
+          while true; do
+            # Get HEAD reset to latest remote branch in case push failed
+            git fetch origin ${{ inputs.io-branch }}
+            git reset --hard  "origin/${{ inputs.io-branch }}"
+            git clean -fdx
+            
+            
+            # race test
+            # sleep 300
+            # do the ig-ref copy
+          
+            [[ -d "${{ inputs.io-path }}" ]] &&  rm -rf "${{ inputs.io-path }}"
+            cp -ra "${GITHUB_WORKSPACE}/output-ref" "${{ inputs.io-path }}"
+            git add ${{ inputs.io-path }}
+            
+            if [[ ! -f  "IG_BUILDS.md" ]]; then
+              echo '# IG Builds  ' > IG_BUILDS.md
+            fi
+          
+            IGLink="[${{ inputs.io-path }}](https://${{ inputs.io-owner }}.github.io/${{ inputs.io-repo }}/${{ inputs.io-path }}/index.html?version=${{steps.branch.outputs.sha}})"
+            {
+              cat IG_BUILDS.md |  grep -v '${{ inputs.io-path }}' ;
+              printf '%s  \n' "$IGLink";
+            } | sort > IG_BUILDS.md.new
+            mv -f IG_BUILDS.md.new IG_BUILDS.md
+            echo "Branch IG build site: $IGLink" >> $GITHUB_STEP_SUMMARY
+          
+            # If there was a merge build
+          
+            if [[ ! -z "${{ inputs.io-path-merged }}" ]]; then
+              [[ -d "${{ inputs.io-path-merged }}" ]] && rm -rf "${{ inputs.io-path-merged }}"
+            fi
+          
+            if [[ "${{ steps.merge.outputs.skip-merge }}" == false ]]; then
+              cp -ra "${GITHUB_WORKSPACE}/output-merge" "${{ inputs.io-path-merged }}"
+              IGLink="[${{ inputs.io-path-merged }}](https://${{ inputs.io-owner }}.github.io/${{ inputs.io-repo }}/${{ inputs.io-path-merged }}/index.html?version=${{steps.merge.outputs.sha}})"
+              {
+                cat IG_BUILDS.md;
+                printf '%s  \n' "$IGLink";
+              } | sort > IG_BUILDS.md.new
+              mv -f IG_BUILDS.md.new IG_BUILDS.md
+              echo "Merge IG build site: $IGLink" >> $GITHUB_STEP_SUMMARY
+            fi
+          
+            git add ${{ inputs.io-path-merged }}
+            git add IG_BUILDS.md
+          
+            if [[ -z "$(git status --porcelain)" ]]; then
+              echo NO changes
+            else
+              git commit -m "IG: ${{ inputs.ig-owner-repo }}, ref: ${{ inputs.ig-ref }}  run_id: ${{ github.run_id }}, run_number: ${{ github.run_number }}, run_attempt: ${{ github.run_attempt }} with branch SHA: ${{steps.branch.outputs.sha}} and merge SHA: ${{steps.merge.outputs.sha}}"
+              if git push --atomic; then
+                # we were able to push to remote, i.e. remote wasn't updated by another build
+                break
+              fi
+            fi
+            
+          done

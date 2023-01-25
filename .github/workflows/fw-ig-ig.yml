@@ -1,0 +1,149 @@
+name: ig-build-workflow
+
+# Setup:
+# 1. Copy this file and name it to match the IG folder name to help relate the file to the IG. The file name it not
+#    important but it helps to match the IG folder name. Remove the .off suffix if there is one.
+# 2. Set the env variables to match your setup.
+# 3. Adjust the paths under the `on.push.paths`  and `on.pull_request_target.paths` keys to match your IG's directory.
+# 4. Set up a GitHub Actions secret in this repository for the PAT token to write to the publishing repository so the build can push to it. the secrete is named secrets.PUBLISHER_IO
+# 5. Enable GitHub actions and write access to this repository.
+# 6.
+env:
+  IG_PATH: 'ig'  # The relative folder path of the IG root directory
+  IG_READ_SECRET_NAME: GITHUB_TOKEN  # this is the name of the secrets token that should be used for IG source code read access.
+#  IG_WRITE_SECRET_NAME: GITHUB_TOKEN  # this is the name of the secrets token that should be used for IG source code write access.
+
+  DOCKER_PUBLISHER_TAG: latest  # The Docker tag for the Publisher version wanted for the build from: https://hub.docker.com/repository/docker/sessaid/ig-publisher
+  PUBLISHER_ARGS: "-ig /ig/ig.ini"  # the publisher command line arguments
+
+  IO_OWNER: ${{ github.event.repository.owner.login }} #  The owner of a GitHub repository that will be used for publishing the built IG's output
+  IO_REPO: ${{ github.event.repository.name }} # The repository to publish to
+  IO_BRANCH: gh-pages  # The branch to publish to
+  IO_PATH_PREFIX: ''  # An optional path prefix (from the root of the repo) to publish to. No leading slash but with a trailing slash
+  IO_WRITE_SECRET_NAME: GITHUB_TOKEN
+
+defaults:
+  run:
+    shell: bash
+
+# Only build the latest branch for an IG, and cancel any in progress builds in favor of the latest.
+concurrency:
+  group: ${{ github.repository }}_${{ github.workflow }}_${{ github.ref }}_${{ github.head_ref }}
+  cancel-in-progress: true
+
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main, master, dev ]
+    paths:
+      - 'ig/**'
+      - '.github/workflows/fw-ig-ig.yml'
+      - '.github/workflows/_fw-ig-build-callable.yml'
+      - '!**/README*'
+
+  pull_request_target:
+    paths:
+      - 'ig/**'
+      - '.github/workflows/fw-ig-ig.yml'
+      - '.github/workflows/_fw-ig-build-callable.yml'
+      - '!**/README*'
+
+
+jobs:
+
+  # Do any setup needed to create job output parameters needed to the later build job
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+    outputs:
+      # --- ig branch
+      ig-owner-repo: ${{ steps.arguments.outputs.ig-owner-repo }}
+      ig-ref: ${{ steps.arguments.outputs.ig-ref }}
+      ig-path: ${{ steps.arguments.outputs.ig-path }}
+      ig-read-secret-name: ${{ steps.arguments.outputs.ig-read-secret-name }}
+      #      ig-write-secret-name: ${{ steps.arguments.outputs.ig-write-secret-name }}
+
+
+      pr-base-ref: ${{ steps.arguments.outputs.pr-base-ref }}
+      pr-number: ${{ steps.arguments.outputs.pr-number }}
+
+      # --- publisher
+      publisher-args: ${{ steps.arguments.outputs.publisher-args }}
+      docker-publisher-tag: ${{ steps.arguments.outputs.docker-publisher-tag }}
+
+      # ----- IO
+      io-owner: ${{ steps.arguments.outputs.io-owner }}
+      io-repo: ${{ steps.arguments.outputs.io-repo }}
+      io-branch: ${{ steps.arguments.outputs.io-branch }}
+      io-path: ${{ steps.arguments.outputs.io-path }}
+      io-path-merged: ${{ steps.arguments.outputs.io-path-merged }}
+      io-write-secret-name: ${{ steps.arguments.outputs.io-write-secret-name }}
+
+    steps:
+      - name: Debug
+        id: debug
+        run: |
+          echo concurrency group: ${{ github.repository }}_${{ github.workflow }}_${{ github.ref }}_${{ github.head_ref }} 
+          echo github context: '${{ toJSON(github) }}'
+          echo secrets context: '${{ toJSON(secrets) }}'
+          echo env context: '${{ toJSON(env) }}'
+
+      - name: arguments
+        id: arguments
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            echo "ig-owner-repo=${{ github.repository }}" >> $GITHUB_OUTPUT
+            echo "ig-ref=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+            echo "io-path=${{ env.IO_PATH_PREFIX }}${{ env.IG_PATH }}/branch/${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event_name }}" = "pull_request_target" ]; then
+            echo "ig-owner-repo=${{ github.event.pull_request.head.repo.full_name }}" >> $GITHUB_OUTPUT
+            echo "ig-ref=${{ github.event.pull_request.head.ref }}" >> $GITHUB_OUTPUT
+               
+            echo "pr-base-ref=${{ github.event.pull_request.base.ref }}" >> $GITHUB_OUTPUT
+            echo "pr-number=${{ github.event.pull_request.number }}" >> $GITHUB_OUTPUT
+            
+            echo "io-path=${{ env.IO_PATH_PREFIX }}${{ env.IG_PATH }}/pull/${{ github.event.pull_request.number }}_FROM_${{ github.event.pull_request.head.user.login }}_${{ github.event.pull_request.head.repo.name }}_${{ github.event.pull_request.head.ref }}_TO_${{ github.event.pull_request.base.ref }}" >> $GITHUB_OUTPUT
+            echo "io-path-merged=${{ env.IO_PATH_PREFIX }}${{ env.IG_PATH }}/pull/${{ github.event.pull_request.number }}_FROM_${{ github.event.pull_request.head.user.login }}_${{ github.event.pull_request.head.repo.name }}_${{ github.event.pull_request.head.ref }}_TO_${{ github.event.pull_request.base.ref }}_MERGED" >> $GITHUB_OUTPUT
+          else
+            echo EXITING DUE TO UNKNOWN EVENT NAME.
+            exit 1
+          fi
+          
+          echo "ig-path=${{ env.IG_PATH }}" >> $GITHUB_OUTPUT
+          echo "ig-read-secret-name=${{ env.IG_READ_SECRET_NAME }}" >> $GITHUB_OUTPUT
+          #          echo "ig-write-secret-name=${{ env.IG_WRITE_SECRET_NAME }}" >> $GITHUB_OUTPUT
+          
+          echo "publisher-args=${{ env.PUBLISHER_ARGS }}" >> $GITHUB_OUTPUT
+          echo "docker-publisher-tag=${{ env.DOCKER_PUBLISHER_TAG }}" >> $GITHUB_OUTPUT
+          
+          # IO
+          echo "io-owner=${{ env.IO_OWNER }}" >> $GITHUB_OUTPUT
+          echo "io-repo=${{ env.IO_REPO }}" >> $GITHUB_OUTPUT
+          echo "io-branch=${{ env.IO_BRANCH }}" >> $GITHUB_OUTPUT
+          echo "io-write-secret-name=${{ env.IO_WRITE_SECRET_NAME }}" >> $GITHUB_OUTPUT
+
+  build:
+    needs: setup
+    uses: ./.github/workflows/_fw-ig-build-callable.yml
+    secrets: inherit
+
+    with:
+      ig-owner-repo: ${{ needs.setup.outputs.ig-owner-repo }}
+      ig-ref: ${{ needs.setup.outputs.ig-ref }}
+      ig-path: ${{ needs.setup.outputs.ig-path }}
+      ig-read-secret-name: ${{ needs.setup.outputs.ig-read-secret-name }}
+      #      ig-write-secret-name: ${{ needs.setup.outputs.ig-write-secret-name }}
+
+      pr-base-ref: ${{ needs.setup.outputs.pr-base-ref }}
+      pr-number: ${{ needs.setup.outputs.pr-number }}
+
+      publisher-args: ${{ needs.setup.outputs.publisher-args }}
+      docker-publisher-tag: ${{ needs.setup.outputs.docker-publisher-tag }}
+
+      io-owner: ${{ needs.setup.outputs.io-owner }}
+      io-repo: ${{ needs.setup.outputs.io-repo }}
+      io-branch: ${{ needs.setup.outputs.io-branch }}
+      io-path: ${{ needs.setup.outputs.io-path }}
+      io-path-merged: ${{ needs.setup.outputs.io-path-merged }}
+      io-write-secret-name: ${{ needs.setup.outputs.io-write-secret-name }}
+
