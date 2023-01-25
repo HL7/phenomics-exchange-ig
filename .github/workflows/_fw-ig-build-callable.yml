@@ -214,6 +214,7 @@ jobs:
             # do the ig-ref copy
           
             [[ -d "${{ inputs.io-path }}" ]] &&  rm -rf "${{ inputs.io-path }}"
+            mkdir -p "$(dirname \"${{ inputs.io-path }}\")"
             cp -ra "${GITHUB_WORKSPACE}/output-ref" "${{ inputs.io-path }}"
             git add ${{ inputs.io-path }}
             
@@ -233,6 +234,7 @@ jobs:
           
             if [[ ! -z "${{ inputs.io-path-merged }}" ]]; then
               [[ -d "${{ inputs.io-path-merged }}" ]] && rm -rf "${{ inputs.io-path-merged }}"
+              mkdir -p "$(dirname \"${{ inputs.io-path-merged }}\")"
             fi
           
             if [[ "${{ steps.merge.outputs.skip-merge }}" == false ]]; then
