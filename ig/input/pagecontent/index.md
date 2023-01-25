@@ -1,4 +1,4 @@
-# GA4GH Phenopackets
+# GA4GH Phenopackets   Shahim's Edit
 
 The [Global Alliance for Genomics and Health](https://www.ga4gh.org/) (GA4GH) Phenopacket standard intendds to support global exchange of computable case-level phenotypic information for all types of disease diagnosis and research. The Phenopacket standard is a freely available, community-driven standard that streamlines exchange and systematic use of phenotypic data, which will enable sophisticated computational analysis of both clinical and genomic information to help improve our understanding of diseases and our ability to manage them.
 
