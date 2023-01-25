@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Specimen",
+  "id" : "phenopacketSpecimenExample01",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated specimen example</div>"
+  },
+  "identifier" : [{
+    "use" : "temp",
+    "value" : "01"
+  }],
+  "subject" : {
+    "reference" : "Patient/phenopacketPatientExample01"
+  }
+}

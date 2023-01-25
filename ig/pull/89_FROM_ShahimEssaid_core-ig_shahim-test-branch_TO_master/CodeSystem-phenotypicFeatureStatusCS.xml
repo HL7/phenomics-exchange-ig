@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="phenotypicFeatureStatusCS"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr><tr><td style="white-space:nowrap">Absent<a name="phenotypicFeatureStatusCS-Absent"> </a></td></tr><tr><td style="white-space:nowrap">Present<a name="phenotypicFeatureStatusCS-Present"> </a></td></tr></table></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS"/>
+  <version value="0.1.0"/>
+  <name value="PhenotypicFeatureStatusCS"/>
+  <title value="Categories"/>
+  <status value="active"/>
+  <date value="2023-01-25T22:39:39+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Various categories or tags"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="Absent"/>
+    <display value="Absent"/>
+  </concept>
+  <concept>
+    <code value="Present"/>
+    <display value="Present"/>
+  </concept>
+</CodeSystem>

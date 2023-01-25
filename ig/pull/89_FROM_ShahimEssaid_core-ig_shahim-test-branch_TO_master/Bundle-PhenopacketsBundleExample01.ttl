@@ -1,0 +1,651 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Bundle/PhenopacketsBundleExample01> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PhenopacketsBundleExample01"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.lastUpdated [ fhir:value "2022-02-02T22:22:22Z"^^xsd:dateTime ]
+  ]; # 
+  fhir:Bundle.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:1111-1111-1111-1111" ]
+  ]; # 
+  fhir:Bundle.type [ fhir:value "document"]; # 
+  fhir:Bundle.timestamp [ fhir:value "2022-02-02T22:22:22Z"^^xsd:dateTime]; # 
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html>
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Patient-example-patient.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Patient-example-patient.html>
+  ], [
+     fhir:index 2;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html>
+  ], [
+     fhir:index 3;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html>
+  ], [
+     fhir:index 4;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Observation-id.measurement.1.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Observation-id.measurement.1.html>
+  ], [
+     fhir:index 5;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Condition-id.disease.3.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Condition-id.disease.3.html>
+  ], [
+     fhir:index 6;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html>
+  ], [
+     fhir:index 7;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html>
+  ], [
+     fhir:index 8;
+     fhir:Bundle.entry.fullUrl [ fhir:value "http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html" ];
+     fhir:Bundle.entry.resource <http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html>
+  ] . # 
+
+<http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html> a fhir:Composition;
+  fhir:Resource.id [ fhir:value "PhenopacketCompositionExample01"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"PhenopacketCompositionExample01\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;PhenopacketCompositionExample01&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Phenopacket.html\">Phenopacket profile</a></p></div><p><b>identifier</b>: id: urn:uuid:1111-1111-1111-1112</p><p><b>status</b>: preliminary</p><p><b>type</b>: Medical records <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11503-0)</span></p><p><b>date</b>: 2022-02-02</p><p><b>author</b>: <a href=\"#Practitioner_PhenopacketPractitionerExample01\">See above (Practitioner/PhenopacketPractitionerExample01: John T. Practitioner)</a></p><p><b>title</b>: This is an example of a composition resource that represents some of the Phenopackets data elements</p></div>"
+  ]; # 
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:1111-1111-1111-1112" ]
+  ]; # 
+  fhir:Composition.status [ fhir:value "preliminary"]; # 
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:11503-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "11503-0" ];
+       fhir:Coding.display [ fhir:value "Medical records" ]
+     ]
+  ]; # 
+  fhir:Composition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ];
+     fhir:Reference.display [ fhir:value "Anyname A. Anyperson" ]
+  ]; # 
+  fhir:Composition.date [ fhir:value "2022-02-02"^^xsd:date]; # 
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Practitioner/PhenopacketPractitionerExample01>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PhenopacketPractitionerExample01" ];
+     fhir:Reference.display [ fhir:value "John T. Practitioner" ]
+  ]; # 
+  fhir:Composition.title [ fhir:value "This is an example of a composition resource that represents some of the Phenopackets data elements"]; # 
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "phenotypic_features" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/id.phenotypicfeature.4>;
+       fhir:Reference.reference [ fhir:value "Observation/id.phenotypicfeature.4" ];
+       fhir:Reference.display [ fhir:value "Congestive heart failure" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "measurements" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/id.measurement.1>;
+       fhir:Reference.reference [ fhir:value "Observation/id.measurement.1" ];
+       fhir:Reference.display [ fhir:value "Thrombocytopenia" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "biosamples" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Specimen/biosample.specimen.id.1>;
+       fhir:Reference.reference [ fhir:value "Specimen/biosample.specimen.id.1" ];
+       fhir:Reference.display [ fhir:value "Bladder Carcinoma" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "interpretations" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/DiagnosticReport/PhenopacketsGenomicInterpretationExample02>;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/PhenopacketsGenomicInterpretationExample02" ];
+       fhir:Reference.display [ fhir:value "Obesity due to centrosomal protein 19 deficiency (disorder)" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "diseases" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Condition/id.disease.3>;
+       fhir:Reference.reference [ fhir:value "Condition/id.disease.3" ];
+       fhir:Reference.display [ fhir:value "CHF-stageIII" ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Patient-example-patient.html> a fhir:Patient;
+  fhir:Resource.id [ fhir:value "example-patient"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Individual";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Individual>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Patient</b><a name=\"example-patient\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Patient &quot;example-patient&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Individual.html\">Individual</a></p></div><p><b>identifier</b>: Medical Record Number: m123 (use: USUAL)</p><p><b>name</b>: Anyname A. Anyperson </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 2001-01-20</p><p><b>address</b>: 123 Any St Anytown 12345 US </p><h3>Contacts</h3><table class=\"grid\"><tr><td>-</td><td><b>Telecom</b></td></tr><tr><td>*</td><td>ph: 777-444-2222(HOME), <a href=\"mailto:anyname.anyperson@example.com\">anyname.anyperson@example.com</a></td></tr></table><h3>Communications</h3><table class=\"grid\"><tr><td>-</td><td><b>Language</b></td></tr><tr><td>*</td><td>English <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v3-ietf3066.html\">Tags for the Identification of Languages</a>#en-US &quot;English (Region=United States)&quot;)</span></td></tr></table></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.example.org" ];
+     fhir:Identifier.value [ fhir:value "m123" ]
+  ]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Anyperson" ];
+     fhir:HumanName.given [
+       fhir:value "Anyname";
+       fhir:index 0
+     ], [
+       fhir:value "A.";
+       fhir:index 1
+     ]
+  ]; # 
+  fhir:Patient.gender [ fhir:value "male"]; # 
+  fhir:Patient.birthDate [ fhir:value "2001-01-20"^^xsd:date]; # 
+  fhir:Patient.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "123 Any St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Anytown" ];
+     fhir:Address.postalCode [ fhir:value "12345" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ]; # 
+  fhir:Patient.contact [
+     fhir:index 0;
+     fhir:Patient.contact.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "phone" ];
+       fhir:ContactPoint.value [ fhir:value "777-444-2222" ];
+       fhir:ContactPoint.use [ fhir:value "home" ]
+     ], [
+       fhir:index 1;
+       fhir:ContactPoint.system [ fhir:value "email" ];
+       fhir:ContactPoint.value [ fhir:value "anyname.anyperson@example.com" ]
+     ]
+  ]; # 
+  fhir:Patient.communication [
+     fhir:index 0;
+     fhir:Patient.communication.language [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "urn:ietf:bcp:47" ];
+         fhir:Coding.code [ fhir:value "en-US" ];
+         fhir:Coding.display [ fhir:value "English (Region=United States)" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "English" ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html> a fhir:Practitioner;
+  fhir:Resource.id [ fhir:value "PhenopacketPractitionerExample01"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated Practitioner example</div>"
+  ]; # 
+  fhir:Practitioner.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "temp" ];
+     fhir:Identifier.value [ fhir:value "03" ]
+  ]; # 
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.text [ fhir:value "John T. Practitioner" ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "id.phenotypicfeature.4"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.phenotypicfeature.4\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.phenotypicfeature.4&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PhenotypicFeature.html\">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Low-output congestive heart failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0009805)</span></p><p><b>subject</b>: <a href=\"#Patient_example-patient\">See above (Patient/example-patient)</a></p><p><b>effective</b>: 2018-03-06</p><p><b>value</b>: Present <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA9633-4)</span></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012824)</span></td><td>Severe <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012828)</span></td></tr></table></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+       fhir:Coding.code [ fhir:value "HP:0009805" ];
+       fhir:Coding.display [ fhir:value "Low-output congestive heart failure" ]
+     ]
+  ]; # 
+  fhir:Observation.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ]; # 
+  fhir:Observation.effectiveDateTime [ fhir:value "2018-03-06"^^xsd:date]; # 
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ]; # 
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012824" ];
+         fhir:Coding.display [ fhir:value "Severity" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012828" ];
+         fhir:Coding.display [ fhir:value "Severe" ]
+       ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Observation-id.measurement.1.html> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "id.measurement.1"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Measurement";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Measurement>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.measurement.1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.measurement.1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Measurement.html\">Measurement</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Platelets [#/volume] in Blood <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#26515-7)</span></p><p><b>effective</b>: 2018-03-06</p><p><b>value</b>: 20 10^12/L</p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>150000 10^12/L</td><td>450000 10^12/L</td></tr></table></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:26515-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "26515-7" ];
+       fhir:Coding.display [ fhir:value "Platelets [#/volume] in Blood" ]
+     ]
+  ]; # 
+  fhir:Observation.effectiveDateTime [ fhir:value "2018-03-06"^^xsd:date]; # 
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "10^12/L" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+  ]; # 
+  fhir:Observation.referenceRange [
+     fhir:index 0;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "150000"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "10^12/L" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+     ];
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "450000"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "10^12/L" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Condition-id.disease.3.html> a fhir:Condition;
+  fhir:Resource.id [ fhir:value "id.disease.3"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Disease";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Disease>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"id.disease.3\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;id.disease.3&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Disease.html\">Disease profile</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>code</b>: congestive heart failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mondo#MONDO_0005009)</span></p><p><b>subject</b>: <a href=\"#Patient_example-patient\">See above (Patient/example-patient)</a></p><h3>Stages</h3><table class=\"grid\"><tr><td>-</td><td><b>Summary</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>moderate heart failure <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (efo#EFO:0003148)</span></td><td>Clinical staging <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#260998006)</span></td></tr></table></div>"
+  ]; # 
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ];
+       fhir:Coding.display [ fhir:value "Active" ]
+     ]
+  ]; # 
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/monarch-initiative/mondo" ];
+       fhir:Coding.code [ fhir:value "MONDO_0005009" ];
+       fhir:Coding.display [ fhir:value "congestive heart failure" ]
+     ]
+  ]; # 
+  fhir:Condition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ]; # 
+  fhir:Condition.stage [
+     fhir:index 0;
+     fhir:Condition.stage.summary [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/EBISPOT/efo" ];
+         fhir:Coding.code [ fhir:value "EFO:0003148" ];
+         fhir:Coding.display [ fhir:value "moderate heart failure" ]
+       ]
+     ];
+     fhir:Condition.stage.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:260998006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "260998006" ];
+         fhir:Coding.display [ fhir:value "Clinical staging" ]
+       ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html> a fhir:Specimen;
+  fhir:Resource.id [ fhir:value "biosample.specimen.id.1"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Biosample";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Biosample>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Specimen</b><a name=\"biosample.specimen.id.1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Specimen &quot;biosample.specimen.id.1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Biosample.html\">Biosample</a></p></div><p><b>Histological Diagnosis</b>: Infiltrating Urothelial Carcinoma <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C39853)</span></p><p><b>Tumor Progression</b>: Primary Malignant Neoplasm <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C84509)</span></p><p><b>Tumor Grade</b>: Grade 2 Lesion <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C36136)</span></p><p><b>Pathological Tumor Stage</b>: Stage II <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C28054)</span></p><p><b> Pathological TNM Finding</b>: M0 Stage Finding <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C48699)</span></p><p><b>Material Sample</b>: abnormal sample <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (efo#EFO_0009655)</span></p><p><b>identifier</b>: id: arbitrary identifier</p><p><b>type</b>: primary tumor sample <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (efo#EFO_0010942)</span></p><p><b>subject</b>: <a href=\"#Patient_example-patient\">See above (Patient/example-patient)</a></p><h3>Collections</h3><table class=\"grid\"><tr><td>-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td>2021-01-20</td><td>wall of urinary bladder <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (uberon#UBERON_0001256)</span></td></tr></table><h3>Processings</h3><table class=\"grid\"><tr><td>-</td><td><b>Procedure</b></td></tr><tr><td>*</td><td>Radical Cystoprostatectomy <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (ncit.owl#NCIT_C5189)</span></td></tr></table></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/HistologicalDiagnosis" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C39853" ];
+         fhir:Coding.display [ fhir:value "Infiltrating Urothelial Carcinoma" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/TumorProgression" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C84509" ];
+         fhir:Coding.display [ fhir:value "Primary Malignant Neoplasm" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/TumorGrade" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C36136" ];
+         fhir:Coding.display [ fhir:value "Grade 2 Lesion" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalStage" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C28054" ];
+         fhir:Coding.display [ fhir:value "Stage II" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalTnmFinding" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C48699" ];
+         fhir:Coding.display [ fhir:value "M0 Stage Finding" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/MaterialSample" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/EBISPOT/efo" ];
+         fhir:Coding.code [ fhir:value "EFO_0009655" ];
+         fhir:Coding.display [ fhir:value "abnormal sample" ]
+       ]
+     ]
+  ]; # 
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "arbitrary identifier" ]
+  ]; # 
+  fhir:Specimen.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/EBISPOT/efo" ];
+       fhir:Coding.code [ fhir:value "EFO_0010942" ];
+       fhir:Coding.display [ fhir:value "primary tumor sample" ]
+     ]
+  ]; # 
+  fhir:Specimen.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ]; # 
+  fhir:Specimen.collection [
+     fhir:Specimen.collection.collectedDateTime [ fhir:value "2021-01-20"^^xsd:date ];
+     fhir:Specimen.collection.bodySite [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/obophenotype/uberon" ];
+         fhir:Coding.code [ fhir:value "UBERON_0001256" ];
+         fhir:Coding.display [ fhir:value "wall of urinary bladder" ]
+       ]
+     ]
+  ]; # 
+  fhir:Specimen.processing [
+     fhir:index 0;
+     fhir:Specimen.processing.procedure [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+         fhir:Coding.code [ fhir:value "NCIT_C5189" ];
+         fhir:Coding.display [ fhir:value "Radical Cystoprostatectomy" ]
+       ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html> a fhir:DiagnosticReport;
+  fhir:Resource.id [ fhir:value "PhenopacketsGenomicInterpretationExample02"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: DiagnosticReport</b><a name=\"PhenopacketsGenomicInterpretationExample02\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource DiagnosticReport &quot;PhenopacketsGenomicInterpretationExample02&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-phenopackets-genomic-interpretation.html\">Phenopackets Genomic Interpretation</a></p></div><p><b>identifier</b>: id: 02</p><p><b>status</b>: unknown</p><p><b>category</b>: Genetics <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-v2-0074.html\">diagnosticServiceSectionId</a>#GE)</span></p><p><b>code</b>: some loinc code <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (loinc#123)</span></p><p><b>subject</b>: <a href=\"Patient-phenopacketPatientExample01.html\">Patient/phenopacketPatientExample01</a> &quot; DOE&quot;</p><p><b>specimen</b>: <a href=\"Specimen-phenopacketSpecimenExample01.html\">Specimen/phenopacketSpecimenExample01</a></p><p><b>result</b>: <a href=\"#Observation_PhenopacketsVariantExample01\">See above (Observation/PhenopacketsVariantExample01)</a></p><p><b>conclusion</b>: A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported.</p><p><b>conclusionCode</b>: Obesity due to centrosomal protein 19 deficiency (disorder) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#783549006)</span></p></div>"
+  ]; # 
+  fhir:DomainResource.modifierExtension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus" ];
+         fhir:Coding.code [ fhir:value "0" ];
+         fhir:Coding.display [ fhir:value "UNKNOWN_STATUS" ]
+       ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.identifier [
+     fhir:index 0;
+     fhir:Identifier.value [ fhir:value "02" ]
+  ]; # 
+  fhir:DiagnosticReport.status [ fhir:value "unknown"]; # 
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "GE" ];
+       fhir:Coding.display [ fhir:value "Genetics" ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://loinc" ];
+       fhir:Coding.code [ fhir:value "123" ];
+       fhir:Coding.display [ fhir:value "some loinc code" ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/phenopacketPatientExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.specimen [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01>;
+     fhir:Reference.reference [ fhir:value "Specimen/phenopacketSpecimenExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Observation/PhenopacketsVariantExample01>;
+     fhir:Reference.reference [ fhir:value "Observation/PhenopacketsVariantExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.conclusion [ fhir:value "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."]; # 
+  fhir:DiagnosticReport.conclusionCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:783549006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "783549006" ];
+       fhir:Coding.display [ fhir:value "Obesity due to centrosomal protein 19 deficiency (disorder)" ]
+     ]
+  ] . # 
+
+<http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html> a fhir:Observation;
+  fhir:Resource.id [ fhir:value "PhenopacketsVariantExample01"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"PhenopacketsVariantExample01\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;PhenopacketsVariantExample01&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-phenopackets-variant.html\">Phenopackets Variant</a></p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: Genetic variant assessment <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#69548-6)</span></p></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/observation-category" ];
+       fhir:Coding.code [ fhir:value "laboratory" ]
+     ]
+  ]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:69548-6;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "69548-6" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Bundle/PhenopacketsBundleExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

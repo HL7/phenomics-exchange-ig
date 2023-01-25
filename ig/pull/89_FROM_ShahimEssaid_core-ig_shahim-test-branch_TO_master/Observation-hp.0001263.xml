@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="hp.0001263"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="hp.0001263"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;hp.0001263&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-PhenotypicFeature.html">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Global developmental delay <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (hpo#HP:0001263)</span></p><p><b>subject</b>: <a href="Patient-Proband1.html">Patient/Proband1</a> &quot; ANYPERSON&quot;</p><p><b>value</b>: Present <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA9633-4)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <code value="HP:0001263"/>
+      <display value="Global developmental delay"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Proband1"/>
+  </subject>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA9633-4"/>
+      <display value="Present"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

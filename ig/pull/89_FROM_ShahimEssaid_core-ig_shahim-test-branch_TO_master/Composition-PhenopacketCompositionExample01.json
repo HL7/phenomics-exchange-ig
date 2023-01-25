@@ -1,0 +1,93 @@
+{
+  "resourceType" : "Composition",
+  "id" : "PhenopacketCompositionExample01",
+  "meta" : {
+    "profile" : ["https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"PhenopacketCompositionExample01\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;PhenopacketCompositionExample01&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Phenopacket.html\">Phenopacket profile</a></p></div><p><b>identifier</b>: id: urn:uuid:1111-1111-1111-1112</p><p><b>status</b>: preliminary</p><p><b>type</b>: Medical records <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11503-0)</span></p><p><b>date</b>: 2022-02-02</p><p><b>author</b>: <a href=\"Practitioner-PhenopacketPractitionerExample01.html\">Practitioner/PhenopacketPractitionerExample01: John T. Practitioner</a> &quot;&quot;</p><p><b>title</b>: This is an example of a composition resource that represents some of the Phenopackets data elements</p></div>"
+  },
+  "identifier" : {
+    "system" : "urn:ietf:rfc:3986",
+    "value" : "urn:uuid:1111-1111-1111-1112"
+  },
+  "status" : "preliminary",
+  "type" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "11503-0",
+      "display" : "Medical records"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example-patient",
+    "display" : "Anyname A. Anyperson"
+  },
+  "date" : "2022-02-02",
+  "author" : [{
+    "reference" : "Practitioner/PhenopacketPractitionerExample01",
+    "display" : "John T. Practitioner"
+  }],
+  "title" : "This is an example of a composition resource that represents some of the Phenopackets data elements",
+  "section" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+        "code" : "phenotypic_features"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Observation/id.phenotypicfeature.4",
+      "display" : "Congestive heart failure"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+        "code" : "measurements"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Observation/id.measurement.1",
+      "display" : "Thrombocytopenia"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+        "code" : "biosamples"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Specimen/biosample.specimen.id.1",
+      "display" : "Bladder Carcinoma"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+        "code" : "interpretations"
+      }]
+    },
+    "entry" : [{
+      "reference" : "DiagnosticReport/PhenopacketsGenomicInterpretationExample02",
+      "display" : "Obesity due to centrosomal protein 19 deficiency (disorder)"
+    }]
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+        "code" : "diseases"
+      }]
+    },
+    "entry" : [{
+      "reference" : "Condition/id.disease.3",
+      "display" : "CHF-stageIII"
+    }]
+  }]
+}

@@ -1,0 +1,29 @@
+{
+  "resourceType" : "Observation",
+  "id" : "hp.0001252",
+  "meta" : {
+    "profile" : ["https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"hp.0001252\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;hp.0001252&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PhenotypicFeature.html\">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Hypotonia <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0001252)</span></p><p><b>subject</b>: <a href=\"Patient-Proband1.html\">Patient/Proband1</a> &quot; ANYPERSON&quot;</p><p><b>value</b>: Present <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA9633-4)</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+      "code" : "HP:0001252",
+      "display" : "Hypotonia"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/Proband1"
+  },
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA9633-4",
+      "display" : "Present"
+    }]
+  }
+}

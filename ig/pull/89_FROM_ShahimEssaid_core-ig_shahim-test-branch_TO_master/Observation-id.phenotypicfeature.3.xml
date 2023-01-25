@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="id.phenotypicfeature.3"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="id.phenotypicfeature.3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;id.phenotypicfeature.3&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-PhenotypicFeature.html">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Mitral valve prolapse <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (hpo#HP:0001634)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2018-03-06</p><p><b>value</b>: Present <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#LA9633-4)</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <code value="HP:0001634"/>
+      <display value="Mitral valve prolapse"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-patient"/>
+  </subject>
+  <effectiveDateTime value="2018-03-06"/>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA9633-4"/>
+      <display value="Present"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

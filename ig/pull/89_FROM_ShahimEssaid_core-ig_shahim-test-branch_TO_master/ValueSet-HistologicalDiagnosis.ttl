@@ -1,0 +1,69 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "HistologicalDiagnosis"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  NCIT:C28101</li><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  NCIT:C2991</li></ul></div>"
+  ]; # 
+  fhir:ValueSet.url [ fhir:value "https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis"]; # 
+  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
+  fhir:ValueSet.name [ fhir:value "HistologicalDiagnosis"]; # 
+  fhir:ValueSet.title [ fhir:value "HistologicalDiagnosis"]; # 
+  fhir:ValueSet.status [ fhir:value "active"]; # 
+  fhir:ValueSet.date [ fhir:value "2020-02-14T16:13:10+10:00"^^xsd:dateTime]; # 
+  fhir:ValueSet.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ]
+  ]; # 
+  fhir:ValueSet.description [ fhir:value "Histological diagnosis codes from NCIT."]; # 
+  fhir:ValueSet.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "US" ]
+     ]
+  ]; # 
+  fhir:ValueSet.copyright [ fhir:value "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"]; # 
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "descendent-of" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "NCIT:C28101" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
+       fhir:ValueSet.compose.include.filter [
+         fhir:index 0;
+         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
+         fhir:ValueSet.compose.include.filter.op [ fhir:value "descendent-of" ];
+         fhir:ValueSet.compose.include.filter.value [ fhir:value "NCIT:C2991" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

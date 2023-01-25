@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/DiagnosticReport/PhenopacketsGenomicInterpretationExample01> a fhir:DiagnosticReport;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PhenopacketsGenomicInterpretationExample01"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc 123}\">some loinc code</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-PhenopacketsVariantExample01.html\"><span title=\"Codes: {http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td/></tr></table><p>The detected variant is Likely-Pathogenic of Pfeiffer syndrome</p><p><b>Coded Conclusions :</b></p><ul><li><span title=\"Codes: {http://snomed.info/sct 70410008}\">Acrocephalosyndactyly type V (disorder)</span></li></ul></div>"
+  ]; # 
+  fhir:DomainResource.modifierExtension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status" ];
+     fhir:Extension.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus" ];
+         fhir:Coding.code [ fhir:value "0" ];
+         fhir:Coding.display [ fhir:value "UNKNOWN_STATUS" ]
+       ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.status [ fhir:value "unknown"]; # 
+  fhir:DiagnosticReport.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0074" ];
+       fhir:Coding.code [ fhir:value "GE" ];
+       fhir:Coding.display [ fhir:value "Genetics" ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://loinc" ];
+       fhir:Coding.code [ fhir:value "123" ];
+       fhir:Coding.display [ fhir:value "some loinc code" ]
+     ]
+  ]; # 
+  fhir:DiagnosticReport.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/phenopacketPatientExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.specimen [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01>;
+     fhir:Reference.reference [ fhir:value "Specimen/phenopacketSpecimenExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.result [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Observation/PhenopacketsVariantExample01>;
+     fhir:Reference.reference [ fhir:value "Observation/PhenopacketsVariantExample01" ]
+  ]; # 
+  fhir:DiagnosticReport.conclusion [ fhir:value "The detected variant is Likely-Pathogenic of Pfeiffer syndrome"]; # 
+  fhir:DiagnosticReport.conclusionCode [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:70410008;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "70410008" ];
+       fhir:Coding.display [ fhir:value "Acrocephalosyndactyly type V (disorder)" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/DiagnosticReport/PhenopacketsGenomicInterpretationExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

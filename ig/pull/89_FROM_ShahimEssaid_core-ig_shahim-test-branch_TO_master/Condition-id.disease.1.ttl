@@ -1,0 +1,51 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Condition/id.disease.1> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "id.disease.1"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Disease";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Disease>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"id.disease.1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;id.disease.1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Disease.html\">Disease profile</a></p></div><p><b>clinicalStatus</b>: Active <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\">Condition Clinical Status Codes</a>#active)</span></p><p><b>code</b>: Bacterial infectious disease <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#87628006)</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Patient/example-patient</a> &quot; ANYPERSON&quot;</p></div>"
+  ]; # 
+  fhir:Condition.clinicalStatus [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/condition-clinical" ];
+       fhir:Coding.code [ fhir:value "active" ];
+       fhir:Coding.display [ fhir:value "Active" ]
+     ]
+  ]; # 
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:87628006;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "87628006" ];
+       fhir:Coding.display [ fhir:value "Bacterial infectious disease" ]
+     ]
+  ]; # 
+  fhir:Condition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Condition/id.disease.1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

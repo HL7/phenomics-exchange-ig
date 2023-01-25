@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="phenopacketSpecimenExample01"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml">This is an incomplete example that used as a placeholder for a curated specimen example</div>
+  </text>
+  <identifier>
+    <use value="temp"/>
+    <value value="01"/>
+  </identifier>
+  <subject>
+    <reference value="Patient/phenopacketPatientExample01"/>
+  </subject>
+</Specimen>
