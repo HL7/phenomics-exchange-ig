@@ -215,7 +215,7 @@ jobs:
           
             [[ -d "${{ inputs.io-path }}" ]] &&  rm -rf "${{ inputs.io-path }}"
             mkdir -p "$(dirname "${{ inputs.io-path }}")"
-            cp -ra "${GITHUB_WORKSPACE}/output-ref" "$(dirname \"${{ inputs.io-path }}\")"
+            cp -ra "${GITHUB_WORKSPACE}/output-ref" "$(dirname ${{ inputs.io-path }})"
             git add ${{ inputs.io-path }}
             
             if [[ ! -f  "IG_BUILDS.md" ]]; then
@@ -238,7 +238,7 @@ jobs:
             fi
           
             if [[ "${{ steps.merge.outputs.skip-merge }}" == false ]]; then
-              cp -ra "${GITHUB_WORKSPACE}/output-merge" "$(dirname \"${{ inputs.io-path-merged }}\")"
+              cp -ra "${GITHUB_WORKSPACE}/output-merge" "$(dirname ${{ inputs.io-path-merged }})"
               IGLink="[${{ inputs.io-path-merged }}](https://${{ inputs.io-owner }}.github.io/${{ inputs.io-repo }}/${{ inputs.io-path-merged }}/index.html?version=${{steps.merge.outputs.sha}})"
               {
                 cat IG_BUILDS.md;
