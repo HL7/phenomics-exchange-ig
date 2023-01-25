@@ -199,7 +199,7 @@ jobs:
       - name: Publishing IG
         if: inputs.io-repo != ''
         run: |
-          set -x
+          #set -x
           cd io-clone
           
           while true; do
@@ -214,8 +214,8 @@ jobs:
             # do the ig-ref copy
           
             [[ -d "${{ inputs.io-path }}" ]] &&  rm -rf "${{ inputs.io-path }}"
-            mkdir -p "$(dirname "${{ inputs.io-path }}")"
-            cp -ra "${GITHUB_WORKSPACE}/output-ref" "$(dirname ${{ inputs.io-path }})"
+            mkdir -p "${{ inputs.io-path }}"
+            cp -ra "${GITHUB_WORKSPACE}/output-ref"/* "${{ inputs.io-path }}"
             git add ${{ inputs.io-path }}
             
             if [[ ! -f  "IG_BUILDS.md" ]]; then
@@ -234,11 +234,11 @@ jobs:
           
             if [[ ! -z "${{ inputs.io-path-merged }}" ]]; then
               [[ -d "${{ inputs.io-path-merged }}" ]] && rm -rf "${{ inputs.io-path-merged }}"
-              mkdir -p "$(dirname "${{ inputs.io-path-merged }}")"
+              mkdir -p "${{ inputs.io-path-merged }}"
             fi
           
             if [[ "${{ steps.merge.outputs.skip-merge }}" == false ]]; then
-              cp -ra "${GITHUB_WORKSPACE}/output-merge" "$(dirname ${{ inputs.io-path-merged }})"
+              cp -ra "${GITHUB_WORKSPACE}/output-merge"/* "${{ inputs.io-path-merged }}"
               IGLink="[${{ inputs.io-path-merged }}](https://${{ inputs.io-owner }}.github.io/${{ inputs.io-repo }}/${{ inputs.io-path-merged }}/index.html?version=${{steps.merge.outputs.sha}})"
               {
                 cat IG_BUILDS.md;
