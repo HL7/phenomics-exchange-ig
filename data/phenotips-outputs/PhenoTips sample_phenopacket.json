@@ -1,0 +1,144 @@
+{
+    "id": "03b7f369-4710-4c8b-943c-d7abfea89da1",
+    "subject": {
+        "id": "P0000001",
+        "alternateIds": [
+          "MRN123445",
+          "LABELED_EID1"
+        ],
+        "dateOfBirth": "2020-01-01T00:00:00Z",
+        "sex": "FEMALE"
+    },
+    "phenotypicFeatures": [
+        {
+            "type": {
+                "id": "HP:0000274",
+                "label": "Small face"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0011451",
+                "label": "Congenital microcephaly"
+            },
+            "severity": {
+                "id": "HP:0012828",
+                "label": "Severe"
+            },
+            "modifiers": [
+                {
+                    "id": "HP:0012832",
+                    "label": "Bilateral"
+                },
+                {
+                    "id": "HP:0012838",
+                    "label": "Localized"
+                }
+            ],
+            "classOfOnset": {
+                "id": "HP:0003577",
+                "label": "Congenital onset"
+            }
+        },
+        {
+            "type": {
+                "id": "HP:0000718",
+                "label": "Aggressive behavior"
+            },
+            "negated": true
+        }
+    ],
+    "genes": [
+        {
+            "id": "HGNC:9891",
+            "alternateIds": [
+                "ensembl:ENSG00000101773"
+            ],
+            "symbol": "RBBP8"
+        }
+    ],
+    "variants": [
+        {
+            "hgvsAllele": {
+                "hgvs": "NM_00000.0:c.1094C>T"
+            },
+            "zygosity": {
+                "id": "homozygous",
+                "label": "homozygous"
+            }
+        },
+        {
+            "hgvsAllele": {
+                "hgvs": "PHGDH:c.1094G>H"
+            },
+            "zygosity": {
+                "id": "heterozygous",
+                "label": "heterozygous"
+            }
+        }
+    ],
+    "diseases": [
+        {
+            "term": {
+                "id": "ORDO:199642",
+                "label": "Isolated congenital microcephaly"
+            }
+        },
+        {
+            "term": {
+                "id": "MIM:156580",
+                "label": "MICROCEPHALY, AUTOSOMAL DOMINANT"
+            }
+        }
+    ],
+    "htsFiles": [
+        {
+            "uri": "http://local.phenotips.com/rest/variant-source-files/patients/P0000001/files/5002-01.warehouse.csv",
+            "htsFormat": "VCF",
+            "genomeAssembly": "GRCh38"
+        },
+        {
+            "uri": "http://local.phenotips.com/rest/variant-source-files/patients/P0000001/files/5002-02.warehouse.csv",
+            "htsFormat": "VCF",
+            "genomeAssembly": "GRCh38"
+        }
+    ],
+    "metaData": {
+        "created": "2020-09-29T18:08:12.536Z",
+        "createdBy": "Administrator",
+        "resources": [
+            {
+                "id": "hgnc",
+                "name": "HUGO Gene Nomenclature Committee's GeneNames (HGNC)",
+                "url": "ftp://ftp.ebi.ac.uk/pub/databases/genenames/new/tsv/hgnc_complete_set.txt",
+                "version": "2018-10-03T16:36:59.029Z",
+                "namespacePrefix": "HGNC",
+                "iriPrefix": "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/"
+            },
+            {
+                "id": "hp",
+                "name": "The Human Phenotype Ontology (HPO)",
+                "url": "https://raw.githubusercontent.com/obophenotype/human-phenotype-ontology/master/hp.obo",
+                "version": "releases/2018-10-09",
+                "namespacePrefix": "HP",
+                "iriPrefix": "http://purl.obolibrary.org/obo/HP_"
+            },
+            {
+                "id": "mim",
+                "name": "Online Mendelian Inheritance in Man (OMIM)",
+                "url": "http://data.omim.org/downloads/???/mimTitles.txt",
+                "version": "2018-10-03T17:01:45.970Z",
+                "namespacePrefix": "MIM",
+                "iriPrefix": "https://www.omim.org/entry/"
+            },
+            {
+                "id": "ordo",
+                "name": "Orphanet Rare Disease Ontology",
+                "url": "http://data.bioontology.org/ontologies/ORDO/submissions/20/download?apikey=8b5b7825-538d-40e0-9e9e-5ab9274a9aeb",
+                "version": "2.6",
+                "namespacePrefix": "ORDO",
+                "iriPrefix": "https://identifiers.org/orphanet:"
+            }
+        ]
+    }
+}
