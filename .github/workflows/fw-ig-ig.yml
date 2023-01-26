@@ -14,7 +14,7 @@ env:
 #  IG_WRITE_SECRET_NAME: GITHUB_TOKEN  # this is the name of the secrets token that should be used for IG source code write access.
 
   DOCKER_PUBLISHER_TAG: latest  # The Docker tag for the Publisher version wanted for the build from: https://hub.docker.com/repository/docker/sessaid/ig-publisher
-  PUBLISHER_ARGS: "-ig /ig/ig.ini"  # the publisher command line arguments
+  PUBLISHER_ARGS: "-ig ig.ini"  # the publisher command line arguments
 
   IO_OWNER: ${{ github.event.repository.owner.login }} #  The owner of a GitHub repository that will be used for publishing the built IG's output
   IO_REPO: ${{ github.event.repository.name }} # The repository to publish to
@@ -34,7 +34,7 @@ concurrency:
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main, master, dev ]
+    branches: [ main, master, dev, development ]
     paths:
       - 'ig/input/**'
       - 'ig/fsh.ini'
