@@ -36,10 +36,14 @@ on:
   push:
     branches: [ main, master, dev ]
     paths:
-      - 'ig/**'
+      - 'ig/input/**'
+      - 'ig/fsh.ini'
+      - 'ig/ig.ini'
+      - 'ig/sushi-config.yaml'
       - '.github/workflows/fw-ig-ig.yml'
       - '.github/workflows/_fw-ig-build-callable.yml'
       - '!**/README*'
+      - ''
 
   pull_request_target:
     paths:
