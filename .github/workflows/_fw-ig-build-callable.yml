@@ -202,6 +202,7 @@ jobs:
           #set -x
           cd io-clone
           
+          attempts=1
           while true; do
             # Get HEAD reset to latest remote branch in case push failed
             git fetch origin ${{ inputs.io-branch }}
@@ -258,6 +259,13 @@ jobs:
               if git push --atomic; then
                 # we were able to push to remote, i.e. remote wasn't updated by another build
                 break
+              else
+                attempts=$((attempts+1))
+                if [[ $attempts -gt 3 ]]; then
+                  # TODO: make this configurable
+                  echo "IG site push failed 3 times, giving up!"
+                  exit 1
+                fi
               fi
             fi
             
