@@ -13,6 +13,10 @@ Once you have committed and pushed your new branch to your fork, you can choose 
 The IG can be built locally with the `build.sh` script as described above.
 
 The GitHub Actions based build works as follows:
+* After you fork the repository make sure you enable GitHub Actions in your fork and adjust permissions.
+  * Under repository (not user) Settings > Actions > General
+  * Set `Allow all actions and reusable workflows`, or do more fine-grained control if you're familiar with those settings.
+  * Set `Read and write permissions` under the `Workflow permissions` section at the bottom of the page.
 * A push to a branch named `main, master, dev, or development`, or a pull request for any other branch, will trigger a build of the latest commit from that branch.
 * The built IG is published through GitHub Pages by committing the content of the IG `output` folder to a path in the `gh-pages` branch.
 * You can see the links to the built sites at [this page](https://github.com/phenopackets/core-ig/blob/gh-pages/IG_BUILDS.md) or a similar page in your own repository if you enable GitHub Actions builds in your own fork.
