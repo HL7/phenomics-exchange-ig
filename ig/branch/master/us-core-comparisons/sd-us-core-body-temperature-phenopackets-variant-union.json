@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "d088cb35-2cca-4a13-9bcc-b58dfa3ff726-35",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-35",
+  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-35",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/34f0d867-6956-429a-82ab-4d81bd0e3323-35",
   "name" : "UnionUSCoreBodyTemperatureProfileAndPhenopacketsVariant",
   "title" : "Union of US Core Body Temperature Profile And Phenopackets Variant",
   "status" : "active",
-  "date" : "2023-01-25T22:16:17+00:00",
+  "date" : "2023-01-27T19:25:11+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -628,7 +628,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "left: The vital sign codes from the base FHIR and US Core Vital Signs.; right: Codes identifying names of simple observations.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-17"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/34f0d867-6956-429a-82ab-4d81bd0e3323-17"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -1954,7 +1954,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "left: The vital sign codes from the base FHIR and US Core Vital Signs.; right: Codes identifying names of simple observations.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-17"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/34f0d867-6956-429a-82ab-4d81bd0e3323-17"
       },
       "mapping" : [{
         "identity" : "w5",

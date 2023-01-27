@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle xmlns="http://hl7.org/fhir">
-  <id value="cb14d7ea-1c94-4cdb-9233-477c180ca7b4"/>
+  <id value="48c9d5c7-baab-41e7-ab4a-cfb779ff0f83"/>
   <meta>
-    <lastUpdated value="2023-01-25T22:15:53.871+00:00"/>
+    <lastUpdated value="2023-01-27T19:24:39.090+00:00"/>
   </meta>
   <type value="collection"/>
   <entry>
@@ -213,8 +213,8 @@
         </jurisdiction>
         <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
         <expansion>
-          <identifier value="urn:uuid:833172b5-b06c-4241-b5bf-75cf8b088461"/>
-          <timestamp value="2023-01-25T22:16:50+00:00"/>
+          <identifier value="urn:uuid:8b1f756c-2058-4ecc-9e37-2e407eea7029"/>
+          <timestamp value="2023-01-27T19:26:03+00:00"/>
           <total value="11"/>
           <parameter>
             <name value="excludeNested"/>
@@ -466,7 +466,7 @@
         <name value="ObservationCategories"/>
         <title value="Observation categories"/>
         <status value="draft"/>
-        <date value="2023-01-25T22:15:53+00:00"/>
+        <date value="2023-01-27T19:24:39+00:00"/>
         <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
         <contact>
           <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
@@ -484,8 +484,8 @@
         </jurisdiction>
         <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
         <expansion>
-          <identifier value="urn:uuid:cc53592b-2841-46ff-ac6e-818db965646f"/>
-          <timestamp value="2023-01-25T22:17:05+00:00"/>
+          <identifier value="urn:uuid:adf06138-80e1-42e9-b3b4-af3faa7c55a2"/>
+          <timestamp value="2023-01-27T19:26:33+00:00"/>
           <total value="10"/>
           <parameter>
             <name value="excludeNested"/>
@@ -603,7 +603,7 @@
         <name value="PhenotypicFeatureStatusValueSet"/>
         <title value="Observation Codes for status of a PhenotypicFeature"/>
         <status value="active"/>
-        <date value="2023-01-25T22:15:53+00:00"/>
+        <date value="2023-01-27T19:24:39+00:00"/>
         <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
         <contact>
           <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
@@ -621,8 +621,8 @@
         </jurisdiction>
         <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
         <expansion>
-          <identifier value="urn:uuid:9e4af2ca-561e-4fe2-8a24-6bfa3830c1cb"/>
-          <timestamp value="2023-01-25T22:17:07+00:00"/>
+          <identifier value="urn:uuid:96b768f5-abed-4dce-aa97-f7aa74ea2a73"/>
+          <timestamp value="2023-01-27T19:26:38+00:00"/>
           <total value="2"/>
           <parameter>
             <name value="excludeNested"/>

@@ -17,7 +17,7 @@
   fhir:CodeSystem.name [ fhir:value "PhenotypicFeatureStatusCS"]; # 
   fhir:CodeSystem.title [ fhir:value "Categories"]; # 
   fhir:CodeSystem.status [ fhir:value "active"]; # 
-  fhir:CodeSystem.date [ fhir:value "2023-01-25T22:15:53+00:00"^^xsd:dateTime]; # 
+  fhir:CodeSystem.date [ fhir:value "2023-01-27T19:24:39+00:00"^^xsd:dateTime]; # 
   fhir:CodeSystem.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
   fhir:CodeSystem.contact [
      fhir:index 0;

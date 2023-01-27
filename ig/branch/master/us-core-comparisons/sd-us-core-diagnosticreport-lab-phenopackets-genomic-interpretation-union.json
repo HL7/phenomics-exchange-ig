@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "d088cb35-2cca-4a13-9bcc-b58dfa3ff726-2",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-2",
+  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-2",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/34f0d867-6956-429a-82ab-4d81bd0e3323-2",
   "name" : "UnionUSCoreDiagnosticReportProfileLaboratoryReportingAndPhenopacketsGenomicInterpretation",
   "title" : "Union of US Core DiagnosticReport Profile for Laboratory Results Reporting And Phenopackets Genomic Interpretation",
   "status" : "active",
-  "date" : "2023-01-25T22:16:15+00:00",
+  "date" : "2023-01-27T19:25:09+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -568,7 +568,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "left: LOINC codes; right: Codes that describe Diagnostic Reports.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-5"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/34f0d867-6956-429a-82ab-4d81bd0e3323-5"
       },
       "mapping" : [{
         "identity" : "workflow",

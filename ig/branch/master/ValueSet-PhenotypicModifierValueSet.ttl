@@ -17,7 +17,7 @@
   fhir:ValueSet.name [ fhir:value "PhenotypicModifierValueSet"]; # 
   fhir:ValueSet.title [ fhir:value "Phenotypic modifier ValueSet"]; # 
   fhir:ValueSet.status [ fhir:value "active"]; # 
-  fhir:ValueSet.date [ fhir:value "2023-01-25T22:15:53+00:00"^^xsd:dateTime]; # 
+  fhir:ValueSet.date [ fhir:value "2023-01-27T19:24:39+00:00"^^xsd:dateTime]; # 
   fhir:ValueSet.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
   fhir:ValueSet.contact [
      fhir:index 0;

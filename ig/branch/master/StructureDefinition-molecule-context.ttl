@@ -17,7 +17,7 @@
   fhir:StructureDefinition.name [ fhir:value "MoleculeContext"]; # 
   fhir:StructureDefinition.title [ fhir:value "Molecule Context"]; # 
   fhir:StructureDefinition.status [ fhir:value "active"]; # 
-  fhir:StructureDefinition.date [ fhir:value "2023-01-25T22:15:53+00:00"^^xsd:dateTime]; # 
+  fhir:StructureDefinition.date [ fhir:value "2023-01-27T19:24:39+00:00"^^xsd:dateTime]; # 
   fhir:StructureDefinition.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
   fhir:StructureDefinition.contact [
      fhir:index 0;

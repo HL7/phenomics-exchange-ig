@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "d088cb35-2cca-4a13-9bcc-b58dfa3ff726-53",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/d088cb35-2cca-4a13-9bcc-b58dfa3ff726-53",
+  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-53",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/34f0d867-6956-429a-82ab-4d81bd0e3323-53",
   "name" : "UnionUSCoreLaboratoryTestCodesAndLOINCCodes",
   "title" : "Union of US Core Laboratory Test Codes And LOINC Codes",
   "status" : "active",
-  "date" : "2023-01-25T22:16:17+00:00",
+  "date" : "2023-01-27T19:25:11+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",

@@ -3,7 +3,7 @@
 
 err = 8, warn = 115, info = 146
 IG Publisher Version: 1.2.30
-Generated Wed Jan 25 22:20:04 UTC 2023. FHIR version 4.0.1 for hl7.fhir.us.ga4gh.phenopacket#0.1.0 (canonical = https://github.com/phenopackets/core-ig)
+Generated Fri Jan 27 19:29:39 UTC 2023. FHIR version 4.0.1 for hl7.fhir.us.ga4gh.phenopacket#0.1.0 (canonical = https://github.com/phenopackets/core-ig)
  Build Errors : 2 / 11 / 0
  /ig/fsh-generated/resources/Bundle-PhenopacketsBundleExample01 : 0 / 13 / 40
  /ig/fsh-generated/resources/CodeSystem-HtsFormat : 0 / 2 / 2
