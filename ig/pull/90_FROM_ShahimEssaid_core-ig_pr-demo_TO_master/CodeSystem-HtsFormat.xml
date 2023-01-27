@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="HtsFormat"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">UNKNOWN<a name="HtsFormat-UNKNOWN"> </a></td><td>Unknown</td></tr><tr><td style="white-space:nowrap">SAM<a name="HtsFormat-SAM"> </a></td><td>SAM</td></tr><tr><td style="white-space:nowrap">BAM<a name="HtsFormat-BAM"> </a></td><td>BAM</td></tr><tr><td style="white-space:nowrap">CRAM<a name="HtsFormat-CRAM"> </a></td><td>CRAM</td></tr><tr><td style="white-space:nowrap">VCF<a name="HtsFormat-VCF"> </a></td><td>VCF</td></tr><tr><td style="white-space:nowrap">BCF<a name="HtsFormat-BCF"> </a></td><td>BCF</td></tr><tr><td style="white-space:nowrap">GVCF<a name="HtsFormat-GVCF"> </a></td><td>GVCF</td></tr></table></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat"/>
+  <version value="0.1.0"/>
+  <name value="HtsFormat"/>
+  <title value="HTS Format"/>
+  <status value="active"/>
+  <date value="2020-02-14T16:13:10+10:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="An enumeration used to represent different high-throughput sequencing file formats."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="UNKNOWN"/>
+    <display value="Unknown"/>
+  </concept>
+  <concept>
+    <code value="SAM"/>
+    <display value="SAM"/>
+  </concept>
+  <concept>
+    <code value="BAM"/>
+    <display value="BAM"/>
+  </concept>
+  <concept>
+    <code value="CRAM"/>
+    <display value="CRAM"/>
+  </concept>
+  <concept>
+    <code value="VCF"/>
+    <display value="VCF"/>
+  </concept>
+  <concept>
+    <code value="BCF"/>
+    <display value="BCF"/>
+  </concept>
+  <concept>
+    <code value="GVCF"/>
+    <display value="GVCF"/>
+  </concept>
+</CodeSystem>

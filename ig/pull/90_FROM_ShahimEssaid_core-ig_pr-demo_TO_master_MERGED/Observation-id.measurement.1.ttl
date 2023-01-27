@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.measurement.1> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "id.measurement.1"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Measurement";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Measurement>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.measurement.1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.measurement.1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Measurement.html\">Measurement</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Platelets [#/volume] in Blood <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#26515-7)</span></p><p><b>effective</b>: 2018-03-06</p><p><b>value</b>: 20 10^12/L</p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>150000 10^12/L</td><td>450000 10^12/L</td></tr></table></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:26515-7;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "26515-7" ];
+       fhir:Coding.display [ fhir:value "Platelets [#/volume] in Blood" ]
+     ]
+  ]; # 
+  fhir:Observation.effectiveDateTime [ fhir:value "2018-03-06"^^xsd:date]; # 
+  fhir:Observation.valueQuantity [
+     fhir:Quantity.value [ fhir:value "20"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "10^12/L" ];
+     fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+  ]; # 
+  fhir:Observation.referenceRange [
+     fhir:index 0;
+     fhir:Observation.referenceRange.low [
+       fhir:Quantity.value [ fhir:value "150000"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "10^12/L" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+     ];
+     fhir:Observation.referenceRange.high [
+       fhir:Quantity.value [ fhir:value "450000"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "10^12/L" ];
+       fhir:Quantity.system [ fhir:value "http://unitsofmeasure.org" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.measurement.1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,137 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Composition/DevelopmentalDelay> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "DevelopmentalDelay"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"DevelopmentalDelay\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;DevelopmentalDelay&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Phenopacket.html\">Phenopacket profile</a></p></div><p><b>identifier</b>: id: id.treatment.1</p><p><b>status</b>: preliminary</p><p><b>type</b>: Physician Episode of care medical records <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11516-2)</span></p><p><b>date</b>: 2018-03-16</p><p><b>author</b>: <a href=\"Practitioner-PeterGeneticist.html\">Practitioner/PeterGeneticist</a> &quot; GENETICIST&quot;</p><p><b>title</b>: Phenopacket (static snapshot of clinical findings to support differential diagnosis of a child with developmental delay).</p></div>"
+  ]; # 
+  fhir:Composition.identifier [
+     fhir:Identifier.value [ fhir:value "id.treatment.1" ]
+  ]; # 
+  fhir:Composition.status [ fhir:value "preliminary"]; # 
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:11516-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "11516-2" ];
+       fhir:Coding.display [ fhir:value "Physician Episode of care medical records" ]
+     ]
+  ]; # 
+  fhir:Composition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/Proband1>;
+     fhir:Reference.reference [ fhir:value "Patient/Proband1" ]
+  ]; # 
+  fhir:Composition.date [ fhir:value "2018-03-16"^^xsd:date]; # 
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Practitioner/PeterGeneticist>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PeterGeneticist" ]
+  ]; # 
+  fhir:Composition.title [ fhir:value "Phenopacket (static snapshot of clinical findings to support differential diagnosis of a child with developmental delay)."]; # 
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "phenotypic_features" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0000343>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0000343" ]
+     ], [
+       fhir:index 1;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0000568>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0000568" ]
+     ], [
+       fhir:index 2;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0000541>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0000541" ]
+     ], [
+       fhir:index 3;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0001669>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0001669" ]
+     ], [
+       fhir:index 4;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0007663>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0007663" ]
+     ], [
+       fhir:index 5;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0000369>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0000369" ]
+     ], [
+       fhir:index 6;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0001263>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0001263" ]
+     ], [
+       fhir:index 7;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0001324>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0001324" ]
+     ], [
+       fhir:index 8;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0001252>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0001252" ]
+     ], [
+       fhir:index 9;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0003202>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0003202" ]
+     ], [
+       fhir:index 10;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/hp.0003557>;
+       fhir:Reference.reference [ fhir:value "Observation/hp.0003557" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "biosamples" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Specimen/biosample.specimen.id.2>;
+       fhir:Reference.reference [ fhir:value "Specimen/biosample.specimen.id.2" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "diseases" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Condition/id.disease.intellectualDisability>;
+       fhir:Reference.reference [ fhir:value "Condition/id.disease.intellectualDisability" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Composition/DevelopmentalDelay.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

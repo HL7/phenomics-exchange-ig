@@ -1,0 +1,53 @@
+{
+  "resourceType" : "DiagnosticReport",
+  "id" : "PhenopacketsGenomicInterpretationExample01",
+  "meta" : {
+    "profile" : ["https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc 123}\">some loinc code</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-PhenopacketsVariantExample01.html\"><span title=\"Codes: {http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td/></tr></table><p>The detected variant is Likely-Pathogenic of Pfeiffer syndrome</p><p><b>Coded Conclusions :</b></p><ul><li><span title=\"Codes: {http://snomed.info/sct 70410008}\">Acrocephalosyndactyly type V (disorder)</span></li></ul></div>"
+  },
+  "modifierExtension" : [{
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status",
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus",
+        "code" : "0",
+        "display" : "UNKNOWN_STATUS"
+      }]
+    }
+  }],
+  "status" : "unknown",
+  "category" : [{
+    "coding" : [{
+      "system" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+      "code" : "GE",
+      "display" : "Genetics"
+    }]
+  }],
+  "code" : {
+    "coding" : [{
+      "system" : "http://loinc",
+      "code" : "123",
+      "display" : "some loinc code"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/phenopacketPatientExample01"
+  },
+  "specimen" : [{
+    "reference" : "Specimen/phenopacketSpecimenExample01"
+  }],
+  "result" : [{
+    "reference" : "Observation/PhenopacketsVariantExample01"
+  }],
+  "conclusion" : "The detected variant is Likely-Pathogenic of Pfeiffer syndrome",
+  "conclusionCode" : [{
+    "coding" : [{
+      "system" : "http://snomed.info/sct",
+      "code" : "70410008",
+      "display" : "Acrocephalosyndactyly type V (disorder)"
+    }]
+  }]
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="id.disease.3"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Disease"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="id.disease.3"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition &quot;id.disease.3&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Disease.html">Disease profile</a></p></div><p><b>clinicalStatus</b>: Active <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html">Condition Clinical Status Codes</a>#active)</span></p><p><b>code</b>: congestive heart failure <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (mondo#MONDO_0005009)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><h3>Stages</h3><table class="grid"><tr><td>-</td><td><b>Summary</b></td><td><b>Type</b></td></tr><tr><td>*</td><td>moderate heart failure <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (efo#EFO:0003148)</span></td><td>Clinical staging <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#260998006)</span></td></tr></table></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+      <display value="Active"/>
+    </coding>
+  </clinicalStatus>
+  <code>
+    <coding>
+      <system value="http://github.com/monarch-initiative/mondo"/>
+      <code value="MONDO_0005009"/>
+      <display value="congestive heart failure"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/example-patient"/>
+  </subject>
+  <stage>
+    <summary>
+      <coding>
+        <system value="http://github.com/EBISPOT/efo"/>
+        <code value="EFO:0003148"/>
+        <display value="moderate heart failure"/>
+      </coding>
+    </summary>
+    <type>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="260998006"/>
+        <display value="Clinical staging"/>
+      </coding>
+    </type>
+  </stage>
+</Condition>

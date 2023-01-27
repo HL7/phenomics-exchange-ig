@@ -1,0 +1,47 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "TumorProgression",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://purl.obolibrary.org/obo/ncit.owl</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>NCIT:C8509</td><td>Primary Neoplasm</td></tr><tr><td>NCIT:C3261</td><td>Metastatic Neoplasm</td></tr><tr><td>NCIT:C4798</td><td>Recurrent Neoplasm</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorProgression",
+  "version" : "0.1.0",
+  "name" : "TumorProgression",
+  "title" : "Tumor Progression",
+  "status" : "active",
+  "date" : "2020-02-14T16:13:10+10:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Codes to indicate if a specimen is from the primary tumor, a metastasis or a recurrence.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://purl.obolibrary.org/obo/ncit.owl",
+      "concept" : [{
+        "code" : "NCIT:C8509",
+        "display" : "Primary Neoplasm"
+      },
+      {
+        "code" : "NCIT:C3261",
+        "display" : "Metastatic Neoplasm"
+      },
+      {
+        "code" : "NCIT:C4798",
+        "display" : "Recurrent Neoplasm"
+      }]
+    }]
+  }
+}

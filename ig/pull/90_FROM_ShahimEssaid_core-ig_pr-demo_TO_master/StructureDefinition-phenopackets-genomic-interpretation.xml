@@ -1,0 +1,2299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<StructureDefinition xmlns="http://hl7.org/fhir">
+  <id value="phenopackets-genomic-interpretation"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><table border="0" cellpadding="0" cellspacing="0" style="border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;"><tr style="border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top"><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="The logical name of the element">Name</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Information about the use of the element">Flags</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Minimum and Maximum # of times the the element can appear in the instance">Card.</a></th><th style="width: 100px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Reference to the type of the element">Type</a></th><th style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Additional information about the element">Description &amp; Constraints</a><span style="float: right"><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/></a></span></th></tr><tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_resource.png" alt="." style="background-color: white; background-color: inherit" title="Resource" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport">DiagnosticReport</a><a name="DiagnosticReport"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/uv/genomics-reporting/STU2/StructureDefinition-genomics-report.html">GenomicsReport</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck12.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_modifier_extension_simple.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Simple Extension" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.modifierExtension">Slices for modifierExtension</a><a name="DiagnosticReport.modifierExtension"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/extensibility.html#Extension">Extension</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Extension</span><br/><span style="font-weight:bold">Slice: </span>Unordered, Open by value:url</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck14.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: white; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.modifierExtension:interpretationStatus" title="Slice interpretationStatus">modifierExtension:interpretationStatus</a><a name="DiagnosticReport.modifierExtension"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="StructureDefinition-interpretation-status.html" title="Extension">InterpretationStatus</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation.</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.status">status</a><a name="DiagnosticReport.status"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">1</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="opacity: 0.5" href="http://hl7.org/fhir/R4/datatypes.html#code">code</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">registered | partial | preliminary | final +</span><br/><span style="font-weight:bold">Required Pattern: </span><span style="color: darkgreen">unknown</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.subject">subject</a><a name="DiagnosticReport.subject"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R4/conformance-rules.html#constraints" title="This element has or is affected by constraints (phenopackets-subject-or-specimen-id)">C</a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span><span style="opacity: 0.5">..</span><span style="opacity: 0.5">1</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/R4/patient.html">Patient</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/group.html">Group</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/device.html">Device</a> | <a style="opacity: 0.5" href="http://hl7.org/fhir/R4/location.html">Location</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
+                    or biosample that is the subject being interpreted.
+                    Check specimen element.<br/><span style="font-weight:bold">phenopackets-subject-or-specimen-id: </span>subject.id and/or specimen.id SHALL be present</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.specimen">specimen</a><a name="DiagnosticReport.specimen"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a style="padding-left: 3px; padding-right: 3px; border: 1px maroon solid; font-weight: bold; color: #301212; background-color: #fdf4f4;" href="http://hl7.org/fhir/R4/conformance-rules.html#constraints" title="This element has or is affected by constraints (phenopackets-subject-or-specimen-id)">C</a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">0</span>..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/R4/specimen.html">Specimen</a>)</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient 
+                    or biosample that is the subject being interpreted.
+                    Check subject element.<br/><span style="font-weight:bold">phenopackets-subject-or-specimen-id: </span>subject.id and/or specimen.id SHALL be present</td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white"><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_element.gif" alt="." style="background-color: white; background-color: inherit" title="Element" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.result">result</a><a name="DiagnosticReport.result"> </a></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"/><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..<span style="opacity: 0.5">*</span></td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a style="opacity: 0.5" href="http://hl7.org/fhir/R4/observation.html">Observation</a>)</td><td style="vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="opacity: 0.5">Observations</span></td></tr>
+<tr style="border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7"><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck04.png)" class="hierarchy"><img src="tbl_spacer.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="tbl_vjoin_end.png" alt="." style="background-color: inherit" class="hierarchy"/><img src="icon_slice_item.png" alt="." style="background-color: #F7F7F7; background-color: inherit" title="Slice Item" class="hierarchy"/> <a href="StructureDefinition-phenopackets-genomic-interpretation-definitions.html#DiagnosticReport.result:variant" title="Slice variant">result:variant</a><a name="DiagnosticReport.result"> </a></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><span style="padding-left: 3px; padding-right: 3px; color: white; background-color: red" title="This element must be supported">S</span></td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">1..1</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy"><a href="http://hl7.org/fhir/R4/references.html">Reference</a>(<a href="StructureDefinition-phenopackets-variant.html">Phenopackets Variant</a>)</td><td style="vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px" class="hierarchy">Phenopackets GenomicInterpretation.call: Represents the interpretation, 
+                            i.e., oneof {GeneDescriptor|VariantInterpretation}.</td></tr>
+<tr><td colspan="5" class="hierarchy"><br/><a href="https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views" title="Legend for this format"><img src="http://hl7.org/fhir/R4/help16.png" alt="doco" style="background-color: inherit"/> Documentation for this format</a></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-category">
+    <valueString value="Clinical.Diagnostics"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category">
+    <valueCode value="patient"/>
+  </extension>
+  <url value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+  <version value="0.1.0"/>
+  <name value="PhenopacketsGenomicInterpretation"/>
+  <title value="Phenopackets Genomic Interpretation"/>
+  <status value="draft"/>
+  <date value="2021-10-18T09:00:00-04:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="A profile of Genomics Reporting Genomics Report profile that represents relevant &#xA;              phenopackets building blocks."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <fhirVersion value="4.0.1"/>
+  <mapping>
+    <identity value="workflow"/>
+    <uri value="http://hl7.org/fhir/workflow"/>
+    <name value="Workflow Pattern"/>
+  </mapping>
+  <mapping>
+    <identity value="v2"/>
+    <uri value="http://hl7.org/v2"/>
+    <name value="HL7 v2 Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="rim"/>
+    <uri value="http://hl7.org/v3"/>
+    <name value="RIM Mapping"/>
+  </mapping>
+  <mapping>
+    <identity value="w5"/>
+    <uri value="http://hl7.org/fhir/fivews"/>
+    <name value="FiveWs Pattern Mapping"/>
+  </mapping>
+  <kind value="resource"/>
+  <abstract value="false"/>
+  <type value="DiagnosticReport"/>
+  <baseDefinition value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-report"/>
+  <derivation value="constraint"/>
+  <snapshot>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport"/>
+      <short value="A Diagnostic report - a combination of request information, atomic results, images, interpretation, as well as formatted reports"/>
+      <definition value="The findings and interpretation of diagnostic  tests performed on patients, groups of patients, devices, and locations, and/or specimens derived from these. The report includes clinical context such as requesting and provider information, and some mix of atomic results, images, textual and coded interpretations, and formatted representation of diagnostic reports."/>
+      <comment value="This is intended to capture a single report and is not suitable for use in displaying summary information that covers multiple reports.  For example, this resource has not been designed for laboratory cumulative reporting formats nor detailed structured reports for sequencing."/>
+      <alias value="Report"/>
+      <alias value="Test"/>
+      <alias value="Result"/>
+      <alias value="Results"/>
+      <alias value="Labs"/>
+      <alias value="Laboratory"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <constraint>
+        <key value="dom-2"/>
+        <severity value="error"/>
+        <human value="If the resource is contained in another resource, it SHALL NOT contain nested Resources"/>
+        <expression value="contained.contained.empty()"/>
+        <xpath value="not(parent::f:contained and f:contained)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-3"/>
+        <severity value="error"/>
+        <human value="If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource or SHALL refer to the containing resource"/>
+        <expression value="contained.where((('#'+id in (%resource.descendants().reference | %resource.descendants().as(canonical) | %resource.descendants().as(uri) | %resource.descendants().as(url))) or descendants().where(reference = '#').exists() or descendants().where(as(canonical) = '#').exists() or descendants().where(as(canonical) = '#').exists()).not()).trace('unmatched', id).empty()"/>
+        <xpath value="not(exists(for $id in f:contained/*/f:id/@value return $contained[not(parent::*/descendant::f:reference/@value=concat('#', $contained/*/id/@value) or descendant::f:reference[@value='#'])]))"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-4"/>
+        <severity value="error"/>
+        <human value="If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated"/>
+        <expression value="contained.meta.versionId.empty() and contained.meta.lastUpdated.empty()"/>
+        <xpath value="not(exists(f:contained/*/f:meta/f:versionId)) and not(exists(f:contained/*/f:meta/f:lastUpdated))"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <key value="dom-5"/>
+        <severity value="error"/>
+        <human value="If a resource is contained in another resource, it SHALL NOT have a security label"/>
+        <expression value="contained.meta.security.empty()"/>
+        <xpath value="not(exists(f:contained/*/f:meta/f:security))"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <constraint>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice">
+          <valueBoolean value="true"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation">
+          <valueMarkdown value="When a resource has no narrative, only systems that fully understand the data can display the resource to a human safely. Including a human readable representation in the resource makes for a much more robust eco-system and cheaper handling of resources by intermediary systems. Some ecosystems restrict distribution of resources to only those systems that do fully understand the resources, and as a consequence implementers may believe that the narrative is superfluous. However experience shows that such eco-systems often open up to new participants over time."/>
+        </extension>
+        <key value="dom-6"/>
+        <severity value="warning"/>
+        <human value="A resource should have narrative for robust management"/>
+        <expression value="text.`div`.exists()"/>
+        <xpath value="exists(f:text/h:div)"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/DomainResource"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Entity. Role, or Act"/>
+      </mapping>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="ORU -&gt; OBR"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Observation[classCode=OBS, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.id">
+      <path value="DiagnosticReport.id"/>
+      <short value="Logical id of this artifact"/>
+      <definition value="The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."/>
+      <comment value="The only time that a resource does not have an id is when it is being submitted to the server using a create operation."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="id"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="DiagnosticReport.meta">
+      <path value="DiagnosticReport.meta"/>
+      <short value="Metadata about the resource"/>
+      <definition value="The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.meta"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Meta"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="DiagnosticReport.implicitRules">
+      <path value="DiagnosticReport.implicitRules"/>
+      <short value="A set of rules under which this content was created"/>
+      <definition value="A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."/>
+      <comment value="Asserting this rule set restricts the content to be only understood by a limited set of trading partners. This inherently limits the usefulness of the data in the long term. However, the existing health eco-system is highly fractured, and not yet ready to define, collect, and exchange data in a generally computable sense. Wherever possible, implementers and/or specification writers should avoid using this element. Often, when used, the URL is a reference to an implementation guide that defines these special rules as part of it's narrative along with other profiles, value sets, etc."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.implicitRules"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="uri"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="This element is labeled as a modifier because the implicit rules may provide additional knowledge about the resource that modifies it's meaning or interpretation"/>
+      <isSummary value="true"/>
+    </element>
+    <element id="DiagnosticReport.language">
+      <path value="DiagnosticReport.language"/>
+      <short value="Language of the resource content"/>
+      <definition value="The base language in which the resource is written."/>
+      <comment value="Language is provided to support indexing and accessibility (typically, services such as text to speech use the language tag). The html language tag in the narrative applies  to the narrative. The language tag on the resource may be used to specify the language of other presentations generated from the data in the resource. Not all the content has to be in the base language. The Resource.language should not be assumed to apply to the narrative automatically. If a language is specified, it should it also be specified on the div element in the html (see rules in HTML5 for information about the relationship between xml:lang and the html lang attribute)."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Resource.language"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet">
+          <valueCanonical value="http://hl7.org/fhir/ValueSet/all-languages"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="Language"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
+          <valueBoolean value="true"/>
+        </extension>
+        <strength value="preferred"/>
+        <description value="A human language."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/languages"/>
+      </binding>
+    </element>
+    <element id="DiagnosticReport.text">
+      <path value="DiagnosticReport.text"/>
+      <short value="Text summary of the resource, for human interpretation"/>
+      <definition value="A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."/>
+      <comment value="Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs=1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a &quot;text blob&quot; or where text is additionally entered raw or narrated and encoded information is added later."/>
+      <alias value="narrative"/>
+      <alias value="html"/>
+      <alias value="xhtml"/>
+      <alias value="display"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.text"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Narrative"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="Act.text?"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.contained">
+      <path value="DiagnosticReport.contained"/>
+      <short value="Contained, inline Resources"/>
+      <definition value="These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope."/>
+      <comment value="This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels."/>
+      <alias value="inline resources"/>
+      <alias value="anonymous resources"/>
+      <alias value="contained resources"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.contained"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Resource"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.extension">
+      <path value="DiagnosticReport.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:genomics-artifact">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="genomics-artifact"/>
+      <short value="Genomics Artifact"/>
+      <definition value="Captures citations, evidence and other supporting documentation for the observation or report."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-artifact"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:genomics-file">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="genomics-file"/>
+      <short value="Genomics File"/>
+      <definition value="Used to transmit the contents of or links to files that were produced as part of the testing process. Examples are VCF, BAM, CRAM, and other similar files."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-file"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:recommended-action">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="recommended-action"/>
+      <short value="Recommended Action"/>
+      <definition value="References a proposed action that is recommended based on the results of the diagnostic report."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/recommended-action"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:genomics-risk-assessment">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="genomics-risk-assessment"/>
+      <short value="Genomics Risk Assessment"/>
+      <definition value="RiskAssessment delivered as part of a genomics report or observation"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomics-risk-assessment"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:coded-note">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="coded-note"/>
+      <short value="Comments about the report that also contain a coded type"/>
+      <definition value="Adds codified notes to a report to capture additional content"/>
+      <comment value="May include general statements about the report, or statements about significant, unexpected or unreliable results values, or information about its source when relevant to its interpretation.&#xA;The CodedAnnotation data type, while not allowing for or intending to make the content computable, does allow the author to indicate the type of note. This does not replace the use of results or conclusion or conclusionCode.&#xA;One important note is that Annotation is a FHIR data type, this is **NOT** about annotations in the genomic context."/>
+      <requirements value="Need to be able to provide free text additional information. Notes SHALL NOT contain information which can be captured in a structured way."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genomic-report-note"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.extension:supporting-info">
+      <path value="DiagnosticReport.extension"/>
+      <sliceName value="supporting-info"/>
+      <short value="Other information that may be relevant to this event."/>
+      <definition value="Other resources *from the patient record* that may be relevant to the event.  The information from these resources was either used to create the instance or is provided to help with its interpretation.  This extension **should not** be used if more specific  inline elements  or extensions are available.  For example, use `Observation.hasMember`  instead of supportingInformation for  representing the members of an Observation panel."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+    </element>
+    <element id="DiagnosticReport.modifierExtension">
+      <path value="DiagnosticReport.modifierExtension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Extension"/>
+      <definition value="An Extension"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="DomainResource.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the resource that contains them"/>
+      <isSummary value="false"/>
+    </element>
+    <element id="DiagnosticReport.modifierExtension:interpretationStatus">
+      <path value="DiagnosticReport.modifierExtension"/>
+      <sliceName value="interpretationStatus"/>
+      <short value="Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."/>
+      <definition value="Describes the conclusion made about the genomic interpretation."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DomainResource.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status"/>
+      </type>
+      <condition value="ele-1"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), 'value')])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="The interpretation status could be REJECTED which may affect how the whole interpretation is interpreted."/>
+    </element>
+    <element id="DiagnosticReport.identifier">
+      <path value="DiagnosticReport.identifier"/>
+      <short value="Business identifier for report"/>
+      <definition value="Identifiers assigned to this report by the performer or other systems."/>
+      <comment value="Usually assigned by the Information System of the diagnostic service provider (filler id)."/>
+      <requirements value="Need to know what identifier to use when making queries about this report from the source laboratory, and for linking to the report outside FHIR context."/>
+      <alias value="ReportID"/>
+      <alias value="Filler ID"/>
+      <alias value="Placer ID"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.identifier"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Identifier"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.identifier"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-51/ for globally unique filler ID  - OBR-3 , For non-globally unique filler-id the flller/placer number must be combined with the universal service Id -  OBR-2(if present)+OBR-3+OBR-4"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="id"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.basedOn">
+      <path value="DiagnosticReport.basedOn"/>
+      <short value="What was requested"/>
+      <definition value="Details concerning a service requested."/>
+      <comment value="Note: Usually there is one test request for each result, however in some circumstances multiple test requests may be represented using a single test result resource. Note that there are also cases where one request leads to multiple reports."/>
+      <requirements value="This allows tracing of authorization for the report and tracking whether proposals/recommendations were acted upon."/>
+      <alias value="Request"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.basedOn"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CarePlan"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImmunizationRecommendation"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/MedicationRequest"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/NutritionOrder"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ServiceRequest"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.basedOn"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="ORC? OBR-2/3?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=FLFS].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.status">
+      <path value="DiagnosticReport.status"/>
+      <short value="registered | partial | preliminary | final +"/>
+      <definition value="The status of the diagnostic report."/>
+      <requirements value="Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.status"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="code"/>
+      </type>
+      <patternCode value="unknown"/>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="This element is labeled as a modifier because it is a status element that contains status entered-in-error which means that the resource should not be treated as valid"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DiagnosticReportStatus"/>
+        </extension>
+        <strength value="required"/>
+        <description value="The status of the diagnostic report."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-report-status|4.0.1"/>
+      </binding>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.status"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.status"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-25 (not 1:1 mapping)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="statusCode  Note: final and amended are distinguished by whether observation is the subject of a ControlAct event of type &quot;revise&quot;"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category">
+      <path value="DiagnosticReport.category"/>
+      <slicing>
+        <discriminator>
+          <type value="pattern"/>
+          <path value="coding"/>
+        </discriminator>
+        <description value="Slice based on the category code pattern"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Service category"/>
+      <definition value="A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes."/>
+      <comment value="Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code."/>
+      <alias value="Department"/>
+      <alias value="Sub-department"/>
+      <alias value="Service"/>
+      <alias value="Discipline"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.category"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DiagnosticServiceSection"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes for diagnostic service sections."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.class"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-24"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code &lt; LabService].code"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category:Genetics">
+      <path value="DiagnosticReport.category"/>
+      <sliceName value="Genetics"/>
+      <short value="Service category"/>
+      <definition value="A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes."/>
+      <comment value="Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code."/>
+      <alias value="Department"/>
+      <alias value="Sub-department"/>
+      <alias value="Service"/>
+      <alias value="Discipline"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.category"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DiagnosticServiceSection"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Codes for diagnostic service sections."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/diagnostic-service-sections"/>
+      </binding>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.class"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-24"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=COMP].source[classCode=LIST, moodCode=EVN, code &lt; LabService].code"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category:Genetics.id">
+      <path value="DiagnosticReport.category.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category:Genetics.extension">
+      <path value="DiagnosticReport.category.extension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <description value="Extensions are always sliced by (at least) url"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category:Genetics.coding">
+      <path value="DiagnosticReport.category.coding"/>
+      <short value="Code defined by a terminology system"/>
+      <definition value="A reference to a code defined by a terminology system."/>
+      <comment value="Codes may be defined very casually in enumerations, or code lists, up to very formal definitions such as SNOMED CT - see the HL7 v3 Core Principles for more information.  Ordering of codings is undefined and SHALL NOT be used to infer meaning. Generally, at most only one of the coding values will be labeled as UserSelected = true."/>
+      <requirements value="Allows for alternative encodings within a code system, and translations to other code systems."/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="CodeableConcept.coding"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Coding"/>
+      </type>
+      <patternCoding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+        <code value="GE"/>
+      </patternCoding>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.1-8, C*E.10-22"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="union(., ./translation)"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:CodeableConcept.coding rdfs:subPropertyOf dt:CD.coding"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.category:Genetics.text">
+      <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable">
+        <valueBoolean value="true"/>
+      </extension>
+      <path value="DiagnosticReport.category.text"/>
+      <short value="Plain text representation of the concept"/>
+      <definition value="A human language representation of the concept as seen/selected/uttered by the user who entered the data and/or which represents the intended meaning of the user."/>
+      <comment value="Very often the text is the same as a displayName of one of the codings."/>
+      <requirements value="The codes from the terminologies do not always capture the correct meaning with all the nuances of the human using them, or sometimes there is no appropriate code at all. In these cases, the text is used to capture the full meaning of the source."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="CodeableConcept.text"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="C*E.9. But note many systems use C*E.2 for this"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="./originalText[mediaType/code=&quot;text/plain&quot;]/data"/>
+      </mapping>
+      <mapping>
+        <identity value="orim"/>
+        <map value="fhir:CodeableConcept.text rdfs:subPropertyOf dt:CD.originalText"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.code">
+      <path value="DiagnosticReport.code"/>
+      <short value="Name/Code for this diagnostic report"/>
+      <definition value="A code or name that describes this diagnostic report."/>
+      <alias value="Type"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.code"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="DiagnosticReportCodes"/>
+        </extension>
+        <strength value="preferred"/>
+        <description value="Codes that describe Diagnostic Reports."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/report-codes"/>
+      </binding>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.code"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.what[x]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-4 (HL7 v2 doesn't provide an easy way to indicate both the ordered test and the performed panel)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="code"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject"/>
+      <short value="Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient &#xA;                    or biosample that is the subject being interpreted.&#xA;                    Check specimen element."/>
+      <definition value="The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources."/>
+      <requirements value="SHALL know the subject context."/>
+      <alias value="Patient"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.subject"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Patient"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Group"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Device"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Location"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="phenopackets-subject-or-specimen-id"/>
+        <severity value="error"/>
+        <human value="subject.id and/or specimen.id SHALL be present"/>
+        <source value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.subject"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.subject[x]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PID-3 (no HL7 v2 mapping for Group or Device)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="participation[typeCode=SBJ]"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.subject"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.encounter">
+      <path value="DiagnosticReport.encounter"/>
+      <short value="Health care event when test ordered"/>
+      <definition value="The healthcare event  (e.g. a patient and healthcare provider interaction) which this DiagnosticReport is about."/>
+      <comment value="This will typically be the encounter the event occurred within, but some events may be initiated prior to or after the official completion of an encounter  but still be tied to the context of the encounter  (e.g. pre-admission laboratory tests)."/>
+      <requirements value="Links the request to the Encounter context."/>
+      <alias value="Context"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.encounter"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Encounter"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.encounter"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.context"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PV1-19"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=COMP].source[classCode=ENC, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.effective[x]">
+      <path value="DiagnosticReport.effective[x]"/>
+      <short value="Clinically relevant time/time-period for report"/>
+      <definition value="The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself."/>
+      <comment value="If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic."/>
+      <requirements value="Need to know where in the patient history to file/present this report."/>
+      <alias value="Observation time"/>
+      <alias value="Effective Time"/>
+      <alias value="Occurrence"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.effective[x]"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="dateTime"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.occurrence[x]"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.done[x]"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-7"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="effectiveTime"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.issued">
+      <path value="DiagnosticReport.issued"/>
+      <short value="DateTime this version was made"/>
+      <definition value="The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified."/>
+      <comment value="May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report."/>
+      <requirements value="Clinicians need to be able to check the date that the report was released."/>
+      <alias value="Date published"/>
+      <alias value="Date Issued"/>
+      <alias value="Date Verified"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.issued"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="instant"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.recorded"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-22"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="participation[typeCode=VRF or AUT].time"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.performer">
+      <path value="DiagnosticReport.performer"/>
+      <short value="Responsible Diagnostic Service"/>
+      <definition value="The diagnostic service that is responsible for issuing the report."/>
+      <comment value="This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report."/>
+      <requirements value="Need to know whom to contact if there are queries about the results. Also may need to track the source of reports for secondary data analysis."/>
+      <alias value="Laboratory"/>
+      <alias value="Service"/>
+      <alias value="Practitioner"/>
+      <alias value="Department"/>
+      <alias value="Company"/>
+      <alias value="Authorized by"/>
+      <alias value="Director"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.performer"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.performer.actor"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.actor"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="PRT-8 (where this PRT-4-Participation = &quot;PO&quot;)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRF]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.resultsInterpreter">
+      <path value="DiagnosticReport.resultsInterpreter"/>
+      <short value="Primary result interpreter"/>
+      <definition value="The practitioner or organization that is responsible for the report's conclusions and interpretations."/>
+      <comment value="Might not be the same entity that takes responsibility for the clinical report."/>
+      <requirements value="Need to know whom to contact if there are queries about the results. Also may need to track the source of reports for secondary data analysis."/>
+      <alias value="Analyzed by"/>
+      <alias value="Reported by"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.resultsInterpreter"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Practitioner"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/PractitionerRole"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Organization"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/CareTeam"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="workflow"/>
+        <map value="Event.performer.actor"/>
+      </mapping>
+      <mapping>
+        <identity value="w5"/>
+        <map value="FiveWs.actor"/>
+      </mapping>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBR-32, PRT-8 (where this PRT-4-Participation = &quot;PI&quot;)"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".participation[typeCode=PRF]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen"/>
+      <short value="Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient &#xA;                    or biosample that is the subject being interpreted.&#xA;                    Check subject element."/>
+      <definition value="Details about the specimens on which this diagnostic report is based."/>
+      <comment value="If the specimen is sufficiently specified with a code in the test result name, then this additional data may be redundant. If there are multiple specimens, these may be represented per observation or group."/>
+      <requirements value="Need to be able to report information about the collected specimens on which the report is based."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.specimen"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Specimen"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="phenopackets-subject-or-specimen-id"/>
+        <severity value="error"/>
+        <human value="subject.id and/or specimen.id SHALL be present"/>
+        <source value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="SPM"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="participation[typeCode=SBJ]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result"/>
+      <slicing>
+        <discriminator>
+          <type value="profile"/>
+          <path value="resolve()"/>
+        </discriminator>
+        <description value="Slice based on the reference profile and code pattern"/>
+        <rules value="open"/>
+      </slicing>
+      <short value="Observations"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="1"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Observation"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:overall">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="overall"/>
+      <short value="Assessment of overall results"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/overall-interpretation"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:diagnostic-implication">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="diagnostic-implication"/>
+      <short value="Diagnostic Implication"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/diagnostic-implication"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:therapeutic-implication">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="therapeutic-implication"/>
+      <short value="Therapeutic Implication"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/therapeutic-implication"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:variant">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="variant"/>
+      <short value="Phenopackets GenomicInterpretation.call: Represents the interpretation, &#xA;                            i.e., oneof {GeneDescriptor|VariantInterpretation}."/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <mustSupport value="true"/>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:sequence-phase-relation">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="sequence-phase-relation"/>
+      <short value="Sequence Phase Relationship"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/sequence-phase-relationship"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:region-studied">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="region-studied"/>
+      <short value="Region Studied"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/region-studied"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:genotype">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="genotype"/>
+      <short value="Genotype"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/genotype"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.result:haplotype">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="haplotype"/>
+      <short value="Haplotype"/>
+      <definition value="[Observations](http://hl7.org/fhir/R4/observation.html)  that are part of this diagnostic report."/>
+      <comment value="Observations can contain observations."/>
+      <requirements value="Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful."/>
+      <alias value="Data"/>
+      <alias value="Atomic Value"/>
+      <alias value="Result"/>
+      <alias value="Atomic result"/>
+      <alias value="Data"/>
+      <alias value="Test"/>
+      <alias value="Analyte"/>
+      <alias value="Battery"/>
+      <alias value="Organizer"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.result"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/uv/genomics-reporting/StructureDefinition/haplotype"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBXs"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.imagingStudy">
+      <path value="DiagnosticReport.imagingStudy"/>
+      <short value="Reference to full details of imaging associated with the diagnostic report"/>
+      <definition value="One or more links to full details of any imaging performed during the diagnostic investigation. Typically, this is imaging performed by DICOM enabled modalities, but this is not required. A fully enabled PACS viewer can use this information to provide views of the source images."/>
+      <comment value="ImagingStudy and the image element are somewhat overlapping - typically, the list of image references in the image element will also be found in one of the imaging study resources. However, each caters to different types of displays for different types of purposes. Neither, either, or both may be provided."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.imagingStudy"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/ImagingStudy"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target[classsCode=DGIMG, moodCode=EVN]"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media">
+      <path value="DiagnosticReport.media"/>
+      <short value="Key images associated with this report"/>
+      <definition value="A list of key images associated with this report. The images are generally created during the diagnostic process, and may be directly of the patient, or of treated specimens (i.e. slides of interest)."/>
+      <requirements value="Many diagnostic services include images in the report as part of their service."/>
+      <alias value="DICOM"/>
+      <alias value="Slides"/>
+      <alias value="Scans"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.media"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="BackboneElement"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX?"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="outboundRelationship[typeCode=COMP].target"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media.id">
+      <path value="DiagnosticReport.media.id"/>
+      <representation value="xmlAttr"/>
+      <short value="Unique id for inter-element referencing"/>
+      <definition value="Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="Element.id"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type">
+          <valueUrl value="string"/>
+        </extension>
+        <code value="http://hl7.org/fhirpath/System.String"/>
+      </type>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media.extension">
+      <path value="DiagnosticReport.media.extension"/>
+      <short value="Additional content defined by implementations"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="Element.extension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="n/a"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media.modifierExtension">
+      <path value="DiagnosticReport.media.modifierExtension"/>
+      <short value="Extensions that cannot be ignored even if unrecognized"/>
+      <definition value="May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.&#xA;&#xA;Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."/>
+      <comment value="There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone."/>
+      <requirements value="Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4/extensibility.html#modifierExtension)."/>
+      <alias value="extensions"/>
+      <alias value="user content"/>
+      <alias value="modifiers"/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="BackboneElement.modifierExtension"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Extension"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <constraint>
+        <key value="ext-1"/>
+        <severity value="error"/>
+        <human value="Must have either extensions or value[x], not both"/>
+        <expression value="extension.exists() != value.exists()"/>
+        <xpath value="exists(f:extension)!=exists(f:*[starts-with(local-name(.), &quot;value&quot;)])"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Extension"/>
+      </constraint>
+      <isModifier value="true"/>
+      <isModifierReason value="Modifier extensions are expected to modify the meaning or interpretation of the element that contains them"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value="N/A"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media.comment">
+      <path value="DiagnosticReport.media.comment"/>
+      <short value="Comment about the image (e.g. explanation)"/>
+      <definition value="A comment about the image. Typically, this is used to provide an explanation for why the image is included, or to draw the viewer's attention to important features."/>
+      <comment value="The comment should be displayed with the image. It would be common for the report to include additional discussion of the image contents in other sections such as the conclusion."/>
+      <requirements value="The provider of the report should make a comment about each image included in the report."/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.media.comment"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".inboundRelationship[typeCode=COMP].source[classCode=OBS, moodCode=EVN, code=&quot;annotation&quot;].value"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.media.link">
+      <path value="DiagnosticReport.media.link"/>
+      <short value="Reference to the image source"/>
+      <definition value="Reference to the image source."/>
+      <min value="1"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.media.link"/>
+        <min value="1"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="http://hl7.org/fhir/StructureDefinition/Media"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="true"/>
+      <mapping>
+        <identity value="rim"/>
+        <map value=".value.reference"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.conclusion">
+      <path value="DiagnosticReport.conclusion"/>
+      <short value="Clinical conclusion (interpretation) of test results"/>
+      <definition value="Concise and clinically contextualized summary conclusion (interpretation/impression) of the diagnostic report."/>
+      <requirements value="Need to be able to provide a conclusion that is not lost among the basic result data."/>
+      <alias value="Report"/>
+      <min value="0"/>
+      <max value="1"/>
+      <base>
+        <path value="DiagnosticReport.conclusion"/>
+        <min value="0"/>
+        <max value="1"/>
+      </base>
+      <type>
+        <code value="string"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=&quot;SPRT&quot;].source[classCode=OBS, moodCode=EVN, code=LOINC:48767-8].value (type=ST)"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.conclusionCode">
+      <path value="DiagnosticReport.conclusionCode"/>
+      <short value="Codes for the clinical conclusion of test results"/>
+      <definition value="One or more codes that represent the summary conclusion (interpretation/impression) of the diagnostic report."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.conclusionCode"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="CodeableConcept"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <binding>
+        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
+          <valueString value="AdjunctDiagnosis"/>
+        </extension>
+        <strength value="example"/>
+        <description value="Diagnosis codes provided as adjuncts to the report."/>
+        <valueSet value="http://hl7.org/fhir/ValueSet/clinical-findings"/>
+      </binding>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="inboundRelationship[typeCode=SPRT].source[classCode=OBS, moodCode=EVN, code=LOINC:54531-9].value (type=CD)"/>
+      </mapping>
+    </element>
+    <element id="DiagnosticReport.presentedForm">
+      <path value="DiagnosticReport.presentedForm"/>
+      <short value="Entire report as issued"/>
+      <definition value="Rich text representation of the entire result as issued by the diagnostic service. Multiple formats are allowed but they SHALL be semantically equivalent."/>
+      <comment value="&quot;application/pdf&quot; is recommended as the most reliable and interoperable in this context."/>
+      <requirements value="Gives laboratory the ability to provide its own fully formatted report for clinical fidelity."/>
+      <min value="0"/>
+      <max value="*"/>
+      <base>
+        <path value="DiagnosticReport.presentedForm"/>
+        <min value="0"/>
+        <max value="*"/>
+      </base>
+      <type>
+        <code value="Attachment"/>
+      </type>
+      <constraint>
+        <key value="ele-1"/>
+        <severity value="error"/>
+        <human value="All FHIR elements must have a @value or children"/>
+        <expression value="hasValue() or (children().count() &gt; id.count())"/>
+        <xpath value="@value|f:*|h:div"/>
+        <source value="http://hl7.org/fhir/StructureDefinition/Element"/>
+      </constraint>
+      <isModifier value="false"/>
+      <isSummary value="false"/>
+      <mapping>
+        <identity value="v2"/>
+        <map value="OBX"/>
+      </mapping>
+      <mapping>
+        <identity value="rim"/>
+        <map value="text (type=ED)"/>
+      </mapping>
+    </element>
+  </snapshot>
+  <differential>
+    <element id="DiagnosticReport">
+      <path value="DiagnosticReport"/>
+    </element>
+    <element id="DiagnosticReport.modifierExtension">
+      <path value="DiagnosticReport.modifierExtension"/>
+      <slicing>
+        <discriminator>
+          <type value="value"/>
+          <path value="url"/>
+        </discriminator>
+        <ordered value="false"/>
+        <rules value="open"/>
+      </slicing>
+      <min value="1"/>
+    </element>
+    <element id="DiagnosticReport.modifierExtension:interpretationStatus">
+      <path value="DiagnosticReport.modifierExtension"/>
+      <sliceName value="interpretationStatus"/>
+      <short value="Phenopackets GenomicInterpretation.interpretation_status: status of the interpretation."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Extension"/>
+        <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status"/>
+      </type>
+    </element>
+    <element id="DiagnosticReport.status">
+      <path value="DiagnosticReport.status"/>
+      <patternCode value="unknown"/>
+    </element>
+    <element id="DiagnosticReport.subject">
+      <path value="DiagnosticReport.subject"/>
+      <short value="Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient &#xA;                    or biosample that is the subject being interpreted.&#xA;                    Check specimen element."/>
+      <constraint>
+        <key value="phenopackets-subject-or-specimen-id"/>
+        <severity value="error"/>
+        <human value="subject.id and/or specimen.id SHALL be present"/>
+        <source value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+      </constraint>
+      <mustSupport value="true"/>
+    </element>
+    <element id="DiagnosticReport.specimen">
+      <path value="DiagnosticReport.specimen"/>
+      <short value="Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient &#xA;                    or biosample that is the subject being interpreted.&#xA;                    Check subject element."/>
+      <max value="1"/>
+      <constraint>
+        <key value="phenopackets-subject-or-specimen-id"/>
+        <severity value="error"/>
+        <human value="subject.id and/or specimen.id SHALL be present"/>
+        <source value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+      </constraint>
+    </element>
+    <element id="DiagnosticReport.result">
+      <path value="DiagnosticReport.result"/>
+      <min value="1"/>
+    </element>
+    <element id="DiagnosticReport.result:variant">
+      <path value="DiagnosticReport.result"/>
+      <sliceName value="variant"/>
+      <short value="Phenopackets GenomicInterpretation.call: Represents the interpretation, &#xA;                            i.e., oneof {GeneDescriptor|VariantInterpretation}."/>
+      <min value="1"/>
+      <max value="1"/>
+      <type>
+        <code value="Reference"/>
+        <targetProfile value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant"/>
+      </type>
+      <mustSupport value="true"/>
+    </element>
+  </differential>
+</StructureDefinition>

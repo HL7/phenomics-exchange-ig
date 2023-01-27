@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="PhenopacketsGenomicInterpretationExample02"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2><span title="Codes: {http://loinc 123}">some loinc code</span> (<span title="Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 GE}">Genetics</span>) </h2><table class="grid"><tr><td>Subject</td><td><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</td></tr><tr><td>Identifier:</td><td> id: 02</td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href="Observation-PhenopacketsVariantExample01.html"><span title="Codes: {http://loinc.org 69548-6}">Genetic variant assessment</span></a></td><td/></tr></table><p>A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported.</p><p><b>Coded Conclusions :</b></p><ul><li><span title="Codes: {http://snomed.info/sct 783549006}">Obesity due to centrosomal protein 19 deficiency (disorder)</span></li></ul></div>
+  </text>
+  <modifierExtension url="https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus"/>
+        <code value="0"/>
+        <display value="UNKNOWN_STATUS"/>
+      </coding>
+    </valueCodeableConcept>
+  </modifierExtension>
+  <identifier>
+    <value value="02"/>
+  </identifier>
+  <status value="unknown"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="GE"/>
+      <display value="Genetics"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc"/>
+      <code value="123"/>
+      <display value="some loinc code"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/phenopacketPatientExample01"/>
+  </subject>
+  <specimen>
+    <reference value="Specimen/phenopacketSpecimenExample01"/>
+  </specimen>
+  <result>
+    <reference value="Observation/PhenopacketsVariantExample01"/>
+  </result>
+  <conclusion value="A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."/>
+  <conclusionCode>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="783549006"/>
+      <display value="Obesity due to centrosomal protein 19 deficiency (disorder)"/>
+    </coding>
+  </conclusionCode>
+</DiagnosticReport>

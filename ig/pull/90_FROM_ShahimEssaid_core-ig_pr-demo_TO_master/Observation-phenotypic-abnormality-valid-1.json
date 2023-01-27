@@ -1,0 +1,97 @@
+{
+  "resourceType" : "Observation",
+  "id" : "phenotypic-abnormality-valid-1",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"phenotypic-abnormality-valid-1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;phenotypic-abnormality-valid-1&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: Intellectual disability <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0001249)</span></p><p><b>value</b>: true</p><blockquote><p><b>component</b></p><p><b>code</b>: Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012824)</span></p><p><b>value</b>: Mild <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012825)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Clinical modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012823)</span></p><p><b>value</b>: Worse in evening <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0410401)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003674)</span></p><p><b>value</b>: Congenital onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003577)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003674)</span></p><p><b>value</b>: 0 Day<span style=\"background: LightGoldenRodYellow\"> (Details: http://some/unit/system code Day = 'Day')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (OTHER#OTHER)</span></p><p><b>value</b>: Mild <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (OTHER#OTHERTHING)</span></p></blockquote></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+      "code" : "HP:0001249",
+      "display" : "Intellectual disability"
+    }],
+    "text" : "Intellectual disability"
+  },
+  "valueBoolean" : true,
+  "component" : [{
+    "code" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0012824",
+        "display" : "Severity"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0012825",
+        "display" : "Mild"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0012823",
+        "display" : "Clinical modifier"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0410401",
+        "display" : "Worse in evening"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0003674",
+        "display" : "Onset"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0003577",
+        "display" : "Congenital onset"
+      }]
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "code" : "HP:0003674",
+        "display" : "Onset"
+      }]
+    },
+    "valueQuantity" : {
+      "value" : 0,
+      "unit" : "Day",
+      "system" : "http://some/unit/system",
+      "code" : "Day"
+    }
+  },
+  {
+    "code" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/OTHER",
+        "code" : "OTHER",
+        "display" : "Severity"
+      }]
+    },
+    "valueCodeableConcept" : {
+      "coding" : [{
+        "system" : "http://github.com/phenopackets/core-ig/CodeSystem/OTHER",
+        "code" : "OTHERTHING",
+        "display" : "Mild"
+      }]
+    }
+  }]
+}

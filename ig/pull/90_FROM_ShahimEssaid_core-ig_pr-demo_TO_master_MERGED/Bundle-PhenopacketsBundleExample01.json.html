@@ -1,0 +1,990 @@
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>HL7.FHIR.US.GA4GH.PHENOPACKET\PhenopacketsBundleExample01 - JSON Representation - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.62"}
+    h3,h4,h5,h6{--heading-prefix:"8.62"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">GA4GH Phenopacket (version 2) FHIR Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0 - ci-build
+
+
+
+  <img alt="United States of America flag" src="assets/images/usa.svg" height="16" title="United States of America"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <!-- menu.xml  -->
+
+<ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Background
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="ga4gh.html">GA4GH</a>
+      </li>
+      <li>
+        <a href="phenotype.html">Deep phenotyping</a>
+      </li>
+      <li>
+        <a href="hpo.html">HPO</a>
+      </li>
+      <li>
+        <a href="modeling.html">Modeling</a>
+      </li>
+      <li>
+        <a href="genomicDiagnostics.html">Genomic Diagnostics</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Profiles
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-Biosample.html">Biosample</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Disease.html">Disease</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Individual.html">Individual</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Measurement.html">Measurement</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-PhenotypicFeature.html">PhenotypicFeature</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Phenopacket.html">Phenopacket</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-Treatment.html">Treatment</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-phenopackets-variant.html">PhenopacketsVariant</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-phenopackets-genomic-interpretation.html">PhenopacketsGenomicInterpretation</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Extensions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-CodedOnset.html">CodedOnset</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-DiagnosticMarker.html">DiagnosticMarker</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-KaryotypicSex.html">KaryotypicSex</a>
+      </li>
+      <li>
+        <a href="StructureDefinition-MaterialSample.html">MaterialSample</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="examples.html">Examples</a>
+  </li>
+  <li>
+    <a href="artifacts.html">Artifacts</a>
+  </li>
+</ul>
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><a href='artifacts.html'><b>Artifacts Summary</b></a></li><li><b>PhenopacketsBundleExample01</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+<!--ReleaseHeader--><p id="publish-box">GA4GH Phenopacket (version 2) FHIR Implementation Guide - Local Development build (v0.1.0). See the <a href="https://github.com/phenopackets/core-ig/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="Bundle-PhenopacketsBundleExample01.html">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="Bundle-PhenopacketsBundleExample01.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="Bundle-PhenopacketsBundleExample01.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+
+
+<h2 id="root">: PhenopacketsBundleExample01 - JSON Representation</h2>
+  <table class="">
+    <tr>
+
+      <td colspan="2">
+        
+          
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p><a href="Bundle-PhenopacketsBundleExample01.json" no-download="true">Raw json</a> | <a href="Bundle-PhenopacketsBundleExample01.json" download>Download</a></p>
+
+  <!-- insert intro if present -->
+  
+
+
+
+  <pre class="json" style="white-space: pre; overflow: hidden"><code>
+{
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle">resourceType</a>" : "Bundle",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.id">id</a>" : "PhenopacketsBundleExample01",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2022-02-02T22:22:22Z"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.identifier">identifier</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:1111-1111-1111-1111"
+  },
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.type">type</a>" : "document",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.timestamp">timestamp</a>" : "2022-02-02T22:22:22Z",
+  "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry">entry</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html",
+      "<a href="http://hl7.org/fhir/R4/composition.html#Composition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/composition.html">resourceType</a>" : "Composition",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.id">id</a>" : "PhenopacketCompositionExample01",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Composition&lt;/b&gt;&lt;a name=\&quot;PhenopacketCompositionExample01\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Composition &amp;quot;PhenopacketCompositionExample01&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-Phenopacket.html\&quot;&gt;Phenopacket profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: urn:uuid:1111-1111-1111-1112&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: preliminary&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: Medical records &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#11503-0)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;date&lt;/b&gt;: 2022-02-02&lt;/p&gt;&lt;p&gt;&lt;b&gt;author&lt;/b&gt;: &lt;a href=\&quot;#Practitioner_PhenopacketPractitionerExample01\&quot;&gt;See above (Practitioner/PhenopacketPractitionerExample01: John T. Practitioner)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;title&lt;/b&gt;: This is an example of a composition resource that represents some of the Phenopackets data elements&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.identifier">identifier</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "urn:ietf:rfc:3986",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "urn:uuid:1111-1111-1111-1112"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.status">status</a>" : "preliminary",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "11503-0",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medical records"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example-patient",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Anyname A. Anyperson"
+        },
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.date">date</a>" : "2022-02-02",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.author">author</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Practitioner/PhenopacketPractitionerExample01",
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "John T. Practitioner"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.title">title</a>" : "This is an example of a composition resource that represents some of the Phenopackets data elements",
+        "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section">section</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "phenotypic_features"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/id.phenotypicfeature.4",
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Congestive heart failure"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "measurements"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/id.measurement.1",
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Thrombocytopenia"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "biosamples"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Specimen/biosample.specimen.id.1",
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Bladder Carcinoma"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "interpretations"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "DiagnosticReport/PhenopacketsGenomicInterpretationExample02",
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Obesity due to centrosomal protein 19 deficiency (disorder)"
+              }
+            ]
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "diseases"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/composition.html#Composition.section.entry">entry</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Condition/id.disease.3",
+                "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "CHF-stageIII"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Patient-example-patient.html",
+      "<a href="http://hl7.org/fhir/R4/patient.html#Patient">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/patient.html">resourceType</a>" : "Patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.id">id</a>" : "example-patient",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/Individual"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Patient&lt;/b&gt;&lt;a name=\&quot;example-patient\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Patient &amp;quot;example-patient&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-Individual.html\&quot;&gt;Individual&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: Medical Record Number: m123 (use: USUAL)&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: Anyname A. Anyperson &lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: male&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 2001-01-20&lt;/p&gt;&lt;p&gt;&lt;b&gt;address&lt;/b&gt;: 123 Any St Anytown 12345 US &lt;/p&gt;&lt;h3&gt;Contacts&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Telecom&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;ph: 777-444-2222(HOME), &lt;a href=\&quot;mailto:anyname.anyperson@example.com\&quot;&gt;anyname.anyperson@example.com&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Communications&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Language&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;English &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/5.0.0/CodeSystem-v3-ietf3066.html\&quot;&gt;Tags for the Identification of Languages&lt;/a&gt;#en-US &amp;quot;English (Region=United States)&amp;quot;)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "usual",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MR",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Medical Record Number"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.system">system</a>" : "http://hospital.example.org",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "m123"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "Anyperson",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+              "Anyname",
+              "A."
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.gender">gender</a>" : "male",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.birthDate">birthDate</a>" : "2001-01-20",
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.address">address</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.line">line</a>" : [
+              "123 Any St"
+            ],
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.city">city</a>" : "Anytown",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.postalCode">postalCode</a>" : "12345",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Address#Address.country">country</a>" : "US"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact">contact</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.contact.telecom">telecom</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "phone",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "777-444-2222",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.use">use</a>" : "home"
+              },
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "email",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "anyname.anyperson@example.com"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication">communication</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/patient.html#Patient.communication.language">language</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "urn:ietf:bcp:47",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "en-US",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "English (Region=United States)"
+                }
+              ],
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "English"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html",
+      "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/practitioner.html">resourceType</a>" : "Practitioner",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.id">id</a>" : "PhenopacketPractitionerExample01",
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;This is an incomplete example that used as a placeholder for a curated Practitioner example&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.use">use</a>" : "temp",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "03"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/practitioner.html#Practitioner.name">name</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.text">text</a>" : "John T. Practitioner"
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html",
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/observation.html">resourceType</a>" : "Observation",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "id.phenotypicfeature.4",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Observation&lt;/b&gt;&lt;a name=\&quot;id.phenotypicfeature.4\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Observation &amp;quot;id.phenotypicfeature.4&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-PhenotypicFeature.html\&quot;&gt;Phenotypic Feature&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Low-output congestive heart failure &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (hpo#HP:0009805)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_example-patient\&quot;&gt;See above (Patient/example-patient)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2018-03-06&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: Present &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#LA9633-4)&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Components&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Code&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Value[x]&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Severity &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (hpo#HP:0012824)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Severe &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (hpo#HP:0012828)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "HP:0009805",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Low-output congestive heart failure"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example-patient"
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2018-03-06",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueCodeableConcept</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "LA9633-4",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Present"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component">component</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.code">code</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "HP:0012824",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Severity"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/observation.html#Observation.component.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "HP:0012828",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Severe"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Observation-id.measurement.1.html",
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/observation.html">resourceType</a>" : "Observation",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "id.measurement.1",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/Measurement"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Observation&lt;/b&gt;&lt;a name=\&quot;id.measurement.1\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Observation &amp;quot;id.measurement.1&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-Measurement.html\&quot;&gt;Measurement&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Platelets [#/volume] in Blood &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#26515-7)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;effective&lt;/b&gt;: 2018-03-06&lt;/p&gt;&lt;p&gt;&lt;b&gt;value&lt;/b&gt;: 20 10^12/L&lt;/p&gt;&lt;h3&gt;ReferenceRanges&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Low&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;High&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;150000 10^12/L&lt;/td&gt;&lt;td&gt;450000 10^12/L&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "26515-7",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Platelets [#/volume] in Blood"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.effective[x]">effectiveDateTime</a>" : "2018-03-06",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.value[x]">valueQuantity</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 20,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.unit">unit</a>" : "10^12/L",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org"
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange">referenceRange</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange.low">low</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 150000,
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "10^12/L",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org"
+            },
+            "<a href="http://hl7.org/fhir/R4/observation.html#Observation.referenceRange.high">high</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.value">value</a>" : 450000,
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.unit">unit</a>" : "10^12/L",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#SimpleQuantity#Quantity.system">system</a>" : "http://unitsofmeasure.org"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Condition-id.disease.3.html",
+      "<a href="http://hl7.org/fhir/R4/condition.html#Condition">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/condition.html">resourceType</a>" : "Condition",
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.id">id</a>" : "id.disease.3",
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/Disease"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Condition&lt;/b&gt;&lt;a name=\&quot;id.disease.3\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Condition &amp;quot;id.disease.3&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-Disease.html\&quot;&gt;Disease profile&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;clinicalStatus&lt;/b&gt;: Active &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/5.0.0/CodeSystem-condition-clinical.html\&quot;&gt;Condition Clinical Status Codes&lt;/a&gt;#active)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: congestive heart failure &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (mondo#MONDO_0005009)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_example-patient\&quot;&gt;See above (Patient/example-patient)&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Stages&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Summary&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Type&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;moderate heart failure &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (efo#EFO:0003148)&lt;/span&gt;&lt;/td&gt;&lt;td&gt;Clinical staging &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#260998006)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.clinicalStatus">clinicalStatus</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/condition-clinical",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "active",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Active"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/monarch-initiative/mondo",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "MONDO_0005009",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "congestive heart failure"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example-patient"
+        },
+        "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage">stage</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage.summary">summary</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/EBISPOT/efo",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "EFO:0003148",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "moderate heart failure"
+                }
+              ]
+            },
+            "<a href="http://hl7.org/fhir/R4/condition.html#Condition.stage.type">type</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "260998006",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Clinical staging"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html",
+      "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/specimen.html">resourceType</a>" : "Specimen",
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.id">id</a>" : "biosample.specimen.id.1",
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/Biosample"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "extensions",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Specimen&lt;/b&gt;&lt;a name=\&quot;biosample.specimen.id.1\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Specimen &amp;quot;biosample.specimen.id.1&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-Biosample.html\&quot;&gt;Biosample&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;Histological Diagnosis&lt;/b&gt;: Infiltrating Urothelial Carcinoma &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C39853)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tumor Progression&lt;/b&gt;: Primary Malignant Neoplasm &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C84509)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Tumor Grade&lt;/b&gt;: Grade 2 Lesion &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C36136)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Pathological Tumor Stage&lt;/b&gt;: Stage II &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C28054)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt; Pathological TNM Finding&lt;/b&gt;: M0 Stage Finding &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C48699)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;Material Sample&lt;/b&gt;: abnormal sample &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (efo#EFO_0009655)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: arbitrary identifier&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: primary tumor sample &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (efo#EFO_0010942)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;#Patient_example-patient\&quot;&gt;See above (Patient/example-patient)&lt;/a&gt;&lt;/p&gt;&lt;h3&gt;Collections&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Collected[x]&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;BodySite&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;2021-01-20&lt;/td&gt;&lt;td&gt;wall of urinary bladder &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (uberon#UBERON_0001256)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h3&gt;Processings&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Procedure&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;Radical Cystoprostatectomy &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (ncit.owl#NCIT_C5189)&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.extension">extension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/HistologicalDiagnosis",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C39853",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Infiltrating Urothelial Carcinoma"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/TumorProgression",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C84509",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Primary Malignant Neoplasm"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/TumorGrade",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C36136",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Grade 2 Lesion"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalStage",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C28054",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Stage II"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalTnmFinding",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C48699",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "M0 Stage Finding"
+                }
+              ]
+            }
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/MaterialSample",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/EBISPOT/efo",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "EFO_0009655",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "abnormal sample"
+                }
+              ]
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "arbitrary identifier"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.type">type</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/EBISPOT/efo",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "EFO_0010942",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "primary tumor sample"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/example-patient"
+        },
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection">collection</a>" : {
+          "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.collected[x]">collectedDateTime</a>" : "2021-01-20",
+          "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.collection.bodySite">bodySite</a>" : {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://github.com/obophenotype/uberon",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "UBERON_0001256",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "wall of urinary bladder"
+              }
+            ]
+          }
+        },
+        "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.processing">processing</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/specimen.html#Specimen.processing.procedure">procedure</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://purl.obolibrary.org/obo/ncit.owl",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "NCIT_C5189",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Radical Cystoprostatectomy"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html",
+      "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html">resourceType</a>" : "DiagnosticReport",
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.id">id</a>" : "PhenopacketsGenomicInterpretationExample02",
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: DiagnosticReport&lt;/b&gt;&lt;a name=\&quot;PhenopacketsGenomicInterpretationExample02\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource DiagnosticReport &amp;quot;PhenopacketsGenomicInterpretationExample02&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-phenopackets-genomic-interpretation.html\&quot;&gt;Phenopackets Genomic Interpretation&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;identifier&lt;/b&gt;: id: 02&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: unknown&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Genetics &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/5.0.0/CodeSystem-v2-0074.html\&quot;&gt;diagnosticServiceSectionId&lt;/a&gt;#GE)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: some loinc code &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (loinc#123)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;subject&lt;/b&gt;: &lt;a href=\&quot;Patient-phenopacketPatientExample01.html\&quot;&gt;Patient/phenopacketPatientExample01&lt;/a&gt; &amp;quot; DOE&amp;quot;&lt;/p&gt;&lt;p&gt;&lt;b&gt;specimen&lt;/b&gt;: &lt;a href=\&quot;Specimen-phenopacketSpecimenExample01.html\&quot;&gt;Specimen/phenopacketSpecimenExample01&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;result&lt;/b&gt;: &lt;a href=\&quot;#Observation_PhenopacketsVariantExample01\&quot;&gt;See above (Observation/PhenopacketsVariantExample01)&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;conclusion&lt;/b&gt;: A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported.&lt;/p&gt;&lt;p&gt;&lt;b&gt;conclusionCode&lt;/b&gt;: Obesity due to centrosomal protein 19 deficiency (disorder) &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://browser.ihtsdotools.org/\&quot;&gt;SNOMED CT&lt;/a&gt;#783549006)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.modifierExtension">modifierExtension</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.url">url</a>" : "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status",
+            "<a href="http://hl7.org/fhir/R4/extensibility.html#Extension#Extension.value[x]">valueCodeableConcept</a>" : {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+                {
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "0",
+                  "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "UNKNOWN_STATUS"
+                }
+              ]
+            }
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.identifier">identifier</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Identifier#Identifier.value">value</a>" : "02"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.status">status</a>" : "unknown",
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.category">category</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v2-0074",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "GE",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Genetics"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "123",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "some loinc code"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.subject">subject</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/phenopacketPatientExample01"
+        },
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.specimen">specimen</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Specimen/phenopacketSpecimenExample01"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.result">result</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Observation/PhenopacketsVariantExample01"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.conclusion">conclusion</a>" : "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported.",
+        "<a href="http://hl7.org/fhir/R4/diagnosticreport.html#DiagnosticReport.conclusionCode">conclusionCode</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "783549006",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Obesity due to centrosomal protein 19 deficiency (disorder)"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/bundle.html#Bundle.entry.fullUrl">fullUrl</a>" : "http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html",
+      "<a href="http://hl7.org/fhir/R4/observation.html#Observation">resource</a>" : {
+        "<a href="http://hl7.org/fhir/R4/observation.html">resourceType</a>" : "Observation",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.id">id</a>" : "PhenopacketsVariantExample01",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.meta">meta</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+            "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant"
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.text">text</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative: Observation&lt;/b&gt;&lt;a name=\&quot;PhenopacketsVariantExample01\&quot;&gt; &lt;/a&gt;&lt;/p&gt;&lt;div style=\&quot;display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\&quot;&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Resource Observation &amp;quot;PhenopacketsVariantExample01&amp;quot; &lt;/p&gt;&lt;p style=\&quot;margin-bottom: 0px\&quot;&gt;Profile: &lt;a href=\&quot;StructureDefinition-phenopackets-variant.html\&quot;&gt;Phenopackets Variant&lt;/a&gt;&lt;/p&gt;&lt;/div&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: final&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: Laboratory &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html\&quot;&gt;Observation Category Codes&lt;/a&gt;#laboratory)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;code&lt;/b&gt;: Genetic variant assessment &lt;span style=\&quot;background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\&quot;&gt; (&lt;a href=\&quot;https://loinc.org/\&quot;&gt;LOINC&lt;/a&gt;#69548-6)&lt;/span&gt;&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+        },
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.status">status</a>" : "final",
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.category">category</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/observation-category",
+                "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "laboratory"
+              }
+            ]
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/observation.html#Observation.code">code</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://loinc.org",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "69548-6"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}</code></pre>
+
+
+  <!-- insert notes if present -->
+  
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/">Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</a>.  Package hl7.fhir.us.ga4gh.phenopacket#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Fri, Jan 27, 2023 18:58+0000">2023-01-27</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+<!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

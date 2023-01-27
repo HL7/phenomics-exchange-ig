@@ -1,0 +1,34 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "service-request-supporting-info",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: SearchParameter</b><a name=\"service-request-supporting-info\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource SearchParameter &quot;service-request-supporting-info&quot; </p></div><p><b>url</b>: <code>http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: ServiceRequestSupportingInfo</p><p><b>status</b>: active</p><p><b>date</b>: 2023-01-27 18:53:33+0000</p><p><b>publisher</b>: Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</p><p><b>contact</b>: Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream: <a href=\"https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/\">https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/</a></p><p><b>description</b>: Search ServiceRequest by supporting resource parameters</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#US)</span></p><p><b>code</b>: supporting-info</p><p><b>base</b>: ServiceRequest</p><p><b>type</b>: reference</p><p><b>expression</b>: ServiceRequest.supportingInfo</p><p><b>target</b>: Bundle</p><p><b>comparator</b>: eq</p></div>"
+  },
+  "url" : "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info",
+  "version" : "0.1.0",
+  "name" : "ServiceRequestSupportingInfo",
+  "status" : "active",
+  "date" : "2023-01-27T18:53:33+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Search ServiceRequest by supporting resource parameters",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "code" : "supporting-info",
+  "base" : ["ServiceRequest"],
+  "type" : "reference",
+  "expression" : "ServiceRequest.supportingInfo",
+  "target" : ["Bundle"],
+  "comparator" : ["eq"]
+}

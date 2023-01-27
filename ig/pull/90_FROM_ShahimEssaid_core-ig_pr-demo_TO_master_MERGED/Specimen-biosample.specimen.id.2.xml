@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Specimen xmlns="http://hl7.org/fhir">
+  <id value="biosample.specimen.id.2"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Biosample"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Specimen</b><a name="biosample.specimen.id.2"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Specimen &quot;biosample.specimen.id.2&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Biosample.html">Biosample</a></p></div><p><b>Material Sample</b>: abnormal sample <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (efo#EFO_0009655)</span></p><p><b>identifier</b>: id: arbitrary identifier</p><p><b>subject</b>: <a href="Patient-Proband1.html">Patient/Proband1</a> &quot; ANYPERSON&quot;</p><h3>Collections</h3><table class="grid"><tr><td>-</td><td><b>Collected[x]</b></td><td><b>BodySite</b></td></tr><tr><td>*</td><td>2021-01-20</td><td>gastrocnemius <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (uberon#UBERON_0001388)</span></td></tr></table><h3>Processings</h3><table class="grid"><tr><td>-</td><td><b>Procedure</b></td></tr><tr><td>*</td><td>Muscle Biopsy <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (ncit.owl#NCIT_C51895)</span></td></tr></table></div>
+  </text>
+  <extension url="https://github.com/phenopackets/core-ig/StructureDefinition/MaterialSample">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://github.com/EBISPOT/efo"/>
+        <code value="EFO_0009655"/>
+        <display value="abnormal sample"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <identifier>
+    <value value="arbitrary identifier"/>
+  </identifier>
+  <subject>
+    <reference value="Patient/Proband1"/>
+  </subject>
+  <collection>
+    <collectedDateTime value="2021-01-20"/>
+    <bodySite>
+      <coding>
+        <system value="http://github.com/obophenotype/uberon"/>
+        <code value="UBERON_0001388"/>
+        <display value="gastrocnemius"/>
+      </coding>
+    </bodySite>
+  </collection>
+  <processing>
+    <procedure>
+      <coding>
+        <system value="http://purl.obolibrary.org/obo/ncit.owl"/>
+        <code value="NCIT_C51895"/>
+        <display value="Muscle Biopsy"/>
+      </coding>
+    </procedure>
+  </processing>
+</Specimen>

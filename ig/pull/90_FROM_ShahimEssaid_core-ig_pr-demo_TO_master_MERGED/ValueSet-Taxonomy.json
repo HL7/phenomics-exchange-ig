@@ -1,0 +1,35 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "Taxonomy",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include all codes defined in <code>http://purl.obolibrary.org/obo/ncbitaxon.owl</code></li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/Taxonomy",
+  "version" : "0.1.0",
+  "name" : "Taxonomy",
+  "title" : "Taxonomy",
+  "status" : "active",
+  "date" : "2020-02-14T16:13:10+10:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Taxonomic identifiers of an organism.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://purl.obolibrary.org/obo/ncbitaxon.owl"
+    }]
+  }
+}

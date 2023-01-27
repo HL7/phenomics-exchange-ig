@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="acmgPathogenicityClassification-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>0</td><td>NOT_PROVIDED</td></tr><tr><td>1</td><td>BENIGN</td></tr><tr><td>2</td><td>LIKELY_BENIGN</td></tr><tr><td>3</td><td>UNCERTAIN_SIGNIFICANCE</td></tr><tr><td>4</td><td>LIKELY_PATHOGENIC</td></tr><tr><td>5</td><td>PATHOGENIC</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/acmgPathogenicityClassification-vs"/>
+  <version value="0.1.0"/>
+  <name value="AcmgPathogenicityClassificationVS"/>
+  <title value="ACMG Pathogenicity Classification Value Set"/>
+  <status value="active"/>
+  <date value="2023-01-27T18:58:56+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Describes the ACMG five-tier pathogenicity classification system (Richards et al., 2015, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"/>
+  <compose>
+    <include>
+      <system value="http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification"/>
+      <concept>
+        <code value="0"/>
+        <display value="NOT_PROVIDED"/>
+      </concept>
+      <concept>
+        <code value="1"/>
+        <display value="BENIGN"/>
+      </concept>
+      <concept>
+        <code value="2"/>
+        <display value="LIKELY_BENIGN"/>
+      </concept>
+      <concept>
+        <code value="3"/>
+        <display value="UNCERTAIN_SIGNIFICANCE"/>
+      </concept>
+      <concept>
+        <code value="4"/>
+        <display value="LIKELY_PATHOGENIC"/>
+      </concept>
+      <concept>
+        <code value="5"/>
+        <display value="PATHOGENIC"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

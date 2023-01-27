@@ -1,0 +1,408 @@
+[
+  {
+    "id" : "service-request-supporting-info",
+    "type" : "SearchParameter",
+    "url" : "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info",
+    "version" : "0.1.0",
+    "name" : "ServiceRequestSupportingInfo"
+  },
+  {
+    "id" : "PhenotypicModifierValueSet",
+    "type" : "ValueSet",
+    "url" : "http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier",
+    "version" : "0.1.0",
+    "name" : "PhenotypicModifierValueSet"
+  },
+  {
+    "id" : "HtsFormat",
+    "type" : "CodeSystem",
+    "url" : "https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat",
+    "version" : "0.1.0",
+    "name" : "HtsFormat"
+  },
+  {
+    "id" : "KaryotypicSex",
+    "type" : "CodeSystem",
+    "url" : "https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex",
+    "version" : "0.1.0",
+    "name" : "KaryotypicSexCS"
+  },
+  {
+    "id" : "categories",
+    "type" : "CodeSystem",
+    "url" : "https://github.com/phenopackets/core-ig/CodeSystem/categories",
+    "version" : "0.1.0",
+    "name" : "Categories"
+  },
+  {
+    "id" : "phenotypicFeatureStatusCS",
+    "type" : "CodeSystem",
+    "url" : "https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS",
+    "version" : "0.1.0",
+    "name" : "PhenotypicFeatureStatusCS"
+  },
+  {
+    "id" : "hl7.fhir.us.ga4gh.phenopacket",
+    "type" : "ImplementationGuide",
+    "url" : "https://github.com/phenopackets/core-ig/ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket",
+    "version" : "0.1.0",
+    "name" : "GA4GHPhenopacketIG"
+  },
+  {
+    "id" : "Biosample",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Biosample",
+    "version" : "0.1.0",
+    "name" : "Biosample"
+  },
+  {
+    "id" : "CodedOnset",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/CodedOnset",
+    "version" : "0.1.0",
+    "name" : "CodedOnset"
+  },
+  {
+    "id" : "DiagnosticMarker",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/DiagnosticMarker",
+    "version" : "0.1.0",
+    "name" : "DiagnosticMarker"
+  },
+  {
+    "id" : "Disease",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Disease",
+    "version" : "0.1.0",
+    "name" : "Disease"
+  },
+  {
+    "id" : "HistologicalDiagnosis",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/HistologicalDiagnosis",
+    "version" : "0.1.0",
+    "name" : "HistologicalDiagnosis"
+  },
+  {
+    "id" : "Individual",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Individual",
+    "version" : "0.1.0",
+    "name" : "Individual"
+  },
+  {
+    "id" : "KaryotypicSex",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/KaryotypicSex",
+    "version" : "0.1.0",
+    "name" : "KaryotypicSex"
+  },
+  {
+    "id" : "MaterialSample",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/MaterialSample",
+    "version" : "0.1.0",
+    "name" : "MaterialSample"
+  },
+  {
+    "id" : "Measurement",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Measurement",
+    "version" : "0.1.0",
+    "name" : "Measurement"
+  },
+  {
+    "id" : "MeasurementExt",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/MeasurementExt",
+    "version" : "0.1.0",
+    "name" : "MeasurementExt"
+  },
+  {
+    "id" : "Onset",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Onset",
+    "version" : "0.1.0",
+    "name" : "Onset"
+  },
+  {
+    "id" : "PathologicalStage",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalStage",
+    "version" : "0.1.0",
+    "name" : "PathologicalStage"
+  },
+  {
+    "id" : "PathologicalTnmFinding",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/PathologicalTnmFinding",
+    "version" : "0.1.0",
+    "name" : "PathologicalTnmFinding"
+  },
+  {
+    "id" : "Phenopacket",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket",
+    "version" : "0.1.0",
+    "name" : "Phenopacket"
+  },
+  {
+    "id" : "PhenotypicFeature",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature",
+    "version" : "0.1.0",
+    "name" : "PhenotypicFeature"
+  },
+  {
+    "id" : "PhenotypicFeatureExt",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeatureExt",
+    "version" : "0.1.0",
+    "name" : "PhenotypicFeatureExt"
+  },
+  {
+    "id" : "Taxonomy",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Taxonomy",
+    "version" : "0.1.0",
+    "name" : "Taxonomy"
+  },
+  {
+    "id" : "Treatment",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/Treatment",
+    "version" : "0.1.0",
+    "name" : "Treatment"
+  },
+  {
+    "id" : "TumorGrade",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/TumorGrade",
+    "version" : "0.1.0",
+    "name" : "TumorGrade"
+  },
+  {
+    "id" : "TumorProgression",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/TumorProgression",
+    "version" : "0.1.0",
+    "name" : "TumorProgression"
+  },
+  {
+    "id" : "acmg-pathogenicity-classification",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/acmg-pathogenicity-classification",
+    "version" : "0.1.0",
+    "name" : "AcmgPathogenicityClassification"
+  },
+  {
+    "id" : "additional-variant-identifier",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/additional-variant-identifier",
+    "version" : "0.1.0",
+    "name" : "AdditionalVariantIdentifier"
+  },
+  {
+    "id" : "filter-status",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/filter-status",
+    "version" : "0.1.0",
+    "name" : "FilterStatus"
+  },
+  {
+    "id" : "interpretation-status",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status",
+    "version" : "0.1.0",
+    "name" : "InterpretationStatus"
+  },
+  {
+    "id" : "molecule-context",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/molecule-context",
+    "version" : "0.1.0",
+    "name" : "MoleculeContext"
+  },
+  {
+    "id" : "phenopackets-genomic-interpretation",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation",
+    "version" : "0.1.0",
+    "name" : "PhenopacketsGenomicInterpretation"
+  },
+  {
+    "id" : "phenopackets-variant",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant",
+    "version" : "0.1.0",
+    "name" : "PhenopacketsVariant"
+  },
+  {
+    "id" : "phred-quality-score",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/phred-quality-score",
+    "version" : "0.1.0",
+    "name" : "PhredQualityScore"
+  },
+  {
+    "id" : "related-concept-id",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/related-concept-id",
+    "version" : "0.1.0",
+    "name" : "RelatedConceptID"
+  },
+  {
+    "id" : "therapeutic-actionability",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/therapeutic-actionability",
+    "version" : "0.1.0",
+    "name" : "TherapeuticActionability"
+  },
+  {
+    "id" : "vcf-info",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/vcf-info",
+    "version" : "0.1.0",
+    "name" : "VCFInfo"
+  },
+  {
+    "id" : "vrs-object",
+    "type" : "StructureDefinition",
+    "url" : "https://github.com/phenopackets/core-ig/StructureDefinition/vrs-object",
+    "version" : "0.1.0",
+    "name" : "VrsObject"
+  },
+  {
+    "id" : "DiagnosticMarker",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/DiagnosticMarker",
+    "version" : "0.1.0",
+    "name" : "DiagnosticMarker"
+  },
+  {
+    "id" : "HistologicalDiagnosis",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis",
+    "version" : "0.1.0",
+    "name" : "HistologicalDiagnosis"
+  },
+  {
+    "id" : "HpoSeverity",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/HpoSeverity",
+    "version" : "0.1.0",
+    "name" : "HpoSeverityVS"
+  },
+  {
+    "id" : "KaryotypicSex",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex",
+    "version" : "0.1.0",
+    "name" : "KaryotypicSex"
+  },
+  {
+    "id" : "Onset",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/Onset",
+    "version" : "0.1.0",
+    "name" : "Onset"
+  },
+  {
+    "id" : "Taxonomy",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/Taxonomy",
+    "version" : "0.1.0",
+    "name" : "Taxonomy"
+  },
+  {
+    "id" : "TumorGrade",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorGrade",
+    "version" : "0.1.0",
+    "name" : "TumorGrade"
+  },
+  {
+    "id" : "TumorProgression",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorProgression",
+    "version" : "0.1.0",
+    "name" : "TumorProgression"
+  },
+  {
+    "id" : "TumorStage",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorStage",
+    "version" : "0.1.0",
+    "name" : "TumorStage"
+  },
+  {
+    "id" : "acmgPathogenicityClassification-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/acmgPathogenicityClassification-vs",
+    "version" : "0.1.0",
+    "name" : "AcmgPathogenicityClassificationVS"
+  },
+  {
+    "id" : "geno-ontology-allelic-state-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/geno-ontology-allelic-state-vs",
+    "version" : "0.1.0",
+    "name" : "GenoOntologyAllelicStateVS"
+  },
+  {
+    "id" : "interpretationStatus-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/interpretationStatus-vs",
+    "version" : "0.1.0",
+    "name" : "InterpretationStatusVS"
+  },
+  {
+    "id" : "moleculeContext-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/moleculeContext-vs",
+    "version" : "0.1.0",
+    "name" : "MoleculeContextVS"
+  },
+  {
+    "id" : "observation-categories",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/observation-categories",
+    "version" : "0.1.0",
+    "name" : "ObservationCategories"
+  },
+  {
+    "id" : "phenotypic-abnormality",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality",
+    "version" : "0.1.0",
+    "name" : "PhenotypicAbnormalityValueSet"
+  },
+  {
+    "id" : "phenotypic-component",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component",
+    "version" : "0.1.0",
+    "name" : "PhenotypicComponentValueSet"
+  },
+  {
+    "id" : "phenotypicFeatureVS",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypicFeatureVS",
+    "version" : "0.1.0",
+    "name" : "PhenotypicFeatureStatusValueSet"
+  },
+  {
+    "id" : "sequence-ontology-structural-variant-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/sequence-ontology-structural-variant-vs",
+    "version" : "0.1.0",
+    "name" : "SequenceOntologyStructuralVariantVS"
+  },
+  {
+    "id" : "therapeuticActionability-vs",
+    "type" : "ValueSet",
+    "url" : "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs",
+    "version" : "0.1.0",
+    "name" : "TherapeuticActionabilityVS"
+  }
+]

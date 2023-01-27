@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="id.disease.intellectualDisability"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Disease"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="id.disease.intellectualDisability"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition &quot;id.disease.intellectualDisability&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Disease.html">Disease profile</a></p></div><p><b>code</b>: Intellectual disability <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (mondo#MONDO_0001071)</span></p><p><b>subject</b>: <a href="Patient-Proband1.html">Patient/Proband1</a> &quot; ANYPERSON&quot;</p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://github.com/monarch-initiative/mondo"/>
+      <code value="MONDO_0001071"/>
+      <display value="Intellectual disability"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/Proband1"/>
+  </subject>
+</Condition>

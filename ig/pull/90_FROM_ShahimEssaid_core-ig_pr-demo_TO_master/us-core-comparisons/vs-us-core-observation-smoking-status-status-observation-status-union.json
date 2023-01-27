@@ -1,0 +1,67 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "e7f2b6c9-bc51-4659-b7c7-b445be508429-86",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/e7f2b6c9-bc51-4659-b7c7-b445be508429-86",
+  "name" : "UnionUSCoreObservationSmokingStatusStatusAndObservationStatus",
+  "title" : "Union of US Core Status for Smoking Status Observation And ObservationStatus",
+  "status" : "active",
+  "date" : "2023-01-27T18:53:58+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "final"
+      },
+      {
+        "code" : "entered-in-error"
+      }]
+    }]
+  },
+  "expansion" : {
+    "contains" : [{
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "final",
+      "display" : "Final"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "entered-in-error",
+      "display" : "Entered in Error"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "registered",
+      "display" : "Registered"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "preliminary",
+      "display" : "Preliminary"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "amended",
+      "display" : "Amended"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "corrected",
+      "display" : "Corrected"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "cancelled",
+      "display" : "Cancelled"
+    },
+    {
+      "system" : "http://hl7.org/fhir/observation-status",
+      "code" : "unknown",
+      "display" : "Unknown"
+    }]
+  }
+}

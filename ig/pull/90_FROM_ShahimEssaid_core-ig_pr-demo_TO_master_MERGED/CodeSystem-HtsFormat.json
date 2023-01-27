@@ -1,0 +1,60 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "HtsFormat",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">UNKNOWN<a name=\"HtsFormat-UNKNOWN\"> </a></td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">SAM<a name=\"HtsFormat-SAM\"> </a></td><td>SAM</td></tr><tr><td style=\"white-space:nowrap\">BAM<a name=\"HtsFormat-BAM\"> </a></td><td>BAM</td></tr><tr><td style=\"white-space:nowrap\">CRAM<a name=\"HtsFormat-CRAM\"> </a></td><td>CRAM</td></tr><tr><td style=\"white-space:nowrap\">VCF<a name=\"HtsFormat-VCF\"> </a></td><td>VCF</td></tr><tr><td style=\"white-space:nowrap\">BCF<a name=\"HtsFormat-BCF\"> </a></td><td>BCF</td></tr><tr><td style=\"white-space:nowrap\">GVCF<a name=\"HtsFormat-GVCF\"> </a></td><td>GVCF</td></tr></table></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat",
+  "version" : "0.1.0",
+  "name" : "HtsFormat",
+  "title" : "HTS Format",
+  "status" : "active",
+  "date" : "2020-02-14T16:13:10+10:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "An enumeration used to represent different high-throughput sequencing file formats.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "UNKNOWN",
+    "display" : "Unknown"
+  },
+  {
+    "code" : "SAM",
+    "display" : "SAM"
+  },
+  {
+    "code" : "BAM",
+    "display" : "BAM"
+  },
+  {
+    "code" : "CRAM",
+    "display" : "CRAM"
+  },
+  {
+    "code" : "VCF",
+    "display" : "VCF"
+  },
+  {
+    "code" : "BCF",
+    "display" : "BCF"
+  },
+  {
+    "code" : "GVCF",
+    "display" : "GVCF"
+  }]
+}

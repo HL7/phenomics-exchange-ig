@@ -1,0 +1,17 @@
+{
+  "resourceType" : "Patient",
+  "id" : "phenopacketPatientExample01",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</p><hr/></div>"
+  },
+  "identifier" : [{
+    "use" : "temp",
+    "value" : "04"
+  }],
+  "name" : [{
+    "family" : "Doe",
+    "given" : ["John"]
+  }],
+  "gender" : "unknown"
+}

@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="8905d533-3b34-40ff-8a70-a98cdb65a5c3"/>
+  <meta>
+    <lastUpdated value="2023-01-27T18:58:56.931+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex"/>
+    <resource>
+      <ValueSet>
+        <id value="KaryotypicSex"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 11 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-KaryotypicSex.html">Karyotypic sex code system v0.1.0 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-UNKNOWN-KARYOTYPE"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-UNKNOWN_KARYOTYPE">UNKNOWN_KARYOTYPE</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>UNKNOWN_KARYOTYPE</td>
+                <td>
+                  <div>
+                    <p>Untyped or inconclusive karyotyping</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XX"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XX">XX</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XX karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with two X chromosomes</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XY"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XY">XY</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XY karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with one X chromosome and one Y chromosome</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XO"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XO">XO</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XO karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with one X chromosome</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XXY"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XXY">XXY</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XXY karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with two X chromosomes and one Y chromosome</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XXX"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XXX">XXX</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XXX karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with three X chromosomes</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XXYY"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XXYY">XXYY</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XXYY karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with two X chromosomes and two Y chromosomes</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XXXY"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XXXY">XXXY</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XXXY karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with three X chromosomes and one Y chromosome</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XXXX"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XXXX">XXXX</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XXXX karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with four X chromosomes</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-XYY"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-XYY">XYY</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>XYY karyotypic sex</td>
+                <td>
+                  <div>
+                    <p>Karyotype with one X chromosome and two Y chromosomes</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-KaryotypicSex-OTHER-KARYOTYPE"> </a>  
+                  <a href="CodeSystem-KaryotypicSex.html#KaryotypicSex-OTHER_KARYOTYPE">OTHER_KARYOTYPE</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</td>
+                <td>Other karyotype</td>
+                <td>
+                  <div>
+                    <p>Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex"/>
+        <version value="0.1.0"/>
+        <name value="KaryotypicSex"/>
+        <title value="Karyotypic sex value set"/>
+        <status value="active"/>
+        <date value="2021-05-28T17:06:00-04:00"/>
+        <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+        <contact>
+          <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+          </telecom>
+        </contact>
+        <description value="The karyotypic (chromosomal) sex of an individual"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+        <expansion>
+          <identifier value="urn:uuid:ab0f13fa-a507-41ff-9b1c-4ca30d847e58"/>
+          <timestamp value="2023-01-27T19:00:45+00:00"/>
+          <total value="11"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="UNKNOWN_KARYOTYPE"/>
+            <display value="UNKNOWN_KARYOTYPE"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XX"/>
+            <display value="XX karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XY"/>
+            <display value="XY karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XO"/>
+            <display value="XO karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XXY"/>
+            <display value="XXY karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XXX"/>
+            <display value="XXX karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XXYY"/>
+            <display value="XXYY karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XXXY"/>
+            <display value="XXXY karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XXXX"/>
+            <display value="XXXX karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="XYY"/>
+            <display value="XYY karyotypic sex"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+            <code value="OTHER_KARYOTYPE"/>
+            <display value="Other karyotype"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://github.com/phenopackets/core-ig/ValueSet/observation-categories"/>
+    <resource>
+      <ValueSet>
+        <id value="observation-categories"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 10 concepts</p>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>
+                  <a href="CodeSystem-categories.html">Categories v0.1.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html">Observation Category Codes v0.1.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://hl7.org/fhir/R4/valueset-observation-category.html">Observation Category Codes v4.0.1 (ValueSet)</a>
+                </li>
+              </ul>
+            </div>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-social-history"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-social-history">social-history</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Social History</td>
+                <td>
+                  <div>
+                    <p>Social History Observations define the patient's occupational, personal (e.g., lifestyle), social, familial, and environmental history and health risk factors that may impact the patient's health.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-vital-signs"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-vital-signs">vital-signs</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Vital Signs</td>
+                <td>
+                  <div>
+                    <p>Clinical observations measure the body's basic functions such as blood pressure, heart rate, respiratory rate, height, weight, body mass index, head circumference, pulse oximetry, temperature, and body surface area.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-imaging"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-imaging">imaging</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Imaging</td>
+                <td>
+                  <div>
+                    <p>Observations generated by imaging. The scope includes observations regarding plain x-ray, ultrasound, CT, MRI, angiography, echocardiography, and nuclear medicine.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-laboratory"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-laboratory">laboratory</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Laboratory</td>
+                <td>
+                  <div>
+                    <p>The results of observations generated by laboratories.  Laboratory results are typically generated by laboratories providing analytic services in areas such as chemistry, hematology, serology, histology, cytology, anatomic pathology (including digital pathology), microbiology, and/or virology. These observations are based on analysis of specimens obtained from the patient and submitted to the laboratory.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-procedure"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-procedure">procedure</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Procedure</td>
+                <td>
+                  <div>
+                    <p>Observations generated by other procedures.  This category includes observations resulting from interventional and non-interventional procedures excluding laboratory and imaging (e.g., cardiology catheterization, endoscopy, electrodiagnostics, etc.).  Procedure results are typically generated by a clinician to provide more granular information about component observations made during a procedure.  An example would be when a gastroenterologist reports the size of a polyp observed during a colonoscopy.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-survey"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-survey">survey</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Survey</td>
+                <td>
+                  <div>
+                    <p>Assessment tool/survey instrument observations (e.g., Apgar Scores, Montreal Cognitive Assessment (MoCA)).</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-exam"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-exam">exam</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Exam</td>
+                <td>
+                  <div>
+                    <p>Observations generated by physical exam findings including direct observations made by a clinician and use of simple instruments and the result of simple maneuvers performed directly on the patient's body.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-therapy"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-therapy">therapy</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Therapy</td>
+                <td>
+                  <div>
+                    <p>Observations generated by non-interventional treatment protocols (e.g. occupational, physical, radiation, nutritional and medication therapy)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-observation-category-activity"> </a>  
+                  <a href="http://terminology.hl7.org/5.0.0/CodeSystem-observation-category.html#observation-category-activity">activity</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/observation-category</td>
+                <td>Activity</td>
+                <td>
+                  <div>
+                    <p>Observations that measure or record any bodily activity that enhances or maintains physical fitness and overall health and wellness.  Not under direct supervision of practitioner such as a physical therapist. (e.g., laps swum, steps, sleep data)</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---github.com-phenopackets-core-ig-CodeSystem-categories-phenotype"> </a>  
+                  <a href="CodeSystem-categories.html#categories-phenotype">phenotype</a>
+                </td>
+                <td>https://github.com/phenopackets/core-ig/CodeSystem/categories</td>
+                <td>Phenotype</td>
+                <td>
+                  <div/>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://github.com/phenopackets/core-ig/ValueSet/observation-categories"/>
+        <version value="0.1.0"/>
+        <name value="ObservationCategories"/>
+        <title value="Observation categories"/>
+        <status value="draft"/>
+        <date value="2023-01-27T18:58:56+00:00"/>
+        <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+        <contact>
+          <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+          </telecom>
+        </contact>
+        <description value="ValueSet description here"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+        <expansion>
+          <identifier value="urn:uuid:c50d02e6-e931-41bc-b4d0-dbafa2b8e7f2"/>
+          <timestamp value="2023-01-27T19:00:59+00:00"/>
+          <total value="10"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7.org/fhir/ValueSet/observation-category|4.0.1"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/observation-category|0.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="https://github.com/phenopackets/core-ig/CodeSystem/categories|0.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="social-history"/>
+            <display value="Social History"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="vital-signs"/>
+            <display value="Vital Signs"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="imaging"/>
+            <display value="Imaging"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="laboratory"/>
+            <display value="Laboratory"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="procedure"/>
+            <display value="Procedure"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="survey"/>
+            <display value="Survey"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="exam"/>
+            <display value="Exam"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="therapy"/>
+            <display value="Therapy"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+            <code value="activity"/>
+            <display value="Activity"/>
+          </contains>
+          <contains>
+            <system value="https://github.com/phenopackets/core-ig/CodeSystem/categories"/>
+            <code value="phenotype"/>
+            <display value="Phenotype"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="https://github.com/phenopackets/core-ig/ValueSet/phenotypicFeatureVS"/>
+    <resource>
+      <ValueSet>
+        <id value="phenotypicFeatureVS"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on Loinc v2.73</p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA9633-4"> </a>  
+                  <a href="https://loinc.org/LA9633-4/">LA9633-4</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Present</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---loinc.org-LA9634-2"> </a>  
+                  <a href="https://loinc.org/LA9634-2/">LA9634-2</a>
+                </td>
+                <td>http://loinc.org</td>
+                <td>Absent</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="https://github.com/phenopackets/core-ig/ValueSet/phenotypicFeatureVS"/>
+        <version value="0.1.0"/>
+        <name value="PhenotypicFeatureStatusValueSet"/>
+        <title value="Observation Codes for status of a PhenotypicFeature"/>
+        <status value="active"/>
+        <date value="2023-01-27T18:58:56+00:00"/>
+        <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+        <contact>
+          <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+          <telecom>
+            <system value="url"/>
+            <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+          </telecom>
+        </contact>
+        <description value="The LOINC codes for present if a feature is observed and absent if a feature was excluded."/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="US"/>
+          </coding>
+        </jurisdiction>
+        <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+        <expansion>
+          <identifier value="urn:uuid:60471ef9-1c80-4310-8bc2-e824a6f7d458"/>
+          <timestamp value="2023-01-27T19:01:02+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="limitedExpansion"/>
+            <valueBoolean value="true"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://loinc.org|2.73"/>
+          </parameter>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA9633-4"/>
+            <display value="Present"/>
+          </contains>
+          <contains>
+            <system value="http://loinc.org"/>
+            <code value="LA9634-2"/>
+            <display value="Absent"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>
