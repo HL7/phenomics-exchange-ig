@@ -1,0 +1,176 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/phenotypic-abnormality-invalid-meta-profile> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "phenotypic-abnormality-invalid-meta-profile"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"phenotypic-abnormality-invalid-meta-profile\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;phenotypic-abnormality-invalid-meta-profile&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: Intellectual disability <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0001249)</span></p><p><b>value</b>: true</p><blockquote><p><b>component</b></p><p><b>code</b>: Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012824)</span></p><p><b>value</b>: Mild <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012825)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012824)</span></p><p><b>value</b>: Mild <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012825)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Clinical modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012823)</span></p><p><b>value</b>: Worse in evening <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0410401)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Clinical modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012823)</span></p><p><b>value</b>: Refractory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0031375)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Clinical modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012823)</span></p><p><b>value</b>: Non existant modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:999999999)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003674)</span></p><p><b>value</b>: Congenital onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003577)</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Onset <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0003674)</span></p><p><b>value</b>: 0 Day<span style=\"background: LightGoldenRodYellow\"> (Details: http://some/unit/system code Day = 'Day')</span></p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: Severity <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (OTHER#OTHER)</span></p><p><b>value</b>: Mild <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (OTHER#OTHERTHING)</span></p></blockquote></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+       fhir:Coding.code [ fhir:value "HP:0001249" ];
+       fhir:Coding.display [ fhir:value "Intellectual disability" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Intellectual disability" ]
+  ]; # 
+  fhir:Observation.valueBoolean [ fhir:value "true"^^xsd:boolean]; # 
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012824" ];
+         fhir:Coding.display [ fhir:value "Severity" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012825" ];
+         fhir:Coding.display [ fhir:value "Mild" ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012824" ];
+         fhir:Coding.display [ fhir:value "Severity" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012825" ];
+         fhir:Coding.display [ fhir:value "Mild" ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012823" ];
+         fhir:Coding.display [ fhir:value "Clinical modifier" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0410401" ];
+         fhir:Coding.display [ fhir:value "Worse in evening" ]
+       ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012823" ];
+         fhir:Coding.display [ fhir:value "Clinical modifier" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0031375" ];
+         fhir:Coding.display [ fhir:value "Refractory" ]
+       ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012823" ];
+         fhir:Coding.display [ fhir:value "Clinical modifier" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:999999999" ];
+         fhir:Coding.display [ fhir:value "Non existant modifier" ]
+       ]
+     ]
+  ], [
+     fhir:index 5;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0003674" ];
+         fhir:Coding.display [ fhir:value "Onset" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0003577" ];
+         fhir:Coding.display [ fhir:value "Congenital onset" ]
+       ]
+     ]
+  ], [
+     fhir:index 6;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0003674" ];
+         fhir:Coding.display [ fhir:value "Onset" ]
+       ]
+     ];
+     fhir:Observation.component.valueQuantity [
+       fhir:Quantity.value [ fhir:value "0"^^xsd:decimal ];
+       fhir:Quantity.unit [ fhir:value "Day" ];
+       fhir:Quantity.system [ fhir:value "http://some/unit/system" ];
+       fhir:Quantity.code [ fhir:value "Day" ]
+     ]
+  ], [
+     fhir:index 7;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/OTHER" ];
+         fhir:Coding.code [ fhir:value "OTHER" ];
+         fhir:Coding.display [ fhir:value "Severity" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/OTHER" ];
+         fhir:Coding.code [ fhir:value "OTHERTHING" ];
+         fhir:Coding.display [ fhir:value "Mild" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/phenotypic-abnormality-invalid-meta-profile.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,59 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "4b4a14c3-37f6-4059-9966-7390676f2716-170",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/4b4a14c3-37f6-4059-9966-7390676f2716-170",
+  "name" : "UnionUSCoreConditionCodesAndCondition/Problem/DiagnosisCodes",
+  "title" : "Union of US Core Condition Codes And Condition/Problem/Diagnosis Codes",
+  "status" : "active",
+  "date" : "2023-01-27T18:48:02+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001"
+      }]
+    },
+    {
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "404684003"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "243796009"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "272379006"
+      }]
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-10-cm"
+    },
+    {
+      "system" : "http://hl7.org/fhir/sid/icd-9-cm"
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "concept" : [{
+        "code" : "160245001",
+        "display" : "No current problems or disability"
+      }]
+    }]
+  }
+}

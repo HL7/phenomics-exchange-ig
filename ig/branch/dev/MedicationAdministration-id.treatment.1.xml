@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationAdministration xmlns="http://hl7.org/fhir">
+  <id value="id.treatment.1"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Treatment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationAdministration</b><a name="id.treatment.1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationAdministration &quot;id.treatment.1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Treatment.html">Treatment</a></p></div><p><b>status</b>: completed</p><p><b>category</b>: Outpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-medicationrequest-category.html">MedicationRequest Category Codes</a>#outpatient)</span></p><p><b>medication</b>: losartan <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (#DrugCentral_1610)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2020-03-15 13:00:00+0000 --&gt; 2020-03-25 09:00:00+0000</p><h3>Dosages</h3><table class="grid"><tr><td>-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>Oral Route of Administration <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (ncit.owl#NCIT_C38288)</span></td><td>30 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></td></tr></table></div>
+  </text>
+  <status value="completed"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/medicationrequest-category"/>
+      <code value="outpatient"/>
+    </coding>
+  </category>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="http://drugcentral.org/"/>
+      <code value="DrugCentral_1610"/>
+      <display value="losartan"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient/example-patient"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2020-03-15T13:00:00Z"/>
+    <end value="2020-03-25T09:00:00Z"/>
+  </effectivePeriod>
+  <dosage>
+    <route>
+      <coding>
+        <system value="http://purl.obolibrary.org/obo/ncit.owl"/>
+        <code value="NCIT_C38288"/>
+        <display value="Oral Route of Administration"/>
+      </coding>
+    </route>
+    <dose>
+      <value value="30"/>
+      <unit value="mg"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg"/>
+    </dose>
+  </dosage>
+</MedicationAdministration>

@@ -1,0 +1,36 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "phenopacketPatientExample01"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</p><hr/></div>"
+  ]; # 
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "temp" ];
+     fhir:Identifier.value [ fhir:value "04" ]
+  ]; # 
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "Doe" ];
+     fhir:HumanName.given [
+       fhir:value "John";
+       fhir:index 0
+     ]
+  ]; # 
+  fhir:Patient.gender [ fhir:value "unknown"] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

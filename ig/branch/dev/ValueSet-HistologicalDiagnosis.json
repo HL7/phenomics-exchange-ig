@@ -1,0 +1,48 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "HistologicalDiagnosis",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  NCIT:C28101</li><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  NCIT:C2991</li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis",
+  "version" : "0.1.0",
+  "name" : "HistologicalDiagnosis",
+  "title" : "HistologicalDiagnosis",
+  "status" : "active",
+  "date" : "2020-02-14T16:13:10+10:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Histological diagnosis codes from NCIT.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://purl.obolibrary.org/obo/ncit.owl",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "NCIT:C28101"
+      }]
+    },
+    {
+      "system" : "http://purl.obolibrary.org/obo/ncit.owl",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "NCIT:C2991"
+      }]
+    }]
+  }
+}

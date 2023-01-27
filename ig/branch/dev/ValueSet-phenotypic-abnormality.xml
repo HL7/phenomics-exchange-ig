@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="phenotypic-abnormality"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  HP:0000118</li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality"/>
+  <version value="0.1.0"/>
+  <name value="PhenotypicAbnormalityValueSet"/>
+  <title value="Phenotypic abnormality ValueSet"/>
+  <status value="active"/>
+  <date value="2023-01-27T18:47:37+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="ValueSet description here"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="http://purl.obolibrary.org/obo/ncit.owl"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="HP:0000118"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

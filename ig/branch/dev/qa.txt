@@ -1,0 +1,477 @@
+﻿GA4GHPhenopacketIG : Validation Results
+=========================================
+
+err = 8, warn = 115, info = 146
+IG Publisher Version: 1.2.30
+Generated Fri Jan 27 18:51:45 UTC 2023. FHIR version 4.0.1 for hl7.fhir.us.ga4gh.phenopacket#0.1.0 (canonical = https://github.com/phenopackets/core-ig)
+ Build Errors : 2 / 11 / 0
+ /ig/fsh-generated/resources/Bundle-PhenopacketsBundleExample01 : 0 / 13 / 40
+ /ig/fsh-generated/resources/CodeSystem-HtsFormat : 0 / 2 / 2
+ /ig/fsh-generated/resources/CodeSystem-KaryotypicSex : 0 / 2 / 2
+ /ig/fsh-generated/resources/CodeSystem-categories : 0 / 1 / 2
+ /ig/fsh-generated/resources/CodeSystem-phenotypicFeatureStatusCS : 0 / 2 / 2
+ /ig/fsh-generated/resources/Composition-DevelopmentalDelay : 0 / 0 / 4
+ /ig/fsh-generated/resources/Composition-PhenopacketCompositionExample01 : 0 / 0 / 6
+ /ig/fsh-generated/resources/Condition-id.disease.1 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Condition-id.disease.2 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Condition-id.disease.3 : 0 / 0 / 3
+ /ig/fsh-generated/resources/Condition-id.disease.intellectualDisability : 0 / 0 / 2
+ /ig/fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample01 : 0 / 1 / 3
+ /ig/fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample02 : 0 / 1 / 3
+ /ig/fsh-generated/resources/ImplementationGuide-hl7.fhir.us.ga4gh.phenopacket : 0 / 4 / 1
+ /ig/fsh-generated/resources/MedicationAdministration-id.treatment.1 : 0 / 0 / 3
+ /ig/fsh-generated/resources/Observation-PhenopacketsVariantExample01 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Observation-hp.0000343 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0000369 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0000541 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0000568 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0001252 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0001263 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0001324 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0001669 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0003202 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0003557 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-hp.0007663 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-id.bilateral-polydactyly.phenotypic-feature : 1 / 0 / 4
+ /ig/fsh-generated/resources/Observation-id.measurement.1 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Observation-id.phenotypicfeature.1 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-id.phenotypicfeature.2 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-id.phenotypicfeature.3 : 0 / 0 / 2
+ /ig/fsh-generated/resources/Observation-id.phenotypicfeature.4 : 0 / 1 / 4
+ /ig/fsh-generated/resources/Observation-karyotypic-sex-invalid-1 : 0 / 0 / 3
+ /ig/fsh-generated/resources/Observation-karyotypic-sex-valid-1 : 0 / 0 / 3
+ /ig/fsh-generated/resources/Observation-phenotypic-abnormality-invalid-1 : 1 / 0 / 18
+ /ig/fsh-generated/resources/Observation-phenotypic-abnormality-invalid-meta-profile : 0 / 0 / 18
+ /ig/fsh-generated/resources/Observation-phenotypic-abnormality-valid-1 : 0 / 0 / 12
+ /ig/fsh-generated/resources/Patient-Proband1 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Patient-example-patient : 0 / 0 / 1
+ /ig/fsh-generated/resources/Patient-phenopacketPatientExample01 : 0 / 0 / 1
+ /ig/fsh-generated/resources/Practitioner-PeterGeneticist : 0 / 0 / 1
+ /ig/fsh-generated/resources/Practitioner-PhenopacketPractitionerExample01 : 0 / 0 / 1
+ /ig/fsh-generated/resources/SearchParameter-service-request-supporting-info : 3 / 0 / 1
+ /ig/fsh-generated/resources/Specimen-biosample.specimen.id.1 : 0 / 0 / 10
+ /ig/fsh-generated/resources/Specimen-biosample.specimen.id.2 : 0 / 0 / 4
+ /ig/fsh-generated/resources/Specimen-phenopacketSpecimenExample01 : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Biosample : 0 / 2 / 1
+ /ig/fsh-generated/resources/StructureDefinition-CodedOnset : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-DiagnosticMarker : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Disease : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-HistologicalDiagnosis : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Individual : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-KaryotypicSex : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-MaterialSample : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Measurement : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-MeasurementExt : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Onset : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-PathologicalStage : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-PathologicalTnmFinding : 0 / 3 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Phenopacket : 0 / 0 / 15
+ /ig/fsh-generated/resources/StructureDefinition-PhenotypicFeature : 0 / 1 / 7
+ /ig/fsh-generated/resources/StructureDefinition-PhenotypicFeatureExt : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Taxonomy : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-Treatment : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-TumorGrade : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-TumorProgression : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-acmg-pathogenicity-classification : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-additional-variant-identifier : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-filter-status : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-interpretation-status : 0 / 0 / 1
+ /ig/fsh-generated/resources/StructureDefinition-molecule-context : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-phenopackets-genomic-interpretation : 0 / 5 / 2
+ /ig/fsh-generated/resources/StructureDefinition-phenopackets-variant : 0 / 1 / 2
+ /ig/fsh-generated/resources/StructureDefinition-phred-quality-score : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-related-concept-id : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-therapeutic-actionability : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-vcf-info : 0 / 1 / 1
+ /ig/fsh-generated/resources/StructureDefinition-vrs-object : 0 / 1 / 1
+ /ig/fsh-generated/resources/ValueSet-DiagnosticMarker : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-HistologicalDiagnosis : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-HpoSeverity : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-KaryotypicSex : 0 / 1 / 1
+ /ig/fsh-generated/resources/ValueSet-Onset : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-PhenotypicModifierValueSet : 2 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-Taxonomy : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-TumorGrade : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-TumorProgression : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-TumorStage : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-acmgPathogenicityClassification-vs : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-geno-ontology-allelic-state-vs : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-interpretationStatus-vs : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-moleculeContext-vs : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-observation-categories : 0 / 1 / 1
+ /ig/fsh-generated/resources/ValueSet-phenotypic-abnormality : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-phenotypic-component : 0 / 3 / 1
+ /ig/fsh-generated/resources/ValueSet-phenotypicFeatureVS : 0 / 1 / 1
+ /ig/fsh-generated/resources/ValueSet-sequence-ontology-structural-variant-vs : 0 / 2 / 1
+ /ig/fsh-generated/resources/ValueSet-therapeuticActionability-vs : 0 / 3 / 1
+</table>
+== n/a ==
+ERROR: ImplementationGuide.definition.parameter[26].value: Supressed messages file not found
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Composition/PhenopacketCompositionExample01.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Bundle/PhenopacketsBundleExample01.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/karyotypic-sex-invalid-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/karyotypic-sex-valid-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/phenotypic-abnormality-invalid-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/phenotypic-abnormality-invalid-meta-profile.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource Observation/phenotypic-abnormality-valid-1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+ERROR: /ig/output/modeling.html#/html/body/div/div/div/div/div/p/a at Line 224, column 57: The link 'phenotype.md' for "deep phenotyping" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/Bundle-PhenopacketsBundleExample01.json ==
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).subject: Entry 1 matches the reference Patient/example-patient by type and id but it's fullUrl http://phenopackets.org/core-ig/Patient-example-patient.html does not match the full target URL http://phenopackets.org/Patient/example-patient by Bundle resolution rules
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).author[0]: Entry 2 matches the reference Practitioner/PhenopacketPractitionerExample01 by type and id but it's fullUrl http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html does not match the full target URL http://phenopackets.org/Practitioner/PhenopacketPractitionerExample01 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[0].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[0].entry[0]: Entry 3 matches the reference Observation/id.phenotypicfeature.4 by type and id but it's fullUrl http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html does not match the full target URL http://phenopackets.org/Observation/id.phenotypicfeature.4 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[1].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[1].entry[0]: Entry 4 matches the reference Observation/id.measurement.1 by type and id but it's fullUrl http://phenopackets.org/core-ig/Observation-id.measurement.1.html does not match the full target URL http://phenopackets.org/Observation/id.measurement.1 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[2].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[2].entry[0]: Entry 6 matches the reference Specimen/biosample.specimen.id.1 by type and id but it's fullUrl http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html does not match the full target URL http://phenopackets.org/Specimen/biosample.specimen.id.1 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[3].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[3].entry[0]: Entry 7 matches the reference DiagnosticReport/PhenopacketsGenomicInterpretationExample02 by type and id but it's fullUrl http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html does not match the full target URL http://phenopackets.org/DiagnosticReport/PhenopacketsGenomicInterpretationExample02 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[4].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[0].resource.ofType(Composition).section[4].entry[0]: Entry 5 matches the reference Condition/id.disease.3 by type and id but it's fullUrl http://phenopackets.org/core-ig/Condition-id.disease.3.html does not match the full target URL http://phenopackets.org/Condition/id.disease.3 by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[3].resource.ofType(Observation).code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[3].resource.ofType(Observation).subject: Entry 1 matches the reference Patient/example-patient by type and id but it's fullUrl http://phenopackets.org/core-ig/Patient-example-patient.html does not match the full target URL http://phenopackets.org/Patient/example-patient by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[3].resource.ofType(Observation).component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[3].resource.ofType(Observation).component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[3].resource.ofType(Observation).component[0].value.ofType(CodeableConcept): [Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated]
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[5].resource.ofType(Condition).code.coding[0]: Code System URI 'http://github.com/monarch-initiative/mondo' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[5].resource.ofType(Condition).subject: Entry 1 matches the reference Patient/example-patient by type and id but it's fullUrl http://phenopackets.org/core-ig/Patient-example-patient.html does not match the full target URL http://phenopackets.org/Patient/example-patient by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[5].resource.ofType(Condition).stage[0].summary.coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).extension[5].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).type.coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).subject: Entry 1 matches the reference Patient/example-patient by type and id but it's fullUrl http://phenopackets.org/core-ig/Patient-example-patient.html does not match the full target URL http://phenopackets.org/Patient/example-patient by Bundle resolution rules
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).collection.bodySite.coding[0]: Code System URI 'http://github.com/obophenotype/uberon' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[6].resource.ofType(Specimen).processing[0].procedure.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[7].resource.ofType(DiagnosticReport).modifierExtension[0].value.ofType(CodeableConcept): [Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated]
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[7].resource.ofType(DiagnosticReport).modifierExtension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[7].resource.ofType(DiagnosticReport).code: None of the codings provided are in the value set 'LOINC Diagnostic Report Codes' (http://hl7.org/fhir/ValueSet/report-codes|4.0.1), and a coding is recommended to come from this value set) (codes = http://loinc#123)
+INFORMATION: Bundle/PhenopacketsBundleExample01: Bundle.entry[7].resource.ofType(DiagnosticReport).code.coding[0]: Code System URI 'http://loinc' is unknown so the code cannot be validated
+WARNING: Bundle/PhenopacketsBundleExample01: Bundle.entry[7].resource.ofType(DiagnosticReport).result[0]: Entry 8 matches the reference Observation/PhenopacketsVariantExample01 by type and id but it's fullUrl http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html does not match the full target URL http://phenopackets.org/Observation/PhenopacketsVariantExample01 by Bundle resolution rules
+== fsh-generated/resources/CodeSystem-HtsFormat.json ==
+INFORMATION: CodeSystem/HtsFormat: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/HtsFormat: CodeSystem: The ShareableCodeSystem profile says that the experimental element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+WARNING: CodeSystem/HtsFormat: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+== fsh-generated/resources/CodeSystem-KaryotypicSex.json ==
+INFORMATION: CodeSystem/KaryotypicSex: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/KaryotypicSex: CodeSystem: The ShareableCodeSystem profile says that the experimental element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+WARNING: CodeSystem/KaryotypicSex: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+== fsh-generated/resources/CodeSystem-categories.json ==
+INFORMATION: CodeSystem/categories: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/categories: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+== fsh-generated/resources/CodeSystem-phenotypicFeatureStatusCS.json ==
+INFORMATION: CodeSystem/phenotypicFeatureStatusCS: CodeSystem: CodeSystems SHOULD have a stated value for the caseSensitive element so that users know the status and meaning of the code system clearly
+WARNING: CodeSystem/phenotypicFeatureStatusCS: CodeSystem: The ShareableCodeSystem profile says that the experimental element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+WARNING: CodeSystem/phenotypicFeatureStatusCS: CodeSystem: The ShareableCodeSystem profile says that the caseSensitive element is mandatory, but it is not present. Published code systems SHOULD conform to the ShareableCodeSystem profile
+== fsh-generated/resources/Composition-DevelopmentalDelay.json ==
+INFORMATION: Composition/DevelopmentalDelay: Composition.section[0].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/DevelopmentalDelay: Composition.section[1].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/DevelopmentalDelay: Composition.section[2].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+== fsh-generated/resources/Composition-PhenopacketCompositionExample01.json ==
+INFORMATION: Composition/PhenopacketCompositionExample01: Composition.section[0].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/PhenopacketCompositionExample01: Composition.section[1].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/PhenopacketCompositionExample01: Composition.section[2].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/PhenopacketCompositionExample01: Composition.section[3].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: Composition/PhenopacketCompositionExample01: Composition.section[4].code.coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+== fsh-generated/resources/Condition-id.disease.1.json ==
+== fsh-generated/resources/Condition-id.disease.2.json ==
+== fsh-generated/resources/Condition-id.disease.3.json ==
+INFORMATION: Condition/id.disease.3: Condition.code.coding[0]: Code System URI 'http://github.com/monarch-initiative/mondo' is unknown so the code cannot be validated
+INFORMATION: Condition/id.disease.3: Condition.stage[0].summary.coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+== fsh-generated/resources/Condition-id.disease.intellectualDisability.json ==
+INFORMATION: Condition/id.disease.intellectualDisability: Condition.code.coding[0]: Code System URI 'http://github.com/monarch-initiative/mondo' is unknown so the code cannot be validated
+== fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample01.json ==
+WARNING: DiagnosticReport/PhenopacketsGenomicInterpretationExample01: DiagnosticReport.modifierExtension[0].value.ofType(CodeableConcept): [Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated]
+INFORMATION: DiagnosticReport/PhenopacketsGenomicInterpretationExample01: DiagnosticReport.modifierExtension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated
+INFORMATION: DiagnosticReport/PhenopacketsGenomicInterpretationExample01: DiagnosticReport.code.coding[0]: Code System URI 'http://loinc' is unknown so the code cannot be validated
+== fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.json ==
+WARNING: DiagnosticReport/PhenopacketsGenomicInterpretationExample02: DiagnosticReport.modifierExtension[0].value.ofType(CodeableConcept): [Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated]
+INFORMATION: DiagnosticReport/PhenopacketsGenomicInterpretationExample02: DiagnosticReport.modifierExtension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is unknown so the code cannot be validated
+INFORMATION: DiagnosticReport/PhenopacketsGenomicInterpretationExample02: DiagnosticReport.code.coding[0]: Code System URI 'http://loinc' is unknown so the code cannot be validated
+== fsh-generated/resources/ImplementationGuide-hl7.fhir.us.ga4gh.phenopacket.json ==
+WARNING: ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket: ImplementationGuide.definition.resource[22].name: value should not start or finish with whitespace ' Pathological...Finding'
+WARNING: ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket: ImplementationGuide.definition.resource[34].name: value should not start or finish with whitespace 'GENO...Set '
+WARNING: ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket: ImplementationGuide.definition.resource[59].description: value should not start or finish with whitespace ' This...example'
+WARNING: ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket: ImplementationGuide.definition.resource[93].description: value should not start or finish with whitespace ' This...example'
+== fsh-generated/resources/MedicationAdministration-id.treatment.1.json ==
+INFORMATION: MedicationAdministration/id.treatment.1: MedicationAdministration.medication.ofType(CodeableConcept).coding[0]: Code System URI 'http://drugcentral.org/' is unknown so the code cannot be validated
+INFORMATION: MedicationAdministration/id.treatment.1: MedicationAdministration.dosage.route.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-PhenopacketsVariantExample01.json ==
+== fsh-generated/resources/Observation-hp.0000343.json ==
+INFORMATION: Observation/hp.0000343: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0000369.json ==
+INFORMATION: Observation/hp.0000369: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0000541.json ==
+INFORMATION: Observation/hp.0000541: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0000568.json ==
+INFORMATION: Observation/hp.0000568: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0001252.json ==
+INFORMATION: Observation/hp.0001252: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0001263.json ==
+INFORMATION: Observation/hp.0001263: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0001324.json ==
+INFORMATION: Observation/hp.0001324: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0001669.json ==
+INFORMATION: Observation/hp.0001669: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0003202.json ==
+INFORMATION: Observation/hp.0003202: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0003557.json ==
+INFORMATION: Observation/hp.0003557: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-hp.0007663.json ==
+INFORMATION: Observation/hp.0007663: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-id.bilateral-polydactyly.phenotypic-feature.json ==
+INFORMATION: Observation/id.bilateral-polydactyly.phenotypic-feature: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/id.bilateral-polydactyly.phenotypic-feature: Observation.component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+ERROR: Observation/id.bilateral-polydactyly.phenotypic-feature: Observation.component[0].value.ofType(CodeableConcept): None of the codings provided are in the value set 'Phenotypic modifier ValueSet' (http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier|0.1.0), and a coding from this value set is required) (codes = http://github.com/phenopackets/core-ig/CodeSystem/hpo#HP:0012832)
+INFORMATION: Observation/id.bilateral-polydactyly.phenotypic-feature: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-id.measurement.1.json ==
+== fsh-generated/resources/Observation-id.phenotypicfeature.1.json ==
+INFORMATION: Observation/id.phenotypicfeature.1: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-id.phenotypicfeature.2.json ==
+INFORMATION: Observation/id.phenotypicfeature.2: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-id.phenotypicfeature.3.json ==
+INFORMATION: Observation/id.phenotypicfeature.3: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-id.phenotypicfeature.4.json ==
+INFORMATION: Observation/id.phenotypicfeature.4: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/id.phenotypicfeature.4: Observation.component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+WARNING: Observation/id.phenotypicfeature.4: Observation.component[0].value.ofType(CodeableConcept): [Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated]
+INFORMATION: Observation/id.phenotypicfeature.4: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-karyotypic-sex-invalid-1.json ==
+INFORMATION: Observation/karyotypic-sex-invalid-1: Observation.code.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/GSSO' is unknown so the code cannot be validated
+INFORMATION: Observation/karyotypic-sex-invalid-1: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/observation-karyotypic-sex' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-karyotypic-sex-valid-1.json ==
+INFORMATION: Observation/karyotypic-sex-valid-1: Observation.code.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/GSSO' is unknown so the code cannot be validated
+INFORMATION: Observation/karyotypic-sex-valid-1: Observation.value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/observation-karyotypic-sex' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-phenotypic-abnormality-invalid-1.json ==
+ERROR: Observation/phenotypic-abnormality-invalid-1: Observation.extension[0]: The extension http://github.com/phenopackets/core-ig/ig-tools/validation-error-count is unknown, and not allowed here
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[1].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[2].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[3].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[4].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[5].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[6].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[6].value.ofType(Quantity): Code System URI 'http://some/unit/system' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[7].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-1: Observation.component[7].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-phenotypic-abnormality-invalid-meta-profile.json ==
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[1].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[2].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[3].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[4].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[5].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[5].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[6].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[6].value.ofType(Quantity): Code System URI 'http://some/unit/system' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[7].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-invalid-meta-profile: Observation.component[7].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+== fsh-generated/resources/Observation-phenotypic-abnormality-valid-1.json ==
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[0].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[1].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[2].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[3].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[3].value.ofType(Quantity): Code System URI 'http://some/unit/system' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[4].code.coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+INFORMATION: Observation/phenotypic-abnormality-valid-1: Observation.component[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/OTHER' is unknown so the code cannot be validated
+== fsh-generated/resources/Patient-Proband1.json ==
+== fsh-generated/resources/Patient-example-patient.json ==
+== fsh-generated/resources/Patient-phenopacketPatientExample01.json ==
+== fsh-generated/resources/Practitioner-PeterGeneticist.json ==
+== fsh-generated/resources/Practitioner-PhenopacketPractitionerExample01.json ==
+== fsh-generated/resources/SearchParameter-service-request-supporting-info.json ==
+ERROR: SearchParameter.where(url = 'http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info'): Conformance resource /ig/fsh-generated/resources/SearchParameter-service-request-supporting-info.json - the canonical URL (https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info) does not match the URL (http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info)
+ERROR: SearchParameter.where(url = 'http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info'): Conformance resource /ig/fsh-generated/resources/SearchParameter-service-request-supporting-info.json - the canonical URL (https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info) does not match the URL (http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info)
+ERROR: /ig/fsh-generated/resources/SearchParameter-service-request-supporting-info: URL Mismatch https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info vs http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info
+== fsh-generated/resources/Specimen-biosample.specimen.id.1.json ==
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[1].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[2].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[3].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[4].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.extension[5].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.type.coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.collection.bodySite.coding[0]: Code System URI 'http://github.com/obophenotype/uberon' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.1: Specimen.processing[0].procedure.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+== fsh-generated/resources/Specimen-biosample.specimen.id.2.json ==
+INFORMATION: Specimen/biosample.specimen.id.2: Specimen.extension[0].value.ofType(CodeableConcept).coding[0]: Code System URI 'http://github.com/EBISPOT/efo' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.2: Specimen.collection.bodySite.coding[0]: Code System URI 'http://github.com/obophenotype/uberon' is unknown so the code cannot be validated
+INFORMATION: Specimen/biosample.specimen.id.2: Specimen.processing[0].procedure.coding[0]: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated
+== fsh-generated/resources/Specimen-phenopacketSpecimenExample01.json ==
+== fsh-generated/resources/StructureDefinition-Biosample.json ==
+WARNING: StructureDefinition/Biosample: StructureDefinition.snapshot.element[13].short: value should not start or finish with whitespace ' Pathological...Finding'
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Biosample').baseDefinition: US FHIR Usage rules require that all profiles on Specimen derive from the core US profile
+== fsh-generated/resources/StructureDefinition-CodedOnset.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/CodedOnset'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-DiagnosticMarker.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/DiagnosticMarker'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Disease.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Disease').baseDefinition: US FHIR Usage rules require that all profiles on Condition derive from one of the base US profiles
+== fsh-generated/resources/StructureDefinition-HistologicalDiagnosis.json ==
+== fsh-generated/resources/StructureDefinition-Individual.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Individual').baseDefinition: US FHIR Usage rules require that all profiles on Patient derive from the core US profile
+== fsh-generated/resources/StructureDefinition-KaryotypicSex.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/KaryotypicSex'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-MaterialSample.json ==
+== fsh-generated/resources/StructureDefinition-Measurement.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Measurement').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+== fsh-generated/resources/StructureDefinition-MeasurementExt.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/MeasurementExt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Onset.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Onset'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-PathologicalStage.json ==
+== fsh-generated/resources/StructureDefinition-PathologicalTnmFinding.json ==
+WARNING: StructureDefinition/PathologicalTnmFinding: StructureDefinition.title: value should not start or finish with whitespace ' Pathological...Finding'
+WARNING: StructureDefinition/PathologicalTnmFinding: StructureDefinition.snapshot.element[0].short: value should not start or finish with whitespace ' Pathological...Finding'
+WARNING: StructureDefinition/PathologicalTnmFinding: StructureDefinition.differential.element[0].short: value should not start or finish with whitespace ' Pathological...Finding'
+== fsh-generated/resources/StructureDefinition-Phenopacket.json ==
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[59].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[73].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[87].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[101].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[115].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[129].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.snapshot.element[143].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[6].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[10].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[14].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[18].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[22].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[26].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/Phenopacket: StructureDefinition.differential.element[30].pattern.ofType(CodeableConcept).coding[0]: Code System URI 'http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType' is unknown so the code cannot be validated
+== fsh-generated/resources/StructureDefinition-PhenotypicFeature.json ==
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.snapshot.element[57].pattern.ofType(Coding): Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.snapshot.element[70].pattern.ofType(Coding): Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.differential.element[9].pattern.ofType(Coding): Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.differential.element[12].pattern.ofType(Coding): Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.snapshot.element[57].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+INFORMATION: StructureDefinition/PhenotypicFeature: StructureDefinition.snapshot.element[70].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+== fsh-generated/resources/StructureDefinition-PhenotypicFeatureExt.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeatureExt'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Taxonomy.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/Taxonomy'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-Treatment.json ==
+== fsh-generated/resources/StructureDefinition-TumorGrade.json ==
+== fsh-generated/resources/StructureDefinition-TumorProgression.json ==
+== fsh-generated/resources/StructureDefinition-acmg-pathogenicity-classification.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/acmg-pathogenicity-classification'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-additional-variant-identifier.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/additional-variant-identifier'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-filter-status.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/filter-status'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-interpretation-status.json ==
+== fsh-generated/resources/StructureDefinition-molecule-context.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/molecule-context'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-phenopackets-genomic-interpretation.json ==
+WARNING: StructureDefinition/phenopackets-genomic-interpretation: StructureDefinition.snapshot.element[26].constraint[1]: Rule eld-21: 'Constraints should have an expression or else validators will not be able to enforce them' Failed
+WARNING: StructureDefinition/phenopackets-genomic-interpretation: StructureDefinition.snapshot.element[32].constraint[1]: Rule eld-21: 'Constraints should have an expression or else validators will not be able to enforce them' Failed
+WARNING: StructureDefinition/phenopackets-genomic-interpretation: StructureDefinition.differential.element[4].constraint[0]: Rule eld-21: 'Constraints should have an expression or else validators will not be able to enforce them' Failed
+WARNING: StructureDefinition/phenopackets-genomic-interpretation: StructureDefinition.differential.element[5].constraint[0]: Rule eld-21: 'Constraints should have an expression or else validators will not be able to enforce them' Failed
+INFORMATION: StructureDefinition/phenopackets-genomic-interpretation: StructureDefinition.snapshot.element[23].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation').baseDefinition: US FHIR Usage rules require that all profiles on DiagnosticReport derive from one of the base US profiles
+== fsh-generated/resources/StructureDefinition-phenopackets-variant.json ==
+INFORMATION: StructureDefinition/phenopackets-variant: StructureDefinition.snapshot.element[19].pattern.ofType(Coding): The repeating element has a pattern. The pattern will apply to all the repeats (this has not been clear to all users)
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-variant').baseDefinition: US FHIR Usage rules require that all profiles on Observation derive from one of the base US profiles
+== fsh-generated/resources/StructureDefinition-phred-quality-score.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/phred-quality-score'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-related-concept-id.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/related-concept-id'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-therapeutic-actionability.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/therapeutic-actionability'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-vcf-info.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/vcf-info'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/StructureDefinition-vrs-object.json ==
+WARNING: StructureDefinition.where(url = 'https://github.com/phenopackets/core-ig/StructureDefinition/vrs-object'): The Implementation Guide contains no examples for this extension
+== fsh-generated/resources/ValueSet-DiagnosticMarker.json ==
+WARNING: ValueSet/DiagnosticMarker: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'DiagnosticMarker'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-HistologicalDiagnosis.json ==
+WARNING: ValueSet/HistologicalDiagnosis: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'HistologicalDiagnosis'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-HpoSeverity.json ==
+WARNING: ValueSet/HpoSeverity: ValueSet.compose[0].include[0]: Unknown System 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated)
+WARNING: ValueSet/HpoSeverity: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'HpoSeverity'): Error from server: Unable to provide support for code system http://github.com/phenopackets/core-ig/CodeSystem/hpo
+== fsh-generated/resources/ValueSet-KaryotypicSex.json ==
+WARNING: ValueSet/KaryotypicSex: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+== fsh-generated/resources/ValueSet-Onset.json ==
+WARNING: ValueSet/Onset: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'Onset'): Error from server: Unable to provide support for code system http://github.com/phenopackets/core-ig/CodeSystem/hpo
+== fsh-generated/resources/ValueSet-PhenotypicModifierValueSet.json ==
+ERROR: ValueSet.where(url = 'http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier'): Conformance resource /ig/fsh-generated/resources/ValueSet-PhenotypicModifierValueSet.json - the canonical URL (https://github.com/phenopackets/core-ig/ValueSet/PhenotypicModifierValueSet) does not match the URL (http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier)
+WARNING: ValueSet/PhenotypicModifierValueSet: ValueSet.compose[0].include[0]: Unknown System 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated)
+WARNING: ValueSet/PhenotypicModifierValueSet: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'PhenotypicModifierValueSet'): Error from server: Unable to provide support for code system http://github.com/phenopackets/core-ig/CodeSystem/hpo
+ERROR: /ig/fsh-generated/resources/ValueSet-PhenotypicModifierValueSet: URL Mismatch https://github.com/phenopackets/core-ig/ValueSet/PhenotypicModifierValueSet vs http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier
+== fsh-generated/resources/ValueSet-Taxonomy.json ==
+WARNING: ValueSet/Taxonomy: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'Taxonomy'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncbitaxon.owl
+== fsh-generated/resources/ValueSet-TumorGrade.json ==
+WARNING: ValueSet/TumorGrade: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'TumorGrade'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-TumorProgression.json ==
+WARNING: ValueSet/TumorProgression: ValueSet.compose[0].include[0]: Unknown System 'http://purl.obolibrary.org/obo/ncit.owl' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://purl.obolibrary.org/obo/ncit.owl' is unknown so the code cannot be validated)
+WARNING: ValueSet/TumorProgression: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'TumorProgression'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-TumorStage.json ==
+WARNING: ValueSet/TumorStage: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'TumorStage'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-acmgPathogenicityClassification-vs.json ==
+WARNING: ValueSet/acmgPathogenicityClassification-vs: ValueSet.compose[0].include[0]: Unknown System 'http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification' specified, so Concepts and Filters can't be checked (Details: Local Error: Unable to resolve system http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification. Server Error: The code system 'http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification' is not known (encountered paired with code = '0'); The code provided (http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification#0) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
+WARNING: ValueSet/acmgPathogenicityClassification-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'acmgPathogenicityClassification-vs'): Error from server: Unable to provide support for code system http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification
+== fsh-generated/resources/ValueSet-geno-ontology-allelic-state-vs.json ==
+WARNING: ValueSet/geno-ontology-allelic-state-vs: ValueSet.title: value should not start or finish with whitespace 'GENO...Set '
+WARNING: ValueSet/geno-ontology-allelic-state-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'geno-ontology-allelic-state-vs'): Error from server: Unable to provide support for code system http://www.ebi.ac.uk/ols/ontologies/geno
+== fsh-generated/resources/ValueSet-interpretationStatus-vs.json ==
+WARNING: ValueSet/interpretationStatus-vs: ValueSet.compose[0].include[0]: Unknown System 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' specified, so Concepts and Filters can't be checked (Details: Local Error: Unable to resolve system http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus. Server Error: The code system 'http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus' is not known (encountered paired with code = '0'); The code provided (http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus#0) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
+WARNING: ValueSet/interpretationStatus-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'interpretationStatus-vs'): Error from server: Unable to provide support for code system http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
+== fsh-generated/resources/ValueSet-moleculeContext-vs.json ==
+WARNING: ValueSet/moleculeContext-vs: ValueSet.compose[0].include[0]: Unknown System 'http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext' specified, so Concepts and Filters can't be checked (Details: Local Error: Unable to resolve system http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext. Server Error: The code system 'http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext' is not known (encountered paired with code = '0'); The code provided (http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext#0) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
+WARNING: ValueSet/moleculeContext-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'moleculeContext-vs'): Error from server: Unable to provide support for code system http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
+== fsh-generated/resources/ValueSet-observation-categories.json ==
+WARNING: ValueSet/observation-categories: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+== fsh-generated/resources/ValueSet-phenotypic-abnormality.json ==
+WARNING: ValueSet/phenotypic-abnormality: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'phenotypic-abnormality'): Error from server: Unable to provide support for code system http://purl.obolibrary.org/obo/ncit.owl
+== fsh-generated/resources/ValueSet-phenotypic-component.json ==
+WARNING: ValueSet/phenotypic-component: ValueSet.compose[0].include[0]: Unknown System 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' specified, so Concepts and Filters can't be checked (Details: Code System URI 'http://github.com/phenopackets/core-ig/CodeSystem/hpo' is unknown so the code cannot be validated)
+WARNING: ValueSet/phenotypic-component: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'phenotypic-component'): Error from server: Unable to provide support for code system http://github.com/phenopackets/core-ig/CodeSystem/hpo
+== fsh-generated/resources/ValueSet-phenotypicFeatureVS.json ==
+WARNING: ValueSet/phenotypicFeatureVS: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+== fsh-generated/resources/ValueSet-sequence-ontology-structural-variant-vs.json ==
+WARNING: ValueSet/sequence-ontology-structural-variant-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'sequence-ontology-structural-variant-vs'): Error from server: Unable to provide support for code system http://www.sequenceontology.org/
+== fsh-generated/resources/ValueSet-therapeuticActionability-vs.json ==
+WARNING: ValueSet/therapeuticActionability-vs: ValueSet.compose[0].include[0]: Unknown System 'http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability' specified, so Concepts and Filters can't be checked (Details: Local Error: Unable to resolve system http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability. Server Error: The code system 'http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability' is not known (encountered paired with code = '0'); The code provided (http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability#0) is not valid in the value set 'All codes known to the system' (from http://tx.fhir.org/r4))
+WARNING: ValueSet/therapeuticActionability-vs: ValueSet: The ShareableValueSet profile says that the experimental element is mandatory, but it is not present. Published value sets SHOULD conform to the ShareableValueSet profile
+WARNING: ValueSet.where(id = 'therapeuticActionability-vs'): Error from server: Unable to provide support for code system http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability

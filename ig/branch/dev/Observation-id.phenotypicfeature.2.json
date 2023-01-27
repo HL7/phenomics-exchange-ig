@@ -1,0 +1,29 @@
+{
+  "resourceType" : "Observation",
+  "id" : "id.phenotypicfeature.2",
+  "meta" : {
+    "profile" : ["https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.phenotypicfeature.2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.phenotypicfeature.2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PhenotypicFeature.html\">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Left ventricular diastolic dysfunction <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0025168)</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>value</b>: Absent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA9634-2)</span></p></div>"
+  },
+  "status" : "final",
+  "code" : {
+    "coding" : [{
+      "system" : "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+      "code" : "HP:0025168",
+      "display" : "Left ventricular diastolic dysfunction"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient/example-patient"
+  },
+  "valueCodeableConcept" : {
+    "coding" : [{
+      "system" : "http://loinc.org",
+      "code" : "LA9634-2",
+      "display" : "Absent"
+    }]
+  }
+}

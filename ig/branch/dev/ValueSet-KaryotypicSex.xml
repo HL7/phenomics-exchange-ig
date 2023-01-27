@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="KaryotypicSex"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-KaryotypicSex.html"><code>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</code></a></li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex"/>
+  <version value="0.1.0"/>
+  <name value="KaryotypicSex"/>
+  <title value="Karyotypic sex value set"/>
+  <status value="active"/>
+  <date value="2021-05-28T17:06:00-04:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="The karyotypic (chromosomal) sex of an individual"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"/>
+    </include>
+  </compose>
+</ValueSet>

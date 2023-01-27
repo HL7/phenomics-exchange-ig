@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="Onset"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code> where concept  is-a  HP:0003674</li><li>Include codes from <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from  282032007 (Periods of life)</li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/Onset"/>
+  <version value="0.1.0"/>
+  <name value="Onset"/>
+  <title value="Onset ValueSet"/>
+  <status value="active"/>
+  <date value="2021-06-03T10:26:00-04:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007)."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="http://github.com/phenopackets/core-ig/CodeSystem/hpo"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="HP:0003674"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="282032007"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

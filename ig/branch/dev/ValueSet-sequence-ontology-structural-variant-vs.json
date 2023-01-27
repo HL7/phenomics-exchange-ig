@@ -1,0 +1,40 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "sequence-ontology-structural-variant-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <code>http://www.sequenceontology.org/</code> where concept  is-a  SO:0001537</li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/sequence-ontology-structural-variant-vs",
+  "version" : "0.1.0",
+  "name" : "SequenceOntologyStructuralVariantVS",
+  "title" : "Sequence Ontology Structural Variant Value Set",
+  "status" : "active",
+  "date" : "2023-01-27T18:47:37+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Descendent terms of SO:0001537.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://www.sequenceontology.org/",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "SO:0001537"
+      }]
+    }]
+  }
+}
