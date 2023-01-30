@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="id.measurement.1"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Measurement"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Observation</b><a name="id.measurement.1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Observation &quot;id.measurement.1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Measurement.html">Measurement</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Platelets [#/volume] in Blood <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://loinc.org/">LOINC</a>#26515-7)</span></p><p><b>effective</b>: 2018-03-06</p><p><b>value</b>: 20 10^12/L</p><h3>ReferenceRanges</h3><table class="grid"><tr><td>-</td><td><b>Low</b></td><td><b>High</b></td></tr><tr><td>*</td><td>150000 10^12/L</td><td>450000 10^12/L</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="26515-7"/>
+      <display value="Platelets [#/volume] in Blood"/>
+    </coding>
+  </code>
+  <effectiveDateTime value="2018-03-06"/>
+  <valueQuantity>
+    <value value="20"/>
+    <unit value="10^12/L"/>
+    <system value="http://unitsofmeasure.org"/>
+  </valueQuantity>
+  <referenceRange>
+    <low>
+      <value value="150000"/>
+      <unit value="10^12/L"/>
+      <system value="http://unitsofmeasure.org"/>
+    </low>
+    <high>
+      <value value="450000"/>
+      <unit value="10^12/L"/>
+      <system value="http://unitsofmeasure.org"/>
+    </high>
+  </referenceRange>
+</Observation>

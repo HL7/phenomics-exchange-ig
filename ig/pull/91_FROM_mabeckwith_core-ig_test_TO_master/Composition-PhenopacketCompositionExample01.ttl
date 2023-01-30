@@ -1,0 +1,133 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Composition/PhenopacketCompositionExample01> a fhir:Composition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "PhenopacketCompositionExample01"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"PhenopacketCompositionExample01\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition &quot;PhenopacketCompositionExample01&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Phenopacket.html\">Phenopacket profile</a></p></div><p><b>identifier</b>: id: urn:uuid:1111-1111-1111-1112</p><p><b>status</b>: preliminary</p><p><b>type</b>: Medical records <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#11503-0)</span></p><p><b>date</b>: 2022-02-02</p><p><b>author</b>: <a href=\"Practitioner-PhenopacketPractitionerExample01.html\">Practitioner/PhenopacketPractitionerExample01: John T. Practitioner</a> &quot;&quot;</p><p><b>title</b>: This is an example of a composition resource that represents some of the Phenopackets data elements</p></div>"
+  ]; # 
+  fhir:Composition.identifier [
+     fhir:Identifier.system [ fhir:value "urn:ietf:rfc:3986" ];
+     fhir:Identifier.value [ fhir:value "urn:uuid:1111-1111-1111-1112" ]
+  ]; # 
+  fhir:Composition.status [ fhir:value "preliminary"]; # 
+  fhir:Composition.type [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:11503-0;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "11503-0" ];
+       fhir:Coding.display [ fhir:value "Medical records" ]
+     ]
+  ]; # 
+  fhir:Composition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ];
+     fhir:Reference.display [ fhir:value "Anyname A. Anyperson" ]
+  ]; # 
+  fhir:Composition.date [ fhir:value "2022-02-02"^^xsd:date]; # 
+  fhir:Composition.author [
+     fhir:index 0;
+     fhir:link <https://github.com/phenopackets/core-ig/Practitioner/PhenopacketPractitionerExample01>;
+     fhir:Reference.reference [ fhir:value "Practitioner/PhenopacketPractitionerExample01" ];
+     fhir:Reference.display [ fhir:value "John T. Practitioner" ]
+  ]; # 
+  fhir:Composition.title [ fhir:value "This is an example of a composition resource that represents some of the Phenopackets data elements"]; # 
+  fhir:Composition.section [
+     fhir:index 0;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "phenotypic_features" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/id.phenotypicfeature.4>;
+       fhir:Reference.reference [ fhir:value "Observation/id.phenotypicfeature.4" ];
+       fhir:Reference.display [ fhir:value "Congestive heart failure" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "measurements" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Observation/id.measurement.1>;
+       fhir:Reference.reference [ fhir:value "Observation/id.measurement.1" ];
+       fhir:Reference.display [ fhir:value "Thrombocytopenia" ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "biosamples" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Specimen/biosample.specimen.id.1>;
+       fhir:Reference.reference [ fhir:value "Specimen/biosample.specimen.id.1" ];
+       fhir:Reference.display [ fhir:value "Bladder Carcinoma" ]
+     ]
+  ], [
+     fhir:index 3;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "interpretations" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/DiagnosticReport/PhenopacketsGenomicInterpretationExample02>;
+       fhir:Reference.reference [ fhir:value "DiagnosticReport/PhenopacketsGenomicInterpretationExample02" ];
+       fhir:Reference.display [ fhir:value "Obesity due to centrosomal protein 19 deficiency (disorder)" ]
+     ]
+  ], [
+     fhir:index 4;
+     fhir:Composition.section.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://ga4gh.org/fhir/phenopackets/CodeSystem/SectionType" ];
+         fhir:Coding.code [ fhir:value "diseases" ]
+       ]
+     ];
+     fhir:Composition.section.entry [
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/Condition/id.disease.3>;
+       fhir:Reference.reference [ fhir:value "Condition/id.disease.3" ];
+       fhir:Reference.display [ fhir:value "CHF-stageIII" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Composition/PhenopacketCompositionExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

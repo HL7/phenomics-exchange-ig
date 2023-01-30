@@ -1,0 +1,31 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01> a fhir:Specimen;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "phenopacketSpecimenExample01"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated specimen example</div>"
+  ]; # 
+  fhir:Specimen.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "temp" ];
+     fhir:Identifier.value [ fhir:value "01" ]
+  ]; # 
+  fhir:Specimen.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01>;
+     fhir:Reference.reference [ fhir:value "Patient/phenopacketPatientExample01" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

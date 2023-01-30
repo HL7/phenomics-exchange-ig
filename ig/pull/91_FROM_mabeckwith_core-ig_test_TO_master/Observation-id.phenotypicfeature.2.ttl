@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.phenotypicfeature.2> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "id.phenotypicfeature.2"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.phenotypicfeature.2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.phenotypicfeature.2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PhenotypicFeature.html\">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Left ventricular diastolic dysfunction <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0025168)</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>value</b>: Absent <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA9634-2)</span></p></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+       fhir:Coding.code [ fhir:value "HP:0025168" ];
+       fhir:Coding.display [ fhir:value "Left ventricular diastolic dysfunction" ]
+     ]
+  ]; # 
+  fhir:Observation.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ]; # 
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9634-2;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9634-2" ];
+       fhir:Coding.display [ fhir:value "Absent" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.phenotypicfeature.2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

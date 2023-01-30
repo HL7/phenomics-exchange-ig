@@ -1,0 +1,41 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Condition/id.disease.intellectualDisability> a fhir:Condition;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "id.disease.intellectualDisability"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Disease";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Disease>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"id.disease.intellectualDisability\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;id.disease.intellectualDisability&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-Disease.html\">Disease profile</a></p></div><p><b>code</b>: Intellectual disability <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (mondo#MONDO_0001071)</span></p><p><b>subject</b>: <a href=\"Patient-Proband1.html\">Patient/Proband1</a> &quot; ANYPERSON&quot;</p></div>"
+  ]; # 
+  fhir:Condition.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/monarch-initiative/mondo" ];
+       fhir:Coding.code [ fhir:value "MONDO_0001071" ];
+       fhir:Coding.display [ fhir:value "Intellectual disability" ]
+     ]
+  ]; # 
+  fhir:Condition.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/Proband1>;
+     fhir:Reference.reference [ fhir:value "Patient/Proband1" ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Condition/id.disease.intellectualDisability.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

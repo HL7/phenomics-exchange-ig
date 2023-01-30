@@ -1,0 +1,57 @@
+{
+  "resourceType" : "Patient",
+  "id" : "Proband1",
+  "meta" : {
+    "profile" : ["https://github.com/phenopackets/core-ig/StructureDefinition/Individual"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anyname A. Anyperson </b> male, DoB: 2017-01-20 ( Medical Record Number: m123 (use: USUAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">123 Any St Anytown 12345 US </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 en-US}\">English</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact</td><td colspan=\"3\"><ul><li>ph: 777-444-2222(HOME)</li><li><a href=\"mailto:anyname.anyperson@example.com\">anyname.anyperson@example.com</a></li></ul></td></tr></table></div>"
+  },
+  "identifier" : [{
+    "use" : "usual",
+    "type" : {
+      "coding" : [{
+        "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code" : "MR",
+        "display" : "Medical Record Number"
+      }]
+    },
+    "system" : "http://hospital.example.org",
+    "value" : "m123"
+  }],
+  "name" : [{
+    "family" : "Anyperson",
+    "given" : ["Anyname",
+    "A."]
+  }],
+  "gender" : "male",
+  "birthDate" : "2017-01-20",
+  "address" : [{
+    "line" : ["123 Any St"],
+    "city" : "Anytown",
+    "postalCode" : "12345",
+    "country" : "US"
+  }],
+  "contact" : [{
+    "telecom" : [{
+      "system" : "phone",
+      "value" : "777-444-2222",
+      "use" : "home"
+    },
+    {
+      "system" : "email",
+      "value" : "anyname.anyperson@example.com"
+    }]
+  }],
+  "communication" : [{
+    "language" : {
+      "coding" : [{
+        "system" : "urn:ietf:bcp:47",
+        "code" : "en-US",
+        "display" : "English (Region=United States)"
+      }],
+      "text" : "English"
+    }
+  }]
+}

@@ -1,0 +1,72 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <http://loinc.org/rdf#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.bilateral-polydactyly.phenotypic-feature> a fhir:Observation;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "id.bilateral-polydactyly.phenotypic-feature"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature";
+       fhir:index 0;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/PhenotypicFeature>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"id.bilateral-polydactyly.phenotypic-feature\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;id.bilateral-polydactyly.phenotypic-feature&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-PhenotypicFeature.html\">Phenotypic Feature</a></p></div><p><b>status</b>: final</p><p><b>code</b>: Postaxial hand polydactyly <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0001162)</span></p><p><b>subject</b>: <a href=\"Patient-example-patient.html\">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2022-09-18</p><p><b>value</b>: Present <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://loinc.org/\">LOINC</a>#LA9633-4)</span></p><h3>Components</h3><table class=\"grid\"><tr><td>-</td><td><b>Code</b></td><td><b>Value[x]</b></td></tr><tr><td>*</td><td>Clinical modifier <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012823)</span></td><td>Bilateral <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (hpo#HP:0012832)</span></td></tr></table></div>"
+  ]; # 
+  fhir:Observation.status [ fhir:value "final"]; # 
+  fhir:Observation.code [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+       fhir:Coding.code [ fhir:value "HP:0001162" ];
+       fhir:Coding.display [ fhir:value "Postaxial hand polydactyly" ]
+     ]
+  ]; # 
+  fhir:Observation.subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/example-patient>;
+     fhir:Reference.reference [ fhir:value "Patient/example-patient" ]
+  ]; # 
+  fhir:Observation.effectiveDateTime [ fhir:value "2022-09-18"^^xsd:date]; # 
+  fhir:Observation.valueCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a loinc:LA9633-4;
+       fhir:Coding.system [ fhir:value "http://loinc.org" ];
+       fhir:Coding.code [ fhir:value "LA9633-4" ];
+       fhir:Coding.display [ fhir:value "Present" ]
+     ]
+  ]; # 
+  fhir:Observation.component [
+     fhir:index 0;
+     fhir:Observation.component.code [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012823" ];
+         fhir:Coding.display [ fhir:value "Clinical modifier" ]
+       ]
+     ];
+     fhir:Observation.component.valueCodeableConcept [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
+         fhir:Coding.code [ fhir:value "HP:0012832" ];
+         fhir:Coding.display [ fhir:value "Bilateral" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/id.bilateral-polydactyly.phenotypic-feature.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+
