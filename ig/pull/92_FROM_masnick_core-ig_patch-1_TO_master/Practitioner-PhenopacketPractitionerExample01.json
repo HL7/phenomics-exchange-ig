@@ -1,0 +1,15 @@
+{
+  "resourceType" : "Practitioner",
+  "id" : "PhenopacketPractitionerExample01",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated Practitioner example</div>"
+  },
+  "identifier" : [{
+    "use" : "temp",
+    "value" : "03"
+  }],
+  "name" : [{
+    "text" : "John T. Practitioner"
+  }]
+}

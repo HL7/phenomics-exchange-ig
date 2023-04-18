@@ -1,0 +1,47 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "therapeuticActionability-vs",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>0</td><td>UNKNOWN_ACTIONABILITY</td></tr><tr><td>1</td><td>NOT_ACTIONABLE</td></tr><tr><td>2</td><td>ACTIONABLE</td></tr></table></li></ul></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs",
+  "version" : "0.1.0",
+  "name" : "TherapeuticActionabilityVS",
+  "title" : "Therapeutic Actionability Value Set",
+  "status" : "active",
+  "date" : "2023-04-18T17:38:22+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Describes the therapeutic actionability of the variant.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)",
+  "compose" : {
+    "include" : [{
+      "system" : "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability",
+      "concept" : [{
+        "code" : "0",
+        "display" : "UNKNOWN_ACTIONABILITY"
+      },
+      {
+        "code" : "1",
+        "display" : "NOT_ACTIONABLE"
+      },
+      {
+        "code" : "2",
+        "display" : "ACTIONABLE"
+      }]
+    }]
+  }
+}

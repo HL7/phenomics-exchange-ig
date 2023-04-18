@@ -1,0 +1,74 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/DiagnosticReport/PhenopacketsGenomicInterpretationExample02> a fhir:_DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PhenopacketsGenomicInterpretationExample02"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation"^^xsd:anyURI ;
+       fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/phenopackets-genomic-interpretation>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2><span title=\"Codes: {http://loinc 123}\">some loinc code</span> (<span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v2-0074 GE}\">Genetics</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td><b>John Doe </b> unknown, DoB Unknown ( id: 04 (use: TEMP))</td></tr><tr><td>Identifier:</td><td> id: 02</td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td></tr><tr><td><a href=\"Observation-PhenopacketsVariantExample01.html\"><span title=\"Codes: {http://loinc.org 69548-6}\">Genetic variant assessment</span></a></td><td/></tr></table><p>A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported.</p><p><b>Coded Conclusions :</b></p><ul><li><span title=\"Codes: {http://snomed.info/sct 783549006}\">Obesity due to centrosomal protein 19 deficiency (disorder)</span></li></ul></div>"
+  ] ; # 
+  fhir:modifierExtension ( [
+     fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/StructureDefinition/interpretation-status"^^xsd:anyURI ] ;
+     fhir:value [
+       a fhir:CodeableConcept ;
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "UNKNOWN_STATUS" ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:identifier ( [
+     fhir:value [ fhir:v "02" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "unknown"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "GE" ] ;
+       fhir:display [ fhir:v "Genetics" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://loinc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "123" ] ;
+       fhir:display [ fhir:v "some loinc code" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01> ;
+     fhir:reference [ fhir:v "Patient/phenopacketPatientExample01" ]
+  ] ; # 
+  fhir:specimen ( [
+     fhir:link <https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01> ;
+     fhir:reference [ fhir:v "Specimen/phenopacketSpecimenExample01" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:link <https://github.com/phenopackets/core-ig/Observation/PhenopacketsVariantExample01> ;
+     fhir:reference [ fhir:v "Observation/PhenopacketsVariantExample01" ]
+  ] ) ; # 
+  fhir:conclusion [ fhir:v "A rare genetic form of obesity characterized by morbid obesity, hypertension, type 2 diabetes mellitus and dyslipidemia leading to early coronary disease, myocardial infarction and congestive heart failure. Intellectual disability and decreased sperm counts or azoospermia have also been reported."] ; # 
+  fhir:conclusionCode ( [
+     fhir:coding ( [
+       a sct:783549006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "783549006" ] ;
+       fhir:display [ fhir:v "Obesity due to centrosomal protein 19 deficiency (disorder)" ]
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

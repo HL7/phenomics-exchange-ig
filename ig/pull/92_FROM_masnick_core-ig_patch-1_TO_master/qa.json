@@ -1,0 +1,12 @@
+{
+  "url" : "https://github.com/phenopackets/core-ig/ImplementationGuide/hl7.fhir.us.ga4gh.phenopacket",
+  "name" : "GA4GHPhenopacketIG",
+  "package-id" : "hl7.fhir.us.ga4gh.phenopacket",
+  "ig-ver" : "0.1.0",
+  "date" : "Tue, 18 Apr, 2023 17:38:22 +0000",
+  "errs" : 8,
+  "warnings" : 115,
+  "hints" : 146,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)"
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="example-patient"/>
+  <meta>
+    <profile value="https://github.com/phenopackets/core-ig/StructureDefinition/Individual"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;"><b>Anyname A. Anyperson </b> male, DoB: 2001-01-20 ( Medical Record Number: m123 (use: USUAL))</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail:</td><td colspan="3">123 Any St Anytown 12345 US </td></tr><tr><td style="background-color: #f3f5da" title="Languages spoken">Language:</td><td colspan="3"><span title="Codes: {urn:ietf:bcp:47 en-US}">English</span></td></tr><tr><td style="background-color: #f3f5da" title="Patient contact">Contact</td><td colspan="3"><ul><li>ph: 777-444-2222(HOME)</li><li><a href="mailto:anyname.anyperson@example.com">anyname.anyperson@example.com</a></li></ul></td></tr></table></div>
+  </text>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical Record Number"/>
+      </coding>
+    </type>
+    <system value="http://hospital.example.org"/>
+    <value value="m123"/>
+  </identifier>
+  <name>
+    <family value="Anyperson"/>
+    <given value="Anyname"/>
+    <given value="A."/>
+  </name>
+  <gender value="male"/>
+  <birthDate value="2001-01-20"/>
+  <address>
+    <line value="123 Any St"/>
+    <city value="Anytown"/>
+    <postalCode value="12345"/>
+    <country value="US"/>
+  </address>
+  <contact>
+    <telecom>
+      <system value="phone"/>
+      <value value="777-444-2222"/>
+      <use value="home"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="anyname.anyperson@example.com"/>
+    </telecom>
+  </contact>
+  <communication>
+    <language>
+      <coding>
+        <system value="urn:ietf:bcp:47"/>
+        <code value="en-US"/>
+        <display value="English (Region=United States)"/>
+      </coding>
+      <text value="English"/>
+    </language>
+  </communication>
+</Patient>

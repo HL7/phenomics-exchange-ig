@@ -1,0 +1,25 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Specimen/phenopacketSpecimenExample01> a fhir:Specimen ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "phenopacketSpecimenExample01"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated specimen example</div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "temp" ] ;
+     fhir:value [ fhir:v "01" ]
+  ] ) ; # 
+  fhir:subject [
+     fhir:link <https://github.com/phenopackets/core-ig/Patient/phenopacketPatientExample01> ;
+     fhir:reference [ fhir:v "Patient/phenopacketPatientExample01" ]
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

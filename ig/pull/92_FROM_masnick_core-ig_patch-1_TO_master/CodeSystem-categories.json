@@ -1,0 +1,37 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "categories",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/categories</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">phenotype<a name=\"categories-phenotype\"> </a></td><td>Phenotype</td></tr></table></div>"
+  },
+  "url" : "https://github.com/phenopackets/core-ig/CodeSystem/categories",
+  "version" : "0.1.0",
+  "name" : "Categories",
+  "title" : "Categories",
+  "status" : "draft",
+  "experimental" : true,
+  "date" : "2023-04-18T17:38:22+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Various categories or tags",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "copyright" : "[Global Alliance for Genomics and Health](https://www.ga4gh.org)",
+  "content" : "complete",
+  "count" : 1,
+  "concept" : [{
+    "code" : "phenotype",
+    "display" : "Phenotype"
+  }]
+}

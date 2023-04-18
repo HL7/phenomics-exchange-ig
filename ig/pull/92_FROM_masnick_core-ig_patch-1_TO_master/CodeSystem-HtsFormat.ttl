@@ -1,0 +1,63 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "HtsFormat"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">UNKNOWN<a name=\"HtsFormat-UNKNOWN\"> </a></td><td>Unknown</td></tr><tr><td style=\"white-space:nowrap\">SAM<a name=\"HtsFormat-SAM\"> </a></td><td>SAM</td></tr><tr><td style=\"white-space:nowrap\">BAM<a name=\"HtsFormat-BAM\"> </a></td><td>BAM</td></tr><tr><td style=\"white-space:nowrap\">CRAM<a name=\"HtsFormat-CRAM\"> </a></td><td>CRAM</td></tr><tr><td style=\"white-space:nowrap\">VCF<a name=\"HtsFormat-VCF\"> </a></td><td>VCF</td></tr><tr><td style=\"white-space:nowrap\">BCF<a name=\"HtsFormat-BCF\"> </a></td><td>BCF</td></tr><tr><td style=\"white-space:nowrap\">GVCF<a name=\"HtsFormat-GVCF\"> </a></td><td>GVCF</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "HtsFormat"] ; # 
+  fhir:title [ fhir:v "HTS Format"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2020-02-14T16:13:10+10:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "An enumeration used to represent different high-throughput sequencing file formats."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "UNKNOWN" ] ;
+     fhir:display [ fhir:v "Unknown" ]
+  ] [
+     fhir:code [ fhir:v "SAM" ] ;
+     fhir:display [ fhir:v "SAM" ]
+  ] [
+     fhir:code [ fhir:v "BAM" ] ;
+     fhir:display [ fhir:v "BAM" ]
+  ] [
+     fhir:code [ fhir:v "CRAM" ] ;
+     fhir:display [ fhir:v "CRAM" ]
+  ] [
+     fhir:code [ fhir:v "VCF" ] ;
+     fhir:display [ fhir:v "VCF" ]
+  ] [
+     fhir:code [ fhir:v "BCF" ] ;
+     fhir:display [ fhir:v "BCF" ]
+  ] [
+     fhir:code [ fhir:v "GVCF" ] ;
+     fhir:display [ fhir:v "GVCF" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

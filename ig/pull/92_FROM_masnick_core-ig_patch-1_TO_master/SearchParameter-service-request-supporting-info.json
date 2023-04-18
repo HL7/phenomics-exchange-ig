@@ -1,0 +1,34 @@
+{
+  "resourceType" : "SearchParameter",
+  "id" : "service-request-supporting-info",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ServiceRequestSupportingInfo</h2><p>Parameter <code>supporting-info</code>:<code>reference</code></p><div><p>Search ServiceRequest by supporting resource parameters</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td></tr><tr><td>Expression</td><td><code>ServiceRequest.supportingInfo</code></td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr><tr><td>Comparators</td><td>Allowed: eq</td></tr></table></div>"
+  },
+  "url" : "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info",
+  "version" : "0.1.0",
+  "name" : "ServiceRequestSupportingInfo",
+  "status" : "active",
+  "date" : "2023-04-18T17:38:22+00:00",
+  "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+  "contact" : [{
+    "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"
+    }]
+  }],
+  "description" : "Search ServiceRequest by supporting resource parameters",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "code" : "supporting-info",
+  "base" : ["ServiceRequest"],
+  "type" : "reference",
+  "expression" : "ServiceRequest.supportingInfo",
+  "target" : ["Bundle"],
+  "comparator" : ["eq"]
+}

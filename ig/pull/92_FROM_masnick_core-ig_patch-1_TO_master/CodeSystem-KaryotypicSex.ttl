@@ -1,0 +1,86 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "KaryotypicSex"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">UNKNOWN_KARYOTYPE<a name=\"KaryotypicSex-UNKNOWN_KARYOTYPE\"> </a></td><td>UNKNOWN_KARYOTYPE</td><td>Untyped or inconclusive karyotyping</td></tr><tr><td style=\"white-space:nowrap\">XX<a name=\"KaryotypicSex-XX\"> </a></td><td>XX karyotypic sex</td><td>Karyotype with two X chromosomes</td></tr><tr><td style=\"white-space:nowrap\">XY<a name=\"KaryotypicSex-XY\"> </a></td><td>XY karyotypic sex</td><td>Karyotype with one X chromosome and one Y chromosome</td></tr><tr><td style=\"white-space:nowrap\">XO<a name=\"KaryotypicSex-XO\"> </a></td><td>XO karyotypic sex</td><td>Karyotype with one X chromosome</td></tr><tr><td style=\"white-space:nowrap\">XXY<a name=\"KaryotypicSex-XXY\"> </a></td><td>XXY karyotypic sex</td><td>Karyotype with two X chromosomes and one Y chromosome</td></tr><tr><td style=\"white-space:nowrap\">XXX<a name=\"KaryotypicSex-XXX\"> </a></td><td>XXX karyotypic sex</td><td>Karyotype with three X chromosomes</td></tr><tr><td style=\"white-space:nowrap\">XXYY<a name=\"KaryotypicSex-XXYY\"> </a></td><td>XXYY karyotypic sex</td><td>Karyotype with two X chromosomes and two Y chromosomes</td></tr><tr><td style=\"white-space:nowrap\">XXXY<a name=\"KaryotypicSex-XXXY\"> </a></td><td>XXXY karyotypic sex</td><td>Karyotype with three X chromosomes and one Y chromosome</td></tr><tr><td style=\"white-space:nowrap\">XXXX<a name=\"KaryotypicSex-XXXX\"> </a></td><td>XXXX karyotypic sex</td><td>Karyotype with four X chromosomes</td></tr><tr><td style=\"white-space:nowrap\">XYY<a name=\"KaryotypicSex-XYY\"> </a></td><td>XYY karyotypic sex</td><td>Karyotype with one X chromosome and two Y chromosomes</td></tr><tr><td style=\"white-space:nowrap\">OTHER_KARYOTYPE<a name=\"KaryotypicSex-OTHER_KARYOTYPE\"> </a></td><td>Other karyotype</td><td>Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "KaryotypicSexCS"] ; # 
+  fhir:title [ fhir:v "Karyotypic sex code system"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2021-05-28T17:06:00-04:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "karyotypic sex of an individual (also known as chromosomal sex)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"] ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "11"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "UNKNOWN_KARYOTYPE" ] ;
+     fhir:display [ fhir:v "UNKNOWN_KARYOTYPE" ] ;
+     fhir:definition [ fhir:v "Untyped or inconclusive karyotyping" ]
+  ] [
+     fhir:code [ fhir:v "XX" ] ;
+     fhir:display [ fhir:v "XX karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with two X chromosomes" ]
+  ] [
+     fhir:code [ fhir:v "XY" ] ;
+     fhir:display [ fhir:v "XY karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with one X chromosome and one Y chromosome" ]
+  ] [
+     fhir:code [ fhir:v "XO" ] ;
+     fhir:display [ fhir:v "XO karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with one X chromosome" ]
+  ] [
+     fhir:code [ fhir:v "XXY" ] ;
+     fhir:display [ fhir:v "XXY karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with two X chromosomes and one Y chromosome" ]
+  ] [
+     fhir:code [ fhir:v "XXX" ] ;
+     fhir:display [ fhir:v "XXX karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with three X chromosomes" ]
+  ] [
+     fhir:code [ fhir:v "XXYY" ] ;
+     fhir:display [ fhir:v "XXYY karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with two X chromosomes and two Y chromosomes" ]
+  ] [
+     fhir:code [ fhir:v "XXXY" ] ;
+     fhir:display [ fhir:v "XXXY karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with three X chromosomes and one Y chromosome" ]
+  ] [
+     fhir:code [ fhir:v "XXXX" ] ;
+     fhir:display [ fhir:v "XXXX karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with four X chromosomes" ]
+  ] [
+     fhir:code [ fhir:v "XYY" ] ;
+     fhir:display [ fhir:v "XYY karyotypic sex" ] ;
+     fhir:definition [ fhir:v "Karyotype with one X chromosome and two Y chromosomes" ]
+  ] [
+     fhir:code [ fhir:v "OTHER_KARYOTYPE" ] ;
+     fhir:display [ fhir:v "Other karyotype" ] ;
+     fhir:definition [ fhir:v "Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

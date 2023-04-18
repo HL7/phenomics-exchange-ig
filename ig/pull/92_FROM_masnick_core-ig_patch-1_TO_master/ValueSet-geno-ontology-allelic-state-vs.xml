@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="geno-ontology-allelic-state-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <code>http://www.ebi.ac.uk/ols/ontologies/geno</code> where concept  is-a  GENO_0000875</li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/geno-ontology-allelic-state-vs"/>
+  <version value="0.1.0"/>
+  <name value="GenoOntologyAllelicStateVS"/>
+  <title value="GENO Ontology Allelic State Value Set "/>
+  <status value="active"/>
+  <date value="2023-04-18T17:38:22+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Descendent terms of GENO_0000875"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="http://www.ebi.ac.uk/ols/ontologies/geno"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="GENO_0000875"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>
