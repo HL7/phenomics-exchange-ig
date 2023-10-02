@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HL7.FHIR.US.GA4GH.PHENOPACKET\losartan - FHIR v4.0.1</title>
+    <title>losartan - GA4GH Phenopacket (version 2) FHIR Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -29,10 +29,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -238,18 +238,6 @@
 
   <h2 id="root">Example MedicationAdministration: losartan</h2>
 
-  <table class="colsi">
-    <tr>
-
-      <td colspan="2">
-        
-          
-          
-        
-      </td>
-
-    </tr>
-  </table>
 
 
 
@@ -258,7 +246,7 @@
 
 
 
-  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationAdministration</b><a name="id.treatment.1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationAdministration &quot;id.treatment.1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Treatment.html">Treatment</a></p></div><p><b>status</b>: completed</p><p><b>category</b>: Outpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-medicationrequest-category.html">MedicationRequest Category Codes</a>#outpatient)</span></p><p><b>medication</b>: losartan <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (#DrugCentral_1610)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2020-03-15 13:00:00+0000 --&gt; 2020-03-25 09:00:00+0000</p><h3>Dosages</h3><table class="grid"><tr><td>-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td>*</td><td>Oral Route of Administration <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (ncit.owl#NCIT_C38288)</span></td><td>30 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></td></tr></table></div>
+  <div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationAdministration</b><a name="id.treatment.1"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationAdministration &quot;id.treatment.1&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-Treatment.html">Treatment</a></p></div><p><b>status</b>: completed</p><p><b>category</b>: Outpatient <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.3.0/CodeSystem-medicationrequest-category.html">MedicationRequest Category Codes</a>#outpatient)</span></p><p><b>medication</b>: losartan <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (#DrugCentral_1610)</span></p><p><b>subject</b>: <a href="Patient-example-patient.html">Patient/example-patient</a> &quot; ANYPERSON&quot;</p><p><b>effective</b>: 2020-03-15 13:00:00+0000 --&gt; 2020-03-25 09:00:00+0000</p><h3>Dosages</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Route</b></td><td><b>Dose</b></td></tr><tr><td style="display: none">*</td><td>Oral Route of Administration <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (ncit.owl#NCIT_C38288)</span></td><td>30 mg<span style="background: LightGoldenRodYellow"> (Details: UCUM code mg = 'mg')</span></td></tr></table></div>
 
   
 
@@ -289,7 +277,7 @@
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/">Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</a>.  Package hl7.fhir.us.ga4gh.phenopacket#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 18, 2023 17:38+0000">2023-04-18</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/">Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</a>.  Package hl7.fhir.us.ga4gh.phenopacket#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 2, 2023 17:27+0000">2023-10-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

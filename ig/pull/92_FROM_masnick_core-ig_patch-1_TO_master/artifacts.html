@@ -3,7 +3,7 @@
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-    <title>HL7.FHIR.US.GA4GH.PHENOPACKET\Artifacts Summary - FHIR v4.0.1</title>
+    <title>Artifacts Summary - GA4GH Phenopacket (version 2) FHIR Implementation Guide v0.1.0</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta name="author" content="http://hl7.org/fhir"/>
@@ -29,10 +29,10 @@
     <![endif]-->
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
     <link rel="shortcut icon" href="assets/ico/favicon.png"/>
   </head>
   <body onload="document.body.style.opacity='1'">
@@ -357,6 +357,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="StructureDefinition-PathologicalTnmFinding.html"
+                     title="StructureDefinition/PathologicalTnmFinding"> Pathological TNM Finding</a>
+               </td>
+               <td>
+<p>Pathological TNM findings, if applicable. Corresponds to pathological_tnm_finding (GA4GH)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="StructureDefinition-acmg-pathogenicity-classification.html"
                      title="StructureDefinition/acmg-pathogenicity-classification">ACMG Pathogenicity Classification</a>
                </td>
@@ -469,15 +478,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>This element can be used if the phenopacket describes cancer. Tumor staging describes the extent of growth of cancer, including the tumor and, if applicable, affected lymph nodes and distant metastases. This element should not be confused with clinical stage.</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="StructureDefinition-PathologicalTnmFinding.html"
-                     title="StructureDefinition/PathologicalTnmFinding"> Pathological TNM Finding</a>
-               </td>
-               <td>
-<p>Pathological TNM findings, if applicable. Corresponds to pathological_tnm_finding (GA4GH)</p>
 </td>
             </tr>
             <tr>
@@ -644,6 +644,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="ValueSet-phenotypicFeatureVS.html"
+                     title="ValueSet/phenotypicFeatureVS">Observation Codes for status of a PhenotypicFeature</a>
+               </td>
+               <td>
+<p>The LOINC codes for present if a feature is observed and absent if a feature was excluded.</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="ValueSet-observation-categories.html"
                      title="ValueSet/observation-categories">Observation categories</a>
                </td>
@@ -675,15 +684,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>ValueSet description here</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="ValueSet-phenotypicFeatureVS.html"
-                     title="ValueSet/phenotypicFeatureVS">Observation Codes for status of a PhenotypicFeature</a>
-               </td>
-               <td>
-<p>The LOINC codes for present if a feature is observed and absent if a feature was excluded.</p>
 </td>
             </tr>
             <tr>
@@ -767,6 +767,15 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
+                  <a href="CodeSystem-phenotypicFeatureStatusCS.html"
+                     title="CodeSystem/phenotypicFeatureStatusCS">Categories</a>
+               </td>
+               <td>
+<p>Various categories or tags</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="CodeSystem-HtsFormat.html" title="CodeSystem/HtsFormat">HTS Format</a>
                </td>
                <td>
@@ -779,15 +788,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>karyotypic sex of an individual (also known as chromosomal sex)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="CodeSystem-phenotypicFeatureStatusCS.html"
-                     title="CodeSystem/phenotypicFeatureStatusCS">Categories</a>
-               </td>
-               <td>
-<p>Various categories or tags</p>
 </td>
             </tr>
          </tbody>
@@ -804,11 +804,73 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
          <tbody>
             <tr>
                <td style="column-width:30%">
+                  <a href="Observation-karyotypic-sex-valid-1.html"
+                     title="Observation/karyotypic-sex-valid-1">A VALID karyotypic sex Observation instance.</a>
+               </td>
+               <td>
+
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-phenotypic-abnormality-valid-1.html"
+                     title="Observation/phenotypic-abnormality-valid-1">A valid phenotypic abnormality Observation example.</a>
+               </td>
+               <td>
+
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-karyotypic-sex-invalid-1.html"
+                     title="Observation/karyotypic-sex-invalid-1">An INVALID karyotypic sex Observation instance.</a>
+               </td>
+               <td>
+
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-phenotypic-abnormality-invalid-1.html"
+                     title="Observation/phenotypic-abnormality-invalid-1">An INVALID phenotypic abnormality Observation example.</a>
+               </td>
+               <td>
+
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-id.disease.3.html" title="Condition/id.disease.3">CHF-stageIII</a>
+               </td>
+               <td>
+<p>Congestive heart failure, New York Heart Association stage III</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-id.phenotypicfeature.4.html"
+                     title="Observation/id.phenotypicfeature.4">CHF-with-severity</a>
+               </td>
+               <td>
+<p>PhenotypicFeature Example for severe Low-output congestive heart failure</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
                   <a href="Composition-DevelopmentalDelay.html"
                      title="Composition/DevelopmentalDelay">DevelopmentalDelay</a>
                </td>
                <td>
 <p>Example use case for a child with undiagnosed developmental delay</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-id.phenotypicfeature.3.html"
+                     title="Observation/id.phenotypicfeature.3">MVP-with-onset</a>
+               </td>
+               <td>
+<p>PhenotypicFeature Example for mitral value prolapse with onset</p>
 </td>
             </tr>
             <tr>
@@ -824,25 +886,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                <td style="column-width:30%">
                   <a href="Composition-PhenopacketCompositionExample01.html"
                      title="Composition/PhenopacketCompositionExample01">PhenopacketCompositionExample01</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Practitioner-PhenopacketPractitionerExample01.html"
-                     title="Practitioner/PhenopacketPractitionerExample01">phenopacket Practitioner Example01</a>
-               </td>
-               <td>
-<p>This is an incomplete example that used as 
-               a placeholder for a curated Practitioner example</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Bundle-PhenopacketsBundleExample01.html"
-                     title="Bundle/PhenopacketsBundleExample01">PhenopacketsBundleExample01</a>
                </td>
                <td>
 
@@ -886,124 +929,11 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Patient-Proband1.html" title="Patient/Proband1">Proband1</a>
+                  <a href="Bundle-PhenopacketsBundleExample01.html"
+                     title="Bundle/PhenopacketsBundleExample01">PhenopacketsBundleExample01</a>
                </td>
                <td>
-<p>Example child with developmental delay</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Specimen-biosample.specimen.id.1.html"
-                     title="Specimen/biosample.specimen.id.1">bladderCarcinoma</a>
-               </td>
-               <td>
-<p>Biosample Example for bladder carcinoma</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Specimen-biosample.specimen.id.2.html"
-                     title="Specimen/biosample.specimen.id.2">muscleBiopsy</a>
-               </td>
-               <td>
-<p>Biosample Example – muscle biopsy</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Patient-example-patient.html" title="Patient/example-patient">example-patient</a>
-               </td>
-               <td>
-<p>Example of Patient</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0000343.html" title="Observation/hp.0000343">longPhiltrum</a>
-               </td>
-               <td>
-<p>Long philtrum (HP:0000343)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0000369.html" title="Observation/hp.0000369">lowSetEars</a>
-               </td>
-               <td>
-<p>Low-set ears (HP:0000369)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0000541.html" title="Observation/hp.0000541">retinalDetachment</a>
-               </td>
-               <td>
-<p>Retinal detachment (HP:0000541)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0000568.html" title="Observation/hp.0000568">microphthalmia</a>
-               </td>
-               <td>
-<p>Long philtrum (HP:0000568)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0001252.html" title="Observation/hp.0001252">hypotonia</a>
-               </td>
-               <td>
-<p>Hypotonia (HP:0001252)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0001263.html" title="Observation/hp.0001263">globalDevelopmentalDelay</a>
-               </td>
-               <td>
-<p>Global developmental delay (HP:0001263)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0001324.html" title="Observation/hp.0001324">muscleWeakness</a>
-               </td>
-               <td>
-<p>Muscle weakness (HP:0001324)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0001669.html" title="Observation/hp.0001669">tga</a>
-               </td>
-               <td>
-<p>Transposition of the great arteries (HP:0001669)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0003202.html" title="Observation/hp.0003202">amyotrophy</a>
-               </td>
-               <td>
-<p>Skeletal muscle atrophy (HP:0003202)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0003557.html" title="Observation/hp.0003557">fiberSizeVariability</a>
-               </td>
-               <td>
-<p>Increased variability in muscle fiber diameter (HP:0003557)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-hp.0007663.html" title="Observation/hp.0007663">reducedVisualAcuity</a>
-               </td>
-               <td>
-<p>Reduced visual acuity (HP:0007663)</p>
+
 </td>
             </tr>
             <tr>
@@ -1017,44 +947,18 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Condition-id.disease.1.html" title="Condition/id.disease.1">excluded-disease</a>
+                  <a href="Patient-Proband1.html" title="Patient/Proband1">Proband1</a>
                </td>
                <td>
-<p>Phenopacket Example for an excluded disease</p>
+<p>Example child with developmental delay</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Condition-id.disease.2.html" title="Condition/id.disease.2">vitreoretinochoroidopathy</a>
+                  <a href="Observation-hp.0003202.html" title="Observation/hp.0003202">amyotrophy</a>
                </td>
                <td>
-<p>Phenopacket Example for autosomal dominant vitreoretinochoroidopathy</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Condition-id.disease.3.html" title="Condition/id.disease.3">CHF-stageIII</a>
-               </td>
-               <td>
-<p>Congestive heart failure, New York Heart Association stage III</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Condition-id.disease.intellectualDisability.html"
-                     title="Condition/id.disease.intellectualDisability">intellectualDisabilityDisease</a>
-               </td>
-               <td>
-<p>Intellectual disability (disease)</p>
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
-                  <a href="Observation-id.measurement.1.html"
-                     title="Observation/id.measurement.1">thrombocytopenia</a>
-               </td>
-               <td>
-<p>Measurement Example for thrombocytopenia</p>
+<p>Skeletal muscle atrophy (HP:0003202)</p>
 </td>
             </tr>
             <tr>
@@ -1068,29 +972,68 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-id.phenotypicfeature.2.html"
-                     title="Observation/id.phenotypicfeature.2">lvdysfunction-excluded</a>
+                  <a href="Specimen-biosample.specimen.id.1.html"
+                     title="Specimen/biosample.specimen.id.1">bladderCarcinoma</a>
                </td>
                <td>
-<p>PhenotypicFeature Example for exclusion of LV dysfunction</p>
+<p>Biosample Example for bladder carcinoma</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-id.phenotypicfeature.3.html"
-                     title="Observation/id.phenotypicfeature.3">MVP-with-onset</a>
+                  <a href="Patient-example-patient.html" title="Patient/example-patient">example-patient</a>
                </td>
                <td>
-<p>PhenotypicFeature Example for mitral value prolapse with onset</p>
+<p>Example of Patient</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-id.phenotypicfeature.4.html"
-                     title="Observation/id.phenotypicfeature.4">CHF-with-severity</a>
+                  <a href="Condition-id.disease.1.html" title="Condition/id.disease.1">excluded-disease</a>
                </td>
                <td>
-<p>PhenotypicFeature Example for severe Low-output congestive heart failure</p>
+<p>Phenopacket Example for an excluded disease</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0003557.html" title="Observation/hp.0003557">fiberSizeVariability</a>
+               </td>
+               <td>
+<p>Increased variability in muscle fiber diameter (HP:0003557)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0001263.html" title="Observation/hp.0001263">globalDevelopmentalDelay</a>
+               </td>
+               <td>
+<p>Global developmental delay (HP:0001263)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0001252.html" title="Observation/hp.0001252">hypotonia</a>
+               </td>
+               <td>
+<p>Hypotonia (HP:0001252)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-id.disease.intellectualDisability.html"
+                     title="Condition/id.disease.intellectualDisability">intellectualDisabilityDisease</a>
+               </td>
+               <td>
+<p>Intellectual disability (disease)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0000343.html" title="Observation/hp.0000343">longPhiltrum</a>
+               </td>
+               <td>
+<p>Long philtrum (HP:0000343)</p>
 </td>
             </tr>
             <tr>
@@ -1104,20 +1047,44 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-karyotypic-sex-invalid-1.html"
-                     title="Observation/karyotypic-sex-invalid-1">An INVALID karyotypic sex Observation instance.</a>
+                  <a href="Observation-hp.0000369.html" title="Observation/hp.0000369">lowSetEars</a>
                </td>
                <td>
-
+<p>Low-set ears (HP:0000369)</p>
 </td>
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-karyotypic-sex-valid-1.html"
-                     title="Observation/karyotypic-sex-valid-1">A VALID karyotypic sex Observation instance.</a>
+                  <a href="Observation-id.phenotypicfeature.2.html"
+                     title="Observation/id.phenotypicfeature.2">lvdysfunction-excluded</a>
                </td>
                <td>
-
+<p>PhenotypicFeature Example for exclusion of LV dysfunction</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0000568.html" title="Observation/hp.0000568">microphthalmia</a>
+               </td>
+               <td>
+<p>Long philtrum (HP:0000568)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Specimen-biosample.specimen.id.2.html"
+                     title="Specimen/biosample.specimen.id.2">muscleBiopsy</a>
+               </td>
+               <td>
+<p>Biosample Example – muscle biopsy</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0001324.html" title="Observation/hp.0001324">muscleWeakness</a>
+               </td>
+               <td>
+<p>Muscle weakness (HP:0001324)</p>
 </td>
             </tr>
             <tr>
@@ -1127,6 +1094,16 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
                </td>
                <td>
 <p>This is an example of a patient resource to be used in the assocaited patient examples. It is not representative of phenopackets patient’s data representation</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Practitioner-PhenopacketPractitionerExample01.html"
+                     title="Practitioner/PhenopacketPractitionerExample01">phenopacket Practitioner Example01</a>
+               </td>
+               <td>
+<p>This is an incomplete example that used as 
+               a placeholder for a curated Practitioner example</p>
 </td>
             </tr>
             <tr>
@@ -1141,15 +1118,6 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-phenotypic-abnormality-invalid-1.html"
-                     title="Observation/phenotypic-abnormality-invalid-1">An INVALID phenotypic abnormality Observation example.</a>
-               </td>
-               <td>
-
-</td>
-            </tr>
-            <tr>
-               <td style="column-width:30%">
                   <a href="Observation-phenotypic-abnormality-invalid-meta-profile.html"
                      title="Observation/phenotypic-abnormality-invalid-meta-profile">phenotypic-abnormality-invalid-meta-profile</a>
                </td>
@@ -1159,11 +1127,43 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
             </tr>
             <tr>
                <td style="column-width:30%">
-                  <a href="Observation-phenotypic-abnormality-valid-1.html"
-                     title="Observation/phenotypic-abnormality-valid-1">A valid phenotypic abnormality Observation example.</a>
+                  <a href="Observation-hp.0007663.html" title="Observation/hp.0007663">reducedVisualAcuity</a>
                </td>
                <td>
-
+<p>Reduced visual acuity (HP:0007663)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0000541.html" title="Observation/hp.0000541">retinalDetachment</a>
+               </td>
+               <td>
+<p>Retinal detachment (HP:0000541)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-hp.0001669.html" title="Observation/hp.0001669">tga</a>
+               </td>
+               <td>
+<p>Transposition of the great arteries (HP:0001669)</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Observation-id.measurement.1.html"
+                     title="Observation/id.measurement.1">thrombocytopenia</a>
+               </td>
+               <td>
+<p>Measurement Example for thrombocytopenia</p>
+</td>
+            </tr>
+            <tr>
+               <td style="column-width:30%">
+                  <a href="Condition-id.disease.2.html" title="Condition/id.disease.2">vitreoretinochoroidopathy</a>
+               </td>
+               <td>
+<p>Phenopacket Example for autosomal dominant vitreoretinochoroidopathy</p>
 </td>
             </tr>
          </tbody>
@@ -1193,7 +1193,7 @@ h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefi
 
       <div class="inner-wrapper">
         <p>
-          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/">Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</a>.  Package hl7.fhir.us.ga4gh.phenopacket#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Tue, Apr 18, 2023 17:38+0000">2023-04-18</span>
+          IG &#169; 2021+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/">Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</a>.  Package hl7.fhir.us.ga4gh.phenopacket#0.1.0 based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Mon, Oct 2, 2023 17:27+0000">2023-10-02</span>
           <br/>
           <span style="color: var(--footer-highlight-text-color)">
                       Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |

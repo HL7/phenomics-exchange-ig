@@ -1,0 +1,31 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<https://github.com/phenopackets/core-ig/Observation/karyotypic-sex-invalid-1> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "karyotypic-sex-invalid-1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Observation</b><a name=\"karyotypic-sex-invalid-1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Observation &quot;karyotypic-sex-invalid-1&quot; </p></div><p><b>status</b>: final</p><p><b>code</b>: GSSO:000113 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (GSSO#GSSO:000113)</span></p><p><b>value</b>: XXW <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (observation-karyotypic-sex#XXW)</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://purl.obolibrary.org/obo/GSSO"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "GSSO:000113" ]
+     ] )
+  ] ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://github.com/phenopackets/core-ig/CodeSystem/observation-karyotypic-sex"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "XXW" ]
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="sequence-ontology-structural-variant-vs"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include codes from <code>http://www.sequenceontology.org/</code> where concept  is-a  SO:0001537</li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/sequence-ontology-structural-variant-vs"/>
+  <version value="0.1.0"/>
+  <name value="SequenceOntologyStructuralVariantVS"/>
+  <title value="Sequence Ontology Structural Variant Value Set"/>
+  <status value="active"/>
+  <date value="2023-10-02T17:32:44+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Descendent terms of SO:0001537."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="http://www.sequenceontology.org/"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="SO:0001537"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

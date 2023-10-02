@@ -10,14 +10,14 @@
   fhir:id [ fhir:v "phenotypicFeatureStatusCS"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Absent<a name=\"phenotypicFeatureStatusCS-Absent\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Present<a name=\"phenotypicFeatureStatusCS-Present\"> </a></td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr><tr><td style=\"white-space:nowrap\">Absent<a name=\"phenotypicFeatureStatusCS-Absent\"> </a></td></tr><tr><td style=\"white-space:nowrap\">Present<a name=\"phenotypicFeatureStatusCS-Present\"> </a></td></tr></table></div>"
   ] ; # 
   fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
   fhir:name [ fhir:v "PhenotypicFeatureStatusCS"] ; # 
   fhir:title [ fhir:v "Categories"] ; # 
   fhir:status [ fhir:v "active"] ; # 
-  fhir:date [ fhir:v "2023-04-18T17:38:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-02T17:27:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;

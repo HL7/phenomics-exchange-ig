@@ -10,7 +10,7 @@
   fhir:id [ fhir:v "categories"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>https://github.com/phenopackets/core-ig/CodeSystem/categories</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">phenotype<a name=\"categories-phenotype\"> </a></td><td>Phenotype</td></tr></table></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This  code system <code>https://github.com/phenopackets/core-ig/CodeSystem/categories</code> defines the following code:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">phenotype<a name=\"categories-phenotype\"> </a></td><td>Phenotype</td></tr></table></div>"
   ] ; # 
   fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/CodeSystem/categories"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "Categories"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2023-04-18T17:38:22+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-10-02T17:27:27+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;

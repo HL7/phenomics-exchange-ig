@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "a1a6ac01-70cc-42a4-9597-24fe3078faff-8",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/a1a6ac01-70cc-42a4-9597-24fe3078faff-8",
+  "id" : "009e92d6-4501-4c14-ad1c-ed2967b009dc-8",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/009e92d6-4501-4c14-ad1c-ed2967b009dc-8",
   "name" : "UnionUSCoreDiagnosticReportProfileLaboratoryReportingAndPhenopacketsGenomicInterpretation",
   "title" : "Union of US Core DiagnosticReport Profile for Laboratory Results Reporting And Phenopackets Genomic Interpretation",
   "status" : "active",
-  "date" : "2023-04-18T17:38:47+00:00",
+  "date" : "2023-10-02T17:27:51+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -450,7 +450,7 @@
     },
     {
       "path" : "DiagnosticReport.status",
-      "short" : "registered | partial | preliminary | final +",
+      "short" : "left: (USCDI) registered | partial | preliminary | final +; right: registered | partial | preliminary | final +",
       "definition" : "The status of the diagnostic report.",
       "requirements" : "Diagnostic services routinely issue provisional/incomplete reports, and sometimes withdraw previously released reports.",
       "min" : 1,
@@ -496,7 +496,7 @@
     },
     {
       "path" : "DiagnosticReport.category",
-      "short" : "Service category",
+      "short" : "left: (USCDI) Service category; right: Service category",
       "definition" : "A code that classifies the clinical discipline, department or diagnostic service that created the report (e.g. cardiology, biochemistry, hematology, MRI). This is used for searching, sorting and display purposes.",
       "comment" : "Multiple categories are allowed using various categorization schemes.   The level of granularity is defined by the category concepts in the value set. More fine-grained filtering can be performed using the metadata and/or terminology hierarchy in DiagnosticReport.code.",
       "alias" : ["Department",
@@ -542,7 +542,7 @@
     },
     {
       "path" : "DiagnosticReport.code",
-      "short" : "left: US Core Laboratory Report Order Code; right: Name/Code for this diagnostic report",
+      "short" : "left: (USCDI) US Core Laboratory Report Order Code; right: Name/Code for this diagnostic report",
       "definition" : "left: The test, panel or battery that was ordered.; right: A code or name that describes this diagnostic report.",
       "comment" : "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
       "alias" : ["Type"],
@@ -568,7 +568,7 @@
       "binding" : {
         "strength" : "extensible",
         "description" : "left: LOINC codes; right: Codes that describe Diagnostic Reports.",
-        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/a1a6ac01-70cc-42a4-9597-24fe3078faff-11"
+        "valueSet" : "http://hl7.org/fhir/comparison/ValueSet/009e92d6-4501-4c14-ad1c-ed2967b009dc-11"
       },
       "mapping" : [{
         "identity" : "workflow",
@@ -589,7 +589,7 @@
     },
     {
       "path" : "DiagnosticReport.subject",
-      "short" : "left: The subject of the report - usually, but not always, the patient; right: Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient \n                    or biosample that is the subject being interpreted.\n                    Check specimen element.",
+      "short" : "left: (USCDI) The subject of the report - usually, but not always, the patient; right: Phenopackets GenomicInterpretation.subject_or_biosample_id: The id of the patient \n                    or biosample that is the subject being interpreted.\n                    Check specimen element.",
       "definition" : "The subject of the report. Usually, but not always, this is a patient. However, diagnostic services also perform analyses on specimens collected from a variety of other sources.",
       "requirements" : "SHALL know the subject context.",
       "alias" : ["Patient"],
@@ -683,7 +683,7 @@
     },
     {
       "path" : "DiagnosticReport.effective[x]",
-      "short" : "left: Diagnostically relevant time (typically the time of specimen collection); right: Clinically relevant time/time-period for report",
+      "short" : "left: (USCDI) Diagnostically relevant time (typically the time of specimen collection); right: Clinically relevant time/time-period for report",
       "definition" : "The time or time-period the observed values are related to. When the subject of the report is a patient, this is usually either the time of the procedure or of specimen collection(s), but very often the source of the date/time is not known, only the date/time itself.",
       "comment" : "If the diagnostic procedure was performed on the patient, this is the time it was performed. If there are specimens, the diagnostically relevant time can be derived from the specimen collection times, but the specimen information is not always available, and the exact relationship between the specimens and the diagnostically relevant time is not always automatic.",
       "requirements" : "Need to know where in the patient history to file/present this report.",
@@ -735,7 +735,7 @@
     },
     {
       "path" : "DiagnosticReport.issued",
-      "short" : "left: When the report was released; right: DateTime this version was made",
+      "short" : "left: (USCDI) When the report was released; right: DateTime this version was made",
       "definition" : "The date and time that this version of the report was made available to providers, typically after the report was reviewed and verified.",
       "comment" : "May be different from the update time of the resource itself, because that is the status of the record (potentially a secondary copy), not the actual release time of the report.",
       "requirements" : "Clinicians need to be able to check the date that the report was released.",
@@ -776,7 +776,7 @@
     },
     {
       "path" : "DiagnosticReport.performer",
-      "short" : "Responsible Diagnostic Service",
+      "short" : "left: (USCDI) Responsible Diagnostic Service; right: Responsible Diagnostic Service",
       "definition" : "The diagnostic service that is responsible for issuing the report.",
       "comment" : "This is not necessarily the source of the atomic data items or the entity that interpreted the results. It is the entity that takes responsibility for the clinical report.",
       "requirements" : "Need to know whom to contact if there are queries about the results. Also may need to track the source of reports for secondary data analysis.",
@@ -912,7 +912,7 @@
     },
     {
       "path" : "DiagnosticReport.result",
-      "short" : "Observations",
+      "short" : "left: (USCDI) Observations; right: Observations",
       "definition" : "[Observations]  that are part of this diagnostic report.",
       "comment" : "Observations can contain observations.",
       "requirements" : "Need to support individual results, or  groups of results, where the result grouping is arbitrary, but meaningful.",

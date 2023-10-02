@@ -1,0 +1,23 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "996a3e7c-69ad-4724-b152-be6ca6086fec-95",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/996a3e7c-69ad-4724-b152-be6ca6086fec-95",
+  "name" : "UnionUSCoreSmokingStatusObservationCodesAndLOINCCodes",
+  "title" : "Union of US Core Smoking Status Observation Codes And LOINC Codes",
+  "status" : "active",
+  "date" : "2023-10-02T17:33:08+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "US"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "72166-2",
+        "display" : "Tobacco smoking status NHIS"
+      }]
+    }]
+  }
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="TumorProgression"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include these codes as defined in <code>http://purl.obolibrary.org/obo/ncit.owl</code><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>NCIT:C8509</td><td>Primary Neoplasm</td></tr><tr><td>NCIT:C3261</td><td>Metastatic Neoplasm</td></tr><tr><td>NCIT:C4798</td><td>Recurrent Neoplasm</td></tr></table></li></ul></div>
+  </text>
+  <url value="https://github.com/phenopackets/core-ig/ValueSet/TumorProgression"/>
+  <version value="0.1.0"/>
+  <name value="TumorProgression"/>
+  <title value="Tumor Progression"/>
+  <status value="active"/>
+  <date value="2020-02-14T16:13:10+10:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Codes to indicate if a specimen is from the primary tumor, a metastasis or a recurrence."/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <copyright value="[Global Alliance for Genomics and Health](https://www.ga4gh.org)"/>
+  <compose>
+    <include>
+      <system value="http://purl.obolibrary.org/obo/ncit.owl"/>
+      <concept>
+        <code value="NCIT:C8509"/>
+        <display value="Primary Neoplasm"/>
+      </concept>
+      <concept>
+        <code value="NCIT:C3261"/>
+        <display value="Metastatic Neoplasm"/>
+      </concept>
+      <concept>
+        <code value="NCIT:C4798"/>
+        <display value="Recurrent Neoplasm"/>
+      </concept>
+    </include>
+  </compose>
+</ValueSet>

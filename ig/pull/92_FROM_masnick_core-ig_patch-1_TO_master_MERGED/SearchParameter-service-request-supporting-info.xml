@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<SearchParameter xmlns="http://hl7.org/fhir">
+  <id value="service-request-supporting-info"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>ServiceRequestSupportingInfo</h2><p>Parameter <code>supporting-info</code>:<code>reference</code></p><div><p>Search ServiceRequest by supporting resource parameters</p>
+</div><table class="grid"><tr><td>Resource</td><td><a href="http://hl7.org/fhir/R4/servicerequest.html">ServiceRequest</a></td></tr><tr><td>Expression</td><td><code>ServiceRequest.supportingInfo</code></td></tr><tr><td>Target Resources</td><td><a href="http://hl7.org/fhir/R4/bundle.html">Bundle</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr><tr><td>Comparators</td><td>Allowed: eq</td></tr></table></div>
+  </text>
+  <url value="http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info"/>
+  <version value="0.1.0"/>
+  <name value="ServiceRequestSupportingInfo"/>
+  <status value="active"/>
+  <date value="2023-10-02T17:32:44+00:00"/>
+  <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+  <contact>
+    <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/"/>
+    </telecom>
+  </contact>
+  <description value="Search ServiceRequest by supporting resource parameters"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="US"/>
+    </coding>
+  </jurisdiction>
+  <code value="supporting-info"/>
+  <base value="ServiceRequest"/>
+  <type value="reference"/>
+  <expression value="ServiceRequest.supportingInfo"/>
+  <target value="Bundle"/>
+  <comparator value="eq"/>
+</SearchParameter>
