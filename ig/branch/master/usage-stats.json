@@ -283,6 +283,9 @@
     "http://hl7.org/fhir/StructureDefinition/workflow-supportingInfo": [
       "DiagnosticReport"
     ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
     "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
       "ImplementationGuide.definition.page",
       "ImplementationGuide.definition.page.page"

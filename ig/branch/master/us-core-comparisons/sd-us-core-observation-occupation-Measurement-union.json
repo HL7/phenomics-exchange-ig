@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-215",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/34f0d867-6956-429a-82ab-4d81bd0e3323-215",
+  "id" : "47472f25-885f-4ec2-b0b4-aba0fbf2de1c-137",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/47472f25-885f-4ec2-b0b4-aba0fbf2de1c-137",
   "name" : "UnionUSCoreObservationOccupationProfileAndMeasurement",
   "title" : "Union of US Core Observation Occupation Profile And Measurement",
   "status" : "active",
-  "date" : "2023-01-27T19:25:25+00:00",
+  "date" : "2023-10-02T17:29:05+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -500,7 +500,7 @@
     },
     {
       "path" : "Observation.status",
-      "short" : "registered | preliminary | final | amended +",
+      "short" : "left: (USCDI) registered | preliminary | final | amended +; right: registered | preliminary | final | amended +",
       "definition" : "The status of the result value.",
       "comment" : "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
       "requirements" : "Need to track the status of individual results. Some results are finalized before the whole report is finalized.",
@@ -551,7 +551,7 @@
     },
     {
       "path" : "Observation.category",
-      "short" : "Classification of  type of observation",
+      "short" : "left: (USCDI) Classification of  type of observation; right: Classification of  type of observation",
       "definition" : "A code that classifies the general type of observation being made.",
       "comment" : "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.",
       "requirements" : "Used for filtering what observations are retrieved and displayed.",
@@ -590,7 +590,7 @@
     },
     {
       "path" : "Observation.code",
-      "short" : "left: Occupation history; right: Type of observation (code / type)",
+      "short" : "left: (USCDI) Occupation history; right: Type of observation (code / type)",
       "definition" : "Describes what was observed. Sometimes this is called the observation \"name\".",
       "comment" : "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
       "requirements" : "Knowing what kind of observation is being made is essential to understanding the observation.",
@@ -646,7 +646,7 @@
     },
     {
       "path" : "Observation.subject",
-      "short" : "Who and/or what the observation is about",
+      "short" : "left: (USCDI) Who and/or what the observation is about; right: Who and/or what the observation is about",
       "definition" : "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
       "comment" : "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
       "requirements" : "Observations have no value if you don't know who or what they're about.",
@@ -1722,7 +1722,7 @@
     },
     {
       "path" : "Observation.component",
-      "short" : "Component results",
+      "short" : "left: (USCDI) Component results; right: Component results",
       "definition" : "Some observations have multiple component observations.  These component observations are expressed as separate code value pairs that share the same attributes.  Examples include systolic and diastolic component observations for blood pressure measurement and multiple component observations for genetics observations.",
       "comment" : "For a discussion on the ways Observations can be assembled in groups together see [Notes] below.",
       "requirements" : "Component observations share the same attributes in the Observation resource as the primary observation and are always treated a part of a single observation (they are not separable).   However, the reference range for the primary observation value is not inherited by the component values and is required when appropriate for each component observation.",

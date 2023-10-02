@@ -5,57 +5,39 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info> a fhir:SearchParameter;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "service-request-supporting-info"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: SearchParameter</b><a name=\"service-request-supporting-info\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource SearchParameter &quot;service-request-supporting-info&quot; </p></div><p><b>url</b>: <code>http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info</code></p><p><b>version</b>: 0.1.0</p><p><b>name</b>: ServiceRequestSupportingInfo</p><p><b>status</b>: active</p><p><b>date</b>: 2023-01-27 19:24:39+0000</p><p><b>publisher</b>: Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream</p><p><b>contact</b>: Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream: <a href=\"https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/\">https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/</a></p><p><b>description</b>: Search ServiceRequest by supporting resource parameters</p><p><b>jurisdiction</b>: United States of America <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#US)</span></p><p><b>code</b>: supporting-info</p><p><b>base</b>: ServiceRequest</p><p><b>type</b>: reference</p><p><b>expression</b>: ServiceRequest.supportingInfo</p><p><b>target</b>: Bundle</p><p><b>comparator</b>: eq</p></div>"
-  ]; # 
-  fhir:SearchParameter.url [ fhir:value "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info"]; # 
-  fhir:SearchParameter.version [ fhir:value "0.1.0"]; # 
-  fhir:SearchParameter.name [ fhir:value "ServiceRequestSupportingInfo"]; # 
-  fhir:SearchParameter.status [ fhir:value "active"]; # 
-  fhir:SearchParameter.date [ fhir:value "2023-01-27T19:24:39+00:00"^^xsd:dateTime]; # 
-  fhir:SearchParameter.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
-  fhir:SearchParameter.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
-     ]
-  ]; # 
-  fhir:SearchParameter.description [ fhir:value "Search ServiceRequest by supporting resource parameters"]; # 
-  fhir:SearchParameter.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ]
-     ]
-  ]; # 
-  fhir:SearchParameter.code [ fhir:value "supporting-info"]; # 
-  fhir:SearchParameter.base [
-     fhir:value "ServiceRequest";
-     fhir:index 0
-  ]; # 
-  fhir:SearchParameter.type [ fhir:value "reference"]; # 
-  fhir:SearchParameter.expression [ fhir:value "ServiceRequest.supportingInfo"]; # 
-  fhir:SearchParameter.target [
-     fhir:value "Bundle";
-     fhir:index 0
-  ]; # 
-  fhir:SearchParameter.comparator [
-     fhir:value "eq";
-     fhir:index 0
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<https://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info> a fhir:SearchParameter ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "service-request-supporting-info"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>ServiceRequestSupportingInfo</h2><p>Parameter <code>supporting-info</code>:<code>reference</code></p><div><p>Search ServiceRequest by supporting resource parameters</p>\n</div><table class=\"grid\"><tr><td>Resource</td><td><a href=\"http://hl7.org/fhir/R4/servicerequest.html\">ServiceRequest</a></td></tr><tr><td>Expression</td><td><code>ServiceRequest.supportingInfo</code></td></tr><tr><td>Target Resources</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td></tr><tr><td>Multiples</td><td>The parameter cannot repeat or have multiple values</td></tr><tr><td>Comparators</td><td>Allowed: eq</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "ServiceRequestSupportingInfo"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-10-02T17:28:29+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Search ServiceRequest by supporting resource parameters"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:code [ fhir:v "supporting-info"] ; # 
+  fhir:base ( [ fhir:v "ServiceRequest"] ) ; # 
+  fhir:type [ fhir:v "reference"] ; # 
+  fhir:expression [ fhir:v "ServiceRequest.supportingInfo"] ; # 
+  fhir:target ( [ fhir:v "Bundle"] ) ; # 
+  fhir:comparator ( [ fhir:v "eq"] ) . # 
 
 # -------------------------------------------------------------------------------------
 

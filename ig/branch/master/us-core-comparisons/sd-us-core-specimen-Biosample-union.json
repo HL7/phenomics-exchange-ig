@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-176",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/34f0d867-6956-429a-82ab-4d81bd0e3323-176",
+  "id" : "47472f25-885f-4ec2-b0b4-aba0fbf2de1c-176",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/47472f25-885f-4ec2-b0b4-aba0fbf2de1c-176",
   "name" : "UnionUSCoreSpecimenProfileAndBiosample",
   "title" : "Union of US Core Specimen Profile And Biosample",
   "status" : "active",
-  "date" : "2023-01-27T19:25:25+00:00",
+  "date" : "2023-10-02T17:29:05+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -447,7 +447,7 @@
     },
     {
       "path" : "Specimen.type",
-      "short" : "left: Kind of material that forms the specimen; right: Corresponds to sample_type (GA4GH)",
+      "short" : "left: (USCDI) Kind of material that forms the specimen; right: Corresponds to sample_type (GA4GH)",
       "definition" : "The kind of material that forms the specimen.",
       "comment" : "The type can change the way that a specimen is handled and drives what kind of analyses can properly be performed on the specimen. It is frequently used in diagnostic work flow decision making systems.",
       "min" : 0,
@@ -489,18 +489,14 @@
     },
     {
       "path" : "Specimen.subject",
-      "short" : "left: Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device; right: Patient.identifier corresponds to individual_id (GA4GH)",
+      "short" : "left: (USCDI) The patient where the specimen came from.; right: Patient.identifier corresponds to individual_id (GA4GH)",
       "definition" : "Where the specimen came from. This may be from patient(s), from a location (e.g., the source of an environmental sample), or a sampling of a substance or a device.",
       "requirements" : "Must know the subject context.",
       "min" : 0,
       "max" : "1",
       "type" : [{
         "code" : "Reference",
-        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient",
-        "http://hl7.org/fhir/StructureDefinition/Group",
-        "http://hl7.org/fhir/StructureDefinition/Device",
-        "http://hl7.org/fhir/StructureDefinition/Substance",
-        "http://hl7.org/fhir/StructureDefinition/Location"]
+        "targetProfile" : ["http://hl7.org/fhir/StructureDefinition/Patient"]
       }],
       "constraint" : [{
         "extension" : [{

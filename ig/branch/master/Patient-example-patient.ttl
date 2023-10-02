@@ -5,87 +5,63 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/Patient/example-patient> a fhir:Patient;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "example-patient"]; # 
-  fhir:Resource.meta [
-     fhir:Meta.profile [
-       fhir:value "https://github.com/phenopackets/core-ig/StructureDefinition/Individual";
-       fhir:index 0;
+<https://github.com/phenopackets/core-ig/Patient/example-patient> a fhir:Patient ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-patient"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "https://github.com/phenopackets/core-ig/StructureDefinition/Individual"^^xsd:anyURI ;
        fhir:link <https://github.com/phenopackets/core-ig/StructureDefinition/Individual>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anyname A. Anyperson </b> male, DoB: 2001-01-20 ( Medical Record Number: m123 (use: USUAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">123 Any St Anytown 12345 US </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 en-US}\">English</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact</td><td colspan=\"3\"><ul><li>ph: 777-444-2222(HOME)</li><li><a href=\"mailto:anyname.anyperson@example.com\">anyname.anyperson@example.com</a></li></ul></td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "usual" ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0203"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "MR" ] ;
+         fhir:display [ fhir:v "Medical Record Number" ]
+       ] )
+     ] ;
+     fhir:system [ fhir:v "http://hospital.example.org"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "m123" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:family [ fhir:v "Anyperson" ] ;
+     fhir:given ( [ fhir:v "Anyname" ] [ fhir:v "A." ] )
+  ] ) ; # 
+  fhir:gender [ fhir:v "male"] ; # 
+  fhir:birthDate [ fhir:v "2001-01-20"^^xsd:date] ; # 
+  fhir:address ( [
+     fhir:line ( [ fhir:v "123 Any St" ] ) ;
+     fhir:city [ fhir:v "Anytown" ] ;
+     fhir:postalCode [ fhir:v "12345" ] ;
+     fhir:country [ fhir:v "US" ]
+  ] ) ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "phone" ] ;
+       fhir:value [ fhir:v "777-444-2222" ] ;
+       fhir:use [ fhir:v "home" ]
+     ] [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "anyname.anyperson@example.com" ]
+     ] )
+  ] ) ; # 
+  fhir:communication ( [
+     fhir:language [
+       fhir:coding ( [
+         fhir:system [ fhir:v "urn:ietf:bcp:47"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "en-US" ] ;
+         fhir:display [ fhir:v "English (Region=United States)" ]
+       ] ) ;
+       fhir:text [ fhir:v "English" ]
      ]
-  ]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\"><b>Anyname A. Anyperson </b> male, DoB: 2001-01-20 ( Medical Record Number: m123 (use: USUAL))</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Ways to contact the Patient\">Contact Detail:</td><td colspan=\"3\">123 Any St Anytown 12345 US </td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Languages spoken\">Language:</td><td colspan=\"3\"><span title=\"Codes: {urn:ietf:bcp:47 en-US}\">English</span></td></tr><tr><td style=\"background-color: #f3f5da\" title=\"Patient contact\">Contact</td><td colspan=\"3\"><ul><li>ph: 777-444-2222(HOME)</li><li><a href=\"mailto:anyname.anyperson@example.com\">anyname.anyperson@example.com</a></li></ul></td></tr></table></div>"
-  ]; # 
-  fhir:Patient.identifier [
-     fhir:index 0;
-     fhir:Identifier.use [ fhir:value "usual" ];
-     fhir:Identifier.type [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
-         fhir:Coding.code [ fhir:value "MR" ];
-         fhir:Coding.display [ fhir:value "Medical Record Number" ]
-       ]
-     ];
-     fhir:Identifier.system [ fhir:value "http://hospital.example.org" ];
-     fhir:Identifier.value [ fhir:value "m123" ]
-  ]; # 
-  fhir:Patient.name [
-     fhir:index 0;
-     fhir:HumanName.family [ fhir:value "Anyperson" ];
-     fhir:HumanName.given [
-       fhir:value "Anyname";
-       fhir:index 0
-     ], [
-       fhir:value "A.";
-       fhir:index 1
-     ]
-  ]; # 
-  fhir:Patient.gender [ fhir:value "male"]; # 
-  fhir:Patient.birthDate [ fhir:value "2001-01-20"^^xsd:date]; # 
-  fhir:Patient.address [
-     fhir:index 0;
-     fhir:Address.line [
-       fhir:value "123 Any St";
-       fhir:index 0
-     ];
-     fhir:Address.city [ fhir:value "Anytown" ];
-     fhir:Address.postalCode [ fhir:value "12345" ];
-     fhir:Address.country [ fhir:value "US" ]
-  ]; # 
-  fhir:Patient.contact [
-     fhir:index 0;
-     fhir:Patient.contact.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "phone" ];
-       fhir:ContactPoint.value [ fhir:value "777-444-2222" ];
-       fhir:ContactPoint.use [ fhir:value "home" ]
-     ], [
-       fhir:index 1;
-       fhir:ContactPoint.system [ fhir:value "email" ];
-       fhir:ContactPoint.value [ fhir:value "anyname.anyperson@example.com" ]
-     ]
-  ]; # 
-  fhir:Patient.communication [
-     fhir:index 0;
-     fhir:Patient.communication.language [
-       fhir:CodeableConcept.coding [
-         fhir:index 0;
-         fhir:Coding.system [ fhir:value "urn:ietf:bcp:47" ];
-         fhir:Coding.code [ fhir:value "en-US" ];
-         fhir:Coding.display [ fhir:value "English (Region=United States)" ]
-       ];
-       fhir:CodeableConcept.text [ fhir:value "English" ]
-     ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/Patient/example-patient.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 

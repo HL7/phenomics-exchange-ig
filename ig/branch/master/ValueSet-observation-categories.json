@@ -3,14 +3,14 @@
   "id" : "observation-categories",
   "text" : {
     "status" : "generated",
-    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-observation-category.html\">http://hl7.org/fhir/ValueSet/observation-category</a></li><li>Include these codes as defined in <a href=\"CodeSystem-categories.html\"><code>https://github.com/phenopackets/core-ig/CodeSystem/categories</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-categories.html#categories-phenotype\">phenotype</a></td><td>Phenotype</td></tr></table></li></ul></div>"
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-observation-category.html\">Observation Category Codes</a></li><li>Include these codes as defined in <a href=\"CodeSystem-categories.html\"><code>https://github.com/phenopackets/core-ig/CodeSystem/categories</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"CodeSystem-categories.html#categories-phenotype\">phenotype</a></td><td style=\"color: #cccccc\">Phenotype</td></tr></table></li></ul></div>"
   },
   "url" : "https://github.com/phenopackets/core-ig/ValueSet/observation-categories",
   "version" : "0.1.0",
   "name" : "ObservationCategories",
   "title" : "Observation categories",
   "status" : "draft",
-  "date" : "2023-01-27T19:24:39+00:00",
+  "date" : "2023-10-02T17:28:29+00:00",
   "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
   "contact" : [{
     "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",

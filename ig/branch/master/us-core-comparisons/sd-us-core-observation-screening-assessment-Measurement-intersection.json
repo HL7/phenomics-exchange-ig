@@ -1,11 +1,11 @@
 {
   "resourceType" : "StructureDefinition",
-  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-225",
-  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/34f0d867-6956-429a-82ab-4d81bd0e3323-225",
+  "id" : "47472f25-885f-4ec2-b0b4-aba0fbf2de1c-147",
+  "url" : "http://hl7.org/fhir/comparison/StructureDefinition/47472f25-885f-4ec2-b0b4-aba0fbf2de1c-147",
   "name" : "IntersectionUSCoreObservationScreeningAssessmentProfileAndMeasurement",
   "title" : "Intersection of US Core Observation Screening Assessment Profile And Measurement",
   "status" : "active",
-  "date" : "2023-01-27T19:25:25+00:00",
+  "date" : "2023-10-02T17:29:05+00:00",
   "jurisdiction" : [{
     "coding" : [{
       "system" : "urn:iso:std:iso:3166",
@@ -127,7 +127,7 @@
         "key" : "us-core-3",
         "severity" : "error",
         "human" : "SHALL use UCUM for coded quantity units.",
-        "expression" : "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'"
+        "expression" : "value.ofType(Quantity).system.empty() or value.ofType(Quantity).system = 'http://unitsofmeasure.org'"
       }],
       "mustSupport" : false,
       "isModifier" : false,
@@ -532,7 +532,7 @@
     },
     {
       "path" : "Observation.status",
-      "short" : "registered | preliminary | final | amended +",
+      "short" : "left: (USCDI) registered | preliminary | final | amended +; right: registered | preliminary | final | amended +",
       "definition" : "The status of the result value.",
       "comment" : "This element is labeled as a modifier because the status contains codes that mark the resource as not currently valid.",
       "requirements" : "Need to track the status of individual results. Some results are finalized before the whole report is finalized.",
@@ -583,7 +583,7 @@
     },
     {
       "path" : "Observation.category",
-      "short" : "Classification of  type of observation",
+      "short" : "left: (USCDI) Classification of  type of observation; right: Classification of  type of observation",
       "definition" : "A code that classifies the general type of observation being made.",
       "comment" : "In addition to the required category valueset, this element allows various categorization schemes based on the owner’s definition of the category and effectively multiple categories can be used at once.  The level of granularity is defined by the category concepts in the value set.",
       "requirements" : "Used for filtering what observations are retrieved and displayed.",
@@ -626,7 +626,7 @@
     },
     {
       "path" : "Observation.code",
-      "short" : "Type of observation (code / type)",
+      "short" : "left: (USCDI) Type of observation (code / type); right: Type of observation (code / type)",
       "definition" : "Describes what was observed. Sometimes this is called the observation \"name\".",
       "comment" : "*All* code-value and, if present, component.code-component.value pairs need to be taken into account to correctly understand the meaning of the observation.",
       "requirements" : "Knowing what kind of observation is being made is essential to understanding the observation.",
@@ -681,7 +681,7 @@
     },
     {
       "path" : "Observation.subject",
-      "short" : "Who and/or what the observation is about",
+      "short" : "left: (USCDI) Who and/or what the observation is about; right: Who and/or what the observation is about",
       "definition" : "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation.",
       "comment" : "One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
       "requirements" : "Observations have no value if you don't know who or what they're about.",
@@ -814,7 +814,7 @@
     },
     {
       "path" : "Observation.effective[x]",
-      "short" : "Clinically relevant time/time-period for observation",
+      "short" : "left: (USCDI) Clinically relevant time/time-period for observation; right: Clinically relevant time/time-period for observation",
       "definition" : "left: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\".; right: The time or time-period the observed value is asserted as being true. For biological subjects - e.g. human patients - this is usually called the \"physiologically relevant time\". This is usually either the time of the procedure or of specimen collection, but very often the source of the date/time is not known, only the date/time itself.",
       "comment" : "left: At least a date should be present unless this observation is a historical report.; right: At least a date should be present unless this observation is a historical report.  For recording imprecise or \"fuzzy\" times (For example, a blood glucose measurement taken \"after breakfast\") use the [Timing] datatype which allow the measurement to be tied to regular life events.",
       "requirements" : "Knowing when an observation was deemed true is important to its relevance as well as determining trends.",
@@ -917,7 +917,7 @@
     },
     {
       "path" : "Observation.performer",
-      "short" : "Who is responsible for the observation",
+      "short" : "left: (USCDI) Who is responsible for the observation; right: Who is responsible for the observation",
       "definition" : "Who was responsible for asserting the observed value as \"true\".",
       "comment" : "Some questions on questionnaires are not answered directly (e.g., asserted) by the individual completing the questionnaire, but are derived from answers to one or more other questions. For types of answers, `Observation.performer` should not be specified and `Observation.derivedFrom` should reference the relevant Screening Response Observation(s).",
       "requirements" : "May give a degree of confidence in the observation and also indicates where follow-up questions should be directed.",
@@ -934,7 +934,7 @@
         "_targetProfile" : [{
           "extension" : [{
             "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support",
-            "valueBoolean" : true
+            "valueBoolean" : false
           }]
         },
         {
@@ -1001,7 +1001,7 @@
     },
     {
       "path" : "Observation.value[x]",
-      "short" : "Actual result",
+      "short" : "left: (USCDI) Actual result; right: Actual result",
       "definition" : "The information determined as a result of making the observation, if the information has a simple value.",
       "comment" : "left: An observation may have a value if it represents an individual survey, screening, or assessment question and answer pair. An observation should not have a value if it represents a multi-question or multi-select “check all that apply” responses. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.; right: An observation may have; 1)  a single value here, 2)  both a value and a set of related or component values,  or 3)  only a set of related or component values. If a value is present, the datatype for this element should be determined by Observation.code.  A CodeableConcept with just a text would be used instead of a string if the field was usually coded, or if the type associated with the Observation.code defines a coded value.  For additional guidance, see the [Notes section] below.",
       "requirements" : "An observation exists to have a value, though it might not if it is in error, or if it represents a group of observations.",
@@ -1085,7 +1085,7 @@
     },
     {
       "path" : "Observation.dataAbsentReason",
-      "short" : "Why the result is missing",
+      "short" : "left: (USCDI) Why the result is missing; right: Why the result is missing",
       "definition" : "Provides a reason why the expected value in the element Observation.value[x] is missing.",
       "comment" : "left: \"Null\" or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  The alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values. For a given LOINC question, if the LOINC answer list includes concepts such as 'unknown' or 'not available', they should be used for Observation.value. Where these concepts are not part of the value set for Observation.value, the Observation.dataAbsentReason can be used if necessary and appropriate.; right: Null or exceptional values can be represented two ways in FHIR Observations.  One way is to simply include them in the value set and represent the exceptions in the value.  For example, measurement values for a serology test could be  \"detected\", \"not detected\", \"inconclusive\", or  \"specimen unsatisfactory\".   \n\nThe alternate way is to use the value element for actual observations and use the explicit dataAbsentReason element to record exceptional values.  For example, the dataAbsentReason code \"error\" could be used when the measurement was not completed. Note that an observation may only be reported if there are values to report. For example differential cell counts values may be reported only when > 0.  Because of these options, use-case agreements are required to interpret general observations for null or exceptional values.",
       "requirements" : "For many results it is necessary to handle exceptional values in measurements.",
@@ -1758,7 +1758,7 @@
     },
     {
       "path" : "Observation.hasMember",
-      "short" : "left: Reference to panel or multi-select responses; right: Related resource that belongs to the Observation group",
+      "short" : "left: (USCDI) Reference to panel members or multi-select responses or multi-select responses; right: Related resource that belongs to the Observation group",
       "definition" : "left: Aggregate set of Observations that represent question answer pairs for both multi-question surveys, screenings, and assessments and multi-select questions.; right: This observation is a group observation (e.g. a battery, a panel of tests, a set of vital sign measurements) that includes the target as a member of the group.",
       "comment" : "left: This grouping element is used to represent surveys, screenings, and assessments that group several questions together or individual questions with  “check all that apply” responses. For example in the simplest case a flat multi-question survey where the \"panel\" observation is the survey instrument itself and instead of an `Observation.value` the `hasMember` element references other Observation that represent the individual questions answer pairs. When there is a heirarchical grouping of questions, the observation \"panels\" can be nested. Because surveys, screenings, and assessments can be arbitrarily complex structurally, not all structures can be represented using this Observation grouping pattern.; right: When using this element, an observation will typically have either a value or a set of related resources, although both may be present in some cases.  For a discussion on the ways Observations can assembled in groups together, see [Notes] below.  Note that a system may calculate results from [QuestionnaireResponse]  into a final score and represent the score as an Observation.",
       "min" : 0,
@@ -1812,7 +1812,7 @@
     },
     {
       "path" : "Observation.derivedFrom",
-      "short" : "left: Related Observation(s) or other resource the observation is made from; right: Related measurements the observation is made from",
+      "short" : "left: (USCDI) Related Observation(s) or other resource the observation is made from; right: Related measurements the observation is made from",
       "definition" : "left: Observations or or other resource such as a QuestionnaireResponse from which this observation value is derived.; right: The target resource that represents a measurement from which this observation value is derived. For example, a calculated anion gap or a fetal measurement based on an ultrasound image.",
       "comment" : "All the reference choices that are listed in this element can represent clinical observations and other measurements that may be the source for a derived value.  The most common reference will be another Observation.  For a discussion on the ways Observations can assembled in groups together, see [Notes] below.",
       "min" : 0,

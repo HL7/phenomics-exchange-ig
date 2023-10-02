@@ -5,56 +5,45 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality> a fhir:ValueSet;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "phenotypic-abnormality"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  HP:0000118</li></ul></div>"
-  ]; # 
-  fhir:ValueSet.url [ fhir:value "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality"]; # 
-  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
-  fhir:ValueSet.name [ fhir:value "PhenotypicAbnormalityValueSet"]; # 
-  fhir:ValueSet.title [ fhir:value "Phenotypic abnormality ValueSet"]; # 
-  fhir:ValueSet.status [ fhir:value "active"]; # 
-  fhir:ValueSet.date [ fhir:value "2023-01-27T19:24:39+00:00"^^xsd:dateTime]; # 
-  fhir:ValueSet.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
-  fhir:ValueSet.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
-     ]
-  ]; # 
-  fhir:ValueSet.description [ fhir:value "ValueSet description here"]; # 
-  fhir:ValueSet.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ]
-     ]
-  ]; # 
-  fhir:ValueSet.copyright [ fhir:value "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"]; # 
-  fhir:ValueSet.compose [
-     fhir:ValueSet.compose.include [
-       fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://purl.obolibrary.org/obo/ncit.owl" ];
-       fhir:ValueSet.compose.include.filter [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.filter.property [ fhir:value "concept" ];
-         fhir:ValueSet.compose.include.filter.op [ fhir:value "descendent-of" ];
-         fhir:ValueSet.compose.include.filter.value [ fhir:value "HP:0000118" ]
-       ]
-     ]
+<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "phenotypic-abnormality"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include codes from <code>http://purl.obolibrary.org/obo/ncit.owl</code> where concept  descends from  HP:0000118</li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "PhenotypicAbnormalityValueSet"] ; # 
+  fhir:title [ fhir:v "Phenotypic abnormality ValueSet"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-10-02T17:28:29+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet description here"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://purl.obolibrary.org/obo/ncit.owl"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "concept" ] ;
+         fhir:op [ fhir:v "descendent-of" ] ;
+         fhir:value [ fhir:v "HP:0000118" ]
+       ] )
+     ] )
   ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

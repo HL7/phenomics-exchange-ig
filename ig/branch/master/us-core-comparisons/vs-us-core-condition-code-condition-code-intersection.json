@@ -1,11 +1,11 @@
 {
   "resourceType" : "ValueSet",
-  "id" : "34f0d867-6956-429a-82ab-4d81bd0e3323-171",
-  "url" : "http://hl7.org/fhir/comparison/ValueSet/34f0d867-6956-429a-82ab-4d81bd0e3323-171",
+  "id" : "47472f25-885f-4ec2-b0b4-aba0fbf2de1c-171",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/47472f25-885f-4ec2-b0b4-aba0fbf2de1c-171",
   "name" : "IntersectionUSCoreConditionCodesAndCondition/Problem/DiagnosisCodes",
   "title" : "Intersection of US Core Condition Codes And Condition/Problem/Diagnosis Codes",
   "status" : "active",
-  "date" : "2023-01-27T19:25:15+00:00",
+  "date" : "2023-10-02T17:29:05+00:00",
   "compose" : {
     "include" : [{
       "filter" : [{

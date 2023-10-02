@@ -5,27 +5,20 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/Practitioner/PhenopacketPractitionerExample01> a fhir:Practitioner;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "PhenopacketPractitionerExample01"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated Practitioner example</div>"
-  ]; # 
-  fhir:Practitioner.identifier [
-     fhir:index 0;
-     fhir:Identifier.use [ fhir:value "temp" ];
-     fhir:Identifier.value [ fhir:value "03" ]
-  ]; # 
-  fhir:Practitioner.name [
-     fhir:index 0;
-     fhir:HumanName.text [ fhir:value "John T. Practitioner" ]
-  ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/Practitioner/PhenopacketPractitionerExample01.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
+<https://github.com/phenopackets/core-ig/Practitioner/PhenopacketPractitionerExample01> a fhir:Practitioner ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "PhenopacketPractitionerExample01"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\">This is an incomplete example that used as a placeholder for a curated Practitioner example</div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "temp" ] ;
+     fhir:value [ fhir:v "03" ]
+  ] ) ; # 
+  fhir:name ( [
+     fhir:text [ fhir:v "John T. Practitioner" ]
+  ] ) . # 
 
 # -------------------------------------------------------------------------------------
 
