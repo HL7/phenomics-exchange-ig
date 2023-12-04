@@ -5,63 +5,50 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs> a fhir:ValueSet;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "therapeuticActionability-vs"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>0</td><td>UNKNOWN_ACTIONABILITY</td></tr><tr><td>1</td><td>NOT_ACTIONABLE</td></tr><tr><td>2</td><td>ACTIONABLE</td></tr></table></li></ul></div>"
-  ]; # 
-  fhir:ValueSet.url [ fhir:value "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs"]; # 
-  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
-  fhir:ValueSet.name [ fhir:value "TherapeuticActionabilityVS"]; # 
-  fhir:ValueSet.title [ fhir:value "Therapeutic Actionability Value Set"]; # 
-  fhir:ValueSet.status [ fhir:value "active"]; # 
-  fhir:ValueSet.date [ fhir:value "2023-01-27T18:47:37+00:00"^^xsd:dateTime]; # 
-  fhir:ValueSet.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
-  fhir:ValueSet.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
-     ]
-  ]; # 
-  fhir:ValueSet.description [ fhir:value "Describes the therapeutic actionability of the variant."]; # 
-  fhir:ValueSet.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ]
-     ]
-  ]; # 
-  fhir:ValueSet.copyright [ fhir:value "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"]; # 
-  fhir:ValueSet.compose [
-     fhir:ValueSet.compose.include [
-       fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability" ];
-       fhir:ValueSet.compose.include.concept [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "0" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "UNKNOWN_ACTIONABILITY" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "1" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "NOT_ACTIONABLE" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "2" ];
-         fhir:ValueSet.compose.include.concept.display [ fhir:value "ACTIONABLE" ]
-       ]
-     ]
+<https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "therapeuticActionability-vs"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>0</td><td>UNKNOWN_ACTIONABILITY</td></tr><tr><td>1</td><td>NOT_ACTIONABLE</td></tr><tr><td>2</td><td>ACTIONABLE</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "TherapeuticActionabilityVS"] ; # 
+  fhir:title [ fhir:v "Therapeutic Actionability Value Set"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-12-04T18:14:20+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Describes the therapeutic actionability of the variant."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "0" ] ;
+         fhir:display [ fhir:v "UNKNOWN_ACTIONABILITY" ]
+       ] [
+         fhir:code [ fhir:v "1" ] ;
+         fhir:display [ fhir:v "NOT_ACTIONABLE" ]
+       ] [
+         fhir:code [ fhir:v "2" ] ;
+         fhir:display [ fhir:v "ACTIONABLE" ]
+       ] )
+     ] )
   ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

@@ -1,0 +1,1134 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicModifierValueSet",
+      "title" : "Phenotypic modifier ValueSet",
+      "description" : "Human Phenotype Ontology (HPO) Clinical Modifier terms",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administration-method-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAdministrationMethodCodes",
+      "title" : "SNOMED CT Administration Method Codes",
+      "description" : "This value set includes some method codes from SNOMED CT - provided as an exemplar",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.97"],
+      "sources" : ["2.16.840.1.113883.4.642.3.97"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/administrative-gender",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "AdministrativeGender",
+      "title" : "AdministrativeGender",
+      "description" : "The gender of a person used for administrative purposes.",
+      "systems" : ["http://hl7.org/fhir/administrative-gender"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1"],
+      "uses" : {
+      },
+      "StructureDefinition-Individual.html" : "Individual"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/approach-site-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTAnatomicalStructureForAdministrationSiteCodes",
+      "title" : "SNOMED CT Anatomical Structure for Administration Site Codes",
+      "description" : "This value set includes Anatomical Structure codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.346"],
+      "sources" : ["2.16.840.1.113883.4.642.3.346"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/body-site",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTBodyStructures",
+      "title" : "SNOMED CT Body Structures",
+      "description" : "This value set includes all codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 442083009 (Anatomical or acquired body site (body structure)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.141"],
+      "sources" : ["2.16.840.1.113883.4.642.3.141"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Disease.html" : "Disease profile",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant",
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/clinical-findings",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTClinicalFindings",
+      "title" : "SNOMED CT Clinical Findings",
+      "description" : "This value set includes all the \"Clinical finding\" [SNOMED CT](http://snomed.info/sct) codes - concepts where concept is-a 404684003 (Clinical finding (finding)).",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.232"],
+      "sources" : ["2.16.840.1.113883.4.642.3.232"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-genomic-interpretation.html" : "Phenopackets Genomic Interpretation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-attestation-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionAttestationMode",
+      "title" : "CompositionAttestationMode",
+      "description" : "The way in which a person authenticated a composition.",
+      "systems" : ["http://hl7.org/fhir/composition-attestation-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.238"],
+      "sources" : ["2.16.840.1.113883.4.642.3.238"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/composition-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CompositionStatus",
+      "title" : "CompositionStatus",
+      "description" : "The workflow/clinical status of the composition.",
+      "systems" : ["http://hl7.org/fhir/composition-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.241"],
+      "sources" : ["2.16.840.1.113883.4.642.3.241"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionCategoryCodes",
+      "title" : "Condition Category Codes",
+      "description" : "Preferred value set for Condition Categories.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.162"],
+      "sources" : ["2.16.840.1.113883.4.642.3.162"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-clinical",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionClinicalStatusCodes",
+      "title" : "Condition Clinical Status Codes",
+      "description" : "Preferred value set for Condition Clinical Status.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-clinical"],
+      "oids" : ["2.16.840.1.113883.4.642.3.164"],
+      "sources" : ["2.16.840.1.113883.4.642.3.164"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-code",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/Problem/DiagnosisCodes",
+      "title" : "Condition/Problem/Diagnosis Codes",
+      "description" : "Example value set for Condition/Problem/Diagnosis codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.161"],
+      "sources" : ["2.16.840.1.113883.4.642.3.161"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-severity",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "Condition/DiagnosisSeverity",
+      "title" : "Condition/Diagnosis Severity",
+      "description" : "Preferred value set for Condition/Diagnosis severity grading.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.168"],
+      "sources" : ["2.16.840.1.113883.4.642.3.168"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-stage",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionStage",
+      "title" : "Condition Stage",
+      "description" : "Example value set for stages of cancer and other conditions.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.170"],
+      "sources" : ["2.16.840.1.113883.4.642.3.170"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-stage-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionStageType",
+      "title" : "Condition Stage Type",
+      "description" : "Example value set for the type of stages of cancer and other conditions",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.171"],
+      "sources" : ["2.16.840.1.113883.4.642.3.171"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/condition-ver-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ConditionVerificationStatus",
+      "title" : "ConditionVerificationStatus",
+      "description" : "The verification status to support or decline the clinical status of the condition or diagnosis.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/condition-ver-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.166"],
+      "sources" : ["2.16.840.1.113883.4.642.3.166"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/data-absent-reason",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DataAbsentReason",
+      "title" : "DataAbsentReason",
+      "description" : "Used to specify why the normally expected content of the data element is missing.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/data-absent-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.5"],
+      "sources" : ["2.16.840.1.113883.4.642.3.5"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-report-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticReportStatus",
+      "title" : "DiagnosticReportStatus",
+      "description" : "The status of the diagnostic report.",
+      "systems" : ["http://hl7.org/fhir/diagnostic-report-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.235"],
+      "sources" : ["2.16.840.1.113883.4.642.3.235"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-genomic-interpretation.html" : "Phenopackets Genomic Interpretation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/diagnostic-service-sections",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DiagnosticServiceSectionCodes",
+      "title" : "Diagnostic Service Section Codes",
+      "description" : "This value set includes all the codes in HL7 V2 table 0074.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0074"],
+      "oids" : ["2.16.840.1.113883.4.642.3.234"],
+      "sources" : ["2.16.840.1.113883.4.642.3.234"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-genomic-interpretation.html" : "Phenopackets Genomic Interpretation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-section-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentSectionCodes",
+      "title" : "Document Section Codes",
+      "description" : "Document section codes (LOINC codes used in CCDA sections).",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.237"],
+      "sources" : ["2.16.840.1.113883.4.642.3.237"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/doc-typecodes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRDocumentTypeCodes",
+      "title" : "FHIR Document Type Codes",
+      "description" : "FHIR Document Codes - all LOINC codes where scale type = 'DOC'.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.240"],
+      "sources" : ["2.16.840.1.113883.4.642.3.240"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-classcodes",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "DocumentClassValueSet",
+      "title" : "Document Class Value Set",
+      "description" : "This is the code specifying the high-level kind of document (e.g. Prescription, Discharge Summary, Report, etc.). Note: Class code for documents comes from LOINC, and is based upon one of the following:The type of service described by the document. It is described at a very high level in Section 7.3 of the LOINC Manual. The type study performed. It was determined by identifying modalities for study reports. The section of the chart where the document is placed. It was determined from the SETs created for Claims Attachment requests.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "sources" : ["2.16.840.1.113883.3.88.12.80.46"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/document-relationship-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "DocumentRelationshipType",
+      "title" : "DocumentRelationshipType",
+      "description" : "The type of relationship between documents.",
+      "systems" : ["http://hl7.org/fhir/document-relationship-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.244"],
+      "sources" : ["2.16.840.1.113883.4.642.3.244"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/languages",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "CommonLanguages",
+      "title" : "Common Languages",
+      "description" : "This value set includes common codes from BCP-47 (http://tools.ietf.org/html/bcp47)",
+      "systems" : ["urn:ietf:bcp:47"],
+      "oids" : ["2.16.840.1.113883.4.642.3.20"],
+      "sources" : ["2.16.840.1.113883.4.642.3.20"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile",
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Disease.html" : "Disease profile",
+      "StructureDefinition-phenopackets-genomic-interpretation.html" : "Phenopackets Genomic Interpretation",
+      "StructureDefinition-Individual.html" : "Individual",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-Treatment.html" : "Treatment",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant",
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/link-type",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "LinkType",
+      "title" : "LinkType",
+      "description" : "The type of link between this patient resource and another patient resource.",
+      "systems" : ["http://hl7.org/fhir/link-type"],
+      "oids" : ["2.16.840.1.113883.4.642.3.423"],
+      "sources" : ["2.16.840.1.113883.4.642.3.423"],
+      "uses" : {
+      },
+      "StructureDefinition-Individual.html" : "Individual"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-empty-reason",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListEmptyReasons",
+      "title" : "List Empty Reasons",
+      "description" : "General reasons for a list to be empty. Reasons are either related to a summary list (i.e. problem or medication list) or to a workflow related list (i.e. consultation list).",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-empty-reason"],
+      "oids" : ["2.16.840.1.113883.4.642.3.322"],
+      "sources" : ["2.16.840.1.113883.4.642.3.322"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-mode",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListMode",
+      "title" : "ListMode",
+      "description" : "The processing mode that applies to this list.",
+      "systems" : ["http://hl7.org/fhir/list-mode"],
+      "oids" : ["2.16.840.1.113883.4.642.3.318"],
+      "sources" : ["2.16.840.1.113883.4.642.3.318"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/list-order",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ListOrderCodes",
+      "title" : "List Order Codes",
+      "description" : "Base values for the order of the items in a list resource.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/list-order"],
+      "oids" : ["2.16.840.1.113883.4.642.3.324"],
+      "sources" : ["2.16.840.1.113883.4.642.3.324"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/manifestation-or-symptom",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ManifestationAndSymptomCodes",
+      "title" : "Manifestation and Symptom Codes",
+      "description" : "Example value set for Manifestation and Symptom codes.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.169"],
+      "sources" : ["2.16.840.1.113883.4.642.3.169"],
+      "uses" : {
+      },
+      "StructureDefinition-Disease.html" : "Disease profile"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/marital-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "Marital Status Codes",
+      "title" : "MaritalStatus",
+      "description" : "This value set defines the set of codes that can be used to indicate the marital status of a person.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+        "http://terminology.hl7.org/CodeSystem/v3-NullFlavor"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.29"],
+      "sources" : ["2.16.840.1.113883.4.642.3.29"],
+      "uses" : {
+      },
+      "StructureDefinition-Individual.html" : "Individual"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/med-admin-perform-function",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationAdministration Performer Function Codes",
+      "title" : "Medication administration  performer  function  codes",
+      "description" : "MedicationAdministration Performer Function Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/med-admin-perform-function"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.349"],
+      "sources" : ["2.16.840.1.113883.4.642.3.349"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-admin-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationAdministration Category Codes",
+      "title" : "Medication administration  category  codes",
+      "description" : "MedicationAdministration Category Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medication-admin-category"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.347"],
+      "sources" : ["2.16.840.1.113883.4.642.3.347"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-admin-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "MedicationAdministration Status Codes",
+      "title" : "Medication administration  status  codes",
+      "description" : "MedicationAdministration Status Codes",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/medication-admin-status"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.340"],
+      "sources" : ["2.16.840.1.113883.4.642.3.340"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/medication-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTMedicationCodes",
+      "title" : "SNOMED CT Medication Codes",
+      "description" : "This value set includes all drug or medicament substance codes and all pharmaceutical/biologic products from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.375"],
+      "sources" : ["2.16.840.1.113883.4.642.3.375"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant",
+      "ValueSet-observation-categories.html" : "Observation categories"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCCodes",
+      "title" : "LOINC Codes",
+      "description" : "This value set includes all LOINC codes",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.396"],
+      "sources" : ["2.16.840.1.113883.4.642.3.396"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-interpretation",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationInterpretationCodes",
+      "title" : "Observation Interpretation Codes",
+      "description" : "A categorical assessment, providing a rough qualitative interpretation of the observation value,    such as “normal”/ “abnormal”,”low” / “high”, “better” / “worse”, “susceptible” / “resistant”, “expected”/ “not expected”.    The value set is intended to be for ANY use where coded representation of an interpretation is needed.   \r\n   \r\n   Notes:\r\n   \r\n   This is being communicated in v2.x in OBX-8 (Observation Interpretation), in v3 in ObservationInterpretation (CWE) in R1 (Representative Realm) and in FHIR in    Observation.interpretation. Historically these values come from the laboratory domain, and these codes are extensively    used. The value set binding is extensible, so codes outside the value set that are needed for interpretation concepts    (i.e. particular meanings) that are not included in the value set can be used, and these new codes may also be added to    the value set and published in a future version.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.399"],
+      "sources" : ["2.16.840.1.113883.4.642.3.399"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-methods",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationMethods",
+      "title" : "Observation Methods",
+      "description" : "Observation Method codes from [SNOMED CT](http://snomed.info/sct) where concept is-a 272394005 (Technique (qualifier value)) or is-a 129264002 (Action (qualifier value)) or is-a 386053000 (Evaluation procedure(procedure))",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.395"],
+      "sources" : ["2.16.840.1.113883.4.642.3.395"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-status",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "ObservationStatus",
+      "title" : "ObservationStatus",
+      "description" : "Codes providing the status of an observation.",
+      "systems" : ["http://hl7.org/fhir/observation-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.400"],
+      "sources" : ["2.16.840.1.113883.4.642.3.400"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/patient-contactrelationship",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "PatientContactRelationship",
+      "title" : "Patient Contact Relationship ",
+      "description" : "The nature of the relationship between the patient and the contact person.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0131"],
+      "oids" : ["2.16.840.1.113883.4.642.3.1130"],
+      "sources" : ["2.16.840.1.113883.4.642.3.1130"],
+      "uses" : {
+      },
+      "StructureDefinition-Individual.html" : "Individual"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/quantity-comparator",
+      "version" : "4.0.1",
+      "status" : "active",
+      "name" : "QuantityComparator",
+      "title" : "QuantityComparator",
+      "description" : "How the Quantity should be understood and represented.",
+      "systems" : ["http://hl7.org/fhir/quantity-comparator"],
+      "oids" : ["2.16.840.1.113883.4.642.3.59"],
+      "sources" : ["2.16.840.1.113883.4.642.3.59"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/reason-medication-given-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ReasonMedicationGivenCodes",
+      "title" : "Reason Medication Given Codes",
+      "description" : "This value set is provided as an example. The value set to instantiate this attribute should be drawn from a robust terminology code system that consists of or contains concepts to support the medication process.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/reason-medication-given"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.344"],
+      "sources" : ["2.16.840.1.113883.4.642.3.344"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/reason-medication-not-given-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTReasonMedicationNotGivenCodes",
+      "title" : "SNOMED CT Reason Medication Not Given Codes",
+      "description" : "This value set includes all medication refused, medication not administered, and non-administration of necessary drug or medicine codes from SNOMED CT - provided as an exemplar value set.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.342"],
+      "sources" : ["2.16.840.1.113883.4.642.3.342"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-appliesto",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeAppliesToCodes",
+      "title" : "Observation Reference Range Applies To Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the particular target population the reference range applies to.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/v3-Race",
+        "http://snomed.info/sct"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.407"],
+      "sources" : ["2.16.840.1.113883.4.642.3.407"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/referencerange-meaning",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationReferenceRangeMeaningCodes",
+      "title" : "Observation Reference Range Meaning Codes",
+      "description" : "This value set defines a set of codes that can be used to indicate the meaning/use of a reference range for a particular target population.",
+      "systems" : [
+        "http://terminology.hl7.org/CodeSystem/referencerange-meaning"
+      ],
+      "oids" : ["2.16.840.1.113883.4.642.3.397"],
+      "sources" : ["2.16.840.1.113883.4.642.3.397"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature",
+      "StructureDefinition-Measurement.html" : "Measurement",
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/report-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "LOINCDiagnosticReportCodes",
+      "title" : "LOINC Diagnostic Report Codes",
+      "description" : "This value set includes LOINC codes that relate to Diagnostic Observations.",
+      "systems" : ["http://loinc.org"],
+      "oids" : ["2.16.840.1.113883.4.642.3.233"],
+      "sources" : ["2.16.840.1.113883.4.642.3.233"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-genomic-interpretation.html" : "Phenopackets Genomic Interpretation"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/route-codes",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SNOMEDCTRouteCodes",
+      "title" : "SNOMED CT Route Codes",
+      "description" : "This value set includes all Route codes from SNOMED CT - provided as an exemplar.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.98"],
+      "sources" : ["2.16.840.1.113883.4.642.3.98"],
+      "uses" : {
+      },
+      "StructureDefinition-Treatment.html" : "Treatment"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-collection-method",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "FHIRSpecimenCollectionMethod",
+      "title" : "FHIR Specimen Collection Method",
+      "description" : " This example value set defines a set of codes that can be used to indicate the method by which a specimen was collected.",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.468"],
+      "sources" : ["2.16.840.1.113883.4.642.3.468"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-container-type",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenContainerType",
+      "title" : "Specimen Container Type",
+      "description" : "Checks on the patient prior specimen collection. All SNOMED CT concepts descendants of 706041008 |Device for body fluid and tissue collection/transfer/processing (physical object)|",
+      "systems" : ["http://snomed.info/sct"],
+      "oids" : ["2.16.840.1.113883.4.642.3.470"],
+      "sources" : ["2.16.840.1.113883.4.642.3.470"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-processing-procedure",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenProcessingProcedure",
+      "title" : "Specimen processing procedure",
+      "description" : "The technique that is used to perform the process or preserve the specimen.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0373"],
+      "oids" : ["2.16.840.1.113883.4.642.3.469"],
+      "sources" : ["2.16.840.1.113883.4.642.3.469"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/specimen-status",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "SpecimenStatus",
+      "title" : "SpecimenStatus",
+      "description" : "Codes providing the status/availability of a specimen.",
+      "systems" : ["http://hl7.org/fhir/specimen-status"],
+      "oids" : ["2.16.840.1.113883.4.642.3.471"],
+      "sources" : ["2.16.840.1.113883.4.642.3.471"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/dna-change-type-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "DNAChangeTypeVS",
+      "title" : "DNA Change Type",
+      "description" : "DNA Change Type of a variant.",
+      "systems" : ["http://sequenceontology.org"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgnc-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "HGNCVS",
+      "title" : "HUGO Gene Nomenclature Committee Gene Names (HGNC)",
+      "description" : "This value set includes all HGNC Codes, which includes multiple code systems. In this guide, Gene IDs from HGNC are used as CodeableConcepts, which must be sent with the HGNC gene ID including the prefix 'HGNC:' as the code and the HGNC 'gene symbol' as display. CAUTION: HGNC also indexes gene groups by numeric ID (without a prefix), and older systems may send HGNC gene IDs without the prefix, so care must be taken to confirm alignment. We have separately included the genegroup code system to draw attention to this ambiguity and potential error.",
+      "systems" : [
+        "http://www.genenames.org/genegroup",
+        "http://www.genenames.org/geneId"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/hgvs-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "HGVSVS",
+      "title" : "Human Genome Variation Society (HGVS) Nomenclature",
+      "description" : "HGVS-nomenclature is used to report and exchange information regarding variants found in DNA, RNA and protein sequences and serves as an international standard. (source: varnomen.hgvs.org)",
+      "systems" : ["http://varnomen.hgvs.org"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/molecular-consequence-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "MolecularConsequenceVS",
+      "title" : "Molecular Consequence",
+      "description" : "The calculated or observed effect of a variant on its downstream transcript and, if applicable, ensuing protein sequence.",
+      "systems" : ["http://sequenceontology.org"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/variant-confidence-status-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "VariantConfidenceStatusVS",
+      "title" : "Variant Confidence Status",
+      "description" : "A code that classifies the confidence for calling this variant.",
+      "systems" : [
+        "http://hl7.org/fhir/uv/genomics-reporting/CodeSystem/variant-confidence-status-cs"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://hl7.org/fhir/uv/genomics-reporting/ValueSet/variant-inheritance-vs",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "VariantInheritanceVS",
+      "title" : "Variant Inheritances",
+      "description" : "By which parent the variant was inherited in the patient, if known.",
+      "systems" : ["http://loinc.org"],
+      "uses" : {
+      },
+      "StructureDefinition-phenopackets-variant.html" : "Phenopackets Variant"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0371",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSAdditivePreservative",
+      "title" : "hl7VS-additivePreservative",
+      "description" : "Concepts specifying any additive introduced to the specimen before or at the time of collection.  These additives may be introduced in order to preserve, maintain or enhance the particular nature or component of the specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0371"],
+      "oids" : ["2.16.840.1.113883.21.245"],
+      "sources" : ["2.16.840.1.113883.21.245"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0487",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenType",
+      "title" : "hl7VS-specimenType",
+      "description" : "Concepts that describe the precise nature of an entity that may be used as the source material for an observation.  This is one of two code systems that are used instead of table 0070 (code system xxxx) which conflated specimen types and specimen collection methods.   Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0487"],
+      "oids" : ["2.16.840.1.113883.21.327"],
+      "sources" : ["2.16.840.1.113883.21.327"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0493",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSSpecimenCondition",
+      "title" : "hl7VS-specimenCondition",
+      "description" : "Concepts of modes or states of being that describe the nature of a specimen.  Used in Version 2 messaging in the SPM segment.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0493"],
+      "oids" : ["2.16.840.1.113883.21.333"],
+      "sources" : ["2.16.840.1.113883.21.333"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v2-0916",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "Hl7VSRelevantClincialInformation",
+      "title" : "hl7VS-relevantClincialInformation",
+      "description" : "Value Set of codes that specify additional clinical information about the patient or specimen to report the supporting and/or suspected diagnosis and clinical findings on requests for interpreted diagnostic studies.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v2-0916"],
+      "oids" : ["2.16.840.1.113883.21.440"],
+      "sources" : ["2.16.840.1.113883.21.440"],
+      "uses" : {
+      },
+      "StructureDefinition-Biosample.html" : "Biosample"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ActCode",
+      "version" : "2.0.0",
+      "status" : "active",
+      "name" : "ActCode",
+      "title" : "v3 Code System ActCode",
+      "description" : "A code specifying the particular kind of Act that the Act-instance represents within its class.  Constraints:\r\nThe kind of Act (e.g. physical examination, serum potassium, inpatient encounter, charge financial transaction, etc.) is specified with a code from one of several, typically external, coding systems.  The coding system will depend on the class of Act, such as LOINC for observations, etc. Conceptually, the Act.code must be a specialization of the Act.classCode. This is why the structure of ActClass domain should be reflected in the superstructure of the ActCode domain and then individual codes or externally referenced vocabularies subordinated under these domains that reflect the ActClass structure. Act.classCode and Act.code are not modifiers of each other but the Act.code concept should really imply the Act.classCode concept. For a negative example, it is not appropriate to use an Act.code \"potassium\" together with and Act.classCode for \"laboratory observation\" to somehow mean \"potassium laboratory observation\" and then use the same Act.code for \"potassium\" together with Act.classCode for \"medication\" to mean \"substitution of potassium\". This mutually modifying use of Act.code and Act.classCode is not permitted.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-ActCode"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification",
+      "version" : "2014-03-26",
+      "status" : "active",
+      "name" : "v3.ConfidentialityClassification",
+      "title" : "V3 Value SetConfidentialityClassification",
+      "description" : " Set of codes used to value Act.Confidentiality and Role.Confidentiality attribute in accordance with the definition for concept domain \"Confidentiality\".",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/v3-Confidentiality"],
+      "oids" : ["2.16.840.1.113883.1.11.10228"],
+      "sources" : ["2.16.840.1.113883.1.11.10228"],
+      "uses" : {
+      },
+      "StructureDefinition-Phenopacket.html" : "Phenopacket profile"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/DiagnosticMarker",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "DiagnosticMarker",
+      "title" : "Diagnostic Marker",
+      "description" : "Codes to indicate clinically relevant bio markers.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticMarker.html" : "Diagnostic Marker"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HistologicalDiagnosis",
+      "title" : "HistologicalDiagnosis",
+      "description" : "Histological diagnosis codes from NCIT.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-HistologicalDiagnosis.html" : "Histological Diagnosis"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/HpoSeverity",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HpoSeverityVS",
+      "title" : "Hpo Severity Value Set",
+      "description" : "The HPO codes for phenotypic feature severity",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "KaryotypicSex",
+      "title" : "Karyotypic sex value set",
+      "description" : "The karyotypic (chromosomal) sex of an individual",
+      "systems" : [
+        "https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-KaryotypicSex.html" : "Karyotypic Sex"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/Onset",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Onset",
+      "title" : "Onset ValueSet",
+      "description" : "Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007).",
+      "systems" : [
+        "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-CodedOnset.html" : "Coded Onset"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/Taxonomy",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Taxonomy",
+      "title" : "Taxonomy",
+      "description" : "Taxonomic identifiers of an organism.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncbitaxon.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-Taxonomy.html" : "Taxonomy"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorGrade",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorGrade",
+      "title" : "Tumor Grade",
+      "description" : "Codes to indicate the grade of a tumor.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-TumorGrade.html" : "Tumor Grade"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorProgression",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorProgression",
+      "title" : "Tumor Progression",
+      "description" : "Codes to indicate if a specimen is from the primary tumor, a metastasis or a recurrence.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-TumorProgression.html" : "Tumor Progression"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorStage",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorStage",
+      "title" : "Tumor Stage",
+      "description" : "Codes to represent the stage of a tumor.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-PathologicalStage.html" : "Pathological Tumor Stage",
+      "StructureDefinition-PathologicalTnmFinding.html" : " Pathological TNM Finding"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/acmgPathogenicityClassification-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "AcmgPathogenicityClassificationVS",
+      "title" : "ACMG Pathogenicity Classification Value Set",
+      "description" : "Describes the ACMG five-tier pathogenicity classification system (Richards et al., 2015, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/).",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-acmg-pathogenicity-classification.html" : "ACMG Pathogenicity Classification"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/geno-ontology-allelic-state-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "GenoOntologyAllelicStateVS",
+      "title" : "GENO Ontology Allelic State Value Set ",
+      "description" : "Descendent terms of GENO_0000875",
+      "systems" : ["http://www.ebi.ac.uk/ols/ontologies/geno"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/interpretationStatus-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "InterpretationStatusVS",
+      "title" : "Interpretation Status Value Set",
+      "description" : "Describes the conclusion made about the genomic interpretation.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-interpretation-status.html" : "Interpretation Status"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/moleculeContext-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "MoleculeContextVS",
+      "title" : "Molecule Context Value Set",
+      "description" : "Describes The molecular context of the variant. Default is unspecified_molecule_context.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-molecule-context.html" : "Molecule Context"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/observation-categories",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ObservationCategories",
+      "title" : "Observation categories",
+      "description" : "ValueSet description here",
+      "systems" : [
+        "https://github.com/phenopackets/core-ig/CodeSystem/categories",
+        "http://terminology.hl7.org/CodeSystem/observation-category"
+      ]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicAbnormalityValueSet",
+      "title" : "Phenotypic abnormality ValueSet",
+      "description" : "ValueSet description here",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicComponentValueSet",
+      "title" : "Phenotypic component ValueSet",
+      "description" : "ValueSet description here",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypicFeatureVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicFeatureStatusValueSet",
+      "title" : "Observation Codes for status of a PhenotypicFeature",
+      "description" : "The LOINC codes for present if a feature is observed and absent if a feature was excluded.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/sequence-ontology-structural-variant-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SequenceOntologyStructuralVariantVS",
+      "title" : "Sequence Ontology Structural Variant Value Set",
+      "description" : "Descendent terms of SO:0001537.",
+      "systems" : ["http://www.sequenceontology.org/"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TherapeuticActionabilityVS",
+      "title" : "Therapeutic Actionability Value Set",
+      "description" : "Describes the therapeutic actionability of the variant.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-therapeutic-actionability.html" : "Therapeutic Actionability"
+    }
+  ]
+}

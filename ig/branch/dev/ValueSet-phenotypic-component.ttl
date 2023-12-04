@@ -5,60 +5,47 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component> a fhir:ValueSet;
-  fhir:nodeRole fhir:treeRoot;
-  fhir:Resource.id [ fhir:value "phenotypic-component"]; # 
-  fhir:DomainResource.text [
-     fhir:Narrative.status [ fhir:value "generated" ];
-     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HP:0012823</td><td/></tr><tr><td>HP:0012824</td><td/></tr><tr><td>HP:0003674</td><td/></tr></table></li></ul></div>"
-  ]; # 
-  fhir:ValueSet.url [ fhir:value "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component"]; # 
-  fhir:ValueSet.version [ fhir:value "0.1.0"]; # 
-  fhir:ValueSet.name [ fhir:value "PhenotypicComponentValueSet"]; # 
-  fhir:ValueSet.title [ fhir:value "Phenotypic component ValueSet"]; # 
-  fhir:ValueSet.status [ fhir:value "active"]; # 
-  fhir:ValueSet.date [ fhir:value "2023-01-27T18:47:37+00:00"^^xsd:dateTime]; # 
-  fhir:ValueSet.publisher [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"]; # 
-  fhir:ValueSet.contact [
-     fhir:index 0;
-     fhir:ContactDetail.name [ fhir:value "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ];
-     fhir:ContactDetail.telecom [
-       fhir:index 0;
-       fhir:ContactPoint.system [ fhir:value "url" ];
-       fhir:ContactPoint.value [ fhir:value "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
-     ]
-  ]; # 
-  fhir:ValueSet.description [ fhir:value "ValueSet description here"]; # 
-  fhir:ValueSet.jurisdiction [
-     fhir:index 0;
-     fhir:CodeableConcept.coding [
-       fhir:index 0;
-       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
-       fhir:Coding.code [ fhir:value "US" ]
-     ]
-  ]; # 
-  fhir:ValueSet.copyright [ fhir:value "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"]; # 
-  fhir:ValueSet.compose [
-     fhir:ValueSet.compose.include [
-       fhir:index 0;
-       fhir:ValueSet.compose.include.system [ fhir:value "http://github.com/phenopackets/core-ig/CodeSystem/hpo" ];
-       fhir:ValueSet.compose.include.concept [
-         fhir:index 0;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "HP:0012823" ]
-       ], [
-         fhir:index 1;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "HP:0012824" ]
-       ], [
-         fhir:index 2;
-         fhir:ValueSet.compose.include.concept.code [ fhir:value "HP:0003674" ]
-       ]
-     ]
+<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "phenotypic-component"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>Include these codes as defined in <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td>HP:0012823</td><td/></tr><tr><td>HP:0012824</td><td/></tr><tr><td>HP:0003674</td><td/></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0"] ; # 
+  fhir:name [ fhir:v "PhenotypicComponentValueSet"] ; # 
+  fhir:title [ fhir:v "Phenotypic component ValueSet"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-12-04T18:14:20+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "ValueSet description here"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "US" ]
+     ] )
+  ] ) ; # 
+  fhir:copyright [ fhir:v "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://github.com/phenopackets/core-ig/CodeSystem/hpo"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "HP:0012823" ]
+       ] [
+         fhir:code [ fhir:v "HP:0012824" ]
+       ] [
+         fhir:code [ fhir:v "HP:0003674" ]
+       ] )
+     ] )
   ] . # 
-
-# - ontology header ------------------------------------------------------------
-
-<https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component.ttl> a owl:Ontology;
-  owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------
 

@@ -11,7 +11,7 @@
   <name value="GA4GHPhenopacketIG"/>
   <title value="GA4GH Phenopacket (version 2) FHIR Implementation Guide"/>
   <status value="draft"/>
-  <date value="2023-01-27T18:47:37+00:00"/>
+  <date value="2023-12-04T18:14:20+00:00"/>
   <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
   <contact>
     <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
@@ -37,7 +37,15 @@
     </extension>
     <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
     <packageId value="hl7.terminology.r4"/>
-    <version value="5.0.0"/>
+    <version value="5.3.0"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="1.0.0"/>
   </dependsOn>
   <dependsOn id="hl7_fhir_uv_genomics_reporting">
     <uri value="http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting"/>
@@ -199,6 +207,14 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
         <valueString value="active-tables"/>
       </extension>
       <extension url="value">
@@ -237,9 +253,12 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#current"/>
+    </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="copyrightyear"/>
+        <valueCode value="copyrightyear"/>
       </extension>
       <extension url="value">
         <valueString value="2021+"/>
@@ -247,7 +266,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="releaselabel"/>
+        <valueCode value="releaselabel"/>
       </extension>
       <extension url="value">
         <valueString value="ci-build"/>
@@ -255,7 +274,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-contact"/>
+        <valueCode value="apply-contact"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -263,7 +282,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-jurisdiction"/>
+        <valueCode value="apply-jurisdiction"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -271,7 +290,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-publisher"/>
+        <valueCode value="apply-publisher"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -279,7 +298,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="autoload-resources"/>
+        <valueCode value="autoload-resources"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -287,7 +306,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
         <valueString value="template/liquid"/>
@@ -295,7 +314,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-liquid"/>
+        <valueCode value="path-liquid"/>
       </extension>
       <extension url="value">
         <valueString value="input/liquid"/>
@@ -303,7 +322,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-qa"/>
+        <valueCode value="path-qa"/>
       </extension>
       <extension url="value">
         <valueString value="temp/qa"/>
@@ -311,7 +330,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-temp"/>
+        <valueCode value="path-temp"/>
       </extension>
       <extension url="value">
         <valueString value="temp/pages"/>
@@ -319,7 +338,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-output"/>
+        <valueCode value="path-output"/>
       </extension>
       <extension url="value">
         <valueString value="output"/>
@@ -327,7 +346,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-suppressed-warnings"/>
+        <valueCode value="path-suppressed-warnings"/>
       </extension>
       <extension url="value">
         <valueString value="input/ignoreWarnings.txt"/>
@@ -335,7 +354,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-history"/>
+        <valueCode value="path-history"/>
       </extension>
       <extension url="value">
         <valueString value="https://github.com/phenopackets/core-ig/history.html"/>
@@ -343,7 +362,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="template-html"/>
+        <valueCode value="template-html"/>
       </extension>
       <extension url="value">
         <valueString value="template-page.html"/>
@@ -351,7 +370,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="template-md"/>
+        <valueCode value="template-md"/>
       </extension>
       <extension url="value">
         <valueString value="template-page-md.html"/>
@@ -359,7 +378,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-context"/>
+        <valueCode value="apply-context"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -367,7 +386,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-copyright"/>
+        <valueCode value="apply-copyright"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -375,7 +394,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-license"/>
+        <valueCode value="apply-license"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -383,7 +402,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="apply-version"/>
+        <valueCode value="apply-version"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -391,7 +410,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="active-tables"/>
+        <valueCode value="apply-wg"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -399,7 +418,15 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="fmm-definition"/>
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
       </extension>
       <extension url="value">
         <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
@@ -407,7 +434,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="propagate-status"/>
+        <valueCode value="propagate-status"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -415,7 +442,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="excludelogbinaryformat"/>
+        <valueCode value="excludelogbinaryformat"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
@@ -423,7 +450,7 @@
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="tabbed-snapshots"/>
+        <valueCode value="tabbed-snapshots"/>
       </extension>
       <extension url="value">
         <valueString value="true"/>
