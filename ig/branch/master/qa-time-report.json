@@ -1,5 +1,5 @@
 {
-  "date" : "Mon, 02 Oct, 2023 17:28:29 +0000",
+  "date" : "Mon, 04 Dec, 2023 18:31:23 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [
     {
@@ -7,1328 +7,99 @@
       "size" : 33125,
       "processes" : [
         {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
           "activity" : "load",
-          "start" : 79,
-          "length" : 266
+          "start" : 46,
+          "length" : 103
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 12
+          "start" : 48,
+          "length" : 5
         },
         {
           "activity" : "generateNarratives",
-          "start" : 84,
-          "length" : 187
+          "start" : 48,
+          "length" : 106
         },
         {
           "activity" : "validate",
-          "start" : 109,
-          "length" : 1107
+          "start" : 61,
+          "length" : 547
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 4
+          "start" : 64,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 121,
-          "length" : 323
+          "start" : 66,
+          "length" : 268
         },
         {
           "activity" : "generate2",
-          "start" : 132,
-          "length" : 235
+          "start" : 74,
+          "length" : 274
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 21
+          "start" : 237,
+          "length" : 9
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 345,
+          "start" : 253,
           "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/StructureDefinition-Onset.json",
-      "size" : 1848,
+      "name" : "fsh-generated/resources/Bundle-PhenopacketsBundleExample01.json",
+      "size" : 18072,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 10
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 12
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 79,
-          "length" : 42
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 84,
-          "length" : 69
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 189
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 110,
-          "length" : 1
-        },
-        {
-          "activity" : "checkConformanceResources2",
-          "start" : 110,
-          "length" : 3954
-        },
-        {
-          "activity" : "generate1",
-          "start" : 121,
-          "length" : 108
-        },
-        {
-          "activity" : "generate2",
-          "start" : 132,
-          "length" : 1456
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Individual.json",
-      "size" : 2658,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 10
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 12
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 79,
-          "length" : 315
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 84,
-          "length" : 170
-        },
-        {
-          "activity" : "validate",
-          "start" : 100,
-          "length" : 499
-        },
-        {
-          "activity" : "checkConformanceResources2",
-          "start" : 114,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 121,
-          "length" : 290
-        },
-        {
-          "activity" : "generate2",
-          "start" : 134,
-          "length" : 1346
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 8
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-phenopackets-genomic-interpretation.json",
-      "size" : 4823,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 13
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 34
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 375
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 241
-        },
-        {
-          "activity" : "validate",
-          "start" : 100,
-          "length" : 725
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 338
-        },
-        {
-          "activity" : "generate2",
-          "start" : 135,
-          "length" : 955
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 11
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-HistologicalDiagnosis.json",
-      "size" : 976,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 4
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 218
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 14
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 13
-        },
-        {
-          "activity" : "generate2",
-          "start" : 136,
-          "length" : 7191
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 316,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.4.json",
-      "size" : 1199,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 6
-        },
-        {
-          "activity" : "scan",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 59
-        },
-        {
-          "activity" : "validate",
-          "start" : 117,
-          "length" : 124
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 143,
-          "length" : 32
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-karyotypic-sex-valid-1.json",
-      "size" : 423,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 267
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 3
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 7
-        },
-        {
-          "activity" : "generate2",
-          "start" : 143,
-          "length" : 21
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-invalid-meta-profile.json",
-      "size" : 4184,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 13
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 108
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 33
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 29
-        },
-        {
-          "activity" : "generate2",
-          "start" : 143,
-          "length" : 30
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/CodeSystem-categories.json",
-      "size" : 421,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 3
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 29
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 9
-        },
-        {
-          "activity" : "validate",
-          "start" : 98,
-          "length" : 695
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 110,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 143,
-          "length" : 77
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-DiagnosticMarker.json",
-      "size" : 732,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 20
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 8
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 143,
-          "length" : 660
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-PathologicalTnmFinding.json",
-      "size" : 1931,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 10
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 13
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 41
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 30
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 74
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 69
-        },
-        {
-          "activity" : "generate2",
-          "start" : 144,
-          "length" : 301
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 3
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-interpretationStatus-vs.json",
-      "size" : 1146,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 13
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 85,
-          "length" : 641
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 91
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 18
-        },
-        {
-          "activity" : "generate2",
-          "start" : 144,
-          "length" : 686
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-MaterialSample.json",
-      "size" : 1632,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 27
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 12
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 49
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 86,
-          "length" : 30
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 109
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 63
-        },
-        {
-          "activity" : "generate2",
-          "start" : 145,
-          "length" : 225
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0001324.json",
-      "size" : 624,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 86,
-          "length" : 9
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 6
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 145,
-          "length" : 9
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-acmgPathogenicityClassification-vs.json",
-      "size" : 1387,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 14
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 7
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 86,
-          "length" : 545
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 94
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 16
-        },
-        {
-          "activity" : "generate2",
-          "start" : 145,
-          "length" : 631
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-DiagnosticMarker.json",
-      "size" : 2220,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 23
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 8
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 59
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 30
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 80
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 66
-        },
-        {
-          "activity" : "generate2",
-          "start" : 146,
-          "length" : 176
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Patient-Proband1.json",
-      "size" : 1379,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 9
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 8
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 724
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 146,
-          "length" : 15
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-vcf-info.json",
-      "size" : 1497,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 7
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 8
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 41
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 23
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 39
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 65
-        },
-        {
-          "activity" : "generate2",
-          "start" : 146,
-          "length" : 132
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Practitioner-PhenopacketPractitionerExample01.json",
-      "size" : 422,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 1
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 6
-        },
-        {
-          "activity" : "generate2",
-          "start" : 146,
-          "length" : 6
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-geno-ontology-allelic-state-vs.json",
-      "size" : 629,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 5
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 92
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 10
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 146,
-          "length" : 598
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0001263.json",
-      "size" : 635,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 11
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 5
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 10
-        },
-        {
-          "activity" : "generate2",
-          "start" : 147,
-          "length" : 8
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-TumorProgression.json",
-      "size" : 2212,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 9
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 8
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 40
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 28
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 46
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 81
-        },
-        {
-          "activity" : "generate2",
-          "start" : 147,
-          "length" : 198
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-TumorProgression.json",
-      "size" : 949,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 7
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 14
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 520
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 14
-        },
-        {
-          "activity" : "generate2",
-          "start" : 147,
-          "length" : 610
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-vrs-object.json",
-      "size" : 1811,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 24
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 41
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 35
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 84
-        },
-        {
-          "activity" : "generate1",
-          "start" : 122,
-          "length" : 64
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 120
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-invalid-1.json",
-      "size" : 4318,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 45
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 16
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 17
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
+          "start" : 45,
           "length" : 26
         },
         {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 15
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-CodedOnset.json",
-      "size" : 1753,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 9
-        },
-        {
           "activity" : "load",
-          "start" : 78,
-          "length" : 8
+          "start" : 45,
+          "length" : 62
         },
         {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 41
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 27
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 77
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 91
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 111
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample01.json",
-      "size" : 1601,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 7
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 87,
-          "length" : 94
-        },
-        {
-          "activity" : "validate",
-          "start" : 118,
-          "length" : 280
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 14
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 10
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.3.json",
-      "size" : 686,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 4
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 6
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 6
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-TumorGrade.json",
-      "size" : 1748,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 9
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 8
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 80,
-          "length" : 40
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 35
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 76
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 87
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 176
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Taxonomy.json",
-      "size" : 2050,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 14
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
+          "activity" : "checkR4R4B",
+          "start" : 48,
           "length" : 1
         },
         {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 41
-        },
-        {
           "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 71
+          "start" : 48,
+          "length" : 361
         },
         {
           "activity" : "validate",
-          "start" : 101,
-          "length" : 40
+          "start" : 64,
+          "length" : 910
         },
         {
           "activity" : "generate1",
-          "start" : 123,
-          "length" : 64
+          "start" : 66,
+          "length" : 96
         },
         {
           "activity" : "generate2",
-          "start" : 148,
-          "length" : 108
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-therapeutic-actionability.json",
-      "size" : 2137,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 12
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 11
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 48
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 31
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 54
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 73
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 109
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
+          "start" : 75,
+          "length" : 104
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 345,
+          "start" : 253,
           "length" : 1
         }
       ]
@@ -1339,73 +110,542 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 7
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
+          "start" : 45,
+          "length" : 3
         },
         {
           "activity" : "load",
-          "start" : 78,
-          "length" : 7
+          "start" : 45,
+          "length" : 27
         },
         {
           "activity" : "generateNarratives",
-          "start" : 88,
+          "start" : 49,
           "length" : 8
         },
         {
           "activity" : "validate",
-          "start" : 99,
-          "length" : 15
+          "start" : 55,
+          "length" : 167
         },
         {
           "activity" : "generate1",
-          "start" : 123,
-          "length" : 21
+          "start" : 66,
+          "length" : 15
         },
         {
           "activity" : "generate2",
-          "start" : 148,
-          "length" : 33
+          "start" : 75,
+          "length" : 1773
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
+          "start" : 237,
           "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/Observation-hp.0001669.json",
-      "size" : 644,
+      "name" : "fsh-generated/resources/CodeSystem-KaryotypicSex.json",
+      "size" : 2074,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
+          "start" : 45,
           "length" : 4
         },
         {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 11
+        },
+        {
           "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 15
+          "start" : 49,
+          "length" : 12
         },
         {
           "activity" : "validate",
-          "start" : 119,
+          "start" : 55,
+          "length" : 14
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 18
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 65
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-categories.json",
+      "size" : 421,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 41
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-phenotypicFeatureStatusCS.json",
+      "size" : 502,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 48
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Composition-DevelopmentalDelay.json",
+      "size" : 2396,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 7
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 138
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 16
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 30
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Composition-PhenopacketCompositionExample01.json",
+      "size" : 2720,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 15
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 14
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 18
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 236,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Condition-id.disease.1.json",
+      "size" : 611,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 48,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 43
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 6
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Condition-id.disease.2.json",
+      "size" : 639,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 42
+        },
+        {
+          "activity" : "generate1",
+          "start" : 66,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Condition-id.disease.3.json",
+      "size" : 1083,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
           "length" : 4
         },
         {
           "activity" : "generate1",
-          "start" : 123,
+          "start" : 66,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 9
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Condition-id.disease.intellectualDisability.json",
+      "size" : 448,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample01.json",
+      "size" : 1601,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 13
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 68
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.json",
+      "size" : 1912,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 32
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/MedicationAdministration-id.treatment.1.json",
+      "size" : 1099,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 51
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 48
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
           "length" : 11
         },
         {
           "activity" : "generate2",
-          "start" : 148,
+          "start" : 77,
+          "length" : 10
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-PhenopacketsVariantExample01.json",
+      "size" : 537,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0000343.json",
+      "size" : 622,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 5
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0000369.json",
+      "size" : 630,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
           "length" : 7
         }
       ]
@@ -1416,329 +656,224 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 5
+          "start" : 45,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 13
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 10
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-PhenotypicFeature.json",
-      "size" : 4874,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 27
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 18
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 391
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 444
-        },
-        {
-          "activity" : "validate",
-          "start" : 101,
-          "length" : 466
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 110,
-          "length" : 5
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 123,
-          "length" : 592
-        },
-        {
-          "activity" : "generate2",
-          "start" : 148,
-          "length" : 1027
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 17
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
+          "start" : 49,
           "length" : 4
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Measurement.json",
-      "size" : 1905,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 9
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 9
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 232
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 269
         },
         {
           "activity" : "validate",
-          "start" : 102,
-          "length" : 332
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 314
-        },
-        {
-          "activity" : "generate2",
-          "start" : 149,
-          "length" : 674
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 17
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 345,
-          "length" : 1
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-HistologicalDiagnosis.json",
-      "size" : 2265,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 8
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 19
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 41
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 88,
-          "length" : 32
-        },
-        {
-          "activity" : "validate",
-          "start" : 102,
-          "length" : 58
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 66
-        },
-        {
-          "activity" : "generate2",
-          "start" : 150,
-          "length" : 123
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
+          "start" : 65,
           "length" : 3
         },
         {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Composition-PhenopacketCompositionExample01.json",
-      "size" : 2720,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 11
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 8
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 285
-        },
-        {
           "activity" : "generate1",
-          "start" : 124,
-          "length" : 17
+          "start" : 67,
+          "length" : 7
         },
         {
           "activity" : "generate2",
-          "start" : 150,
-          "length" : 13
+          "start" : 77,
+          "length" : 8
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/StructureDefinition-acmg-pathogenicity-classification.json",
-      "size" : 2169,
+      "name" : "fsh-generated/resources/Observation-hp.0000568.json",
+      "size" : 623,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 13
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 64
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 45
+          "start" : 45,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 28
-        },
-        {
-          "activity" : "validate",
-          "start" : 102,
-          "length" : 52
+          "start" : 49,
+          "length" : 4
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 117,
+          "start" : 64,
           "length" : 1
         },
         {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 4
+        },
+        {
           "activity" : "generate1",
-          "start" : 124,
-          "length" : 68
+          "start" : 67,
+          "length" : 6
         },
         {
           "activity" : "generate2",
-          "start" : 150,
-          "length" : 122
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
+          "start" : 77,
+          "length" : 8
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.json",
-      "size" : 1912,
+      "name" : "fsh-generated/resources/Observation-hp.0001252.json",
+      "size" : 618,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 16
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 12
+          "start" : 49,
+          "length" : 4
         },
         {
           "activity" : "validate",
-          "start" : 119,
-          "length" : 143
+          "start" : 65,
+          "length" : 3
         },
         {
           "activity" : "generate1",
-          "start" : 124,
-          "length" : 15
+          "start" : 67,
+          "length" : 8
         },
         {
           "activity" : "generate2",
-          "start" : 150,
-          "length" : 10
+          "start" : 77,
+          "length" : 7
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0001263.json",
+      "size" : 635,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 65,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0001324.json",
+      "size" : 624,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0001669.json",
+      "size" : 644,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-hp.0003202.json",
+      "size" : 632,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
         }
       ]
     },
@@ -1748,805 +883,58 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 13
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 12
-        },
-        {
-          "activity" : "checkConformanceResources2",
-          "start" : 114,
-          "length" : 1
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 5
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 150,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Condition-id.disease.1.json",
-      "size" : 611,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 4
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 86
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 11
-        },
-        {
-          "activity" : "generate2",
-          "start" : 150,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-MeasurementExt.json",
-      "size" : 1736,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 16
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 20
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 4
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 33
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 29
-        },
-        {
-          "activity" : "validate",
-          "start" : 102,
-          "length" : 38
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 53
-        },
-        {
-          "activity" : "generate2",
-          "start" : 150,
-          "length" : 98
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-interpretation-status.json",
-      "size" : 2216,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 26
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 25
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 35
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 32
-        },
-        {
-          "activity" : "validate",
-          "start" : 102,
-          "length" : 43
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 72
-        },
-        {
-          "activity" : "generate2",
-          "start" : 150,
-          "length" : 108
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
+          "start" : 45,
           "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 3
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 7
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/ValueSet-phenotypic-component.json",
-      "size" : 660,
+      "name" : "fsh-generated/resources/Observation-hp.0007663.json",
+      "size" : 630,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 77,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 5
+          "start" : 45,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 583
+          "start" : 49,
+          "length" : 4
         },
         {
           "activity" : "validate",
-          "start" : 99,
-          "length" : 9
+          "start" : 66,
+          "length" : 2
         },
         {
           "activity" : "generate1",
-          "start" : 124,
+          "start" : 67,
           "length" : 12
         },
         {
           "activity" : "generate2",
-          "start" : 150,
-          "length" : 583
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Disease.json",
-      "size" : 1968,
-      "processes" : [
-        {
-          "activity" : "loadResources",
           "start" : 77,
-          "length" : 8
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 27
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 81,
-          "length" : 167
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 141
-        },
-        {
-          "activity" : "validate",
-          "start" : 102,
-          "length" : 211
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 237
-        },
-        {
-          "activity" : "generate2",
-          "start" : 151,
-          "length" : 455
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 5
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-phenotypic-abnormality.json",
-      "size" : 608,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 3
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 7
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 7
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 11
-        },
-        {
-          "activity" : "generate2",
-          "start" : 151,
-          "length" : 586
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Practitioner-PeterGeneticist.json",
-      "size" : 744,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 6
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 89,
-          "length" : 2680
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 88
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 8
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 26
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-molecule-context.json",
-      "size" : 1976,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 16
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 31
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 82,
-          "length" : 33
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 73
-        },
-        {
-          "activity" : "validate",
-          "start" : 103,
-          "length" : 41
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 68
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 118
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-phred-quality-score.json",
-      "size" : 1502,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 77,
-          "length" : 7
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 18
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 82,
-          "length" : 24
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 58
-        },
-        {
-          "activity" : "validate",
-          "start" : 103,
-          "length" : 43
-        },
-        {
-          "activity" : "generate1",
-          "start" : 124,
-          "length" : 51
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 103
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-observation-categories.json",
-      "size" : 652,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 14
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 31
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 10
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 11
-        },
-        {
-          "activity" : "checkConformanceResources",
-          "start" : 110,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 125,
-          "length" : 15
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 87
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Condition-id.disease.intellectualDisability.json",
-      "size" : 448,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 6
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 5
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 125,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 8
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Patient-example-patient.json",
-      "size" : 1386,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 44
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 5
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 6
-        },
-        {
-          "activity" : "generate1",
-          "start" : 125,
-          "length" : 10
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 9
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Bundle-PhenopacketsBundleExample01.json",
-      "size" : 18072,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 85
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 69
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 1
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 92
-        },
-        {
-          "activity" : "validate",
-          "start" : 119,
-          "length" : 418
-        },
-        {
-          "activity" : "generate1",
-          "start" : 125,
-          "length" : 88
-        },
-        {
-          "activity" : "generate2",
-          "start" : 152,
-          "length" : 149
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Phenopacket.json",
-      "size" : 10146,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 53
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 83
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 82,
-          "length" : 736
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 92,
-          "length" : 633
-        },
-        {
-          "activity" : "validate",
-          "start" : 103,
-          "length" : 849
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 14
-        },
-        {
-          "activity" : "generate1",
-          "start" : 125,
-          "length" : 1000
-        },
-        {
-          "activity" : "generate2",
-          "start" : 153,
-          "length" : 2851
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 48
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Treatment.json",
-      "size" : 2728,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 25
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 35
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 82,
-          "length" : 203
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 170
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 209
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 258
-        },
-        {
-          "activity" : "generate2",
-          "start" : 155,
-          "length" : 603
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-Onset.json",
-      "size" : 1036,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 10
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 232
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 13
-        },
-        {
-          "activity" : "generate2",
-          "start" : 156,
-          "length" : 579
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 315,
-          "length" : 1
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/CodeSystem-phenotypicFeatureStatusCS.json",
-      "size" : 502,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 5
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 11
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
-          "length" : 79
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-PhenopacketsVariantExample01.json",
-      "size" : 537,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 3
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 5
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 8
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
           "length" : 7
         }
       ]
@@ -2557,725 +945,64 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 14
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
+          "start" : 45,
+          "length" : 3
         },
         {
           "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 11
+          "start" : 49,
+          "length" : 5
         },
         {
           "activity" : "validate",
-          "start" : 120,
-          "length" : 8
+          "start" : 66,
+          "length" : 5
         },
         {
           "activity" : "generate1",
-          "start" : 126,
-          "length" : 14
+          "start" : 67,
+          "length" : 11
         },
         {
           "activity" : "generate2",
-          "start" : 157,
-          "length" : 9
+          "start" : 77,
+          "length" : 6
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/ValueSet-PhenotypicModifierValueSet.json",
-      "size" : 816,
+      "name" : "fsh-generated/resources/Observation-id.measurement.1.json",
+      "size" : 804,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 10
+          "start" : 45,
+          "length" : 3
         },
         {
           "activity" : "checkR4R4B",
-          "start" : 84,
+          "start" : 48,
           "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 93,
-          "length" : 541
+          "start" : 49,
+          "length" : 3
         },
         {
           "activity" : "validate",
-          "start" : 99,
-          "length" : 8
+          "start" : 66,
+          "length" : 3
         },
         {
           "activity" : "generate1",
-          "start" : 126,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
-          "length" : 587
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-related-concept-id.json",
-      "size" : 1618,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 11
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 19
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 25
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 23
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 33
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 52
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
-          "length" : 114
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-valid-1.json",
-      "size" : 2700,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 13
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 7
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 18
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
-          "length" : 12
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Composition-DevelopmentalDelay.json",
-      "size" : 2396,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
+          "start" : 67,
           "length" : 10
         },
         {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 11
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 283
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 15
-        },
-        {
           "activity" : "generate2",
-          "start" : 157,
-          "length" : 11
-        },
-        {
-          "activity" : "generateExampleZip",
-          "start" : 316,
-          "length" : 1
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-therapeuticActionability-vs.json",
-      "size" : 999,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 11
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 518
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 89
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 14
-        },
-        {
-          "activity" : "generate2",
-          "start" : 157,
-          "length" : 581
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-KaryotypicSex.json",
-      "size" : 1826,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 7
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 25
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 28
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 27
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 38
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 57
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 102
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 4
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-PathologicalStage.json",
-      "size" : 2234,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 7
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 32
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 24
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 28
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 38
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 63
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 133
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0001252.json",
-      "size" : 618,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 94,
-          "length" : 6
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 3
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Patient-phenopacketPatientExample01.json",
-      "size" : 262,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 2
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 2
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
+          "start" : 77,
           "length" : 5
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 6
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-filter-status.json",
-      "size" : 1502,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 6
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 19
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 26
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 24
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 36
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 71
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 105
-        },
-        {
-          "activity" : "makeDependencies",
-          "start" : 172,
-          "length" : 1
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-HpoSeverity.json",
-      "size" : 967,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 7
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 522
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 17
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 13
-        },
-        {
-          "activity" : "generate2",
-          "start" : 158,
-          "length" : 667
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/CodeSystem-KaryotypicSex.json",
-      "size" : 2074,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 10
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 11
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 16
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 19
-        },
-        {
-          "activity" : "generate2",
-          "start" : 159,
-          "length" : 34
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0000568.json",
-      "size" : 623,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 6
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 3
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 8
-        },
-        {
-          "activity" : "generate2",
-          "start" : 159,
-          "length" : 8
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-Taxonomy.json",
-      "size" : 531,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 11
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 5
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 159,
-          "length" : 632
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/MedicationAdministration-id.treatment.1.json",
-      "size" : 1099,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "scan",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 97
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 96
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 17
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Specimen-phenopacketSpecimenExample01.json",
-      "size" : 419,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 5
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 6
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-Biosample.json",
-      "size" : 6818,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 22
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 50
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 218
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 249
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 301
-        },
-        {
-          "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 1
-        },
-        {
-          "activity" : "generate1",
-          "start" : 126,
-          "length" : 335
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 602
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 10
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 345,
-          "length" : 1
         }
       ]
     },
@@ -3285,73 +1012,1675 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
+          "start" : 45,
+          "length" : 2
         },
         {
           "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 12
+          "start" : 49,
+          "length" : 3
         },
         {
           "activity" : "validate",
-          "start" : 120,
+          "start" : 66,
           "length" : 3
         },
         {
           "activity" : "generate1",
-          "start" : 127,
-          "length" : 9
+          "start" : 67,
+          "length" : 7
         },
         {
           "activity" : "generate2",
-          "start" : 160,
-          "length" : 7
+          "start" : 77,
+          "length" : 5
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/ValueSet-KaryotypicSex.json",
-      "size" : 496,
+      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.2.json",
+      "size" : 665,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 43
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.3.json",
+      "size" : 686,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 5
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.4.json",
+      "size" : 1199,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
           "length" : 3
         },
         {
           "activity" : "load",
-          "start" : 78,
-          "length" : 5
+          "start" : 45,
+          "length" : 1
         },
         {
           "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 15
+          "start" : 49,
+          "length" : 5
         },
         {
           "activity" : "validate",
-          "start" : 99,
-          "length" : 7
+          "start" : 66,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-karyotypic-sex-invalid-1.json",
+      "size" : 426,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 92
         },
         {
           "activity" : "validate",
-          "start" : 109,
+          "start" : 66,
           "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 127,
-          "length" : 13
+          "start" : 67,
+          "length" : 5
         },
         {
           "activity" : "generate2",
-          "start" : 160,
-          "length" : 65
+          "start" : 77,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-karyotypic-sex-valid-1.json",
+      "size" : 423,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 6
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-invalid-1.json",
+      "size" : 4318,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 47
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 10
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 21
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 13
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-invalid-meta-profile.json",
+      "size" : 4184,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 10
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 8
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 9
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 21
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 13
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Observation-phenotypic-abnormality-valid-1.json",
+      "size" : 2700,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 9
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 15
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 8
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-Proband1.json",
+      "size" : 1379,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 48,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 6
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-example-patient.json",
+      "size" : 1386,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 4
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Patient-phenopacketPatientExample01.json",
+      "size" : 262,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 4
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Practitioner-PeterGeneticist.json",
+      "size" : 744,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 49,
+          "length" : 1384
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 43
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Practitioner-PhenopacketPractitionerExample01.json",
+      "size" : 422,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 3
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/SearchParameter-service-request-supporting-info.json",
+      "size" : 525,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 11
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 42
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 10
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Specimen-biosample.specimen.id.1.json",
+      "size" : 3129,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 8
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 11
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 23
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 20
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 9
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Specimen-biosample.specimen.id.2.json",
+      "size" : 1188,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 6
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/Specimen-phenopacketSpecimenExample01.json",
+      "size" : 419,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 66,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 3
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 5
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Biosample.json",
+      "size" : 6818,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 10
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 29
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 185
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 133
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 360
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 61,
+          "length" : 1
+        },
+        {
+          "activity" : "checkConformanceResources2",
+          "start" : 61,
+          "length" : 2505
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 453
+        },
+        {
+          "activity" : "generate2",
+          "start" : 77,
+          "length" : 1521
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 7
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 253,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-CodedOnset.json",
+      "size" : 1753,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 20
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 45
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 68
+        },
+        {
+          "activity" : "generate2",
+          "start" : 79,
+          "length" : 148
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-DiagnosticMarker.json",
+      "size" : 2220,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 22
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 59
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 79
+        },
+        {
+          "activity" : "generate2",
+          "start" : 79,
+          "length" : 192
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 100,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Disease.json",
+      "size" : 1968,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 138
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 79
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 186
+        },
+        {
+          "activity" : "generate1",
+          "start" : 67,
+          "length" : 206
+        },
+        {
+          "activity" : "generate2",
+          "start" : 79,
+          "length" : 682
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 25
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-HistologicalDiagnosis.json",
+      "size" : 2265,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 19
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 31
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 61
+        },
+        {
+          "activity" : "generate2",
+          "start" : 80,
+          "length" : 223
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Individual.json",
+      "size" : 2658,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 11
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 118
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 87
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 133
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 246
+        },
+        {
+          "activity" : "generate2",
+          "start" : 80,
+          "length" : 518
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 4
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-KaryotypicSex.json",
+      "size" : 1826,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 46,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 18
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 23
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 56
+        },
+        {
+          "activity" : "generate2",
+          "start" : 80,
+          "length" : 112
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-MaterialSample.json",
+      "size" : 1632,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 31
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 25
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 23
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 53
+        },
+        {
+          "activity" : "generate2",
+          "start" : 80,
+          "length" : 94
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Measurement.json",
+      "size" : 1905,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 119
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 146
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 151
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 272
+        },
+        {
+          "activity" : "generate2",
+          "start" : 81,
+          "length" : 561
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 6
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-MeasurementExt.json",
+      "size" : 1736,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 6
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 28
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 50
+        },
+        {
+          "activity" : "generate2",
+          "start" : 81,
+          "length" : 112
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Onset.json",
+      "size" : 1848,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 23
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 76
+        },
+        {
+          "activity" : "generate2",
+          "start" : 81,
+          "length" : 122
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-PathologicalStage.json",
+      "size" : 2234,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 17
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 20
+        },
+        {
+          "activity" : "generate1",
+          "start" : 68,
+          "length" : 56
+        },
+        {
+          "activity" : "generate2",
+          "start" : 81,
+          "length" : 113
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 2
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-PathologicalTnmFinding.json",
+      "size" : 1931,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 9
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 18
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 15
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 21
+        },
+        {
+          "activity" : "generate1",
+          "start" : 69,
+          "length" : 55
+        },
+        {
+          "activity" : "generate2",
+          "start" : 82,
+          "length" : 120
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Phenopacket.json",
+      "size" : 10146,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 23
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 27
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 455
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 51,
+          "length" : 326
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 446
+        },
+        {
+          "activity" : "checkConformanceResources",
+          "start" : 61,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 2
+        },
+        {
+          "activity" : "generate1",
+          "start" : 69,
+          "length" : 999
+        },
+        {
+          "activity" : "generate2",
+          "start" : 82,
+          "length" : 1433
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 14
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-PhenotypicFeature.json",
+      "size" : 4874,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 12
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 17
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 159
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 176
+        },
+        {
+          "activity" : "validate",
+          "start" : 57,
+          "length" : 223
+        },
+        {
+          "activity" : "checkConformanceResources2",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 515
+        },
+        {
+          "activity" : "generate2",
+          "start" : 83,
+          "length" : 739
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 9
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-PhenotypicFeatureExt.json",
+      "size" : 1782,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 7
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 17
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 48,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 14
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 18
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 52
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 98
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        },
+        {
+          "activity" : "scanProfilesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Taxonomy.json",
+      "size" : 2050,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 13
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 15
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 18
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 1
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 59
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 106
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-Treatment.json",
+      "size" : 2728,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 84
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 78
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 105
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 226
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 336
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 4
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-TumorGrade.json",
+      "size" : 1748,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 13
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 15
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 50
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 53
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 62
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-TumorProgression.json",
+      "size" : 2212,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 12
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 21
+        },
+        {
+          "activity" : "generateLogicalMaps",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 70,
+          "length" : 56
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 59
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-acmg-pathogenicity-classification.json",
+      "size" : 2169,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 47,
+          "length" : 15
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 20
+        },
+        {
+          "activity" : "generate1",
+          "start" : 71,
+          "length" : 60
+        },
+        {
+          "activity" : "generate2",
+          "start" : 84,
+          "length" : 68
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
           "length" : 1
         }
       ]
@@ -3362,618 +2691,252 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 6
+          "start" : 45,
+          "length" : 3
         },
         {
           "activity" : "load",
-          "start" : 79,
-          "length" : 28
+          "start" : 46,
+          "length" : 5
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 24
+          "start" : 47,
+          "length" : 11
         },
         {
           "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 30
+          "start" : 52,
+          "length" : 13
         },
         {
           "activity" : "validate",
-          "start" : 104,
-          "length" : 32
-        },
-        {
-          "activity" : "validate",
-          "start" : 109,
-          "length" : 1
+          "start" : 58,
+          "length" : 15
         },
         {
           "activity" : "generate1",
-          "start" : 127,
+          "start" : 71,
+          "length" : 50
+        },
+        {
+          "activity" : "generate2",
+          "start" : 85,
           "length" : 54
         },
         {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 105
-        },
-        {
           "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
+          "start" : 237,
+          "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/Observation-id.phenotypicfeature.2.json",
-      "size" : 665,
+      "name" : "fsh-generated/resources/StructureDefinition-filter-status.json",
+      "size" : 1502,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
+          "start" : 45,
           "length" : 3
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 16
-        },
-        {
-          "activity" : "validate",
-          "start" : 110,
-          "length" : 1
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 93
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Condition-id.disease.2.json",
-      "size" : 639,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 7
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 95
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 11
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 8
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0000343.json",
-      "size" : 622,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 95,
-          "length" : 15
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 8
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/SearchParameter-service-request-supporting-info.json",
-      "size" : 525,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 29
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 16
-        },
-        {
-          "activity" : "validate",
-          "start" : 109,
-          "length" : 13
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 11
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 9
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-phenotypicFeatureVS.json",
-      "size" : 1085,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 8
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 95
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 182
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 160,
-          "length" : 126
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-TumorStage.json",
-      "size" : 698,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 8
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 12
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 561
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Specimen-biosample.specimen.id.2.json",
-      "size" : 1188,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 14
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 9
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 13
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 9
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0003202.json",
-      "size" : 632,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 18
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 3
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 8
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 6
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Specimen-biosample.specimen.id.1.json",
-      "size" : 3129,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 9
-        },
-        {
-          "activity" : "load-configure",
-          "start" : 78,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 18
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 44
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 21
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 12
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/StructureDefinition-PhenotypicFeatureExt.json",
-      "size" : 1782,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 5
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 19
-        },
-        {
-          "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 27
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 68
-        },
-        {
-          "activity" : "validate",
-          "start" : 104,
-          "length" : 31
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 58
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 100
-        },
-        {
-          "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 2
-        },
-        {
-          "activity" : "scanProfilesForR5",
-          "start" : 345,
-          "length" : 7
-        },
-        {
-          "activity" : "scanExamplesForR5",
-          "start" : 345,
-          "length" : 1
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-id.measurement.1.json",
-      "size" : 804,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
         },
         {
           "activity" : "scan",
-          "start" : 78,
+          "start" : 45,
           "length" : 1
         },
         {
-          "activity" : "generateNarratives",
-          "start" : 96,
+          "activity" : "load",
+          "start" : 46,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 1
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
           "length" : 12
         },
         {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 10
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 9
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0000369.json",
-      "size" : 630,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "checkR4R4B",
-          "start" : 84,
-          "length" : 1
-        },
-        {
           "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 6
+          "start" : 52,
+          "length" : 19
         },
         {
           "activity" : "validate",
-          "start" : 120,
-          "length" : 4
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 8
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/Observation-hp.0007663.json",
-      "size" : 630,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
-        },
-        {
-          "activity" : "load",
-          "start" : 79,
-          "length" : 1
-        },
-        {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 13
-        },
-        {
-          "activity" : "validate",
-          "start" : 120,
-          "length" : 3
-        },
-        {
-          "activity" : "generate1",
-          "start" : 127,
-          "length" : 9
-        },
-        {
-          "activity" : "generate2",
-          "start" : 161,
-          "length" : 7
-        }
-      ]
-    },
-    {
-      "name" : "fsh-generated/resources/ValueSet-TumorGrade.json",
-      "size" : 697,
-      "processes" : [
-        {
-          "activity" : "loadResources",
-          "start" : 78,
-          "length" : 4
-        },
-        {
-          "activity" : "load",
-          "start" : 78,
+          "start" : 58,
           "length" : 17
         },
         {
-          "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 15
-        },
-        {
-          "activity" : "validate",
-          "start" : 99,
-          "length" : 8
-        },
-        {
           "activity" : "generate1",
-          "start" : 127,
-          "length" : 12
+          "start" : 71,
+          "length" : 59
         },
         {
           "activity" : "generate2",
-          "start" : 161,
-          "length" : 566
+          "start" : 85,
+          "length" : 53
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/ValueSet-moleculeContext-vs.json",
-      "size" : 1058,
+      "name" : "fsh-generated/resources/StructureDefinition-interpretation-status.json",
+      "size" : 2216,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 30
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 19
+        },
+        {
+          "activity" : "generate1",
+          "start" : 71,
+          "length" : 60
+        },
+        {
+          "activity" : "generate2",
+          "start" : 85,
+          "length" : 57
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-molecule-context.json",
+      "size" : 1976,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
           "length" : 4
         },
         {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 18
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 52,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 58,
+          "length" : 19
+        },
+        {
+          "activity" : "generate1",
+          "start" : 71,
+          "length" : 59
+        },
+        {
+          "activity" : "generate2",
+          "start" : 85,
+          "length" : 69
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 253,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-phenopackets-genomic-interpretation.json",
+      "size" : 4823,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 6
+        },
+        {
           "activity" : "load-configure",
-          "start" : 78,
+          "start" : 45,
           "length" : 1
         },
         {
           "activity" : "load",
-          "start" : 78,
-          "length" : 10
+          "start" : 46,
+          "length" : 8
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 98
         },
         {
           "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 535
+          "start" : 52,
+          "length" : 130
         },
         {
           "activity" : "validate",
-          "start" : 99,
-          "length" : 100
+          "start" : 58,
+          "length" : 123
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 1
         },
         {
           "activity" : "generate1",
-          "start" : 127,
-          "length" : 12
+          "start" : 71,
+          "length" : 291
         },
         {
           "activity" : "generate2",
-          "start" : 162,
-          "length" : 577
+          "start" : 85,
+          "length" : 528
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 1
+          "start" : 237,
+          "length" : 7
         }
       ]
     },
@@ -3983,130 +2946,996 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 24
+          "start" : 45,
+          "length" : 4
         },
         {
           "activity" : "load",
-          "start" : 79,
-          "length" : 43
+          "start" : 46,
+          "length" : 5
         },
         {
           "activity" : "generateSnapshots",
-          "start" : 83,
-          "length" : 1188
+          "start" : 48,
+          "length" : 585
         },
         {
           "activity" : "generateNarratives",
-          "start" : 96,
-          "length" : 1453
+          "start" : 52,
+          "length" : 601
         },
         {
           "activity" : "validate",
-          "start" : 104,
-          "length" : 4505
+          "start" : 58,
+          "length" : 2500
         },
         {
           "activity" : "checkConformanceResources",
-          "start" : 110,
-          "length" : 1
-        },
-        {
-          "activity" : "checkConformanceResources2",
-          "start" : 114,
+          "start" : 61,
           "length" : 1
         },
         {
           "activity" : "scanForUsageStats",
-          "start" : 117,
-          "length" : 6
+          "start" : 64,
+          "length" : 3
         },
         {
           "activity" : "generate1",
-          "start" : 127,
-          "length" : 1681
+          "start" : 71,
+          "length" : 1590
         },
         {
           "activity" : "generate2",
-          "start" : 162,
-          "length" : 4745
+          "start" : 85,
+          "length" : 2327
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
-          "length" : 53
+          "start" : 237,
+          "length" : 24
         },
         {
           "activity" : "scanProfilesForR5",
-          "start" : 345,
+          "start" : 253,
           "length" : 1
         },
         {
           "activity" : "scanExamplesForR5",
-          "start" : 345,
+          "start" : 253,
+          "length" : 3
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-phred-quality-score.json",
+      "size" : 1502,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 12
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 14
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 16
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 52
+        },
+        {
+          "activity" : "generate2",
+          "start" : 88,
+          "length" : 64
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
           "length" : 2
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/Condition-id.disease.3.json",
-      "size" : 1083,
+      "name" : "fsh-generated/resources/StructureDefinition-related-concept-id.json",
+      "size" : 1618,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
           "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 11
         },
         {
           "activity" : "generateNarratives",
-          "start" : 98,
-          "length" : 7
+          "start" : 53,
+          "length" : 12
         },
         {
           "activity" : "validate",
-          "start" : 120,
-          "length" : 5
+          "start" : 61,
+          "length" : 13
         },
         {
           "activity" : "generate1",
-          "start" : 129,
+          "start" : 73,
+          "length" : 50
+        },
+        {
+          "activity" : "generate2",
+          "start" : 88,
+          "length" : 74
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-therapeutic-actionability.json",
+      "size" : 2137,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
           "length" : 15
         },
         {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 17
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 16
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 64,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 59
+        },
+        {
           "activity" : "generate2",
-          "start" : 167,
-          "length" : 10
+          "start" : 88,
+          "length" : 59
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
         }
       ]
     },
     {
-      "name" : "fsh-generated/resources/Observation-karyotypic-sex-invalid-1.json",
-      "size" : 426,
+      "name" : "fsh-generated/resources/StructureDefinition-vcf-info.json",
+      "size" : 1497,
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 11
         },
         {
           "activity" : "generateNarratives",
-          "start" : 98,
+          "start" : 53,
+          "length" : 13
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 21
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 50
+        },
+        {
+          "activity" : "generate2",
+          "start" : 88,
+          "length" : 49
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-vrs-object.json",
+      "size" : 1811,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 48,
+          "length" : 14
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "validate",
+          "start" : 61,
+          "length" : 29
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 57
+        },
+        {
+          "activity" : "generate2",
+          "start" : 88,
+          "length" : 53
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-DiagnosticMarker.json",
+      "size" : 732,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 93
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 11
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 88,
+          "length" : 3816
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-HistologicalDiagnosis.json",
+      "size" : 976,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 4
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 8
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 92,
+          "length" : 364
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-HpoSeverity.json",
+      "size" : 967,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 362
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 8
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 92,
+          "length" : 299
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-KaryotypicSex.json",
+      "size" : 496,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
           "length" : 3
         },
         {
           "activity" : "validate",
-          "start" : 120,
-          "length" : 2
+          "start" : 55,
+          "length" : 7
         },
         {
           "activity" : "generate1",
-          "start" : 129,
+          "start" : 73,
           "length" : 7
         },
         {
           "activity" : "generate2",
-          "start" : 167,
+          "start" : 92,
+          "length" : 48
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-Onset.json",
+      "size" : 1036,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
           "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 80
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 92,
+          "length" : 280
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-PhenotypicModifierValueSet.json",
+      "size" : 816,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 262
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 8
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 93,
+          "length" : 282
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-Taxonomy.json",
+      "size" : 531,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 2
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 93,
+          "length" : 349
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-TumorGrade.json",
+      "size" : 697,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 9
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 93,
+          "length" : 392
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-TumorProgression.json",
+      "size" : 949,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 4
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 249
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 348
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-TumorStage.json",
+      "size" : 698,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 5
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 48,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 7
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 7
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 276
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-acmgPathogenicityClassification-vs.json",
+      "size" : 1387,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 256
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 69
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 94,
+          "length" : 285
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 236,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-geno-ontology-allelic-state-vs.json",
+      "size" : 629,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 48
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 8
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 95,
+          "length" : 287
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-interpretationStatus-vs.json",
+      "size" : 1146,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 277
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 52
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 95,
+          "length" : 292
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-moleculeContext-vs.json",
+      "size" : 1058,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 45,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 251
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 72
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 95,
+          "length" : 328
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-observation-categories.json",
+      "size" : 652,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 6
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 14
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 39
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-phenotypic-abnormality.json",
+      "size" : 608,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 3
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 323
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 237,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-phenotypic-component.json",
+      "size" : 660,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 250
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 6
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 8
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 308
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-phenotypicFeatureVS.json",
+      "size" : 1085,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 2
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 6
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 46
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 96
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 9
+        },
+        {
+          "activity" : "generate2",
+          "start" : 96,
+          "length" : 86
         }
       ]
     },
@@ -4116,37 +3945,73 @@
       "processes" : [
         {
           "activity" : "loadResources",
-          "start" : 78,
-          "length" : 3
+          "start" : 45,
+          "length" : 2
         },
         {
           "activity" : "load",
-          "start" : 78,
+          "start" : 46,
           "length" : 5
         },
         {
           "activity" : "generateNarratives",
-          "start" : 98,
-          "length" : 89
+          "start" : 55,
+          "length" : 41
         },
         {
           "activity" : "validate",
-          "start" : 99,
+          "start" : 56,
           "length" : 8
         },
         {
           "activity" : "generate1",
-          "start" : 129,
-          "length" : 13
+          "start" : 73,
+          "length" : 7
         },
         {
           "activity" : "generate2",
-          "start" : 167,
-          "length" : 607
+          "start" : 96,
+          "length" : 288
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ValueSet-therapeuticActionability-vs.json",
+      "size" : 999,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 45,
+          "length" : 3
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 5
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 55,
+          "length" : 292
+        },
+        {
+          "activity" : "validate",
+          "start" : 56,
+          "length" : 44
+        },
+        {
+          "activity" : "generate1",
+          "start" : 73,
+          "length" : 10
+        },
+        {
+          "activity" : "generate2",
+          "start" : 97,
+          "length" : 317
         },
         {
           "activity" : "generateValidationPack",
-          "start" : 317,
+          "start" : 237,
           "length" : 1
         }
       ]

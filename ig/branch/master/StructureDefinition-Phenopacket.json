@@ -18,7 +18,7 @@
   "name" : "Phenopacket",
   "title" : "Phenopacket profile",
   "status" : "draft",
-  "date" : "2023-10-02T17:28:29+00:00",
+  "date" : "2023-12-04T18:31:23+00:00",
   "publisher" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
   "contact" : [{
     "name" : "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream",
@@ -262,10 +262,6 @@
         {
           "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
           "valueString" : "Language"
-        },
-        {
-          "url" : "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding",
-          "valueBoolean" : true
         }],
         "strength" : "preferred",
         "description" : "A human language.",
@@ -740,7 +736,7 @@
       "short" : "Composition editing time",
       "definition" : "The composition editing time, when the composition was last logically changed by the author.",
       "comment" : "The Last Modified Date on the composition may be after the date of the document was attested without being changed.",
-      "requirements" : "dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging.",
+      "requirements" : "dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp) is the date of packaging.",
       "min" : 1,
       "max" : "1",
       "base" : {
@@ -1754,10 +1750,6 @@
     },
     {
       "id" : "Composition.section",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "slicing" : {
         "discriminator" : [{
@@ -2336,10 +2328,6 @@
     },
     {
       "id" : "Composition.section:phenotypic_features",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "phenotypic_features",
       "short" : "Composition is broken into sections",
@@ -2918,10 +2906,6 @@
     },
     {
       "id" : "Composition.section:measurements",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "measurements",
       "short" : "Composition is broken into sections",
@@ -3500,10 +3484,6 @@
     },
     {
       "id" : "Composition.section:biosamples",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "biosamples",
       "short" : "Composition is broken into sections",
@@ -4082,10 +4062,6 @@
     },
     {
       "id" : "Composition.section:interpretations",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "interpretations",
       "short" : "represent the interpretation of a genomic analysis, such as the report from a diagnostic laboratory.",
@@ -4664,10 +4640,6 @@
     },
     {
       "id" : "Composition.section:diseases",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "diseases",
       "short" : "Composition is broken into sections",
@@ -5246,10 +5218,6 @@
     },
     {
       "id" : "Composition.section:files",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "files",
       "short" : "relevant documents and files.",
@@ -5828,10 +5796,6 @@
     },
     {
       "id" : "Composition.section:medicalActions",
-      "extension" : [{
-        "url" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name",
-        "valueString" : "Section"
-      }],
       "path" : "Composition.section",
       "sliceName" : "medicalActions",
       "short" : "relevant procedures, radiation therapies, therapeutic regimens, and treatments.",

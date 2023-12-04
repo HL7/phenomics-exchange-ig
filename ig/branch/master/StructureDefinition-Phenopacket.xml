@@ -69,7 +69,7 @@
   <name value="Phenopacket"/>
   <title value="Phenopacket profile"/>
   <status value="draft"/>
-  <date value="2023-10-02T17:28:29+00:00"/>
+  <date value="2023-12-04T18:31:23+00:00"/>
   <publisher value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
   <contact>
     <name value="Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"/>
@@ -303,9 +303,6 @@
         </extension>
         <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName">
           <valueString value="Language"/>
-        </extension>
-        <extension url="http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding">
-          <valueBoolean value="true"/>
         </extension>
         <strength value="preferred"/>
         <description value="A human language."/>
@@ -766,7 +763,7 @@
       <short value="Composition editing time"/>
       <definition value="The composition editing time, when the composition was last logically changed by the author."/>
       <comment value="The Last Modified Date on the composition may be after the date of the document was attested without being changed."/>
-      <requirements value="dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging."/>
+      <requirements value="dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp) is the date of packaging."/>
       <min value="1"/>
       <max value="1"/>
       <base>
@@ -1748,9 +1745,6 @@
       </mapping>
     </element>
     <element id="Composition.section">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <slicing>
         <discriminator>
@@ -2310,9 +2304,6 @@
       </mapping>
     </element>
     <element id="Composition.section:phenotypic_features">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="phenotypic_features"/>
       <short value="Composition is broken into sections"/>
@@ -2872,9 +2863,6 @@
       </mapping>
     </element>
     <element id="Composition.section:measurements">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="measurements"/>
       <short value="Composition is broken into sections"/>
@@ -3434,9 +3422,6 @@
       </mapping>
     </element>
     <element id="Composition.section:biosamples">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="biosamples"/>
       <short value="Composition is broken into sections"/>
@@ -3996,9 +3981,6 @@
       </mapping>
     </element>
     <element id="Composition.section:interpretations">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="interpretations"/>
       <short value="represent the interpretation of a genomic analysis, such as the report from a diagnostic laboratory."/>
@@ -4558,9 +4540,6 @@
       </mapping>
     </element>
     <element id="Composition.section:diseases">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="diseases"/>
       <short value="Composition is broken into sections"/>
@@ -5120,9 +5099,6 @@
       </mapping>
     </element>
     <element id="Composition.section:files">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="files"/>
       <short value="relevant documents and files."/>
@@ -5682,9 +5658,6 @@
       </mapping>
     </element>
     <element id="Composition.section:medicalActions">
-      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name">
-        <valueString value="Section"/>
-      </extension>
       <path value="Composition.section"/>
       <sliceName value="medicalActions"/>
       <short value="relevant procedures, radiation therapies, therapeutic regimens, and treatments."/>

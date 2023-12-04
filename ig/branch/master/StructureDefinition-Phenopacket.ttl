@@ -24,7 +24,7 @@
   fhir:name [ fhir:v "Phenopacket"] ; # 
   fhir:title [ fhir:v "Phenopacket profile"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
-  fhir:date [ fhir:v "2023-10-02T17:28:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-04T18:31:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;
@@ -280,9 +280,6 @@
          ] [
            fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName"^^xsd:anyURI ] ;
            fhir:value [ fhir:v "Language" ]
-         ] [
-           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/elementdefinition-isCommonBinding"^^xsd:anyURI ] ;
-           fhir:value [ fhir:v "true"^^xsd:boolean ]
          ] ) ;
          fhir:strength [ fhir:v "preferred" ] ;
          fhir:description [ fhir:v "A human language." ] ;
@@ -764,7 +761,7 @@
        fhir:short [ fhir:v "Composition editing time" ] ;
        fhir:definition [ fhir:v "The composition editing time, when the composition was last logically changed by the author." ] ;
        fhir:comment [ fhir:v "The Last Modified Date on the composition may be after the date of the document was attested without being changed." ] ;
-       fhir:requirements [ fhir:v "dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](http://hl7.org/fhir/R4/bundle-definitions.html#Bundle.timestamp) is the date of packaging." ] ;
+       fhir:requirements [ fhir:v "dateTime is used for tracking, organizing versions and searching. Note that this is the time of *authoring*. When packaged in a document, [Bundle.timestamp](bundle-definitions.html#Bundle.timestamp) is the date of packaging." ] ;
        fhir:min [ fhir:v "1"^^xsd:nonNegativeInteger ] ;
        fhir:max [ fhir:v "1" ] ;
        fhir:base [
@@ -1833,10 +1830,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:slicing [
          fhir:discriminator ( [
@@ -2462,10 +2455,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:phenotypic_features" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "phenotypic_features" ] ;
        fhir:short [ fhir:v "Composition is broken into sections" ] ;
@@ -3092,10 +3081,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:measurements" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "measurements" ] ;
        fhir:short [ fhir:v "Composition is broken into sections" ] ;
@@ -3722,10 +3707,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:biosamples" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "biosamples" ] ;
        fhir:short [ fhir:v "Composition is broken into sections" ] ;
@@ -4352,10 +4333,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:interpretations" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "interpretations" ] ;
        fhir:short [ fhir:v "represent the interpretation of a genomic analysis, such as the report from a diagnostic laboratory." ] ;
@@ -4982,10 +4959,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:diseases" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "diseases" ] ;
        fhir:short [ fhir:v "Composition is broken into sections" ] ;
@@ -5612,10 +5585,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:files" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "files" ] ;
        fhir:short [ fhir:v "relevant documents and files." ] ;
@@ -6242,10 +6211,6 @@
        ] )
      ] [
        fhir:id [ fhir:v "Composition.section:medicalActions" ] ;
-       fhir:extension ( [
-         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"^^xsd:anyURI ] ;
-         fhir:value [ fhir:v "Section" ]
-       ] ) ;
        fhir:path [ fhir:v "Composition.section" ] ;
        fhir:sliceName [ fhir:v "medicalActions" ] ;
        fhir:short [ fhir:v "relevant procedures, radiation therapies, therapeutic regimens, and treatments." ] ;

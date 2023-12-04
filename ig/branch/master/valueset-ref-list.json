@@ -1,0 +1,257 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "http://github.com/phenopackets/core-ig/ValueSet/phenotypic-modifier",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicModifierValueSet",
+      "title" : "Phenotypic modifier ValueSet",
+      "description" : "Human Phenotype Ontology (HPO) Clinical Modifier terms",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature"
+    },
+    {
+      "url" : "http://hl7.org/fhir/ValueSet/observation-category",
+      "version" : "4.0.1",
+      "status" : "draft",
+      "name" : "ObservationCategoryCodes",
+      "title" : "Observation Category Codes",
+      "description" : "Observation Category codes.",
+      "systems" : ["http://terminology.hl7.org/CodeSystem/observation-category"],
+      "oids" : ["2.16.840.1.113883.4.642.3.403"],
+      "sources" : ["2.16.840.1.113883.4.642.3.403"],
+      "uses" : {
+      },
+      "ValueSet-observation-categories.html" : "Observation categories"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/DiagnosticMarker",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "DiagnosticMarker",
+      "title" : "Diagnostic Marker",
+      "description" : "Codes to indicate clinically relevant bio markers.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-DiagnosticMarker.html" : "Diagnostic Marker"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/HistologicalDiagnosis",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HistologicalDiagnosis",
+      "title" : "HistologicalDiagnosis",
+      "description" : "Histological diagnosis codes from NCIT.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-HistologicalDiagnosis.html" : "Histological Diagnosis"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/HpoSeverity",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HpoSeverityVS",
+      "title" : "Hpo Severity Value Set",
+      "description" : "The HPO codes for phenotypic feature severity",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"],
+      "uses" : {
+      },
+      "StructureDefinition-PhenotypicFeature.html" : "Phenotypic Feature"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/KaryotypicSex",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "KaryotypicSex",
+      "title" : "Karyotypic sex value set",
+      "description" : "The karyotypic (chromosomal) sex of an individual",
+      "systems" : [
+        "https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-KaryotypicSex.html" : "Karyotypic Sex"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/Onset",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Onset",
+      "title" : "Onset ValueSet",
+      "description" : "Set of HPO codes that denote the onset of a disease or phenotypic feature. The codes are descendants of Onset (HP:0003674) or from SNOMED_CT (282032007).",
+      "systems" : [
+        "http://github.com/phenopackets/core-ig/CodeSystem/hpo",
+        "http://snomed.info/sct"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-CodedOnset.html" : "Coded Onset"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/Taxonomy",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "Taxonomy",
+      "title" : "Taxonomy",
+      "description" : "Taxonomic identifiers of an organism.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncbitaxon.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-Taxonomy.html" : "Taxonomy"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorGrade",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorGrade",
+      "title" : "Tumor Grade",
+      "description" : "Codes to indicate the grade of a tumor.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-TumorGrade.html" : "Tumor Grade"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorProgression",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorProgression",
+      "title" : "Tumor Progression",
+      "description" : "Codes to indicate if a specimen is from the primary tumor, a metastasis or a recurrence.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-TumorProgression.html" : "Tumor Progression"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/TumorStage",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TumorStage",
+      "title" : "Tumor Stage",
+      "description" : "Codes to represent the stage of a tumor.",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"],
+      "uses" : {
+      },
+      "StructureDefinition-PathologicalStage.html" : "Pathological Tumor Stage",
+      "StructureDefinition-PathologicalTnmFinding.html" : " Pathological TNM Finding"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/acmgPathogenicityClassification-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "AcmgPathogenicityClassificationVS",
+      "title" : "ACMG Pathogenicity Classification Value Set",
+      "description" : "Describes the ACMG five-tier pathogenicity classification system (Richards et al., 2015, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/).",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-acmg-pathogenicity-classification.html" : "ACMG Pathogenicity Classification"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/geno-ontology-allelic-state-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "GenoOntologyAllelicStateVS",
+      "title" : "GENO Ontology Allelic State Value Set ",
+      "description" : "Descendent terms of GENO_0000875",
+      "systems" : ["http://www.ebi.ac.uk/ols/ontologies/geno"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/interpretationStatus-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "InterpretationStatusVS",
+      "title" : "Interpretation Status Value Set",
+      "description" : "Describes the conclusion made about the genomic interpretation.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-interpretation-status.html" : "Interpretation Status"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/moleculeContext-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "MoleculeContextVS",
+      "title" : "Molecule Context Value Set",
+      "description" : "Describes The molecular context of the variant. Default is unspecified_molecule_context.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-molecule-context.html" : "Molecule Context"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/observation-categories",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "ObservationCategories",
+      "title" : "Observation categories",
+      "description" : "ValueSet description here",
+      "systems" : [
+        "https://github.com/phenopackets/core-ig/CodeSystem/categories",
+        "http://terminology.hl7.org/CodeSystem/observation-category"
+      ]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-abnormality",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicAbnormalityValueSet",
+      "title" : "Phenotypic abnormality ValueSet",
+      "description" : "ValueSet description here",
+      "systems" : ["http://purl.obolibrary.org/obo/ncit.owl"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypic-component",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicComponentValueSet",
+      "title" : "Phenotypic component ValueSet",
+      "description" : "ValueSet description here",
+      "systems" : ["http://github.com/phenopackets/core-ig/CodeSystem/hpo"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/phenotypicFeatureVS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicFeatureStatusValueSet",
+      "title" : "Observation Codes for status of a PhenotypicFeature",
+      "description" : "The LOINC codes for present if a feature is observed and absent if a feature was excluded.",
+      "systems" : ["http://loinc.org"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/sequence-ontology-structural-variant-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "SequenceOntologyStructuralVariantVS",
+      "title" : "Sequence Ontology Structural Variant Value Set",
+      "description" : "Descendent terms of SO:0001537.",
+      "systems" : ["http://www.sequenceontology.org/"]
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/ValueSet/therapeuticActionability-vs",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "TherapeuticActionabilityVS",
+      "title" : "Therapeutic Actionability Value Set",
+      "description" : "Describes the therapeutic actionability of the variant.",
+      "systems" : [
+        "http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability"
+      ],
+      "uses" : {
+      },
+      "StructureDefinition-therapeutic-actionability.html" : "Therapeutic Actionability"
+    }
+  ]
+}

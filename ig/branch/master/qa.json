@@ -3,11 +3,11 @@
   "name" : "GA4GHPhenopacketIG",
   "package-id" : "hl7.fhir.us.ga4gh.phenopacket",
   "ig-ver" : "0.1.0",
-  "date" : "Mon, 02 Oct, 2023 17:28:29 +0000",
-  "errs" : 7,
+  "date" : "Mon, 04 Dec, 2023 18:31:23 +0000",
+  "errs" : 26,
   "warnings" : 190,
-  "hints" : 150,
+  "hints" : 152,
   "version" : "4.0.1",
   "tool" : "5.0.0 (3)",
-  "maxMemory" : 995951256
+  "maxMemory" : 1300278272
 }

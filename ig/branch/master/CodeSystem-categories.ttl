@@ -18,7 +18,7 @@
   fhir:title [ fhir:v "Categories"] ; # 
   fhir:status [ fhir:v "draft"] ; # 
   fhir:experimental [ fhir:v "true"^^xsd:boolean] ; # 
-  fhir:date [ fhir:v "2023-10-02T17:28:29+00:00"^^xsd:dateTime] ; # 
+  fhir:date [ fhir:v "2023-12-04T18:31:23+00:00"^^xsd:dateTime] ; # 
   fhir:publisher [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"] ; # 
   fhir:contact ( [
      fhir:name [ fhir:v "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream" ] ;

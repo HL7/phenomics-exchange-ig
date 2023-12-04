@@ -1,0 +1,36 @@
+{
+  "codeSystems" : [
+    {
+      "url" : "https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "HtsFormat",
+      "title" : "HTS Format",
+      "description" : "An enumeration used to represent different high-throughput sequencing file formats."
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "KaryotypicSexCS",
+      "title" : "Karyotypic sex code system",
+      "description" : "karyotypic sex of an individual (also known as chromosomal sex)"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/CodeSystem/categories",
+      "version" : "0.1.0",
+      "status" : "draft",
+      "name" : "Categories",
+      "title" : "Categories",
+      "description" : "Various categories or tags"
+    },
+    {
+      "url" : "https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS",
+      "version" : "0.1.0",
+      "status" : "active",
+      "name" : "PhenotypicFeatureStatusCS",
+      "title" : "Categories",
+      "description" : "Various categories or tags"
+    }
+  ]
+}

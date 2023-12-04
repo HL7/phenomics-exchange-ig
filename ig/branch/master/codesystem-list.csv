@@ -1,0 +1,5 @@
+URL,Version,Status,OIDs,Name,Title,Descriptino,Used
+https://github.com/phenopackets/core-ig/CodeSystem/HtsFormat,0.1.0,active,,HtsFormat,HTS Format,"An enumeration used to represent different high-throughput sequencing file formats.",
+https://github.com/phenopackets/core-ig/CodeSystem/KaryotypicSex,0.1.0,active,,KaryotypicSexCS,Karyotypic sex code system,"karyotypic sex of an individual (also known as chromosomal sex)",
+https://github.com/phenopackets/core-ig/CodeSystem/categories,0.1.0,draft,,Categories,Categories,"Various categories or tags",
+https://github.com/phenopackets/core-ig/CodeSystem/phenotypicFeatureStatusCS,0.1.0,active,,PhenotypicFeatureStatusCS,Categories,"Various categories or tags",

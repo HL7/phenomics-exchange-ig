@@ -10,7 +10,7 @@
   fhir:id [ fhir:v "Onset"] ; # 
   fhir:text [
      fhir:status [ fhir:v "generated" ] ;
-     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code> where concept  is-a  HP:0003674</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  282032007 (null)</li></ul></div>"
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from <code>http://github.com/phenopackets/core-ig/CodeSystem/hpo</code> where concept  is-a  HP:0003674</li><li>Include codes from <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a> where concept  descends from  282032007 (Periods of life)</li></ul></div>"
   ] ; # 
   fhir:url [ fhir:v "https://github.com/phenopackets/core-ig/ValueSet/Onset"^^xsd:anyURI] ; # 
   fhir:version [ fhir:v "0.1.0"] ; # 
