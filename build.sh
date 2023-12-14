@@ -18,4 +18,7 @@ DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 cd "$DIR"
 
+# The usual publisher options/arguments can be added to the end of this line, as done for the -ig option.
+# The "latest" tag can be replaced with a publisher version as long as there is an image built for it.
+# Check for available images here: https://hub.docker.com/repository/docker/sessaid/ig-publisher/tags
 docker run --pull=always --rm --volume "$(pwd):/ig" sessaid/ig-publisher:latest -ig ig.ini
