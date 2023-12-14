@@ -18,7 +18,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
               interpretation for an individual variant or gene."
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
+* category[Genetics] = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
 * id = "PhenopacketsGenomicInterpretationExample01" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
@@ -37,7 +37,7 @@ Description: "This is an example of phenopackets-variant which is a phenopackets
 * identifier.value = "02"
 * specimen = Reference(phenopacketSpecimenExample01) // we may need to use a real specimen example
 * subject = Reference(phenopacketPatientExample01)
-* category = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
+* category[Genetics] = http://terminology.hl7.org/CodeSystem/v2-0074#GE "Genetics"
 * id = "PhenopacketsGenomicInterpretationExample02" 
 * modifierExtension[interpretationStatus].valueCodeableConcept = PPIS#0  "UNKNOWN_STATUS"
 * result[variant] = Reference(PhenopacketsVariantExample01)
