@@ -10,6 +10,8 @@ Once you have committed and pushed your new branch to your fork, you can choose 
 
 # IG builds
 
+The HL7 builds, by branch, can be [found here](https://build.fhir.org/ig/HL7/phenomics-exchange-ig/branches/)
+
 The IG can be built locally with the `build.sh` script as described above.
 
 The GitHub Actions based build works as follows:
