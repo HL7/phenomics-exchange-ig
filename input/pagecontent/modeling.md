@@ -4,7 +4,7 @@
 
 The GA4GH Phenopacket and this IG intend to support [deep phenotyping](phenotype.md). The phenopacket
 organizes information relevant to deep phenotyping and computational analysis for research or for
-computational differental diagnosis approaches. Here, we discuss the motivations for the decisions we made for this IG.
+computational differential diagnosis approaches. Here, we discuss the motivations for the decisions we made for this IG.
 
 ## PhenotypicFeature: Observation or Condition?
 
