@@ -2,10 +2,10 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: hl7.fhir.us.ga4gh.phenopacket
-canonical: https://github.com/phenopackets/core-ig
-name: GA4GHPhenopacketIG
-title: "Phenomics Exchange for Research and Diagnostics Implementation Guide"
+id: phenomics-exchange
+canonical: http://hl7.org/fhir/uv/phenomics-exchange
+name: PhenomicsExchange
+title: "Phenomics Exchange for Research and Diagnostics"
 description: "FHIR implementation guide for the Global Alliance for Genomics and Health Phenopacket standard."
 status: draft
 license: CC0-1.0
@@ -14,12 +14,13 @@ fhirVersion: 4.0.1
 copyrightYear: 2021+
 copyright: "[Global Alliance for Genomics and Health](https://www.ga4gh.org)"
 releaseLabel: ci-build
+packageId: hl7.fhir.uv.phenomics-exchange
 publisher:
   name: "Global Alliance for Genomics and Health - Clinical and Phenotypic Data Capture Work Stream"
   url: https://www.ga4gh.org/work_stream/clinical-phenotypic-data-capture-2/
 
-jurisdiction: urn:iso:std:iso:3166#US
-# jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+#jurisdiction: urn:iso:std:iso:3166#US
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 pages:
   index.md:
     title: Home
