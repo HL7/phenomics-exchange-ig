@@ -10,9 +10,10 @@ Usage: #example
 * entry[0].fullUrl = "http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html"
 * entry[=].resource = PhenopacketCompositionExample01
 //subject: example-patient
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Patient-example-patient.html"
-* entry[=].resource = example-patient
+// * entry[+].fullUrl = "http://phenopackets.org/core-ig/Patient/example-patient"
+* entry[+].resource = example-patient
 //PhenopacketPractitionerExample01
+
 * entry[+].fullUrl = "http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html"
 * entry[=].resource = PhenopacketPractitionerExample01
 //features: CHF-with-severity

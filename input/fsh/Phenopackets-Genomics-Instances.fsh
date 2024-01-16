@@ -49,7 +49,7 @@ Instance: phenopacketSpecimenExample01
 InstanceOf: Specimen
 Usage: #example
 Title: "phenopacket Specimen Example01"
-Description: " This is an incomplete example that used as 
+Description: "This is an incomplete example that used as 
                a placeholder for a curated specimen example"
 * id = "phenopacketSpecimenExample01"               
 * identifier.value = "01"
@@ -76,7 +76,7 @@ Instance: PhenopacketPractitionerExample01
 InstanceOf: Practitioner
 Usage: #example
 Title: "phenopacket Practitioner Example01"
-Description: " This is an incomplete example that used as 
+Description: "This is an incomplete example that used as 
                a placeholder for a curated Practitioner example"
 * id = "PhenopacketPractitionerExample01"               
 * identifier.value = "03"

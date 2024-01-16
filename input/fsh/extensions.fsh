@@ -103,7 +103,7 @@ Description: "This element can be used if the phenopacket describes cancer. Tumo
 
 Extension: PathologicalTnmFinding
 Id: PathologicalTnmFinding
-Title: " Pathological TNM Finding"
+Title: "Pathological TNM Finding"
 Description: "Pathological TNM findings, if applicable. Corresponds to pathological_tnm_finding (GA4GH)"
 * ^version = "0.1.0"
 * ^date = "2020-02-14T16:13:10+10:00"

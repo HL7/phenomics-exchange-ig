@@ -56,3 +56,15 @@ Description: "karyotypic sex of an individual (also known as chromosomal sex)"
 * #XXXX "XXXX karyotypic sex" "Karyotype with four X chromosomes"
 * #XYY "XYY karyotypic sex" "Karyotype with one X chromosome and two Y chromosomes"
 * #OTHER_KARYOTYPE "Other karyotype" "Karyotype with sex chromosomes other than XX,XY,X0,XXY,XXX,XXYY,XXXY,XXXX, or XYY"
+
+CodeSystem: SectionType
+Id: section-type
+Title: "Section Type"
+Description: "Section Type"
+* #phenotypic_features
+* #measurements
+* #biosamples
+* #interpretations
+* #diseases
+* #files
+* #medicalActions
