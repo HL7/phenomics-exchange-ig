@@ -93,9 +93,10 @@ Description: "This profile defines the GA4GH PhenotypicFeature element in terms 
 * ^contact.name = "Peter Robinson"
 * code 1..1 MS
 * value[x] only CodeableConcept
-//* value[x] from PhenotypicFeatureStatusValueSet
+* value[x] from http://loinc.org/vs/LL1937-3 (required)
 * value[x] 1..1 MS
-* value[x] ^short = "true: observed; false: excluded"
+* value[x] ^short = "LOINC code for presence absence"
+* value[x] ^definition = "LOINC code for presence absence"
 * specimen ..0
 * device ..0
 * referenceRange ..0
