@@ -19,6 +19,9 @@ publisher:
   name: "HL7 International / Clinical Interoperability Council"
   url: http://www.hl7.org/Special/committees/cic
   email: cic@lists.HL7.org
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
+    valueCode: cic
 
 #jurisdiction: urn:iso:std:iso:3166#US
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
@@ -75,6 +78,7 @@ parameters:
 
 dependencies:
   hl7.fhir.uv.genomics-reporting: 2.0.0
+  hl7.fhir.uv.extensions: current
 #    id: genomics-reporting
 #    uri: http://hl7.org/fhir/uv/genomics-reporting/ 
 #    version: 1.0.0  

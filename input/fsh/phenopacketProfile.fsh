@@ -3,7 +3,10 @@ Parent: Composition
 Id: Phenopacket
 Title: "Phenopacket profile"
 Description: "This is the main element that represents the Phenopacket in FHIR."
-* ^status = #draft
+* insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #draft
 * identifier 1..1 MS 
 * subject only Reference(Individual)
 * section ^slicing.discriminator.type = #value

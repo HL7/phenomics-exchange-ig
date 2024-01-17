@@ -1,7 +1,6 @@
 Instance: losartan
 InstanceOf: Treatment
 Description: "Treatment Example (Losartan))"
-* id = "id.treatment.1"
 * status = #completed "completed"
 * subject = Reference(example-patient)
 * category = $MedReqCat#outpatient

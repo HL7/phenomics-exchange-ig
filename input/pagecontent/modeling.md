@@ -2,7 +2,7 @@
 
  > "All models are wrong, but some are useful".
 
-The GA4GH Phenopacket and this IG intend to support [deep phenotyping](phenotype.md). The phenopacket
+The GA4GH Phenopacket and this IG intend to support [deep phenotyping](phenotype.html). The phenopacket
 organizes information relevant to deep phenotyping and computational analysis for research or for
 computational differential diagnosis approaches. Here, we discuss the motivations for the decisions we made for this IG.
 
