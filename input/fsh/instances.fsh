@@ -89,6 +89,7 @@ Usage: #example
 Instance: service-request-supporting-info
 InstanceOf: SearchParameter
 Usage: #definition
+* insert SP_Publisher
 * url = "http://github.com/phenopackets/core-ig/SearchParameter/service-request-supporting-info"
 * name = "ServiceRequestSupportingInfo"
 * status = #active
