@@ -1,43 +1,40 @@
 Instance: PhenopacketsBundleExample01
 InstanceOf: Bundle
+Description: "Example Phenopacket Bundle instance"
 Usage: #example
 * meta.lastUpdated = "2022-02-02T22:22:22Z"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:1111-1111-1111-1111"
 * type = #document
 * timestamp = "2022-02-02T22:22:22Z"
-//http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample01.html
-* entry[0].fullUrl = "http://phenopackets.org/core-ig/Composition-PhenopacketCompositionExample01.html"
-* entry[=].resource = PhenopacketCompositionExample01
-//subject: example-patient
-// * entry[+].fullUrl = "http://phenopackets.org/core-ig/Patient/example-patient"
-* entry[+].resource = example-patient
-//PhenopacketPractitionerExample01
-
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Practitioner-PhenopacketPractitionerExample01.html"
-* entry[=].resource = PhenopacketPractitionerExample01
+* entry[0]
+  * insert bundleEntry(Composition, PhenopacketCompositionExample01)
+* entry[+]
+  * insert bundleEntry(Patient, example-patient)
+* entry[+]
+  * insert bundleEntry(Practitioner, PhenopacketPractitionerExample01)
 //features: CHF-with-severity
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Observation-id.phenotypicfeature.4.html"
-* entry[=].resource = CHF-with-severity
+* entry[+]
+  * insert bundleEntry(Observation, CHF-with-severity)
 //measurements: thrombocytopenia
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Observation-id.measurement.1.html"
-* entry[=].resource = thrombocytopenia
+* entry[+]
+  * insert bundleEntry(Observation, thrombocytopenia)
 //diseases: CHF-stageIII
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Condition-id.disease.3.html"
-* entry[=].resource = CHF-stageIII
+* entry[+]
+  * insert bundleEntry(Condition, CHF-stageIII)
 //biosamples: bladderCarcinoma
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Specimen-biosample.specimen.id.1.html"
-* entry[=].resource = bladderCarcinoma
+* entry[+]
+  * insert bundleEntry(Specimen, bladderCarcinoma)
 //interpretation: PhenopacketsGenomicInterpretationExample02
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/DiagnosticReport-PhenopacketsGenomicInterpretationExample02.html"
-* entry[=].resource = PhenopacketsGenomicInterpretationExample02
+* entry[+]
+  * insert bundleEntry(DiagnosticReport, PhenopacketsGenomicInterpretationExample02)
 //PhenopacketsVariantExample01
-* entry[+].fullUrl = "http://phenopackets.org/core-ig/Observation-PhenopacketsVariantExample01.html"
-* entry[=].resource = PhenopacketsVariantExample01
-
+* entry[+]
+  * insert bundleEntry(Observation, PhenopacketsVariantExample01)
 
 Instance: PhenopacketCompositionExample01
 InstanceOf: Phenopacket
+Description: "Example Phenopacket Composition instance"
 Usage: #example
 //* meta.profile = "https://github.com/phenopackets/core-ig/StructureDefinition/Phenopacket"
 * identifier.system = "urn:ietf:rfc:3986"

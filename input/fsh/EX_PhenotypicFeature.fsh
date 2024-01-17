@@ -1,7 +1,6 @@
 Instance: arachnodactyly
 InstanceOf: PhenotypicFeature
 Description: "PhenotypicFeature Example for arachnodactyly"
-* id = "id.phenotypicfeature.1"
 * status = #final "final"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001166 "Arachnodactyly"
@@ -11,7 +10,6 @@ Description: "PhenotypicFeature Example for arachnodactyly"
 Instance: lvdysfunction-excluded
 InstanceOf: PhenotypicFeature
 Description: "PhenotypicFeature Example for exclusion of LV dysfunction"
-* id = "id.phenotypicfeature.2"
 * status = #final "final"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0025168 "Left ventricular diastolic dysfunction"
@@ -20,7 +18,6 @@ Description: "PhenotypicFeature Example for exclusion of LV dysfunction"
 Instance: MVP-with-onset
 InstanceOf: PhenotypicFeature
 Description: "PhenotypicFeature Example for mitral value prolapse with onset"
-* id = "id.phenotypicfeature.3"
 * status = #final "final"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001634 "Mitral valve prolapse"
@@ -30,7 +27,6 @@ Description: "PhenotypicFeature Example for mitral value prolapse with onset"
 Instance: CHF-with-severity
 InstanceOf: PhenotypicFeature
 Description: "PhenotypicFeature Example for severe Low-output congestive heart failure"
-* id = "id.phenotypicfeature.4"
 * status = #final "final"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0009805 "Low-output congestive heart failure"
@@ -43,7 +39,6 @@ Description: "PhenotypicFeature Example for severe Low-output congestive heart f
 Instance: Polydactyly-with-modifier
 InstanceOf: PhenotypicFeature
 Description: "Bilateral postaxial Polydactyly, example to demonstrate use of Clinical Modifier"
-* id = "id.bilateral-polydactyly.phenotypic-feature"
 * status = #final "final"
 * subject = Reference(example-patient)
 * code = $hpo#HP:0001162 "Postaxial hand polydactyly"

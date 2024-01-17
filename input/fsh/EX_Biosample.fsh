@@ -1,7 +1,6 @@
 Instance: bladderCarcinoma
 InstanceOf: Biosample
 Description: "Biosample Example for bladder carcinoma"
-* id = "biosample.specimen.id.1"
 * collection.bodySite = $uberon#UBERON_0001256  "wall of urinary bladder"
 * type =  $efo#EFO_0010942 "primary tumor sample"
 * subject = Reference(example-patient)

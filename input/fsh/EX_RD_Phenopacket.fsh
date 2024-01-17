@@ -27,7 +27,6 @@ Description: "Example use case for a child with undiagnosed developmental delay"
 Instance: intellectualDisabilityDisease
 InstanceOf: Disease
 Description: "Intellectual disability (disease)"
-* id = "id.disease.intellectualDisability"
 * code  = $mondo#MONDO_0001071  "Intellectual disability"
 * subject = Reference(Proband1)
 
@@ -35,7 +34,6 @@ Description: "Intellectual disability (disease)"
 Instance: longPhiltrum
 InstanceOf: PhenotypicFeature
 Description: "Long philtrum (HP:0000343)"
-* id = "hp.0000343"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000343 "Long philtrum"
@@ -44,7 +42,6 @@ Description: "Long philtrum (HP:0000343)"
 Instance: microphthalmia
 InstanceOf: PhenotypicFeature
 Description: "Long philtrum (HP:0000568)"
-* id = "hp.0000568"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000568 "Microphthalmia"
@@ -53,7 +50,6 @@ Description: "Long philtrum (HP:0000568)"
 Instance: retinalDetachment
 InstanceOf: PhenotypicFeature
 Description: "Retinal detachment (HP:0000541)"
-* id = "hp.0000541"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000541 "Retinal detachment"
@@ -62,7 +58,6 @@ Description: "Retinal detachment (HP:0000541)"
 Instance: tga
 InstanceOf: PhenotypicFeature
 Description: "Transposition of the great arteries (HP:0001669)"
-* id = "hp.0001669"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001669 "Transposition of the great arteries"
@@ -71,7 +66,6 @@ Description: "Transposition of the great arteries (HP:0001669)"
 Instance: reducedVisualAcuity
 InstanceOf: PhenotypicFeature
 Description: "Reduced visual acuity (HP:0007663)"
-* id = "hp.0007663"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0007663 "Reduced visual acuity"
@@ -80,7 +74,6 @@ Description: "Reduced visual acuity (HP:0007663)"
 Instance: lowSetEars
 InstanceOf: PhenotypicFeature
 Description: "Low-set ears (HP:0000369)"
-* id = "hp.0000369"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0000369 "Reduced visual acuity"
@@ -89,7 +82,6 @@ Description: "Low-set ears (HP:0000369)"
 Instance: hypotonia 
 InstanceOf: PhenotypicFeature
 Description: "Hypotonia (HP:0001252)"
-* id = "hp.0001252"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001252 "Hypotonia"
@@ -99,7 +91,6 @@ Description: "Hypotonia (HP:0001252)"
 Instance: globalDevelopmentalDelay
 InstanceOf: PhenotypicFeature
 Description: "Global developmental delay (HP:0001263)"
-* id = "hp.0001263"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001263 "Global developmental delay"
@@ -108,7 +99,6 @@ Description: "Global developmental delay (HP:0001263)"
 Instance: muscleWeakness
 InstanceOf: PhenotypicFeature
 Description: "Muscle weakness (HP:0001324)"
-* id = "hp.0001324"
 * status = #final "final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0001324 "Muscle weakness"
@@ -118,7 +108,6 @@ Description: "Muscle weakness (HP:0001324)"
 Instance: amyotrophy
 InstanceOf: PhenotypicFeature
 Description: "Skeletal muscle atrophy (HP:0003202)"
-* id = "hp.0003202"
 * status = #final "Final"
 * subject = Reference(Proband1)
 * code = $hpo#HP:0003202 "Skeletal muscle atrophy"

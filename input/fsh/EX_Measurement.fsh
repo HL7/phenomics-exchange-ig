@@ -1,7 +1,6 @@
 Instance: thrombocytopenia
 InstanceOf: Measurement
 Description: "Measurement Example for thrombocytopenia"
-* id = "id.measurement.1"
 * status = #final "Final"
 * code = $LOINC#26515-7 "Platelets [#/volume] in Blood"
 * valueQuantity.value = 20
