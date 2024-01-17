@@ -15,6 +15,10 @@ Id: interpretationStatus-vs
 Title: "Interpretation Status Value Set"
 Description: "Describes the conclusion made about the genomic interpretation."
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * ^copyright = "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"
 * PPIS#0  "UNKNOWN_STATUS"
 * PPIS#1  "REJECTED"
@@ -27,6 +31,10 @@ Id: therapeuticActionability-vs
 Title: "Therapeutic Actionability Value Set"
 Description: "Describes the therapeutic actionability of the variant."
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * ^copyright = "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"
 * PPTA#0  "UNKNOWN_ACTIONABILITY"
 * PPTA#1  "NOT_ACTIONABLE"
@@ -37,6 +45,10 @@ Id: acmgPathogenicityClassification-vs
 Title: "ACMG Pathogenicity Classification Value Set"
 Description: "Describes the ACMG five-tier pathogenicity classification system (Richards et al., 2015, https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4544753/)."
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * ^copyright = "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"
 * PPAPC#0  "NOT_PROVIDED"
 * PPAPC#1  "BENIGN"
@@ -50,6 +62,10 @@ Id: moleculeContext-vs
 Title: "Molecule Context Value Set"
 Description: "Describes The molecular context of the variant. Default is unspecified_molecule_context."
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * ^copyright = "This value set includes content from Phenopackets, which is copyright © 2016+ Global Alliance for Genomics and Health (GA4GH)"
 * PPMC#0  "unspecified_molecule_context"
 * PPMC#1  "genomic"
@@ -61,6 +77,10 @@ Id: sequence-ontology-structural-variant-vs
 Title: "Sequence Ontology Structural Variant Value Set"
 Description: "Descendent terms of SO:0001537."
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * include codes from system SO where concept is-a SO#SO:0001537
 
 ValueSet: GenoOntologyAllelicStateVS
@@ -68,4 +88,8 @@ Id: geno-ontology-allelic-state-vs
 Title: "GENO Ontology Allelic State Value Set"
 Description: "Descendent terms of GENO_0000875"
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableValueSet
+* ^experimental = false
 * include codes from system GENO where concept is-a GENO#GENO_0000875 

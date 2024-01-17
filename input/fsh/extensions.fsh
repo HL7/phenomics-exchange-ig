@@ -3,7 +3,8 @@ Id: CodedOnset
 Title: "Coded Onset"
 Description: "The onset of a disease using an ontology class."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Condition"
@@ -15,7 +16,8 @@ Id: DiagnosticMarker
 Title: "Diagnostic Marker"
 Description: "Clinically relevant biomarkers. Most of the assays such as immunohistochemistry (IHC) are covered by the NCIT under the sub-hierarchy NCIT:C36292 (Laboratory Test Result), e.g. NCIT:C68748 (HER2/Neu Positive), NCIT:C131711 (Human Papillomavirus-18 Positive)."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -27,7 +29,8 @@ Id: HistologicalDiagnosis
 Title: "Histological Diagnosis"
 Description: "This is the pathologist’s diagnosis and may often represent a refinement of the clinical diagnosis (which could be reported in the Phenopacket that contains this Biosample). Normal samples would be tagged with the term “NCIT:C38757”, “Negative Finding”."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -40,7 +43,8 @@ Id: KaryotypicSex
 Title: "Karyotypic Sex"
 Description: "Karyotypic sex of an individual (also known as chromosomal sex)."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2021-05-28T17:06:00-04:00"
 * ^context.type = #element
 * ^context.expression = "Patient"
@@ -52,7 +56,8 @@ Id: MaterialSample
 Title: "Material Sample"
 Description: "Type of sample (diseases, control, etc.)"
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2021-05-28T17:06:00-04:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -63,7 +68,8 @@ Id: MeasurementExt
 Title: "Measurement (Biosample)"
 Description: "Term representing a measurement made on a Biosample"
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -74,7 +80,8 @@ Id: Onset
 Title: "Onset"
 Description: "Describes the age at which a phenotypic feature was first noticed or diagnosed."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Observation"
@@ -86,7 +93,8 @@ Id: PathologicalStage
 Title: "Pathological Tumor Stage"
 Description: "This element can be used if the phenopacket describes cancer. Tumor staging describes the extent of growth of cancer, including the tumor and, if applicable, affected lymph nodes and distant metastases. This element should not be confused with clinical stage."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -98,7 +106,8 @@ Id: PathologicalTnmFinding
 Title: "Pathological TNM Finding"
 Description: "Pathological TNM findings, if applicable. Corresponds to pathological_tnm_finding (GA4GH)"
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -111,7 +120,8 @@ Id: PhenotypicFeatureExt
 Title: "Phenotypic Feature (Biosample)"
 Description: "Term representing phenotypic features of a Biosample"
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -123,7 +133,8 @@ Id: Taxonomy
 Title: "Taxonomy"
 Description: "Corresponds to taxonomy (GA4GH). For resources where there may be more than one organism being studied it is advisable to indicate the taxonomic identifier of that organism, to its most specific level."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Biosample"
@@ -136,7 +147,8 @@ Id: TumorGrade
 Title: "Tumor Grade"
 Description: "List of terms representing the tumor grade."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"
@@ -148,7 +160,8 @@ Id: TumorProgression
 Title: "Tumor Progression"
 Description: "This field can be used to indicate if a specimen is from the primary tumor, a metastasis or a recurrence. There are multiple ways of representing this using ontology terms, and the terms chosen should have a specific meaning that is application specific."
 * insert Publisher
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^context.type = #element
 * ^context.expression = "Specimen"

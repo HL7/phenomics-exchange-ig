@@ -4,8 +4,9 @@ Id: Biosample
 Title: "Biosample"
 Description: "A unit of biological material from which the substrate molecules (e.g. genomic DNA, RNA, proteins) for molecular analyses (e.g. sequencing, array hybridisation, mass-spectrometry) are extracted."
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #active
 * ^date = "2021-06-08T09:49:00-04:00"
 * identifier 1..1 MS
 * identifier ^short = "Corresponds to id (GA4GH), i.e.,  a specimen identifier"
@@ -40,8 +41,9 @@ Id: Disease
 Title: "Disease profile"
 Description: "This profile stipulates that a FHIR Condition must have a codeable concept that represents the disease. The concepts can be taken from various ontologies, but for rare-disease concepts, we recommend MONDO."
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #active
 * ^date = "2021-06-03T09:49:00-04:00"
 //* extension contains
 //    CodedOnset named CodedOnset ..1 MS //and
@@ -56,7 +58,8 @@ Id: Individual
 Title: "Individual"
 Description: "The subject of the Phenopacket is represented by an Individual element. This element intends to represent an individual human or other organism."
 * insert Publisher
-* ^version = "0.0.1"
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2021-05-28T17:06:00-04:00"
 * extension contains
  //   AgeOrAgeRange named AgeOrAgeRange ..1 MS and
@@ -73,8 +76,9 @@ Id: Measurement
 Title: "Measurement"
 Description: "This profile defines the GA4GH Measurement element in terms of the FHIR Observation"
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #active
 * ^date = "2021-06-03T09:49:00-04:00"
 * code 1..1 MS
 
@@ -84,8 +88,9 @@ Id: PhenotypicFeature
 Title: "Phenotypic Feature"
 Description: "This profile defines the GA4GH PhenotypicFeature element in terms of the FHIR Observation"
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #active
 * ^date = "2021-06-03T09:49:00-04:00"
 * code 1..1 MS
 * value[x] only CodeableConcept
@@ -131,8 +136,9 @@ Id: Treatment
 Title: "Treatment"
 Description: "This profile defines the GA4GH Treatment element in terms of the FHIR MedicationAdministration"
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #active
 * ^date = "2021-06-18T09:49:00-04:00"
 * category MS
 * category ^short = "Corresponds to drug_type (GA4GH)"

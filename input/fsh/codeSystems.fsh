@@ -4,9 +4,10 @@ Title: "Categories"
 Description: "Various categories or tags"
 * insert Publisher
 * insert SD-WG
-* ^version = "0.0.1"
-* ^status = #draft
-* ^experimental = true
+* insert PR_CS_VS_Version
+* insert ShareableCodeSystem
+* ^experimental = false
+* ^caseSensitive = true
 * ^content = #complete
 * #phenotype "Phenotype"
 
@@ -16,8 +17,11 @@ Id: phenotypicFeatureStatusCS
 Title: "Categories"
 Description: "Various categories or tags"
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableCodeSystem
+* ^experimental = false
+* ^caseSensitive = true
 * ^content = #complete
 * #Absent "Absent"
 * #Present "Present"
@@ -27,8 +31,11 @@ Id: HtsFormat
 Title: "HTS Format"
 Description: "An enumeration used to represent different high-throughput sequencing file formats."
 * insert Publisher
-* ^version = "0.1.0"
-* ^status = #active
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableCodeSystem
+* ^experimental = false
+* ^caseSensitive = true
 * ^date = "2020-02-14T16:13:10+10:00"
 * ^content = #complete
 * #UNKNOWN "Unknown"
@@ -44,7 +51,11 @@ Id: KaryotypicSex
 Title: "Karyotypic sex code system"
 Description: "karyotypic sex of an individual (also known as chromosomal sex)"
 * insert Publisher
-* ^version = "0.0.1"
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableCodeSystem
+* ^experimental = false
+* ^caseSensitive = true
 * ^date = "2021-05-28T17:06:00-04:00"
 * ^content = #complete
 * #UNKNOWN_KARYOTYPE "UNKNOWN_KARYOTYPE" "Untyped or inconclusive karyotyping"
@@ -64,6 +75,11 @@ Id: section-type
 Title: "Section Type"
 Description: "Section Type"
 * insert Publisher
+* insert SD-WG
+* insert PR_CS_VS_Version
+* insert ShareableCodeSystem
+* ^experimental = false
+* ^caseSensitive = true
 * #phenotypic_features
 * #measurements
 * #biosamples

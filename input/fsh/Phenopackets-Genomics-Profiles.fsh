@@ -5,8 +5,9 @@ Id: phenopackets-variant
 Title: "Phenopackets Variant"
 Description: "A profile of Genomics Reporting Variant profile that represents relevant phenopackets building blocks."
 * insert Publisher
-* ^status = #draft // This would be changed later to active
-* ^version = "0.1.0"
+* insert SD-WG
+* insert PR_CS_VS_Version
+//* ^status = #draft // This would be changed later to active
 * ^date = "2021-10-18T06:00:00-04:00"
 //* ^publisher = "GA4GH Phenopacket Working Group"
 //* ^contact.name = "Aly Khalifa"
@@ -22,8 +23,9 @@ Title: "Phenopackets Genomic Interpretation"
 Description: "A profile of Genomics Reporting Genomics Report profile that represents relevant 
               phenopackets building blocks."
 * insert Publisher  
-* ^status = #draft // This would be changed later to active
-* ^version = "0.1.0"
+//* ^status = #draft // This would be changed later to active
+* insert SD-WG
+* insert PR_CS_VS_Version
 * ^date = "2021-10-18T09:00:00-04:00"
 //* ^publisher = "GA4GH Phenopacket Working Group"
 //* ^contact.name = "Aly Khalifa"
