@@ -19,3 +19,14 @@ Alias: $umls = http://www.nlm.nih.gov/research/umls
 Alias: $units = http://purl.obolibrary.org/obo/uo.owl
 Alias: USCorePractitioner = http://hl7.org/fhir/us/core/StructureDefinition/us-core-practitioner
 
+/*This FSH file cotains the FHIR representations of phenopackets controlled terminologies/codes of genomics building blocks value sets */
+Alias: PPIS = http://phenopacket-schema.readthedocs.io/en/v2/genomic-interpretation.html#interpretationstatus
+Alias: PPTA = http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#therapeuticactionability
+Alias: PPAPC = http://phenopacket-schema.readthedocs.io/en/v2/variant-interpretation.html#acmgpathogenicityclassification
+Alias: PPMC = http://phenopacket-schema.readthedocs.io/en/v2/variant.html#rstmoleculecontext
+Alias: SO = http://www.sequenceontology.org/
+Alias: GENO = http://www.ebi.ac.uk/ols/ontologies/geno
+Alias: LNC = http://loinc.org
+Alias: HGNC = http://www.genenames.org/
+Alias: HGVS = http://www.hgvs.org/
+Alias: dbSNP = http://www.ncbi.nlm.nih.gov/snp/
