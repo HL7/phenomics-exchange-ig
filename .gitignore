@@ -7,7 +7,7 @@ fsh-generated/
 input-cache/
 output/
 temp/
-template/
+
 branch/
 pull/
 /FHIR-phenomics-exchange.xml
