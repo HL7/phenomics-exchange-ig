@@ -14,3 +14,8 @@ Description: "A profile of Genomics Reporting Variant profile that represents re
 //* ^short = "A phenopackets profile of the genomics reporting Variant profile. It represents
             //phenopackets GeneDescriptor, VariationDescriptor, VcfRecord, and VariantInterpretation building blocks."
 //This is a placeholder for all Must-support elements (MS). Based on a team discussion, all elements should be MS.
+* value[x] ^slicing.discriminator.type = #type
+* value[x] ^slicing.discriminator.path = "$this"
+* value[x] ^slicing.rules = #closed
+* value[x] only CodeableConcept
+* valueCodeableConcept from http://loinc.org/vs/LL1971-2 (required)
