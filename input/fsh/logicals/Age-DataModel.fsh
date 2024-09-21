@@ -7,6 +7,8 @@ Description: """
     """
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^date = "2024-07-25"
+* ^date = "2024-09-21"
 * iso8601duration 1..1 string "An ISO8601 string represent age"
 * iso8601duration ^comment = "If the Age message is used, the iso8601duration value must be present."
+* iso8601duration ^example[0].label = "Age"
+* iso8601duration ^example[0].valueString = "P25Y3M2D"

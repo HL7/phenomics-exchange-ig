@@ -8,6 +8,10 @@ Description: """
     """
 * insert Publisher
 * insert PR_CS_VS_Version
-* ^date = "2024-07-25"
+* ^date = "2024-09-21"
 * start 1..1 AgeDataModel "An Age message"
+* start ^example[0].label = "AgeRange start"
+* start ^example[0].valueString = "P45Y"
 * end 1..1 AgeDataModel "An Age message"
+* end ^example[0].label = "AgeRange end"
+* end ^example[0].valueString = "P49Y"

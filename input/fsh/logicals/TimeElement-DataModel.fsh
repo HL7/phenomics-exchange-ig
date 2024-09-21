@@ -32,12 +32,12 @@ Description: """
     If an OntologyClass is used to represent the age of onset of a phenotypic feature, then terms for age of onset can be chosen from the Onset subhierarchy of the HPO. 
     See OntologyClass.
     """
-* timestamp 0..1 string "indicates a specific time" // change type to Timestamp
+* timestamp 0..1 TimestampDataModel "indicates a specific time"
 * timestamp ^definition = """
     A Timestamp can be used to represent a specific time. 
     Note that all timestamps in a phenopacket can be shifted by the same amount to help preserve privacy if desired.
     """
-* interval 0..1 string "indicates an interval of time" // change type to TimeInterval
+* interval 0..1 TimeIntervaltDataModel "indicates an interval of time"
 * interval ^definition = """
     This element can be used to represent a specific interval of time. 
     See TimeInterval.
