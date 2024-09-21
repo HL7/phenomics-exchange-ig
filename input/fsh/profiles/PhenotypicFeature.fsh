@@ -23,7 +23,7 @@ Description: "This is an Observation profile to represent a phenotypic feature (
 
 // See: https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#step-1-specify-the-slicing-logic
 * component ^slicing.discriminator.type = #value
-* component ^slicing.discriminator.path = "code.coding"
+* component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
 * component ^slicing.description = "Phenotype modifiers"
 
@@ -34,11 +34,14 @@ Description: "This is an Observation profile to represent a phenotypic feature (
 
 // See: https://build.fhir.org/ig/HL7/fhir-shorthand/reference.html#step-3-constrain-the-slice-contents
 * component[severity] ^short = "The phenotype severity"
-* component[severity].code.coding = $hpo#HP:0012824 //"Severity"
+* component[severity].code = $hpo#HP:0012824 (exactly)
 * component[severity].value[x] only CodeableConcept
 * component[severity].value[x] from HpoSeverityVS (preferred)
 
 * component[modifier] ^short = "Other phenotype modifiers"
-* component[modifier].code.coding = $hpo#HP:0012823 //"Clinical modifier"
+* component[modifier].code = $hpo#HP:0012823
 * component[modifier].value[x] only CodeableConcept
 * component[modifier].value[x] from PhenotypicModifierValueSet (preferred)
+
+
+// url: https://loinc.org/vs/LL6109-4

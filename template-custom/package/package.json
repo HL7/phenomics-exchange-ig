@@ -1,0 +1,13 @@
+{
+  "name": "phenoex.fhir.template",
+  "version": "0.1.0",
+  "type": "fhir.template",
+  "license": "CC0-1.0",
+  "description": "Phenomics Exchange FHIR Template",
+  "author": "Phenomics Exchange Team",
+  "canonical": "http://fhir.org/templates/phenoex.fhir.template",
+  "base": "hl7.fhir.template",
+  "dependencies": {
+    "hl7.fhir.template": "current"
+  }
+}

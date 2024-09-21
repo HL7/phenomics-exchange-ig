@@ -1,0 +1,2 @@
+jiraSpecFile:FHIR-phenomics-exchange
+packagelisturl:http://hl7.org/fhir/uv/phenomics-exchange/package-list.json
