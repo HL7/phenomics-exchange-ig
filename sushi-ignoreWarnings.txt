@@ -1,0 +1,2 @@
+# Inadvisable path warnings for the logical models of the Phenopacket schema should be ignored
+/Inadvisable path */
