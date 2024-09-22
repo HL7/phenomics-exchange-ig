@@ -1,9 +1,9 @@
 # Introduction
 
-This Observation profile is intended to represent a phenotype. It can be a phenotype of a patient, a specimen, or other things that can be phenotyped but the overall context is that the phenotype presence or absence is relevant for diagnosing an underlying disease.  Please see the [modeling issues](#modeling) section for a discussion of various issues that were considered while developing this profile.
+This Observation profile is intended to represent a phenotype. It can be a phenotype of a patient, a specimen, or other things but the overall context is that the phenotype presence or absence is relevant for diagnosing an underlying disease.  Please see the [modeling issues](#modeling) section for a discussion of various issues that were considered while developing this profile.
 
 - The coding of a phenotype can be done with terms of an ontology such as the [Human Phenotype Ontology (HPO)](https://hpo.jax.org/app/)
-- The presence or absence of a phenotype is represented in the `.value` element with a code from the [LOINC Present|Absent answer list](https://loinc.org/LL1937-3/). The ValueSet's URL is: http://loinc.org/vs/LL1937-3
+- The presence or absence of a phenotype is represented in the `.value` element with a code from the [LOINC Present\|Absent answer list](https://loinc.org/LL1937-3/). The ValueSet's URL is: <http://loinc.org/vs/LL1937-3>
 - Other aspects of a phenotype are captured as Observation components.
   - `severity` component to capture the severity of the phenotype itself. This is a specific type of phenotype modifier.
   - `modifiers` component to add other phenotype modifiers.
