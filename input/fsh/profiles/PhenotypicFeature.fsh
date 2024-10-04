@@ -1,6 +1,6 @@
-Profile: PhenotypicFeature
+Profile: ObservationPhenotypicFeature
 Parent: Observation
-Id: PhenotypicFeature
+Id: observation-phenotypicFeature
 Title: "Phenotypic Feature"
 Description: """
 An Observation profile to represent a phenotypic feature (a phenotype) of a patient.
