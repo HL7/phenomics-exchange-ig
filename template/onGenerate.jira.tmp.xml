@@ -59,7 +59,7 @@
   <workgroup key="tsc" webcode="tsc" name="Technical Steering Committee"/>
   <workgroup key="tsmg" webcode="tsmanagement" name="Terminology Services Management Group" listserv="tsmg@lists.HL7.org/"/>
   <workgroup key="us-realm" webcode="usrealm" name="US Realm Task Force" deprecated="true"/>
-  <workgroup key="vocab" webcode="vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
+  <workgroup key="vocab" webcode="Vocab" name="Terminology Infrastructure" listserv="ti@lists.HL7.org/"/>
   <workgroup key="v2mg" webcode="v2management" name="V2 Mgmt Group" listserv="v2mgmtgrp@lists.HL7.org/"/>
   <workgroup key="eu" webcode="eu" name="HL7 Europe" listserv="europe@lists.hl7.org/"/>  
   <workgroup key="au-v2" webcode="au-v2" name="HL7 Australia V2" listserv="hl7v2wgballot@hl7.com.au"/>
@@ -70,8 +70,14 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
    <id value="hl7.fhir.uv.phenomics-exchange"/>
    <text>
-      <status value="extensions"/>
+      <status value="generated"/>
       <div xmlns="http://www.w3.org/1999/xhtml">
+         <p class="res-header-id">
+            <b>Generated Narrative: ImplementationGuide hl7.fhir.uv.phenomics-exchange</b>
+         </p>
+         <a name="hl7.fhir.uv.phenomics-exchange"> </a>
+         <a name="hchl7.fhir.uv.phenomics-exchange"> </a>
+         <a name="hl7.fhir.uv.phenomics-exchange-en-US"> </a>
          <h2>PhenomicsExchange</h2>
          <p>The official URL for this implementation guide is: </p>
          <pre>http://hl7.org/fhir/uv/phenomics-exchange/ImplementationGuide/hl7.fhir.uv.phenomics-exchange</pre>
@@ -88,7 +94,7 @@
    <name value="PhenomicsExchange"/>
    <title value="Phenomics Exchange for Research and Diagnostics"/>
    <status value="draft"/>
-   <date value="2024-06-27T02:33:58+00:00"/>
+   <date value="2024-10-23T20:36:53+00:00"/>
    <publisher value="HL7 International / Clinical Interoperability Council"/>
    <contact>
       <name value="HL7 International / Clinical Interoperability Council"/>
@@ -119,7 +125,7 @@
       </extension>
       <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
       <packageId value="hl7.terminology.r4"/>
-      <version value="5.5.0"/>
+      <version value="6.0.2"/>
    </dependsOn>
    <dependsOn id="hl7_fhir_uv_genomics_reporting">
       <uri value="http://hl7.org/fhir/uv/genomics-reporting/ImplementationGuide/hl7.fhir.uv.genomics-reporting"/>
@@ -333,30 +339,16 @@
          </extension>
       </extension>
       <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
-         <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+         <valueCode value="hl7.fhir.uv.tools#0.2.0"/>
       </extension>
-      
-      
-      
-      
-      
       <grouping id="-dyn-searchparameter">
          <name value="Behavior: Search Parameters"/>
          <description value="These define the properties by which a RESTful server can be searched.  They can also be used for sorting and including related resources."/>
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
       <grouping id="-str-profile">
          <name value="Structures: Resource Profiles"/>
          <description value="These define constraints on FHIR resources for systems conforming to this implementation guide."/>
       </grouping>
-      
       <grouping id="-str-extension">
          <name value="Structures: Extension Definitions"/>
          <description value="These define constraints on FHIR data types for systems conforming to this implementation guide."/>
@@ -369,157 +361,10 @@
          <name value="Terminology: Code Systems"/>
          <description value="These define new code systems used by systems conforming to this implementation guide."/>
       </grouping>
-      
-      
-      
-      
-      
-      
       <grouping id="-ex-example">
          <name value="Example: Example Instances"/>
          <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like."/>
       </grouping>
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
       <resource>
          <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-sort">
             <valueInteger value="999999999"/>

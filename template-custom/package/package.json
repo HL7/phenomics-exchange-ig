@@ -8,6 +8,6 @@
   "canonical": "http://fhir.org/templates/phenoex.fhir.template",
   "base": "hl7.fhir.template",
   "dependencies": {
-    "hl7.fhir.template": "current"
+    "hl7.fhir.template": "0.10.1"
   }
 }
