@@ -40,3 +40,4 @@ This implementation guide builds on FHIR v4.0.1: R4.
 
 ### IP Statements
 {% include ip-statements.xhtml %}
+
