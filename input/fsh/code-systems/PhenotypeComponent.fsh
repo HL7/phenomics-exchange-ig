@@ -1,7 +1,7 @@
 CodeSystem: PhenotypeComponent
 Id: PhenotypeComponent
-Title: "Components of a phenotype"
-Description: "Components of a phenotype"
+Title: "Phenotype components"
+Description: "Phenotype components"
 
 * ^experimental = true
 * ^caseSensitive = true

@@ -1,7 +1,7 @@
-Profile: Phenotype
+Profile: Observation-Phenotype
 Parent: Observation
-Id: Observation-Phenotype
-Title: "Phenotype"
+Id: phenotype
+Title: "Phenotype Observation profile"
 Description: "This profile defines a phenotype representation"
 
 * code 1..1 MS
@@ -38,11 +38,11 @@ component contains
     age-range-onset 0..1
 * component[age-range-onset].code.coding = $PhenotypeComponent#AGE_RANGE_ONSET
 * component[age-range-onset].value[x] only Range
-* component[age-range-onset] ^short = "The age of onset since birth, in the form of a quantity of time"
+* component[age-range-onset] ^short = "The age of onset since birth, in the form of a range of time"
 
 * component contains
     age-onset-coded 0..1
 * component[age-onset-coded].code.coding = $PhenotypeComponent#AGE_ONSET_CODED
 * component[age-onset-coded].value[x] only CodeableConcept
-* component[age-onset-coded] ^short = "The age of onset since birth, in the form of a quantity of time"
+* component[age-onset-coded] ^short = "The age of onset since birth, in the form of a coded concept"
 
