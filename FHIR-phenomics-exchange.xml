@@ -4,8 +4,8 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="CodeSystem/PhenotypeComponent" key="CodeSystem-PhenotypeComponent" name="Components of a phenotype"/>
 <artifact id="StructureDefinition/phenotype" key="StructureDefinition-phenotype" name="Phenotype Observation profile"/>
+<artifact id="CodeSystem/PhenotypeComponent" key="CodeSystem-PhenotypeComponent" name="Phenotype components"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
