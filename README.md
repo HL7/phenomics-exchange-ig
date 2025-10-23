@@ -11,3 +11,4 @@
 - 
 
 Use `./build.sh` to perform a local and Docker-based build. This will use the latest Publisher version as long as the Docker image for that version was successfully built (see [here](https://hub.docker.com/r/sessaid/ig-publisher/tags)). Also, it will use the Sushi version specified in the `/fsh.ini` file.
+
