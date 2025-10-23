@@ -1,0 +1,1 @@
+Alias: $PhenotypeComponent = http://hl7.org/fhir/uv/phenomics-exchange/CodeSystem/PhenotypeComponent

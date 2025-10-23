@@ -1,0 +1,90 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/sushi/configuration/                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: phenomics-exchange
+canonical: http://hl7.org/fhir/uv/phenomics-exchange
+name: PhenomicsExchange
+title: "Phenomics Exchange for Research and Diagnostics"
+description: "Phenomics Exchange for Research and Diagnostics"
+status: draft
+  
+license: CC0-1.0
+version: 0.1.0
+fhirVersion: 4.0.1
+copyrightYear: 2025+
+copyright: "HL7"
+releaseLabel: ci-build
+packageId: hl7.fhir.uv.phenomics-exchange
+publisher:
+  name: "HL7 International / Clinical Interoperability Council"
+  url: http://www.hl7.org/Special/committees/cic
+  email: cic@lists.HL7.org
+extension:
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status
+    valueCode: draft
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
+    valueCode: cic
+
+#jurisdiction: urn:iso:std:iso:3166#US
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
+pages:
+  index.md:
+    title: Home
+  background.md:
+    title: Background
+  # genomicDiagnostics.md:
+  #   title: Genomic Diagnostics
+  # phenotype.md:
+  #   title: Deep phenotyping
+  # modeling.md:
+  #   title: Modeling phenotypic data
+  # hpo.md:
+  #   title: Human Phenotype Ontology
+  # examples.md:
+  #   title: Examples
+
+menu:
+  Home: index.html
+  Background: background.html
+  # Background:
+  #   GA4GH: ga4gh.html
+  #   Deep phenotyping: phenotype.html
+  #   HPO: hpo.html
+  #   Modeling: modeling.html
+  #   Genomic Diagnostics: genomicDiagnostics.html
+  # Profiles:
+  #   Biosample: StructureDefinition-Biosample.html
+  #   Disease: StructureDefinition-Disease.html
+  #   Individual: StructureDefinition-Individual.html
+  #   Measurement: StructureDefinition-Measurement.html
+  #   PhenotypicFeature: StructureDefinition-PhenotypicFeature.html
+  #   Phenopacket: StructureDefinition-Phenopacket.html
+  #   Treatment: StructureDefinition-Treatment.html
+  #   PhenopacketsVariant: StructureDefinition-phenopackets-variant.html
+  #   PhenopacketsGenomicInterpretation: StructureDefinition-phenopackets-genomic-interpretation.html
+  # Extensions:
+  #   CodedOnset: StructureDefinition-CodedOnset.html
+  #   DiagnosticMarker: StructureDefinition-DiagnosticMarker.html
+  #   KaryotypicSex: StructureDefinition-KaryotypicSex.html
+  #   MaterialSample: StructureDefinition-MaterialSample.html
+  # Examples: examples.html
+  Artifacts: artifacts.html
+#  History:
+#    Change Log: change_log.html
+#    Other Versions: http://hl7.org/fhir/us/mcode/history.html
+
+
+parameters:
+  apply-contact: true
+  apply-jurisdiction: true
+  apply-publisher: true
+  path-resource:
+    - input/tmp/resources
+
+# dependencies:
+#   hl7.fhir.uv.genomics-reporting: 2.0.0
+#   hl7.fhir.uv.extensions: current
+# #    id: genomics-reporting
+# #    uri: http://hl7.org/fhir/uv/genomics-reporting/ 
+# #    version: 1.0.0  
