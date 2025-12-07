@@ -3,6 +3,8 @@ Id: PhenotypeComponent
 Title: "Phenotype components"
 Description: "Phenotype components"
 
+* ^url = "https://example.org/phenomics-exchange/CodeSystem/PhenotypeComponent"
+
 * ^experimental = true
 * ^caseSensitive = true
 // * ^date = "2025-05-28T17:06:00-04:00"
