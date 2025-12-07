@@ -20,7 +20,7 @@ DIR="$(cd -P "$(dirname "$SOURCE")" && pwd)"
 cd $DIR/..
 
 if [ "$(docker ps -a -q -f name=build-ig-latest)" ]; then
- docker container start -a build-ig-latest
+ docker container start -a ${1:-ig-latest-default}
 else
   docker run --pull=always --name ${1:-ig-latest-default} --volume .:/ig sessaid/ig-publisher:latest -ig ig.ini
 fi
