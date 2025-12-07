@@ -1,1 +1,1 @@
-Alias: $PhenotypeComponent = http://hl7.org/fhir/uv/phenomics-exchange/CodeSystem/PhenotypeComponent
+Alias: $PhenotypeComponent = https://example.org/phenomics-exchange/CodeSystem/PhenotypeComponent
