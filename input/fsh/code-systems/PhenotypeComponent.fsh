@@ -3,7 +3,7 @@ Id: PhenotypeComponent
 Title: "Phenotype components"
 Description: "Phenotype components"
 
-* ^url = "https://example.org/phenomics-exchange/CodeSystem/PhenotypeComponent"
+// * ^url = "https://example.org/phenomics-exchange/CodeSystem/PhenotypeComponent"
 
 * ^experimental = true
 * ^caseSensitive = true
