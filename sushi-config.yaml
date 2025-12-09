@@ -7,14 +7,14 @@ canonical: http://hl7.org/fhir/uv/phenomics-exchange
 name: PhenomicsExchange
 title: "Phenomics Exchange for Research and Diagnostics"
 description: "Phenomics Exchange for Research and Diagnostics"
-status: draft
+status: ballot
   
 license: CC0-1.0
-version: 0.1.0
+version: 0.1.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 copyright: "HL7"
-releaseLabel: ci-build
+releaseLabel: "Comment1 Ballot"
 packageId: hl7.fhir.uv.phenomics-exchange
 publisher:
   name: "HL7 International / Clinical Interoperability Council"

@@ -1,0 +1,16 @@
+{
+  "package-id" : "hl7.fhir.uv.phenomics-exchange",
+  "version" : "0.1.0-ballot",
+  "path" : "http://hl7.org/fhir/uv/phenomics-exchange/2026Jan",
+  "mode" : "working",
+  "status" : "ballot",
+  "sequence" : "Comment1",
+  "desc" : "This publication is for Comment1 Ballot",
+  "descmd" : "This publication is for Comment1 Ballot",
+  "changes" : "changes.html",
+  "first" : true,
+  "title" : "Phenomics Exchange for Research and Diagnostics",
+  "ci-build" : "https://build.fhir.org/ig/HL7/phenomics-exchange-ig/branches/master/en/index.html",
+  "category" : "Comment1 Ballot",
+  "introduction" : "Provides guidance for representing phenotypic data in FHIR resources. This is a comment level ballot and is limited to a phenotype representation as an Observation profile."
+}
