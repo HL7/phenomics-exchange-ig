@@ -7,7 +7,7 @@ canonical: http://hl7.org/fhir/uv/phenomics-exchange
 name: PhenomicsExchange
 title: "Phenomics Exchange for Research and Diagnostics"
 description: "Phenomics Exchange for Research and Diagnostics"
-status: ballot
+status: draft
   
 license: CC0-1.0
 version: 0.1.0-ballot

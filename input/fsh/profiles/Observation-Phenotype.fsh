@@ -1,4 +1,4 @@
-Profile: Observation-Phenotype
+Profile: ObservationPhenotype
 Parent: Observation
 Id: phenotype
 Title: "Phenotype Observation profile"
