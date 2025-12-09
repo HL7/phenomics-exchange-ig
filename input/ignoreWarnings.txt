@@ -1,11 +1,8 @@
 == Suppressed Messages ==
 
-
-
 # Add warning and/or information messages here after you've confirmed that they aren't really a problem
 # (And include comments like this justifying why)
 
-# 01 CodeSystem to define Observation component slice discriminator codes. Either temporary, or will be registered before a future STU ballot.
-Reference to experimental CodeSystem https://example.org/phenomics-exchange/CodeSystem/PhenotypeComponent|0.1.0-ballot
+# 01 CodeSystem to define Observation component slice discriminator codes. Either temporary, or will be registered before a 
 
 
