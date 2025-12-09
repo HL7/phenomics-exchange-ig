@@ -18,7 +18,7 @@ Description: "This profile defines a phenotype representation"
 
 * component
 * component ^short = "Phenotype components"
-* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code.coding"
 * component ^slicing.rules = #open
 * 
