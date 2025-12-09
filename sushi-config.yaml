@@ -8,7 +8,6 @@ name: PhenomicsExchange
 title: "Phenomics Exchange for Research and Diagnostics"
 description: "Phenomics Exchange for Research and Diagnostics"
 status: draft
-  
 license: CC0-1.0
 version: 0.1.0-ballot
 fhirVersion: 4.0.1
