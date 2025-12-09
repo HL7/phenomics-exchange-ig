@@ -25,14 +25,13 @@ extension:
     valueCode: draft
   - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-wg  
     valueCode: cic
+  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
+    valueInteger: 0
 
 #jurisdiction: urn:iso:std:iso:3166#US
 jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 
-extension:
-  - url: http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm
-    valueInteger: 0
-    
+
 pages:
   index.md:
     title: Home
