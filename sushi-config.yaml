@@ -36,6 +36,8 @@ pages:
     title: Home
   background.md:
     title: Background
+  changes.md:
+    title: Changes
   # genomicDiagnostics.md:
   #   title: Genomic Diagnostics
   # phenotype.md:

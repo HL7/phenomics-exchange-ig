@@ -4,7 +4,7 @@
   "path" : "http://hl7.org/fhir/uv/phenomics-exchange/2026Jan",
   "mode" : "working",
   "status" : "ballot",
-  "sequence" : "Comment",
+  "sequence" : "STU1",
   "desc" : "This publication is for Comment Ballot",
   "descmd" : "This publication is for Comment Ballot",
   "changes" : "changes.html",
