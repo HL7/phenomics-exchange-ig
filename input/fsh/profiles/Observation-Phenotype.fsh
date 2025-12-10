@@ -11,12 +11,12 @@ Description: "This profile defines a phenotype representation"
 * value[x] only CodeableConcept
 * value[x] from http://loinc.org/vs/LL1937-3
 * value[x] ^short = "An assertion for the presence or absence of the phenotype"
-* value[x] ^definition = "TODO: definition"
-* value[x] ^comment = "TODO: comment"
-* value[x] ^alias[+] = "First alias"
-* value[x] ^alias[+] = "Second alias"
+// * value[x] ^definition = "TODO: definition"
+// * value[x] ^comment = "TODO: comment"
+// * value[x] ^alias[+] = "First alias"
+// * value[x] ^alias[+] = "Second alias"
 
-* component
+// * component
 * component ^short = "Phenotype components"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
@@ -30,9 +30,9 @@ Description: "This profile defines a phenotype representation"
 
 * component contains
     age-onset-range 0..1
-* component[age-range-onset].code = PhenotypeComponent#AGE_ONSET_RANGE
-* component[age-range-onset].value[x] only Range
-* component[age-range-onset] ^short = "The age of onset since birth, in the form of a range of time"
+* component[age-onset-range].code = PhenotypeComponent#AGE_ONSET_RANGE
+* component[age-onset-range].value[x] only Range
+* component[age-onset-range] ^short = "The age of onset since birth, in the form of a range of time"
 
 * component contains
     age-onset-coded 0..1
@@ -42,6 +42,6 @@ Description: "This profile defines a phenotype representation"
 
 * component contains
     age-onset-gestational 0..1
-* component[gestational-age-onset].code = PhenotypeComponent#AGE_ONSET_GESTATIONAL
-* component[gestational-age-onset].value[x] only Quantity
-* component[gestational-age-onset] ^short = "The gestational age of onset, in the form of a quantity of time"
+* component[age-onset-gestational].code = PhenotypeComponent#AGE_ONSET_GESTATIONAL
+* component[age-onset-gestational].value[x] only Quantity
+* component[age-onset-gestational] ^short = "The gestational age of onset, in the form of a quantity of time"
