@@ -52,6 +52,7 @@ pages:
 menu:
   Home: index.html
   Background: background.html
+  Artifacts: artifacts.html
   Changes: changes.html
   # Background:
   #   GA4GH: ga4gh.html
@@ -75,7 +76,7 @@ menu:
   #   KaryotypicSex: StructureDefinition-KaryotypicSex.html
   #   MaterialSample: StructureDefinition-MaterialSample.html
   # Examples: examples.html
-  Artifacts: artifacts.html
+  
 #  History:
 #    Change Log: change_log.html
 #    Other Versions: http://hl7.org/fhir/us/mcode/history.html
