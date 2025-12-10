@@ -9,11 +9,11 @@ title: "Phenomics Exchange for Research and Diagnostics"
 description: "Phenomics Exchange for Research and Diagnostics"
 status: draft
 license: CC0-1.0
-version: 0.1.0-ballot
+version: 1.0.0-ballot
 fhirVersion: 4.0.1
 copyrightYear: 2025+
 copyright: "HL7"
-releaseLabel: "Comment1 Ballot"
+releaseLabel: "Comment Ballot"
 packageId: hl7.fhir.uv.phenomics-exchange
 publisher:
   name: "HL7 International / Clinical Interoperability Council"

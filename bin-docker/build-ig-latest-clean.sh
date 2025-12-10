@@ -23,6 +23,6 @@ if [ -f .fhir/packages/packages.ini ]; then
   rm -rf .fhir
 fi
 
-docker container rm -f ${1:-ig-latest-default}
-docker run --pull=always --name ${1:-ig-latest-default} --volume .:/ig sessaid/ig-publisher:latest -ig ig.ini
+docker container rm -f build-ig-latest
+docker run --pull=always --name build-ig-latest --volume .:/ig sessaid/ig-publisher:latest -ig ig.ini
 
