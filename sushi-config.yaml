@@ -52,6 +52,7 @@ pages:
 menu:
   Home: index.html
   Background: background.html
+  Changes: changes.html
   # Background:
   #   GA4GH: ga4gh.html
   #   Deep phenotyping: phenotype.html
