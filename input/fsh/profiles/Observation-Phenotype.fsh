@@ -21,12 +21,6 @@ Description: "This profile defines a phenotype representation"
 * component ^slicing.discriminator.type = #value
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.rules = #open
-* 
-component contains
-    gestational-age-onset 0..1
-* component[gestational-age-onset].code = PhenotypeComponent#AGE_ONSET_GESTATIONAL
-* component[gestational-age-onset].value[x] only Quantity
-* component[gestational-age-onset] ^short = "The gestational age of onset, in the form of a quantity of time"
 
 * component contains
     age-onset 0..1
@@ -35,7 +29,7 @@ component contains
 * component[age-onset] ^short = "The age of onset since birth, in the form of a quantity of time"
 
 * component contains
-    age-range-onset 0..1
+    age-onset-range 0..1
 * component[age-range-onset].code = PhenotypeComponent#AGE_ONSET_RANGE
 * component[age-range-onset].value[x] only Range
 * component[age-range-onset] ^short = "The age of onset since birth, in the form of a range of time"
@@ -46,3 +40,8 @@ component contains
 * component[age-onset-coded].value[x] only CodeableConcept
 * component[age-onset-coded] ^short = "The age of onset since birth, in the form of a coded concept"
 
+* component contains
+    age-onset-gestational 0..1
+* component[gestational-age-onset].code = PhenotypeComponent#AGE_ONSET_GESTATIONAL
+* component[gestational-age-onset].value[x] only Quantity
+* component[gestational-age-onset] ^short = "The gestational age of onset, in the form of a quantity of time"
