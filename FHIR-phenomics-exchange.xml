@@ -7,7 +7,8 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="Observation/phenotype-1" key="Observation-phenotype-1" name="Arachnodactyly present"/>
 <artifact id="StructureDefinition/phenotype" key="StructureDefinition-phenotype" name="Phenotype Observation profile"/>
-<artifact id="CodeSystem/PhenotypeComponent" key="CodeSystem-PhenotypeComponent" name="Phenotype components"/>
+<artifact deprecated="true" id="CodeSystem/PhenotypeComponent" key="CodeSystem-PhenotypeComponent" name="Phenotype components"/>
+<artifact id="CodeSystem/temporary-phenotype-component" key="CodeSystem-temporary-phenotype-component" name="Temporary phenotype component codes"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

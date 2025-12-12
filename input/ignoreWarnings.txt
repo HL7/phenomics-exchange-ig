@@ -5,7 +5,7 @@
 
 
 # 01 Temporary CodeSystem to define Observation component slice discriminator codes
-Reference to experimental CodeSystem http://hl7.org/fhir/uv/phenomics-exchange/CodeSystem/PhenotypeComponent|1.0.0-ballot
+Reference to draft CodeSystem http://hl7.org/fhir/uv/phenomics-exchange/CodeSystem/temporary-phenotype-component|1.0.0-ballot
 Most code systems defined in HL7 IGs will need to move to THO later during the process. Consider giving this code system a THO URL now (See https://confluence.hl7.org/display/TSMG/Terminology+Play+Book, and/or talk to TSMG)
 
 
@@ -13,5 +13,5 @@ Most code systems defined in HL7 IGs will need to move to THO later during the p
 A definition for CodeSystem 'http://human-phenotype-ontology.org' could not be found, so the code cannot be validated
 
 
-# 03 IG Publisher related messages
+# 03 Extension inherited from FHIR Core 4.0.1 Observation resource
 The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.2.0 is deprecated

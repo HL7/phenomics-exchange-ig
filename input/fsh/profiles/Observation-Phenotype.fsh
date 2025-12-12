@@ -24,24 +24,24 @@ Description: "This profile defines a phenotype representation"
 
 * component contains
     age-onset 0..1
-* component[age-onset].code = PhenotypeComponent#AGE_ONSET
+* component[age-onset].code = TemporaryPhenotypeComponent#AGE_ONSET
 * component[age-onset].value[x] only Quantity
 * component[age-onset] ^short = "The age of onset since birth, in the form of a quantity of time"
 
 * component contains
     age-onset-range 0..1
-* component[age-onset-range].code = PhenotypeComponent#AGE_ONSET_RANGE
+* component[age-onset-range].code = TemporaryPhenotypeComponent#AGE_ONSET_RANGE
 * component[age-onset-range].value[x] only Range
 * component[age-onset-range] ^short = "The age of onset since birth, in the form of a range of time"
 
 * component contains
     age-onset-coded 0..1
-* component[age-onset-coded].code = PhenotypeComponent#AGE_ONSET_CODED
+* component[age-onset-coded].code = TemporaryPhenotypeComponent#AGE_ONSET_CODED
 * component[age-onset-coded].value[x] only CodeableConcept
 * component[age-onset-coded] ^short = "The age of onset since birth, in the form of a coded concept"
 
 * component contains
     age-onset-gestational 0..1
-* component[age-onset-gestational].code = PhenotypeComponent#AGE_ONSET_GESTATIONAL
+* component[age-onset-gestational].code = TemporaryPhenotypeComponent#AGE_ONSET_GESTATIONAL
 * component[age-onset-gestational].value[x] only Quantity
 * component[age-onset-gestational] ^short = "The gestational age of onset, in the form of a quantity of time"

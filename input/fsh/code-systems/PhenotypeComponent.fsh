@@ -1,9 +1,9 @@
-CodeSystem: PhenotypeComponent
-Id: PhenotypeComponent
-Title: "Phenotype components"
-Description: "Phenotype components"
+CodeSystem: TemporaryPhenotypeComponent
+Id: temporary-phenotype-component
+Title: "Temporary phenotype component codes"
+Description: "Temporary phenotype component codes."
 
-* ^experimental = true
+* ^experimental = false
 * ^caseSensitive = true
 // * ^date = "2025-05-28T17:06:00-04:00"
 * ^content = #complete
