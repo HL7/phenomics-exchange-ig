@@ -34,10 +34,12 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 pages:
   index.md:
     title: Home
-  background.md:
-    title: Background
+  # background.md:
+  #   title: Background
   changes.md:
     title: Changes
+  feedback.md:
+    title: Feedback
   # genomicDiagnostics.md:
   #   title: Genomic Diagnostics
   # phenotype.md:
@@ -51,9 +53,10 @@ pages:
 
 menu:
   Home: index.html
-  Background: background.html
+  # Background: background.html
   Artifacts: artifacts.html
   Changes: changes.html
+  Feedback: feedback.html
   # Background:
   #   GA4GH: ga4gh.html
   #   Deep phenotyping: phenotype.html
